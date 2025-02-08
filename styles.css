@@ -108,3 +108,50 @@ footer {
 .social-links a:hover {
     color: #fff;
 }
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.service {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 300px;
+}
+
+.service img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service h2 {
+    margin: 10px 0;
+    color: #647abc;
+}
+
+.service p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 80%;
+    }
+}
