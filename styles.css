@@ -1,7 +1,45 @@
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 5px;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding-top: calc(60px + 1rem);
     transition: background 0.3s, color 0.3s;
 	text-align: center;
 }
@@ -14,14 +52,6 @@ body {
 .light-mode {
     background: #ffffff;
     color: #121212;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: #647abc;
 }
 
 .logo {
@@ -60,16 +90,6 @@ button {
 
 button:hover {
     background: #ddd;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #647abc;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 .team {
