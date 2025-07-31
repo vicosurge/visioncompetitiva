@@ -3,117 +3,558 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Vicente Manuel Muñoz Milchorena">
-	<meta name="description" content="Vision Competitiva - Ciberseguridad a tu alcance">
-	<meta name="keywords" content="ciberseguridad, SOC, pentesting, prueba de penetracion, vulnerability management">
+    <meta name="author" content="Vicente Manuel Muñoz Milchorena">
+    <meta name="description" content="Vision Competitiva - Ciberseguridad a tu alcance">
+    <meta name="keywords" content="ciberseguridad, SOC, pentesting, prueba de penetracion, vulnerability management">
     <title>Visión Competitiva</title>
-    <link rel="stylesheet" href="styles.css">
-	
-	<style>
-		.testimonial-slider {
-			text-align: center;
-			overflow: hidden;
-			width: 100%;
-			max-width: 600px;
-			margin: auto;
-		}
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		.testimonial-card {
-			display: none;  /* Hide all cards initially */
-			background: #999;
-			padding: 1.5rem;
-			border-radius: 10px;
-			box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
-			color: white;
-		}
-		
-		.testimonial-card:first-child {
-			display: block;
-		}
-	</style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #1e293b;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --card-bg: #1e293b;
+            --gradient-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
 
-	<script>
-		let index = 0;
+        html, body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--gradient-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-		function showNextTestimonial() {
-			let testimonials = document.querySelectorAll(".testimonial-card");
-			let totalTestimonials = testimonials.length;
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
 
-			// Hide all testimonials
-			testimonials.forEach((testimonial) => {
-				testimonial.style.display = "none";
-			});
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-			// Show only the current testimonial
-			testimonials[index].style.display = "block";
+        .logo {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
 
-			// Move to the next testimonial (looping)
-			index = (index + 1) % totalTestimonials;
-		}
+        .logo:hover {
+            transform: scale(1.05);
+        }
 
-		// Initialize: Hide all except the first one
-		document.querySelectorAll(".testimonial-card").forEach((testimonial, i) => {
-			testimonial.style.display = i === 0 ? "block" : "none";
-		});
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
 
-		// Auto-slide every 3 seconds
-		setInterval(showNextTestimonial, 3000);
-</script>	
-	
+        nav ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        main {
+            min-height: calc(100vh - 160px);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Services Preview */
+        .services-preview {
+            padding: 4rem 2rem;
+            background: rgba(30, 41, 59, 0.3);
+            margin: 4rem 0;
+        }
+
+        .services-preview h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--accent-hover);
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-card {
+            display: none;
+            padding: 3rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .testimonial-card.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .testimonial-card .stars {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #fbbf24;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-card .author {
+            font-weight: 600;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .services-preview {
+                padding: 2rem 1rem;
+            }
+
+            .services-preview h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .testimonials {
+                padding: 2rem 1rem;
+            }
+
+            .testimonials h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-card {
+                padding: 2rem;
+            }
+
+            .testimonial-card blockquote {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
-<body class="light-mode">
+<body>
     <header>
-        <img src="img/logo-blanco.png" alt="Visión Competitiva Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="https://form.jotform.com/250366559153057" target="_blank">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <img src="img/logo-blanco.png" alt="Visión Competitiva Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="https://form.jotform.com/250366559153057" target="_blank">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <h1>Bienvenido a Visión Competitiva</h1>
-        <p>Explora nuestras soluciones de ciberseguridad para tu empresa.</p><hr>
-		<section id="testimonials">
-			<h2>Lo que nuestros clientes dicen</h2>
-			<div class="testimonial-slider">
-				<div class="testimonial-card active">
-					<p>⭐⭐⭐⭐⭐</p>
-					<blockquote>"Vicente has an amazing depth of knowledge on a variety of topics. His information security skills helped us a lot."</blockquote>
-					<p class="author">— Sammy Basu, Careful Security</p>
-				</div>
-				<div class="testimonial-card">
-					<p>⭐⭐⭐⭐⭐</p>
-					<blockquote>"It has been a pleasure working with Vicente. High technical capability and excellent responsiveness. Thank you for the help Vicente."</blockquote>
-					<p class="author">— Positka</p>
-				</div>
-				<div class="testimonial-card">
-					<p>⭐⭐⭐⭐⭐</p>
-					<blockquote>"I'll definitely be contacting Vicente back for future work, he's been nothing short of amazing, super expertise and incredible fast response and results."</blockquote>
-					<p class="author">— Johnny Jonathan, Cyber Eye</p>
-				</div>
-				<div class="testimonial-card">
-					<p>⭐⭐⭐⭐⭐</p>
-					<blockquote>"Vicente Muñoz is a ELK superhero! He has gone beyond my expectations on more than one occasion, and always makes himself avail.  He is a man of his word, and great with python, NXLog, and ELK."</blockquote>
-					<p class="author">— Andrew Brockerhoff</p>
-				</div>
-				<div class="testimonial-card">
-					<p>⭐⭐⭐⭐⭐</p>
-					<blockquote>"Vicente was very professional, accomodating and willing to help. Knows what he is doing especially through information security matter."</blockquote>
-					<p class="author">— BPO Kinetic Business</p>
-				</div>
-				<div class="testimonial-card">
-					<p>⭐⭐⭐⭐⭐</p>
-					<blockquote>"Vicente has awesome skills, thoroughly recommend him to anyone."</blockquote>
-					<p class="author">— Adam Beal, DTS</p>
-				</div>
-			</div>
-		</section>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Ciberseguridad a tu Alcance</h1>
+            <p>Protegemos tu empresa con soluciones avanzadas de ciberseguridad. Monitoreo 24/7, pruebas de penetración y gestión de vulnerabilidades.</p>
+            <a href="https://form.jotform.com/250366559153057" target="_blank" class="cta-button">Solicitar Consulta Gratuita</a>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="services-preview">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Security Operation Center</h3>
+                    <p>Monitoreo y análisis de seguridad 24/7 para detectar y responder a amenazas en tiempo real.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Pruebas de Penetración</h3>
+                    <p>Simulaciones de ataques para evaluar y mejorar la seguridad de tus sistemas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Gestión de Vulnerabilidades</h3>
+                    <p>Identificación, análisis y mitigación de vulnerabilidades en tu infraestructura.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>Lo que Nuestros Clientes Dicen</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-card active">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"Vicente has an amazing depth of knowledge on a variety of topics. His information security skills helped us a lot."</blockquote>
+                    <p class="author">— Sammy Basu, Careful Security</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"It has been a pleasure working with Vicente. High technical capability and excellent responsiveness. Thank you for the help Vicente."</blockquote>
+                    <p class="author">— Positka</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"I'll definitely be contacting Vicente back for future work, he's been nothing short of amazing, super expertise and incredible fast response and results."</blockquote>
+                    <p class="author">— Johnny Jonathan, Cyber Eye</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"Vicente Muñoz is a ELK superhero! He has gone beyond my expectations on more than one occasion, and always makes himself avail. He is a man of his word, and great with python, NXLog, and ELK."</blockquote>
+                    <p class="author">— Andrew Brockerhoff</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"Vicente was very professional, accomodating and willing to help. Knows what he is doing especially through information security matter."</blockquote>
+                    <p class="author">— BPO Kinetic Business</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <blockquote>"Vicente has awesome skills, thoroughly recommend him to anyone."</blockquote>
+                    <p class="author">— Adam Beal, DTS</p>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2025 Visión Competitiva. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current slide and activate corresponding dot
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            showSlide(slideIndex);
+        }
+
+        function currentSlide(index) {
+            slideIndex = index - 1;
+            showSlide(slideIndex);
+        }
+
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(15, 23, 42, 0.98)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
+    </script>
 </body>
 </html>

@@ -3,50 +3,587 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Vicente Manuel Muñoz Milchorena">
-	<meta name="description" content="Vision Competitiva - Ciberseguridad a tu alcance">
-	<meta name="keywords" content="ciberseguridad, SOC, pentesting, prueba de penetracion, vulnerability management">
-	<title>Visión Competitiva - Servicios</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="author" content="Vicente Manuel Muñoz Milchorena">
+    <meta name="description" content="Vision Competitiva - Ciberseguridad a tu alcance">
+    <meta name="keywords" content="ciberseguridad, SOC, pentesting, prueba de penetracion, vulnerability management">
+    <title>Visión Competitiva - Quiénes Somos</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #1e293b;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --card-bg: #1e293b;
+            --gradient-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        html, body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--gradient-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a:hover,
+        nav ul li a[href="quienes-somos.html"] {
+            color: var(--accent-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after,
+        nav ul li a[href="quienes-somos.html"]::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        main {
+            min-height: calc(100vh - 160px);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Company Introduction */
+        .company-intro {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: var(--shadow);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .company-intro h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            text-align: center;
+        }
+
+        .company-intro p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Team Section */
+        .team-section {
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .team-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .team-member {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .team-member:hover::before {
+            left: 100%;
+        }
+
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 4px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.05);
+            border-color: var(--accent-hover);
+        }
+
+        .team-member h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .team-member .role {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Values Section */
+        .values-section {
+            margin-top: 4rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .values-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover .value-icon {
+            background: var(--accent-hover);
+            transform: scale(1.1);
+        }
+
+        .value-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .value-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            .company-intro {
+                padding: 2rem;
+            }
+
+            .company-intro h2 {
+                font-size: 1.5rem;
+            }
+
+            .team-section h2,
+            .values-section h2 {
+                font-size: 2rem;
+            }
+
+            .team {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .team-member {
+                padding: 2rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .team-member {
+                padding: 1.5rem;
+            }
+
+            .company-intro {
+                padding: 1.5rem;
+            }
+
+            .value-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
-<body class="light-mode">
+<body>
     <header>
-        <img src="img/logo-blanco.png" alt="Visión Competitiva Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="https://form.jotform.com/250366559153057" target="_blank">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <img src="img/logo-blanco.png" alt="Visión Competitiva Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="https://form.jotform.com/250366559153057" target="_blank">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Nuestros Servicios</h1>
-        <div class="services-container">
-            <div class="service">
-                <img src="img/soc.jpg" alt="Security Operation Center">
-                <h2>Security Operation Center (SOC)</h2>
-                <p>Monitoreamos y analizamos la seguridad de tu infraestructura 24/7 para detectar y responder a amenazas en tiempo real.</p>
-            </div>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>Quiénes Somos</h1>
+            <p>Conoce al equipo de expertos comprometidos con la seguridad de tu empresa</p>
+        </section>
 
-            <div class="service">
-                <img src="img/penetration-testing.jpg" alt="Pruebas de Penetración">
-                <h2>Pruebas de Penetración</h2>
-                <p>Realizamos simulaciones de ataques para evaluar y mejorar la seguridad de tus sistemas antes de que los atacantes reales lo hagan.</p>
-            </div>
+        <!-- Company Introduction -->
+        <section class="company-intro">
+            <h2>Nuestra Misión</h2>
+            <p>En Visión Competitiva, nos dedicamos a brindar soluciones de ciberseguridad de clase mundial. Nuestro equipo de especialistas trabaja incansablemente para proteger tu empresa contra las amenazas digitales más avanzadas, combinando experiencia técnica con un enfoque personalizado para cada cliente.</p>
+        </section>
 
-            <div class="service">
-                <img src="img/vulnerability-management.jpg" alt="Manejo de Vulnerabilidades">
-                <h2>Manejo de Vulnerabilidades</h2>
-                <p>Identificamos, analizamos y mitigamos vulnerabilidades en tu infraestructura para fortalecer la postura de seguridad de tu empresa.</p>
+        <!-- Team Section -->
+        <section class="team-section">
+            <h2>Nuestro Equipo</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="img/vmmm.jpeg" alt="Vicente Manuel Muñoz Milchorena">
+                    <h3>Vicente Manuel Muñoz Milchorena</h3>
+                    <p class="role">Founder & Cyber Security Officer</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/vicente-milchorena" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/vicosurge" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="img/daac.jpeg" alt="David Aaron Arevalo Cruz">
+                    <h3>David Aaron Arevalo Cruz</h3>
+                    <p class="role">IT Manager</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/aaron-arevalo" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="img/opal.jpg" alt="Omar Paul Antelo Lopez">
+                    <h3>Omar Paul Antelo Lopez</h3>
+                    <p class="role">Account Executive</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/paul-antelo-2667b1350/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <h2>Nuestros Valores</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Excelencia</h3>
+                    <p>Nos comprometemos a brindar servicios de la más alta calidad, superando las expectativas de nuestros clientes.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔒</div>
+                    <h3>Confianza</h3>
+                    <p>Construimos relaciones sólidas basadas en la transparencia, integridad y confidencialidad absoluta.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h3>Innovación</h3>
+                    <p>Nos mantenemos a la vanguardia de las tecnologías de seguridad para ofrecer soluciones avanzadas.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Compromiso</h3>
+                    <p>Trabajamos como socios estratégicos, comprometidos con el éxito y seguridad de cada cliente.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Visión Competitiva. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" crossorigin="anonymous"></script>
+    
+    <script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(15, 23, 42, 0.98)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe animated elements
+        document.querySelectorAll('.page-header, .company-intro, .team-section, .values-section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
