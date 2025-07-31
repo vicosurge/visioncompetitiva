@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Vicente Manuel Muñoz Milchorena">
+    <meta name="description" content="Contacta con Visión Competitiva - Solicita una consulta gratuita de ciberseguridad">
+    <meta name="keywords" content="contacto, ciberseguridad, consulta gratuita, SOC, pentesting, vulnerability management">
+    <title>Contacto - Visión Competitiva</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #1e293b;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+            --success-color: #10b981;
+            --error-color: #ef4444;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --card-bg: #1e293b;
+            --input-bg: #334155;
+            --gradient-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        html, body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--gradient-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a:hover,
+        nav ul li a[href="contacto.html"] {
+            color: var(--accent-color);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after,
+        nav ul li a[href="contacto.html"]::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        main {
+            min-height: calc(100vh - 160px);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .page-header .subtext {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        /* Contact Form */
+        .contact-form-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .required {
+            color: var(--error-color);
+        }
+
+        input, select, textarea {
+            background: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 0.875rem 1rem;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            background: var(--secondary-color);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        select option {
+            background: var(--input-bg);
+            color: var(--text-primary);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .submit-btn:disabled {
+            background: var(--text-muted);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top: 2px solid currentColor;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Success/Error Messages */
+        .message {
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            display: none;
+        }
+
+        .message.success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--success-color);
+            color: var(--success-color);
+        }
+
+        .message.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--error-color);
+            color: var(--error-color);
+        }
+
+        .message.show {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Form Validation */
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: var(--error-color);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+
+        .error-text {
+            color: var(--error-color);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-group.error .error-text {
+            display: block;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .contact-form-container {
+                padding: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-form-container {
+                padding: 1.5rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="img/logo-blanco.png" alt="Visión Competitiva Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <h1>Solicita una Consulta</h1>
+            <p>Descubre cómo podemos proteger tu empresa</p>
+            <p class="subtext">Respuesta garantizada en menos de 24 horas</p>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-container">
+            <div id="success-message" class="message success">
+                <strong>¡Mensaje enviado exitosamente!</strong><br>
+                Nos pondremos en contacto contigo dentro de las próximas 24 horas.
+            </div>
+            
+            <div id="error-message" class="message error">
+                <strong>Error al enviar el mensaje.</strong><br>
+                Por favor, intenta nuevamente o contáctanos directamente.
+            </div>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                        <span class="error-text">Por favor ingresa tu nombre</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="tu@empresa.com">
+                        <span class="error-text">Por favor ingresa un correo válido</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Teléfono <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+52 664 123 4567">
+                        <span class="error-text">Por favor ingresa tu teléfono</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Empresa <span class="required">*</span></label>
+                        <input type="text" id="company" name="company" required placeholder="Nombre de tu empresa">
+                        <span class="error-text">Por favor ingresa el nombre de tu empresa</span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">Servicio de Interés <span class="required">*</span></label>
+                        <select id="service" name="service" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="SOC - Security Operation Center">SOC - Security Operation Center</option>
+                            <option value="Pruebas de Penetración">Pruebas de Penetración</option>
+                            <option value="Gestión de Vulnerabilidades">Gestión de Vulnerabilidades</option>
+                            <option value="Todos los Servicios">Todos los Servicios</option>
+                            <option value="Consultoría General">Consultoría General</option>
+                        </select>
+                        <span class="error-text">Por favor selecciona un servicio</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="company-size">Tamaño de Empresa</label>
+                        <select id="company-size" name="company-size">
+                            <option value="">Selecciona el tamaño</option>
+                            <option value="1-10 empleados">1-10 empleados</option>
+                            <option value="11-50 empleados">11-50 empleados</option>
+                            <option value="51-200 empleados">51-200 empleados</option>
+                            <option value="200+ empleados">200+ empleados</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="urgency">Urgencia del Proyecto</label>
+                    <select id="urgency" name="urgency">
+                        <option value="">Selecciona la urgencia</option>
+                        <option value="ASAP - Lo antes posible">ASAP - Lo antes posible</option>
+                        <option value="Dentro de 1 semana">Dentro de 1 semana</option>
+                        <option value="Dentro de 1 mes">Dentro de 1 mes</option>
+                        <option value="Planificando a futuro">Planificando a futuro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje / Requerimientos Específicos</label>
+                    <textarea id="message" name="message" placeholder="Describe brevemente tus necesidades de ciberseguridad, situación actual, o cualquier pregunta específica que tengas..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span class="btn-text">Enviar Solicitud</span>
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Visión Competitiva. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Form handling
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const successMessage = document.getElementById('success-message');
+        const errorMessage = document.getElementById('error-message');
+
+        // Form validation
+        function validateForm() {
+            let isValid = true;
+            const requiredFields = ['name', 'email', 'phone', 'company', 'service'];
+            
+            requiredFields.forEach(fieldName => {
+                const field = document.getElementById(fieldName);
+                const formGroup = field.closest('.form-group');
+                
+                if (!field.value.trim()) {
+                    formGroup.classList.add('error');
+                    isValid = false;
+                } else {
+                    formGroup.classList.remove('error');
+                }
+            });
+
+            // Email validation
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value && !emailRegex.test(email.value)) {
+                email.closest('.form-group').classList.add('error');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Clear validation errors on input
+        form.addEventListener('input', (e) => {
+            const formGroup = e.target.closest('.form-group');
+            if (formGroup.classList.contains('error')) {
+                formGroup.classList.remove('error');
+            }
+            hideMessages();
+        });
+
+        // Hide messages
+        function hideMessages() {
+            successMessage.classList.remove('show');
+            errorMessage.classList.remove('show');
+        }
+
+        // Show loading state
+        function showLoading() {
+            submitBtn.disabled = true;
+            btnText.innerHTML = '<div class="loading"><div class="spinner"></div>Enviando...</div>';
+        }
+
+        // Hide loading state
+        function hideLoading() {
+            submitBtn.disabled = false;
+            btnText.innerHTML = 'Enviar Solicitud';
+        }
+
+        // Format form data for webhook
+        function formatFormData(formData) {
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Add timestamp
+            data.timestamp = new Date().toLocaleString('es-MX', {
+                timeZone: 'America/Tijuana',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            return data;
+        }
+
+        // Form submission
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            hideMessages();
+
+            if (!validateForm()) {
+                errorMessage.querySelector('span').innerHTML = '<strong>Error de validación.</strong><br>Por favor completa todos los campos requeridos correctamente.';
+                errorMessage.classList.add('show');
+                return;
+            }
+
+            showLoading();
+
+            try {
+                const formData = new FormData(form);
+                const data = formatFormData(formData);
+
+                // Replace with your Make.com webhook URL
+                const webhookUrl = 'https://hook.us2.make.com/gbeleyc11a0f6cvucdejfk1xbi2b95o1';
+                
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    successMessage.classList.add('show');
+                    form.reset();
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.classList.add('show');
+            } finally {
+                hideLoading();
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(15, 23, 42, 0.98)';
+            } else {
+                header.style.background = 'rgba(15, 23, 42, 0.95)';
+            }
+        });
+
+        // Phone number formatting
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (!value.startsWith('52')) {
+                    value = '52' + value;
+                }
+                if (value.length <= 12) {
+                    value = '+' + value.substring(0, 2) + ' ' + value.substring(2, 5) + ' ' + value.substring(5, 8) + ' ' + value.substring(8);
+                }
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
