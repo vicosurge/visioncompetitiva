@@ -6,7 +6,7 @@
     <meta name="author" content="Vicente Manuel Muñoz Milchorena">
     <meta name="description" content="Vision Competitiva - Ciberseguridad a tu alcance">
     <meta name="keywords" content="ciberseguridad, SOC, pentesting, prueba de penetracion, vulnerability management">
-    <title>Visión Competitiva - Quiénes Somos</title>
+    <title>Visión Competitiva - Servicios</title>
     
     <style>
         * {
@@ -85,7 +85,7 @@
         }
 
         nav ul li a:hover,
-        nav ul li a[href="quienes-somos.html"] {
+        nav ul li a[href="servicios.html"] {
             color: var(--accent-color);
         }
 
@@ -101,7 +101,7 @@
         }
 
         nav ul li a:hover::after,
-        nav ul li a[href="quienes-somos.html"]::after {
+        nav ul li a[href="servicios.html"]::after {
             width: 100%;
         }
 
@@ -133,77 +133,42 @@
         .page-header p {
             font-size: 1.25rem;
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        /* Company Introduction */
-        .company-intro {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 4rem;
-            box-shadow: var(--shadow);
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-
-        .company-intro h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--accent-color);
-            text-align: center;
-        }
-
-        .company-intro p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            text-align: center;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Team Section */
-        .team-section {
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
-        .team-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--text-primary);
-        }
-
-        .team {
+        /* Services Grid */
+        .services-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
             margin-bottom: 4rem;
         }
 
-        .team-member {
+        .service {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 2.5rem;
             text-align: center;
             box-shadow: var(--shadow);
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            animation: fadeInUp 1s ease-out calc(var(--delay, 0) * 0.2s) both;
         }
 
-        .team-member:hover {
-            transform: translateY(-10px);
+        .service:nth-child(1) { --delay: 1; }
+        .service:nth-child(2) { --delay: 2; }
+        .service:nth-child(3) { --delay: 3; }
+
+        .service:hover {
+            transform: translateY(-15px);
             box-shadow: var(--shadow-hover);
             border-color: var(--accent-color);
         }
 
-        .team-member::before {
+        .service::before {
             content: '';
             position: absolute;
             top: 0;
@@ -211,108 +176,31 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
-            transition: left 0.5s ease;
+            transition: left 0.6s ease;
         }
 
-        .team-member:hover::before {
+        .service:hover::before {
             left: 100%;
         }
 
-        .team-member img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
+        .service-image {
+            width: 100%;
+            height: 200px;
             object-fit: cover;
-            margin-bottom: 1.5rem;
-            border: 4px solid var(--accent-color);
-            transition: all 0.3s ease;
-        }
-
-        .team-member:hover img {
-            transform: scale(1.05);
-            border-color: var(--accent-hover);
-        }
-
-        .team-member h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        .team-member .role {
-            font-size: 1.1rem;
-            color: var(--accent-color);
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: var(--secondary-color);
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            color: var(--text-secondary);
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background: var(--accent-color);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
-        }
-
-        /* Values Section */
-        .values-section {
-            margin-top: 4rem;
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .values-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--text-primary);
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .value-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
             border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
+            margin-bottom: 2rem;
             transition: all 0.3s ease;
-            box-shadow: var(--shadow);
+            filter: brightness(0.8);
         }
 
-        .value-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
+        .service:hover .service-image {
+            filter: brightness(1);
+            transform: scale(1.02);
         }
 
-        .value-icon {
-            width: 70px;
-            height: 70px;
+        .service-icon {
+            width: 80px;
+            height: 80px;
             background: var(--accent-color);
             border-radius: 50%;
             display: flex;
@@ -321,23 +209,137 @@
             margin: 0 auto 1.5rem;
             font-size: 2rem;
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
         }
 
-        .value-card:hover .value-icon {
+        .service:hover .service-icon {
+            background: var(--accent-hover);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            position: relative;
+            z-index: 2;
+        }
+
+        .service p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Service Features */
+        .service-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* CTA Button */
+        .service-cta {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-cta:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 4rem;
+            box-shadow: var(--shadow);
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .why-choose-us h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover .benefit-icon {
             background: var(--accent-hover);
             transform: scale(1.1);
         }
 
-        .value-card h3 {
-            font-size: 1.3rem;
+        .benefit-card h3 {
+            font-size: 1.2rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--text-primary);
         }
 
-        .value-card p {
+        .benefit-card p {
             color: var(--text-secondary);
-            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         /* Footer */
@@ -392,29 +394,24 @@
                 font-size: 1.1rem;
             }
 
-            .company-intro {
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .service {
                 padding: 2rem;
             }
 
-            .company-intro h2 {
-                font-size: 1.5rem;
+            .why-choose-us {
+                padding: 2rem;
             }
 
-            .team-section h2,
-            .values-section h2 {
+            .why-choose-us h2 {
                 font-size: 2rem;
             }
 
-            .team {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .team-member {
-                padding: 2rem;
-            }
-
-            .values-grid {
+            .benefits-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
@@ -425,16 +422,20 @@
                 font-size: 1.8rem;
             }
 
-            .team-member {
+            .service {
                 padding: 1.5rem;
             }
 
-            .company-intro {
+            .why-choose-us {
                 padding: 1.5rem;
             }
 
-            .value-card {
-                padding: 1.5rem;
+            .service h2 {
+                font-size: 1.3rem;
+            }
+
+            .service p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -457,79 +458,91 @@
     <main>
         <!-- Page Header -->
         <section class="page-header">
-            <h1>Quiénes Somos</h1>
-            <p>Conoce al equipo de expertos comprometidos con la seguridad de tu empresa</p>
+            <h1>Nuestros Servicios</h1>
+            <p>Soluciones integrales de ciberseguridad diseñadas para proteger tu empresa contra las amenazas digitales más avanzadas</p>
         </section>
 
-        <!-- Company Introduction -->
-        <section class="company-intro">
-            <h2>Nuestra Misión</h2>
-            <p>En Visión Competitiva, nos dedicamos a brindar soluciones de ciberseguridad de clase mundial. Nuestro equipo de especialistas trabaja incansablemente para proteger tu empresa contra las amenazas digitales más avanzadas, combinando experiencia técnica con un enfoque personalizado para cada cliente.</p>
-        </section>
-
-        <!-- Team Section -->
-        <section class="team-section">
-            <h2>Nuestro Equipo</h2>
-            <div class="team">
-                <div class="team-member">
-                    <img src="img/vmmm.jpeg" alt="Vicente Manuel Muñoz Milchorena">
-                    <h3>Vicente Manuel Muñoz Milchorena</h3>
-                    <p class="role">Founder & Cyber Security Officer</p>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/vicente-milchorena" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/vicosurge" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <img src="img/daac.jpeg" alt="David Aaron Arevalo Cruz">
-                    <h3>David Aaron Arevalo Cruz</h3>
-                    <p class="role">IT Manager</p>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/aaron-arevalo" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <img src="img/opal.jpg" alt="Omar Paul Antelo Lopez">
-                    <h3>Omar Paul Antelo Lopez</h3>
-                    <p class="role">Account Executive</p>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/paul-antelo-2667b1350/" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
+        <!-- Services Grid -->
+        <div class="services-container">
+            <div class="service">
+                <div class="service-icon">🛡️</div>
+                <img src="img/soc.jpg" alt="Security Operation Center" class="service-image">
+                <h2>Security Operation Center (SOC)</h2>
+                <p>Monitoreo y análisis continuo de la seguridad de tu infraestructura las 24 horas del día, los 7 días de la semana, para detectar y responder a amenazas en tiempo real.</p>
+                <ul class="service-features">
+                    <li>Monitoreo continuo 24/7/365</li>
+                    <li>Detección de amenazas en tiempo real</li>
+                    <li>Análisis de logs y eventos de seguridad</li>
+                    <li>Respuesta rápida a incidentes</li>
+                    <li>Reportes detallados de seguridad</li>
+                </ul>
+                <a href="https://form.jotform.com/250366559153057" target="_blank" class="service-cta">Solicitar Información</a>
             </div>
-        </section>
 
-        <!-- Values Section -->
-        <section class="values-section">
-            <h2>Nuestros Valores</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">🎯</div>
-                    <h3>Excelencia</h3>
-                    <p>Nos comprometemos a brindar servicios de la más alta calidad, superando las expectativas de nuestros clientes.</p>
+            <div class="service">
+                <div class="service-icon">🔍</div>
+                <img src="img/penetration-testing.jpg" alt="Pruebas de Penetración" class="service-image">
+                <h2>Pruebas de Penetración</h2>
+                <p>Simulaciones éticas de ataques cibernéticos realizadas por expertos para evaluar y fortalecer la seguridad de tus sistemas antes de que los atacantes reales lo hagan.</p>
+                <ul class="service-features">
+                    <li>Evaluación completa de vulnerabilidades</li>
+                    <li>Simulación de ataques reales</li>
+                    <li>Pruebas de aplicaciones web y móviles</li>
+                    <li>Auditorías de infraestructura de red</li>
+                    <li>Informes ejecutivos y técnicos detallados</li>
+                </ul>
+                <a href="https://form.jotform.com/250366559153057" target="_blank" class="service-cta">Solicitar Información</a>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">⚡</div>
+                <img src="img/vulnerability-management.jpg" alt="Gestión de Vulnerabilidades" class="service-image">
+                <h2>Gestión de Vulnerabilidades</h2>
+                <p>Proceso sistemático de identificación, análisis, clasificación y mitigación de vulnerabilidades en tu infraestructura para mantener una postura de seguridad sólida.</p>
+                <ul class="service-features">
+                    <li>Escaneo automatizado de vulnerabilidades</li>
+                    <li>Priorización basada en riesgo</li>
+                    <li>Planes de remediación personalizados</li>
+                    <li>Seguimiento continuo del progreso</li>
+                    <li>Métricas de cumplimiento y seguridad</li>
+                </ul>
+                <a href="https://form.jotform.com/250366559153057" target="_blank" class="service-cta">Solicitar Información</a>
+            </div>
+        </div>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <h2>¿Por Qué Elegirnos?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Expertise Comprobado</h3>
+                    <p>Equipo de especialistas certificados con años de experiencia en ciberseguridad</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">🔒</div>
-                    <h3>Confianza</h3>
-                    <p>Construimos relaciones sólidas basadas en la transparencia, integridad y confidencialidad absoluta.</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Respuesta Rápida</h3>
+                    <p>Tiempos de respuesta optimizados para minimizar el impacto de los incidentes</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">🚀</div>
-                    <h3>Innovación</h3>
-                    <p>Nos mantenemos a la vanguardia de las tecnologías de seguridad para ofrecer soluciones avanzadas.</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔧</div>
+                    <h3>Soluciones Personalizadas</h3>
+                    <p>Servicios adaptados a las necesidades específicas de tu empresa</p>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Compromiso</h3>
-                    <p>Trabajamos como socios estratégicos, comprometidos con el éxito y seguridad de cada cliente.</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Reportes Detallados</h3>
+                    <p>Informes ejecutivos y técnicos claros y accionables</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Cobertura Completa</h3>
+                    <p>Protección integral desde endpoints hasta infraestructura en la nube</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>ROI Garantizado</h3>
+                    <p>Inversión rentable que protege y potencia el crecimiento de tu negocio</p>
                 </div>
             </div>
         </section>
@@ -539,8 +552,6 @@
         <p>&copy; 2025 Visión Competitiva. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" crossorigin="anonymous"></script>
-    
     <script>
         // Add scroll effect to header
         window.addEventListener('scroll', () => {
@@ -581,8 +592,19 @@
         }, observerOptions);
 
         // Observe animated elements
-        document.querySelectorAll('.page-header, .company-intro, .team-section, .values-section').forEach(el => {
+        document.querySelectorAll('.page-header, .service, .why-choose-us').forEach(el => {
             observer.observe(el);
+        });
+
+        // Add hover effects for service cards
+        document.querySelectorAll('.service').forEach(service => {
+            service.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+            });
+            
+            service.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
         });
     </script>
 </body>
