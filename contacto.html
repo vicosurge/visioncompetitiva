@@ -583,13 +583,116 @@
             return data;
         }
 
+        // Create WhatsApp message format
+        function createWhatsAppMessage(data) {
+            const message = `🔥 *NUEVO LEAD - Visión Competitiva*
+
+👤 *Nombre:* ${data.name}
+🏢 *Empresa:* ${data.company}
+📧 *Email:* ${data.email}
+📱 *Teléfono:* ${data.phone}
+🛡️ *Servicio:* ${data.service}
+${data['company-size'] ? `👥 *Tamaño:* ${data['company-size']}` : ''}
+${data.urgency ? `⏰ *Urgencia:* ${data.urgency}` : ''}
+
+${data.message ? `💬 *Mensaje:*\n${data.message}` : ''}
+
+📅 *Recibido:* ${data.timestamp}
+
+---
+_Lead generado desde visioncompetitiva.com_`;
+
+            return message;
+        }
+
+        // Create email content
+        function createEmailContent(data) {
+            return {
+                subject: `🔥 Nuevo Lead - ${data.company} - ${data.service}`,
+                html: `
+                    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #f8fafc; padding: 20px;">
+                        <div style="background: #0f172a; color: white; padding: 20px; border-radius: 10px 10px 0 0;">
+                            <h2 style="margin: 0; color: #3b82f6;">🔥 Nuevo Lead - Visión Competitiva</h2>
+                        </div>
+                        
+                        <div style="background: white; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <table style="width: 100%; border-collapse: collapse;">
+                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 10px 0; font-weight: bold; color: #1e293b; width: 120px;">👤 Nombre:</td>
+                                    <td style="padding: 10px 0; color: #334155;">${data.name}</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 10px 0; font-weight: bold; color: #1e293b;">🏢 Empresa:</td>
+                                    <td style="padding: 10px 0; color: #334155;">${data.company}</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 10px 0; font-weight: bold; color: #1e293b;">📧 Email:</td>
+                                    <td style="padding: 10px 0; color: #334155;"><a href="mailto:${data.email}" style="color: #3b82f6;">${data.email}</a></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 10px 0; font-weight: bold; color: #1e293b;">📱 Teléfono:</td>
+                                    <td style="padding: 10px 0; color: #334155;"><a href="tel:${data.phone}" style="color: #3b82f6;">${data.phone}</a></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 10px 0; font-weight: bold; color: #1e293b;">🛡️ Servicio:</td>
+                                    <td style="padding: 10px 0; color: #334155;">${data.service}</td>
+                                </tr>
+                                ${data['company-size'] ? `
+                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 10px 0; font-weight: bold; color: #1e293b;">👥 Tamaño:</td>
+                                    <td style="padding: 10px 0; color: #334155;">${data['company-size']}</td>
+                                </tr>
+                                ` : ''}
+                                ${data.urgency ? `
+                                <tr style="border-bottom: 1px solid #e2e8f0;">
+                                    <td style="padding: 10px 0; font-weight: bold; color: #1e293b;">⏰ Urgencia:</td>
+                                    <td style="padding: 10px 0; color: #334155;">${data.urgency}</td>
+                                </tr>
+                                ` : ''}
+                                <tr>
+                                    <td style="padding: 10px 0; font-weight: bold; color: #1e293b;">📅 Recibido:</td>
+                                    <td style="padding: 10px 0; color: #334155;">${data.timestamp}</td>
+                                </tr>
+                            </table>
+                            
+                            ${data.message ? `
+                            <div style="margin-top: 20px; padding: 15px; background: #f1f5f9; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                                <h4 style="margin: 0 0 10px 0; color: #1e293b;">💬 Mensaje:</h4>
+                                <p style="margin: 0; color: #334155; line-height: 1.6;">${data.message.replace(/\n/g, '<br>')}</p>
+                            </div>
+                            ` : ''}
+                            
+                            <div style="margin-top: 30px; padding: 15px; background: #0f172a; border-radius: 8px; text-align: center;">
+                                <p style="margin: 0; color: #cbd5e1; font-size: 14px;">Lead generado desde <strong style="color: #3b82f6;">visioncompetitiva.com</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                `,
+                text: `NUEVO LEAD - Visión Competitiva
+
+Nombre: ${data.name}
+Empresa: ${data.company}
+Email: ${data.email}
+Teléfono: ${data.phone}
+Servicio: ${data.service}
+${data['company-size'] ? `Tamaño: ${data['company-size']}` : ''}
+${data.urgency ? `Urgencia: ${data.urgency}` : ''}
+
+${data.message ? `Mensaje:\n${data.message}` : ''}
+
+Recibido: ${data.timestamp}
+
+Lead generado desde visioncompetitiva.com`
+            };
+        }
+
         // Form submission
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             hideMessages();
 
             if (!validateForm()) {
-                errorMessage.querySelector('span').innerHTML = '<strong>Error de validación.</strong><br>Por favor completa todos los campos requeridos correctamente.';
+                errorMessage.innerHTML = '<strong>Error de validación.</strong><br>Por favor completa todos los campos requeridos correctamente.';
                 errorMessage.classList.add('show');
                 return;
             }
@@ -599,19 +702,33 @@
             try {
                 const formData = new FormData(form);
                 const data = formatFormData(formData);
+                
+                // Create formatted messages
+                const whatsappMessage = createWhatsAppMessage(data);
+                const emailContent = createEmailContent(data);
+
+                // Prepare payload for Make.com webhook
+                const payload = {
+                    ...data,
+                    whatsappMessage: whatsappMessage,
+                    emailSubject: emailContent.subject,
+                    emailHtml: emailContent.html,
+                    emailText: emailContent.text
+                };
 
                 // Replace with your Make.com webhook URL
-                const webhookUrl = 'https://hook.us2.make.com/gbeleyc11a0f6cvucdejfk1xbi2b95o1';
+                const webhookUrl = 'YOUR_MAKE_WEBHOOK_URL_HERE';
                 
                 const response = await fetch(webhookUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(data)
+                    body: JSON.stringify(payload)
                 });
 
                 if (response.ok) {
+                    successMessage.innerHTML = '<strong>¡Mensaje enviado exitosamente!</strong><br>Hemos recibido tu solicitud y nos pondremos en contacto contigo dentro de las próximas 24 horas.';
                     successMessage.classList.add('show');
                     form.reset();
                     // Scroll to success message
@@ -622,6 +739,7 @@
 
             } catch (error) {
                 console.error('Error:', error);
+                errorMessage.innerHTML = '<strong>Error al enviar el mensaje.</strong><br>Por favor, intenta nuevamente o contáctanos directamente.';
                 errorMessage.classList.add('show');
             } finally {
                 hideLoading();
