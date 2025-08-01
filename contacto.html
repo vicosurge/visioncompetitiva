@@ -563,14 +563,19 @@
             btnText.innerHTML = 'Enviar Solicitud';
         }
 
+        // Generate unique form token
+        function generateFormToken() {
+            return 'VC_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
         // Format form data for webhook
         function formatFormData(formData) {
             const data = {};
             for (let [key, value] of formData.entries()) {
-                data[key] = value;
+                data[key] = value.trim(); // Trim whitespace
             }
             
-            // Add timestamp
+            // Add security and validation data
             data.timestamp = new Date().toLocaleString('es-MX', {
                 timeZone: 'America/Tijuana',
                 year: 'numeric',
@@ -579,12 +584,27 @@
                 hour: '2-digit',
                 minute: '2-digit'
             });
+            
+            // Add form validation token
+            data.formToken = generateFormToken();
+            data.source = 'visioncompetitiva.com';
+            data.userAgent = navigator.userAgent;
+            data.formVersion = '1.0';
+            
+            // Add validation flags
+            data.isValidSubmission = true;
+            data.requiredFieldsComplete = !!(data.name && data.email && data.phone && data.company && data.service);
 
             return data;
         }
 
         // Create WhatsApp message format
         function createWhatsAppMessage(data) {
+            // Only create message if all required fields are present
+            if (!data.requiredFieldsComplete) {
+                return null;
+            }
+
             const message = `🔥 *NUEVO LEAD - Visión Competitiva*
 
 👤 *Nombre:* ${data.name}
@@ -598,6 +618,7 @@ ${data.urgency ? `⏰ *Urgencia:* ${data.urgency}` : ''}
 ${data.message ? `💬 *Mensaje:*\n${data.message}` : ''}
 
 📅 *Recibido:* ${data.timestamp}
+🔑 *Token:* ${data.formToken}
 
 ---
 _Lead generado desde visioncompetitiva.com_`;
@@ -607,12 +628,18 @@ _Lead generado desde visioncompetitiva.com_`;
 
         // Create email content
         function createEmailContent(data) {
+            // Only create email if all required fields are present
+            if (!data.requiredFieldsComplete) {
+                return null;
+            }
+
             return {
                 subject: `🔥 Nuevo Lead - ${data.company} - ${data.service}`,
                 html: `
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #f8fafc; padding: 20px;">
                         <div style="background: #0f172a; color: white; padding: 20px; border-radius: 10px 10px 0 0;">
                             <h2 style="margin: 0; color: #3b82f6;">🔥 Nuevo Lead - Visión Competitiva</h2>
+                            <p style="margin: 5px 0 0 0; color: #cbd5e1; font-size: 12px;">Token: ${data.formToken}</p>
                         </div>
                         
                         <div style="background: white; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
@@ -664,11 +691,13 @@ _Lead generado desde visioncompetitiva.com_`;
                             
                             <div style="margin-top: 30px; padding: 15px; background: #0f172a; border-radius: 8px; text-align: center;">
                                 <p style="margin: 0; color: #cbd5e1; font-size: 14px;">Lead generado desde <strong style="color: #3b82f6;">visioncompetitiva.com</strong></p>
+                                <p style="margin: 5px 0 0 0; color: #94a3b8; font-size: 12px;">Validado • ${data.source} • v${data.formVersion}</p>
                             </div>
                         </div>
                     </div>
                 `,
                 text: `NUEVO LEAD - Visión Competitiva
+Token: ${data.formToken}
 
 Nombre: ${data.name}
 Empresa: ${data.company}
@@ -682,7 +711,8 @@ ${data.message ? `Mensaje:\n${data.message}` : ''}
 
 Recibido: ${data.timestamp}
 
-Lead generado desde visioncompetitiva.com`
+Lead generado desde visioncompetitiva.com
+Validado • ${data.source} • v${data.formVersion}`
             };
         }
 
@@ -717,7 +747,7 @@ Lead generado desde visioncompetitiva.com`
                 };
 
                 // Replace with your Make.com webhook URL
-                const webhookUrl = 'https://hook.us2.make.com/gbeleyc11a0f6cvucdejfk1xbi2b95o1';
+                const webhookUrl = 'YOUR_MAKE_WEBHOOK_URL_HERE';
                 
                 const response = await fetch(webhookUrl, {
                     method: 'POST',
