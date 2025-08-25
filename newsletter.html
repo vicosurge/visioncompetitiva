@@ -378,7 +378,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 22 de agosto, 2025</div>
+                <div class="date">Semana del 25 de agosto, 2025</div>
             </div>
 
             <div class="newsletter-intro">
@@ -387,108 +387,93 @@
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/08/hackers-using-new-quirkyloader-malware.html">Hackers Using New QuirkyLoader Malware to Spread Agent Tesla, AsyncRAT and Snake Keylogger</a></h2>
+                <h2><a href="https://thehackernews.com/2025/08/malicious-go-module-poses-as-ssh-brute.html">Malicious Go Module Poses as SSH Brute-Force Tool, Steals Credentials via Telegram Bot</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>QuirkyLoader es un cargador de malware recientemente descubierto, utilizado desde noviembre de 2024 en campañas de spam por correo electrónico para entregar cargas útiles de siguiente etapa, incluyendo ladrones de información y troyanos de acceso remoto.</p>
+                <p>Investigadores en ciberseguridad descubrieron un módulo malicioso en Go que se hace pasar por una herramienta de fuerza bruta SSH pero exfiltra credenciales a su creador; en el primer inicio de sesión exitoso envía la IP objetivo, usuario y contraseña a un bot de Telegram codificado (investigador de Socket Kirill Boychenko).</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Divulgado por investigadores de ciberseguridad.</li>
-                        <li>Nombre: QuirkyLoader.</li>
-                        <li>Primer avistamiento: desde noviembre de 2024.</li>
-                        <li>Método de entrega: campañas de spam por correo electrónico.</li>
-                        <li>Propósito: entregar cargas útiles de siguiente etapa.</li>
-                        <li>Tipos de cargas útiles: ladrones de información y troyanos de acceso remoto.</li>
-                        <li>Familias de malware destacadas distribuidas: Agent Tesla, AsyncRAT, Formbook, Masslogger y Remcos RAT.</li>
+                        <li>Módulo malicioso en Go presentado como herramienta de fuerza bruta SSH</li>
+                        <li>En el primer inicio de sesión exitoso, envía la dirección IP objetivo, nombre de usuario y contraseña</li>
+                        <li>El destino de la exfiltración es un bot de Telegram codificado controlado por el actor de amenaza</li>
+                        <li>El descubrimiento fue reportado por el investigador Kirill Boychenko de Socket</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Este malware forma parte de campañas de phishing dirigidas que permiten a los atacantes obtener control remoto y robar información confidencial mediante técnicas sofisticadas de entrega de payloads.</p>
+                <p>Este tipo de técnica muestra cómo los atacantes combinan herramientas legítimas con funciones maliciosas para evadir detección y comprometer sistemas, lo que exige una vigilancia constante y respuestas rápidas ante patrones de ataque anómalos.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level medium">RIESGO MEDIO</span>
+                <h2><a href="https://fidelissecurity.com/threatgeek/threat-intelligence/detecting-attack-patterns-in-threat-feeds/">How You Can Detect &amp; Respond to Attack Patterns in Threat Feeds with XDR</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Este artículo explica cómo las soluciones XDR (detección y respuesta extendida) pueden ayudar a identificar patrones de ataque dentro de las fuentes de amenazas, integrando inteligencia para mejorar la detección y respuesta a incidentes en tiempo real.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Uso de inteligencia de amenazas para detectar patrones de ataque</li>
+                        <li>Integración con plataformas XDR para visibilidad y respuesta extendida</li>
+                        <li>Soporte para análisis proactivo y mitigación de riesgos</li>
+                        <li>Mejoras en la automatización de respuestas frente a amenazas emergentes</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="article-section">
                 <h2><a href="https://redcanary.com/blog/threat-intelligence/intelligence-insights-august-2025/">Intelligence Insights: August 2025</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Informe mensual que presenta un análisis actualizado de las tendencias y amenazas detectadas en el ecosistema de ciberseguridad durante agosto de 2025.</p>
+                <p>Informe mensual que analiza tendencias actuales en inteligencia de amenazas, destacando actores, técnicas y campañas relevantes observadas durante agosto de 2025 para fortalecer las defensas corporativas.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Evaluación de amenazas emergentes.</li>
-                        <li>Nuevas tácticas y herramientas utilizadas por actores maliciosos.</li>
-                        <li>Casos ejemplares y recomendaciones de mitigación.</li>
+                        <li>Resumen de campañas y actores maliciosos destacados</li>
+                        <li>Tendencias en técnicas y vectores de ataque</li>
+                        <li>Recomendaciones para fortalecer la postura de seguridad</li>
+                        <li>Información contextual y análisis en profundidad</li>
                     </ul>
                 </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Este análisis proporciona orientación estratégica para equipos de seguridad en la anticipación y respuesta efectiva frente a ataques sofisticados.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level medium">RIESGO MEDIO</span>
                 <h2><a href="https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/">Think before you Click(Fix): Analyzing the ClickFix social engineering technique</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Análisis de la técnica de ingeniería social conocida como ClickFix, que explota la interacción del usuario para propagar ataques sofisticados en redes corporativas.</p>
+                <p>Análisis de la técnica de ingeniería social “ClickFix”, que utiliza señuelos y manipulación para comprometer a usuarios; se presentan estrategias para identificar y mitigar este tipo de ataques.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Explotación del comportamiento del usuario.</li>
-                        <li>Técnicas de manipulación para ejecución de código malicioso.</li>
-                        <li>Recomendaciones para fortalecer la concientización y defensa.</li>
+                        <li>Descripción de la técnica de ingeniería social ClickFix</li>
+                        <li>Modus operandi y vectores comunes de ataque</li>
+                        <li>Estrategias para detección y prevención</li>
+                        <li>Importancia de la concientización y educación del usuario</li>
                     </ul>
                 </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>La protección frente a este método requiere educación continua y controles técnicos que dificulten la ejecución de código basado en engaños.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level low">RIESGO BAJO</span>
                 <h2><a href="https://fidelissecurity.com/threatgeek/threat-detection-response/insider-threat-solutions/">Fidelis Deception®: Enterprise Insider Threat Solution</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Presentación de una solución para detectar y mitigar amenazas internas dentro de entornos empresariales utilizando técnicas avanzadas de engaño y monitoreo.</p>
+                <p>Presentación de Fidelis Deception®, una solución empresarial para la detección y respuesta a amenazas internas, que utiliza engaños y señuelos para identificar actividades maliciosas dentro de la organización.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Uso de tecnologías de engaño para identificar comportamientos maliciosos internos.</li>
-                        <li>Capacidades para respuesta automatizada.</li>
-                        <li>Mejora en la visibilidad y control en entornos corporativos.</li>
+                        <li>Solución enfocada en amenazas internas y empleados malintencionados</li>
+                        <li>Uso de técnicas de engaño para la detección temprana</li>
+                        <li>Capacidades avanzadas de monitoreo y respuesta</li>
+                        <li>Mejora en la protección del perímetro interno corporativo</li>
                     </ul>
                 </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Herramienta recomendada para fortalecer la seguridad de la organización previniendo pérdidas por amenazas internas.</p>
             </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://krebsonsecurity.com/2025/08/sim-swapper-scattered-spider-hacker-gets-10-years/">SIM-Swapper, Scattered Spider Hacker Gets 10 Years</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Sentencia de 10 años de prisión contra un hacker perteneciente al grupo Scattered Spider, conocido por ataques de SIM swapping para tomar control de cuentas bancarias y financieras.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Impacto significativo en víctimas financieras.</li>
-                        <li>Operación criminal avanzada coordinada por el grupo.</li>
-                        <li>Importancia de reforzar la protección de SIM y autenticaciones.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Este fallo refuerza el combate legal contra ciberdelincuentes y destaca la necesidad de controles multi-factores y monitoreo constante de accesos en cuentas sensibles.</p>
-            </section>
-
+            
         </div>
     </main>
 
