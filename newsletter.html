@@ -378,7 +378,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 12 de septiembre, 2025</div>
+                <div class="date">Semana del 15 de septiembre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
@@ -387,112 +387,119 @@
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/09/sonicwall-ssl-vpn-flaw-and.html">SonicWall SSL VPN Flaw and Misconfigurations Actively Exploited by Akira Ransomware Hackers</a></h2>
+                <h2><a href="https://thehackernews.com/2025/09/hiddengh0st-winos-and-kkrat-exploit-seo.html">HiddenGh0st, Winos and kkRAT Exploit SEO, GitHub Pages in Chinese Malware Attacks</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Actores de amenazas afiliados al grupo de ransomware Akira han continuado enfocándose en dispositivos SonicWall para obtener acceso inicial; Rapid7 observó un aumento en las intrusiones que involucran dispositivos SonicWall durante el último mes, especialmente tras reportes sobre renovada actividad del ransomware Akira desde finales de julio de 2025; SonicWall reveló posteriormente actividad de VPN SSL dirigida a sus dispositivos.</p>
+                <p>Usuarios de habla china fueron el objetivo de una campaña de envenenamiento SEO que utilizó sitios de software falsos para distribuir malware.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>El grupo de ransomware Akira apunta a dispositivos SonicWall para acceso inicial.</li>
-                        <li>Rapid7 detectó un repunte en intrusiones con dispositivos SonicWall en el último mes.</li>
-                        <li>El aumento se dio particularmente tras informes de actividad renovada de Akira desde finales de julio de 2025.</li>
-                        <li>SonicWall confirmó actividad sospechosa en su VPN SSL dirigida a sus appliances.</li>
+                        <li>Objetivo: Usuarios de habla china</li>
+                        <li>Método: Envenenamiento SEO manipulando rankings de búsqueda con plugins SEO</li>
+                        <li>Infraestructura: Dominios imitadores registrados que simulan sitios legítimos de software</li>
+                        <li>Tácticas: Uso de lenguaje convincente y pequeñas variaciones de caracteres para engañar a los usuarios</li>
+                        <li>Fuente: Investigador Pei Han Liao de Fortinet FortiGuard Labs</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La explotación de vulnerabilidades en dispositivos de acceso remoto continúa siendo un vector preferido para grupos de ransomware, requiriendo medidas de mitigación actualizadas y monitoreo constante.</p>
+                <p>La campaña utiliza técnicas avanzadas para posicionar contenidos maliciosos en buscadores y aprovechar la confianza en sitios populares falsificados.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://research.checkpoint.com/2025/yurei-the-ghost-of-open-source-ransomware/">Yurei &amp; The Ghost of Open Source Ransomware</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Check Point Research descubrió un nuevo grupo de ransomware llamado Yurei el 5 de septiembre; el grupo publicó en su blog darknet a su primera víctima, una compañía de alimentos de Sri Lanka, mostrando evidencias y pruebas.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Nombre del grupo: Yurei (un espíritu del folclore japonés)</li>
+                        <li>Descubrimiento: 5 de septiembre por Check Point Research</li>
+                        <li>Víctima inicial listada: empresa de manufactura de alimentos en Sri Lanka</li>
+                        <li>Actividad pública: blog en darknet para publicar víctimas y pruebas</li>
+                        <li>Fuente: https://research.checkpoint.com/2025/yurei-the-ghost-of-open-source-ransomware/</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Este grupo utiliza código abierto y técnicas sofisticadas para extorsionar a sus víctimas, mostrando una tendencia preocupante en el desarrollo de ransomware.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level medium">RIESGO MEDIO</span>
+                <h2><a href="https://redcanary.com/blog/threat-intelligence/phishing-rmm-tools/">You’re invited: Four phishing lures in campaigns dropping RMM tools</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Campañas de phishing utilizan cuatro tipos de cebos para distribuir herramientas RMM (Remote Monitoring and Management) que permiten control remoto malicioso de sistemas.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Vectores de ataque múltiples y cuidadosamente diseñados.</li>
+                        <li>Distribución de herramientas RMM para mantener persistencia.</li>
+                        <li>Facilitan el movimiento lateral y control en sistemas comprometidos.</li>
+                        <li>Implicaciones para seguridad empresarial y respuesta defensiva.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Se recomienda reforzar la educación de usuarios y la implementación de controles que detecten el uso indebido de herramientas legítimas como RMM.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level medium">RIESGO MEDIO</span>
+                <h2><a href="https://fidelissecurity.com/threatgeek/deception/deception-technology-in-banking-cybersecurity-defense/">Deception Technology in Banking: A New Line of Defense Against Insider Threats and Fraud</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>La tecnología de engaño usa señuelos, cebos, honeytokens y servicios falsos para atraer, observar y alertar sobre actividades maliciosas en entornos bancarios, proporcionando detecciones de alta fidelidad de amenazas internas y fraude con menos falsos positivos.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Concepto central: desplegar señuelos realistas que no deben ser tocados, cualquier interacción genera alerta.</li>
+                        <li>Detección de amenazas internas: revela mal uso, movimientos laterales, escalada de privilegios y accesos no autorizados.</li>
+                        <li>Reducción de fraude: detecta tomas de cuenta, relleno de credenciales, operaciones con mulas y manipulación de transacciones.</li>
+                        <li>Alertas de alta precisión que disminuyen falsos positivos y carga para analistas.</li>
+                        <li>Detección temprana y reducción del tiempo de permanencia del atacante.</li>
+                        <li>Valor forense: captura TTPs, datos de sesión y artefactos para investigación y enjuiciamiento.</li>
+                        <li>Integración con SIEM, SOAR, EDR, IAM y sistemas antifraude para automatizar respuesta.</li>
+                        <li>Implementación en redes internas, cargas cloud, APIs, endpoints empleados y OT/IoT.</li>
+                        <li>Consideraciones operativas: diseñar señuelos realistas, administrar ciclo de vida y ubicación, evitar señalamientos evidentes, mantener ajuste regular.</li>
+                        <li>Cumplimiento y gestión de riesgos: soporta programas antifraude, auditorías y estándares regulatorios.</li>
+                        <li>Métricas/ROI: reduce tiempos de detección/respuesta, baja falsos positivos y pérdidas por fraude.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Esta tecnología complementa y mejora las defensas tradicionales, ayudando a bancos a enfrentar amenazas internas y fraudes con mayor eficacia y menor esfuerzo.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
                 <h2><a href="https://krebsonsecurity.com/2025/09/bulletproof-host-stark-industries-evades-eu-sanctions/">Bulletproof Host Stark Industries Evades EU Sanctions</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>En mayo de 2025 la Unión Europea sancionó a los propietarios de Stark Industries Solutions Ltd., un proveedor de hosting a prueba de balas creado dos semanas antes de la invasión rusa a Ucrania, que se convirtió en una fuente principal de ciberataques y desinformación vinculada al Kremlin; datos recientes muestran que las sanciones fueron en gran medida ineficaces ya que Stark cambió de marca y desplazó activos a otras entidades corporativas todavía controladas por los proveedores originales.</p>
+                <p>En mayo de 2025 la UE sancionó a los dueños de Stark Industries Solutions Ltd., un proveedor de bulletproof hosting creado dos semanas antes de la invasión rusa a Ucrania y fuente principal de ciberataques y desinformación ligados al Kremlin; nuevos datos muestran que las sanciones fallaron mayormente porque Stark se reetiquetó y trasladó activos a otras entidades aún controladas por los mismos proveedores.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>En mayo de 2025 la UE impuso sanciones financieras a los dueños de Stark Industries Solutions Ltd.</li>
-                        <li>Stark operaba como un proveedor de hosting "a prueba de balas".</li>
-                        <li>Se formó dos semanas antes de la invasión rusa a Ucrania.</li>
-                        <li>Rápidamente se convirtió en una fuente principal de ciberataques y campañas de desinformación vinculadas al Kremlin.</li>
-                        <li>Las sanciones no detuvieron las operaciones de Stark.</li>
-                        <li>Eludir las sanciones mediante cambio de marca y transferencia de activos a entidades controladas por los mismos proveedores originales.</li>
+                        <li>Fecha/acción: sanciones financieras de la UE en mayo de 2025</li>
+                        <li>Naturaleza: proveedor de bulletproof hosting</li>
+                        <li>Contexto temporal: creado dos semanas antes de la invasión rusa a Ucrania</li>
+                        <li>Rol: fuente principal de ciberataques y campañas de desinformación vinculadas al Kremlin</li>
+                        <li>Efectividad: sanciones tuvieron poco impacto en detener la operación</li>
+                        <li>Método de evasión: cambio de nombre y traslado de activos a entidades sucesoras</li>
+                        <li>Control: las nuevas entidades siguen controladas por los mismos proveedores originales</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Este caso evidencia las dificultades para frenar a proveedores de hosting ilegítimos que operan con estructuras corporativas dinámicas y evasivas.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://news.sophos.com/en-us/2025/09/10/september-patch-tuesday-handles-81-cves/">September Patch Tuesday handles 81 CVEs</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>El martes de parches de septiembre solucionó un total de 81 vulnerabilidades reportadas, abarcando múltiples sectores de software y sistemas operativos; se recomienda encarecidamente aplicar las actualizaciones para mitigar riesgos ante exploits activos y potenciales ataques dirigidos.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Se corrigieron 81 vulnerabilidades (CVEs) en el ciclo de parches de septiembre.</li>
-                        <li>Las actualizaciones cubren diferentes productos y sistemas operativos.</li>
-                        <li>Recomendación crítica de aplicar parches inmediatamente para reducir exposición.</li>
-                        <li>Algunas vulnerabilidades ya están siendo activamente explotadas por actores maliciosos.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Las organizaciones deben mantener sus sistemas actualizados para evitar brechas de seguridad que puedan derivar en compromisos graves.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://blog.qualys.com/vulnerabilities-threat-research/2025/09/10/when-dependencies-turn-dangerous-responding-to-the-npm-supply-chain-attack">When Dependencies Turn Dangerous: Responding to the NPM Supply Chain Attack</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>El 8 de septiembre de 2025, atacantes comprometieron 18 paquetes npm muy utilizados (incluyendo chalk, debug, ansi-styles, strip-ansi), descargados colectivamente más de 2.6 mil millones de veces por semana, mediante phishing a un mantenedor y la publicación de versiones maliciosas con JavaScript ofuscado para interceptar transacciones de criptomonedas; las organizaciones que integraron estas versiones en sus compilados estuvieron en riesgo de compromiso.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Fecha del ataque: 8 de septiembre de 2025.</li>
-                        <li>18 paquetes npm fueron comprometidos, entre ellos chalk, debug, ansi-styles y strip-ansi.</li>
-                        <li>Estos paquetes son descargados colectivamente más de 2.6 mil millones de veces semanalmente.</li>
-                        <li>El vector de ataque fue una campaña de phishing contra un mantenedor.</li>
-                        <li>Las versiones publicadas contenían JavaScript ofuscado para interceptar transacciones en criptomonedas.</li>
-                        <li>Organizaciones que usaron estas versiones maliciosas estuvieron en riesgo de ser comprometidas.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Este incidente resalta la importancia de validar la integridad de dependencias y mantener vigilancia en la cadena de suministro de software.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://fidelissecurity.com/threatgeek/threat-detection-response/insider-threats-prevention-detection-mitigation/">Why Is Detecting Insider Threats So Hard—And How Can You Stay Ahead?</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Las amenazas internas son difíciles de detectar porque los insiders maliciosos usan acceso legítimo, siguen procedimientos normales y explotan la confianza organizacional. La analítica de comportamiento en tiempo real y visibilidad continua y multidominio, junto con herramientas como Fidelis Elevate, permiten detectar anomalías, responder rápidamente y mejorar la prevención y mitigación.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Los insiders se mezclan usando credenciales válidas y flujos de trabajo normales, dificultando la detección basada en firmas y reglas.</li>
-                        <li>Los desafíos incluyen baja visibilidad, mucho ruido, patrones legítimos de acceso y tácticas evasivas que retrasan el descubrimiento.</li>
-                        <li>La detección efectiva requiere análisis comportamental en tiempo real, monitoreo de usuarios y entidades, y correlación entre endpoints, red y nube.</li>
-                        <li>Estrategias de prevención incluyen acceso con privilegios mínimos, monitoreo de usuarios privilegiados, segmentación, DLP, gestión de identidad fuerte y preparación para respuesta a incidentes.</li>
-                        <li>Herramientas como Fidelis Elevate ofrecen visibilidad continua, análisis comportamental, detección de anomalías, scoring de amenazas y orquestación para acelerar detección y respuesta.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Abordar amenazas internas requiere un enfoque integral que combine tecnología avanzada y políticas organizacionales sólidas.</p>
+                <p>Este caso ejemplifica los desafíos regulatorios para sancionar entidades relacionadas con cibercriminales y la facilidad con que pueden evadir controles mediante estructuras corporativas complejas.</p>
             </section>
             
         </div>
