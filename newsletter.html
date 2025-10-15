@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -390,27 +389,113 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://example.com">Microsoft released updates for 172 vulnerabilities including two actively exploited zero-days (Agere Modem CVE-2025-24990 removed; RasMan CVE-2025-59230) and other high-risk bugs like WSUS RCE CVE-2025-59287 and Office "Preview Pane" RCEs. October marks the end of Windows 10 support; users should upgrade, enroll in Extended Security Updates, or consider switching to Linux.</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/from-lfi-to-rce-active-exploitation.html">From LFI to RCE: Active Exploitation Detected in Gladinet and TrioFox Vulnerability</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Microsoft lanzó actualizaciones para 172 vulnerabilidades, incluyendo dos zero-days que están siendo activamente explotados (Agere Modem CVE-2025-24990 eliminado; RasMan CVE-2025-59230) y otros errores de alto riesgo como WSUS RCE CVE-2025-59287 y las vulnerabilidades RCE en el "Panel de vista previa" de Office. Octubre marca el fin del soporte para Windows 10; los usuarios deben actualizar, inscribirse en las Actualizaciones de Seguridad Extendidas o considerar cambiar a Linux.</p>
+                <p>Huntress reportó explotación activa de una vulnerabilidad LFI no autenticada de día cero (CVE‑2025‑11371, CVSS 6.1) que afecta a Gladinet CentreStack y TrioFox (≤16.7.10368.56560). La falla permite leer Web.config para extraer la machineKey y encadenarla a una deserialización ViewState que conduce a RCE (vinculada al CVE‑2025‑30406). Se documentaron incidentes con tres clientes afectados. Se recomienda deshabilitar temporalmente el manejador UploadDownloadProxy “temp” hasta que esté disponible un parche.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Se parchearon 172 vulnerabilidades en total.</li>
-                        <li>Dos zero-days activos fueron abordados (uno removido, otro en RasMan).</li>
-                        <li>Vulnerabilidades críticas en WSUS y Office que permiten ejecución remota de código.</li>
-                        <li>Fin del soporte para Windows 10 en octubre 2025.</li>
-                        <li>Recomendaciones: actualizar sistema, optar por Actualizaciones de Seguridad Extendidas o migrar a Linux.</li>
+                        <li>Vulnerabilidad LFI (CVE‑2025‑11371) con explotación activa.</li>
+                        <li>Lectura de Web.config y extracción de machineKey para escalar a RCE vía ViewState.</li>
+                        <li>Incidentes confirmados: tres clientes afectados por Huntress.</li>
+                        <li>Mitigación temporal: deshabilitar UploadDownloadProxy “temp”.</li>
+                        <li>Puntaje CVSS: 6.1 — priorizar parcheo cuando esté disponible.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>El ciclo de vida de Windows 10 culmina este mes, lo que implica que los usuarios sin actualizaciones extenderán su exposición a ataques. Es crucial planificar la migración o suscribirse a planes extendidos para mantener la protección. Además, la atención especial a las vulnerabilidades en WSUS y Office es vital dado el potencial de explotación remota activa.</p>
+                <p>Monitorear accesos al manejador afectado, revisar logs de Web.config y detectar intentos de deserialización maliciosa. Aplicar el parche oficial apenas se publique y considerar controles compensatorios (restricción de acceso, reglas WAF) mientras tanto.</p>
             </section>
 
-            <!-- Repeat the above structure for each article -->
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/10/from-healthkick-to-govershell-evolution.html">From HealthKick to GOVERSHELL: The Evolution of UTA0388's Espionage Malware</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>El actor alineado con China UTA0388 empleó spear‑phishing altamente dirigido en Norteamérica, Asia y Europa para distribuir GOVERSHELL, un backdoor desarrollado en Go y sucesor de HealthKick. Archivos alojados en servicios en la nube (Netlify, OneDrive, etc.) contenían cargas que usaban DLL side‑loading. Se identificaron cinco variantes de GOVERSHELL. Volexity observó que el actor aprovechó ChatGPT/LLMs para crear cebos, automatizar flujos de trabajo y apuntó a intereses geopolíticos asiáticos, con especial foco en Taiwán.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>UTA0388 usó spear‑phishing para distribuir GOVERSHELL (backdoor en Go).</li>
+                        <li>Archivos en servicios cloud alojaban payloads que usan DLL side‑loading.</li>
+                        <li>Identificadas cinco variantes de GOVERSHELL.</li>
+                        <li>Uso de LLMs (ChatGPT) para crear y automatizar cebos y campañas.</li>
+                        <li>Objetivos con énfasis en intereses geopolíticos asiáticos, especialmente Taiwán.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Reforzar revisiones de archivos hospedados en la nube, bloquear técnicas de side‑loading conocidas y aumentar la formación en detección de spear‑phishing. Implementar detecciones para éxfiltración desde servicios públicos y revisar anomalías en procesos de carga de DLL.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://thehackernews.com/2025/10/175-malicious-npm-packages-with-26000.html">175 Malicious npm Packages with 26,000 Downloads Used in Credential Phishing Campaign</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Investigadores descubrieron 175 paquetes maliciosos de npm (≈26,000 descargas) usados como infraestructura para la campaña de phishing Beamglea, que apuntó a más de 135 empresas de los sectores industrial, tecnológico y energético. Los atacantes automatizaron la publicación con redirect_generator.py para crear paquetes redirect‑xxxx y cebos HTML que cargan beamglea.js desde unpkg, redirigiendo víctimas a páginas de phishing de Microsoft precompletadas con sus correos. Los paquetes alojan activos de phishing (no código de instalación malicioso), abusando de npm/unpkg para escalar y resistir eliminación.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>175 paquetes npm maliciosos detectados (~26,000 descargas).</li>
+                        <li>Campaña Beamglea dirigida a +135 organizaciones industriales, tecnológicas y energéticas.</li>
+                        <li>Uso de redirect_generator.py para publicar paquetes redirect‑xxxx automáticamente.</li>
+                        <li>Los paquetes cargan beamglea.js desde unpkg y redirigen a páginas de phishing de Microsoft con correos prellenados.</li>
+                        <li>Los paquetes alojan activos de phishing, no código malicioso de instalación, explotando infraestructura pública (npm/unpkg).</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Mitigar validando dependencias, monitorizando publicaciones sospechosas y bloqueando dominios de entrega de recursos (ej. unpkg) desde entornos críticos. Informar y solicitar eliminación de paquetes maliciosos en los repositorios y educar a usuarios sobre páginas de inicio de sesión precompletadas.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/10/researchers-expose-ta585s-monsterv2.html">Researchers Expose TA585’s MonsterV2 Malware Capabilities and Attack Chain</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Investigadores de Proofpoint atribuyen a TA585 la distribución de MonsterV2 —un RAT/stealer/loader disponible comercialmente— mediante campañas de phishing con temática del IRS, inyecciones JavaScript maliciosas (CAPTCHA falso/ClickFix) y alertas falsificadas de GitHub. MonsterV2 ofrece HVNC, robo de portapapeles, loaders y ejecución remota; se empaqueta con SonicCrypt y se vende como servicio por $800–$2,000/mes. La campaña evita objetivos en la Comunidad de Estados Independientes y se relaciona con infraestructura de CoreSecThree.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>TA585 utiliza MonsterV2 para robo de credenciales y control remoto.</li>
+                        <li>Técnicas: phishing temático (IRS), inyecciones JS, alerts falsificadas de GitHub.</li>
+                        <li>Capacidades: HVNC, clippers de portapapeles, loaders y comandos remotos.</li>
+                        <li>Empaquetado con SonicCrypt y venta como servicio ($800–$2,000/mes).</li>
+                        <li>Conexiones a infraestructura de CoreSecThree; evita objetivos en CIS.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Fortalecer filtrado de correo y detección EDR orientada a HVNC y comportamientos de clippers/loader. Bloquear dominios e IPs asociadas a la infraestructura detectada y realizar análisis forense ante sospechas de compromiso para identificar loaders y comunicaciones C2.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/10/threatsday-bulletin-ms-teams-hack-mfa.html">ThreatsDay Bulletin: MS Teams Hack, MFA Hijacking, $2B Crypto Heist, Apple Siri Probe & More</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>El boletín ThreatsDay muestra que los atacantes combinan ingeniería social, IA y exploits en la nube: abuso de Microsoft Teams para extorsión y secuestro de MFA, despliegue de droppers basados en LNK, desinformación generada por IA y crypters avanzados. El informe también cubre un robo de criptomonedas de más de $2,000 millones atribuido a Corea del Norte, explotación de un zero‑day en Oracle EBS, vulnerabilidades en IoT y Tesla, y una investigación sobre Siri de Apple. Recomendación general: reforzar identidad, endpoints y seguridad en la nube.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Abuso de Microsoft Teams para extorsión y secuestro de MFA.</li>
+                        <li>Uso de droppers LNK, desinformación por IA y crypters avanzados.</li>
+                        <li>Robo de criptomonedas superior a $2,000 millones atribuido a actores estatales.</li>
+                        <li>Explotación de zero‑day en Oracle EBS y múltiples fallas en IoT/Tesla.</li>
+                        <li>Recomendación: fortalecer identidades, endpoints y controles en la nube.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Adoptar MFA resistente a phishing (FIDO2/clave física), revisar aplicaciones y sesiones en Teams, endurecer políticas de carga de archivos y telemetría en la nube, y priorizar parcheo de sistemas críticos como Oracle EBS.</p>
+            </section>
             
         </div>
     </main>
@@ -465,4 +550,3 @@
     </script>
 </body>
 </html>
-
