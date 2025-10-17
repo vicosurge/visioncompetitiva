@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 15 de octubre, 2025</div>
+                <div class="date">Semana del 17 de octubre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
@@ -389,112 +389,102 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/from-lfi-to-rce-active-exploitation.html">From LFI to RCE: Active Exploitation Detected in Gladinet and TrioFox Vulnerability</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/how-attackers-bypass-synced-passkeys.html">How Attackers Bypass Synced Passkeys</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Huntress reportó explotación activa de una vulnerabilidad LFI no autenticada de día cero (CVE‑2025‑11371, CVSS 6.1) que afecta a Gladinet CentreStack y TrioFox (≤16.7.10368.56560). La falla permite leer Web.config para extraer la machineKey y encadenarla a una deserialización ViewState que conduce a RCE (vinculada al CVE‑2025‑30406). Se documentaron incidentes con tres clientes afectados. Se recomienda deshabilitar temporalmente el manejador UploadDownloadProxy “temp” hasta que esté disponible un parche.</p>
+                <p>Las passkeys sincronizadas heredan riesgos de las cuentas en la nube y de los flujos de recuperación, ampliando la superficie de ataque en entornos empresariales. Investigadores documentan ataques AiTM de degradación y extensiones de navegador comprometidas que pueden forzar retrocesos o secuestrar flujos WebAuthn para capturar sesiones. Se recomienda usar passkeys vinculadas al dispositivo con respaldo hardware, eliminar métodos de fallback, aplicar listas blancas de extensiones, capturar la attestación en el registro y atar las sesiones a la postura continua del dispositivo.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Vulnerabilidad LFI (CVE‑2025‑11371) con explotación activa.</li>
-                        <li>Lectura de Web.config y extracción de machineKey para escalar a RCE vía ViewState.</li>
-                        <li>Incidentes confirmados: tres clientes afectados por Huntress.</li>
-                        <li>Mitigación temporal: deshabilitar UploadDownloadProxy “temp”.</li>
-                        <li>Puntaje CVSS: 6.1 — priorizar parcheo cuando esté disponible.</li>
+                        <li>Las passkeys sincronizadas amplían la superficie de ataque mediante vectores cloud y recuperación.</li>
+                        <li>Se han observado ataques AiTM y extensiones comprometidas que fuerzan retrocesos o secuestran sesiones.</li>
+                        <li>Mitigaciones: passkeys ligadas al dispositivo y hardware, eliminar fallback y restringir extensiones.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Monitorear accesos al manejador afectado, revisar logs de Web.config y detectar intentos de deserialización maliciosa. Aplicar el parche oficial apenas se publique y considerar controles compensatorios (restricción de acceso, reglas WAF) mientras tanto.</p>
+                <p>Revisar flujos de recuperación y políticas de sincronización en la empresa; implementar controles que bloqueen extensiones no autorizadas, exigir attestation en el enrolamiento y monitorizar la postura del dispositivo para detectar sesiones anómalas.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/from-healthkick-to-govershell-evolution.html">From HealthKick to GOVERSHELL: The Evolution of UTA0388's Espionage Malware</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/threatsday-bulletin-15b-crypto-bust.html">ThreatsDay Bulletin: $15B Crypto Bust, Satellite Spying, Billion-Dollar Smishing, Android RATs & More</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El actor alineado con China UTA0388 empleó spear‑phishing altamente dirigido en Norteamérica, Asia y Europa para distribuir GOVERSHELL, un backdoor desarrollado en Go y sucesor de HealthKick. Archivos alojados en servicios en la nube (Netlify, OneDrive, etc.) contenían cargas que usaban DLL side‑loading. Se identificaron cinco variantes de GOVERSHELL. Volexity observó que el actor aprovechó ChatGPT/LLMs para crear cebos, automatizar flujos de trabajo y apuntó a intereses geopolíticos asiáticos, con especial foco en Taiwán.</p>
+                <p>Resumen semanal de amenazas: autoridades de EE. UU. incautaron $15,000 millones vinculados a redes de estafa 'pig butchering'; investigadores demuestran que antenas comerciales pueden interceptar tráfico no cifrado de satélites geostacionarios; el gusano de WhatsApp "Maverick" y grandes campañas de phishing contra 2FA (Whisper) están activas. También se reportan RATs para Android, skimmers, abuso de herramientas RMM y técnicas de C2 basadas en la nube.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>UTA0388 usó spear‑phishing para distribuir GOVERSHELL (backdoor en Go).</li>
-                        <li>Archivos en servicios cloud alojaban payloads que usan DLL side‑loading.</li>
-                        <li>Identificadas cinco variantes de GOVERSHELL.</li>
-                        <li>Uso de LLMs (ChatGPT) para crear y automatizar cebos y campañas.</li>
-                        <li>Objetivos con énfasis en intereses geopolíticos asiáticos, especialmente Taiwán.</li>
+                        <li>Operativo de decomiso de $15B relacionado con estafas criptográficas masivas.</li>
+                        <li>Riesgo de intercepción de tráfico satelital no cifrado con equipo comercial.</li>
+                        <li>Campañas activas: malware móvil, phishing 2FA, abuso de RMM y técnicas avanzadas de C2.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Reforzar revisiones de archivos hospedados en la nube, bloquear técnicas de side‑loading conocidas y aumentar la formación en detección de spear‑phishing. Implementar detecciones para éxfiltración desde servicios públicos y revisar anomalías en procesos de carga de DLL.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2025/10/175-malicious-npm-packages-with-26000.html">175 Malicious npm Packages with 26,000 Downloads Used in Credential Phishing Campaign</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Investigadores descubrieron 175 paquetes maliciosos de npm (≈26,000 descargas) usados como infraestructura para la campaña de phishing Beamglea, que apuntó a más de 135 empresas de los sectores industrial, tecnológico y energético. Los atacantes automatizaron la publicación con redirect_generator.py para crear paquetes redirect‑xxxx y cebos HTML que cargan beamglea.js desde unpkg, redirigiendo víctimas a páginas de phishing de Microsoft precompletadas con sus correos. Los paquetes alojan activos de phishing (no código de instalación malicioso), abusando de npm/unpkg para escalar y resistir eliminación.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>175 paquetes npm maliciosos detectados (~26,000 descargas).</li>
-                        <li>Campaña Beamglea dirigida a +135 organizaciones industriales, tecnológicas y energéticas.</li>
-                        <li>Uso de redirect_generator.py para publicar paquetes redirect‑xxxx automáticamente.</li>
-                        <li>Los paquetes cargan beamglea.js desde unpkg y redirigen a páginas de phishing de Microsoft con correos prellenados.</li>
-                        <li>Los paquetes alojan activos de phishing, no código malicioso de instalación, explotando infraestructura pública (npm/unpkg).</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Mitigar validando dependencias, monitorizando publicaciones sospechosas y bloqueando dominios de entrega de recursos (ej. unpkg) desde entornos críticos. Informar y solicitar eliminación de paquetes maliciosos en los repositorios y educar a usuarios sobre páginas de inicio de sesión precompletadas.</p>
+                <p>Priorizar monitoreo de transacciones inusuales, proteger canales de comunicación satelital donde aplique, endurecer configuraciones RMM, reforzar detección de exfiltración y mantener campañas de concientización para usuarios ante phishing y gusanos móviles.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/researchers-expose-ta585s-monsterv2.html">Researchers Expose TA585’s MonsterV2 Malware Capabilities and Attack Chain</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/new-oracle-e-business-suite-bug-could.html">New Oracle E-Business Suite Bug Could Let Hackers Access Data Without Login</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Investigadores de Proofpoint atribuyen a TA585 la distribución de MonsterV2 —un RAT/stealer/loader disponible comercialmente— mediante campañas de phishing con temática del IRS, inyecciones JavaScript maliciosas (CAPTCHA falso/ClickFix) y alertas falsificadas de GitHub. MonsterV2 ofrece HVNC, robo de portapapeles, loaders y ejecución remota; se empaqueta con SonicCrypt y se vende como servicio por $800–$2,000/mes. La campaña evita objetivos en la Comunidad de Estados Independientes y se relaciona con infraestructura de CoreSecThree.</p>
+                <p>Oracle advirtió sobre CVE-2025-61884 en E-Business Suite (afecta 12.2.3–12.2.14) con una puntuación CVSS de 7.5. Según NVD, un atacante no autenticado con acceso HTTP podría comprometer Oracle Configurator y acceder a datos sensibles. Oracle insta a aplicar actualizaciones de inmediato; por ahora no se reporta explotación activa, aunque el aviso sigue a una reciente explotación real de otra vulnerabilidad EBS (CVE-2025-61882).</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>TA585 utiliza MonsterV2 para robo de credenciales y control remoto.</li>
-                        <li>Técnicas: phishing temático (IRS), inyecciones JS, alerts falsificadas de GitHub.</li>
-                        <li>Capacidades: HVNC, clippers de portapapeles, loaders y comandos remotos.</li>
-                        <li>Empaquetado con SonicCrypt y venta como servicio ($800–$2,000/mes).</li>
-                        <li>Conexiones a infraestructura de CoreSecThree; evita objetivos en CIS.</li>
+                        <li>Vulnerabilidad CVE-2025-61884 afecta varias versiones de Oracle E-Business Suite.</li>
+                        <li>Puntuación CVSS 7.5: posibilidad de acceso sin autenticación vía HTTP al Oracle Configurator.</li>
+                        <li>Oracle recomienda actualizar de inmediato; revisar si hay indicadores de compromiso.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Fortalecer filtrado de correo y detección EDR orientada a HVNC y comportamientos de clippers/loader. Bloquear dominios e IPs asociadas a la infraestructura detectada y realizar análisis forense ante sospechas de compromiso para identificar loaders y comunicaciones C2.</p>
+                <p>Aplicar parches oficiales cuanto antes, restringir el acceso HTTP a la instancia (listas IP, VPN, WAF), auditar logs en busca de accesos sospechosos y preparar respuestas para contención si se detecta actividad anómala.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/threatsday-bulletin-ms-teams-hack-mfa.html">ThreatsDay Bulletin: MS Teams Hack, MFA Hijacking, $2B Crypto Heist, Apple Siri Probe & More</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/npm-pypi-and-rubygems-packages-found.html">npm, PyPI, and RubyGems Packages Found Sending Developer Data to Discord Channels</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El boletín ThreatsDay muestra que los atacantes combinan ingeniería social, IA y exploits en la nube: abuso de Microsoft Teams para extorsión y secuestro de MFA, despliegue de droppers basados en LNK, desinformación generada por IA y crypters avanzados. El informe también cubre un robo de criptomonedas de más de $2,000 millones atribuido a Corea del Norte, explotación de un zero‑day en Oracle EBS, vulnerabilidades en IoT y Tesla, y una investigación sobre Siri de Apple. Recomendación general: reforzar identidad, endpoints y seguridad en la nube.</p>
+                <p>Investigadores localizaron paquetes maliciosos en npm, PyPI y RubyGems que usan webhooks de Discord como canal de C2 para exfiltrar archivos de desarrolladores, variables de entorno e información del host. Ejemplos incluyen mysql-dumpdiscord y variantes tipo malinssx/malicus. Además, Socket vinculó una campaña norcoreana ("Contagious Interview") que publicó 338 typosquats en npm (más de 50k descargas) entregando stealers y puertas traseras.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Abuso de Microsoft Teams para extorsión y secuestro de MFA.</li>
-                        <li>Uso de droppers LNK, desinformación por IA y crypters avanzados.</li>
-                        <li>Robo de criptomonedas superior a $2,000 millones atribuido a actores estatales.</li>
-                        <li>Explotación de zero‑day en Oracle EBS y múltiples fallas en IoT/Tesla.</li>
-                        <li>Recomendación: fortalecer identidades, endpoints y controles en la nube.</li>
+                        <li>Paquetes maliciosos exfiltran datos de desarrollo usando webhooks de Discord como C2.</li>
+                        <li>Afecta ecosistemas npm, PyPI y RubyGems; hay typosquats con descargas masivas.</li>
+                        <li>Campañas sofisticadas (incluida actividad DPRK) usan librerías maliciosas para distribuir stealers/backdoors.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Adoptar MFA resistente a phishing (FIDO2/clave física), revisar aplicaciones y sesiones en Teams, endurecer políticas de carga de archivos y telemetría en la nube, y priorizar parcheo de sistemas críticos como Oracle EBS.</p>
+                <p>Revisar dependencias antes de instalarlas, usar lockfiles y escáneres de SBOM, evitar ejecutar paquetes no verificados en CI/CD, rotar credenciales comprometidas y restringir secretos en entornos de desarrollo.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/10/north-korean-hackers-use-etherhiding-to.html">North Korean Hackers Use EtherHiding to Hide Malware Inside Blockchain Smart Contracts</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Google Threat Intelligence indica que UNC5342, un grupo vinculado a Corea del Norte, adoptó "EtherHiding": incrustar código malicioso en contratos inteligentes públicos para alojar y actualizar malware. La campaña atrae a desarrolladores por LinkedIn y Telegram para ejecutar descargadores JavaScript que obtienen payloads en múltiples etapas (stealers y backdoors) que exfiltran credenciales y desvían criptomonedas.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Uso de contratos inteligentes públicos como repositorio vivo para código malicioso (EtherHiding).</li>
+                        <li>Ingeniería social dirigida a desarrolladores (LinkedIn/Telegram) para ejecutar descargadores JS.</li>
+                        <li>Payloads multi-etapa diseñados para robar credenciales y sustraer criptomonedas.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Evitar ejecutar código JavaScript no verificado, verificar fuentes antes de integrar bibliotecas o scripts, aislar entornos de desarrollo y monitorizar actividad relacionada con wallets y credenciales; considerar bloqueo de dominios y firmas IOCs proporcionadas por inteligencia.</p>
             </section>
             
         </div>
