@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 17 de octubre, 2025</div>
+                <div class="date">Semana del 20 de octubre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
@@ -385,106 +385,105 @@
             </div>
 
             <!-- Article sections will be inserted here by your n8n workflow -->
-            <!-- Example format for OpenAI to follow: -->
             
             <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/how-attackers-bypass-synced-passkeys.html">How Attackers Bypass Synced Passkeys</a></h2>
+                <span class="threat-level low">AMENAZA BAJA</span>
+                <h2><a href="https://thehackernews.com/2025/10/beware-hidden-costs-of-pen-testing.html">Beware the Hidden Costs of Pen Testing</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Las passkeys sincronizadas heredan riesgos de las cuentas en la nube y de los flujos de recuperación, ampliando la superficie de ataque en entornos empresariales. Investigadores documentan ataques AiTM de degradación y extensiones de navegador comprometidas que pueden forzar retrocesos o secuestrar flujos WebAuthn para capturar sesiones. Se recomienda usar passkeys vinculadas al dispositivo con respaldo hardware, eliminar métodos de fallback, aplicar listas blancas de extensiones, capturar la attestación en el registro y atar las sesiones a la postura continua del dispositivo.</p>
+                <p>Las pruebas de penetración son esenciales, pero los enfoques tradicionales puntuales esconden costos: carga administrativa, alcance complejo, interrupciones operativas, procesos de remediación y necesidad de retesting, además de retos en presupuesto. El artículo recomienda modelos flexibles de Pen-Testing-as-a-Service (PTaaS) para pruebas continuas, con mayor transparencia de costos y priorización de hallazgos.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Las passkeys sincronizadas amplían la superficie de ataque mediante vectores cloud y recuperación.</li>
-                        <li>Se han observado ataques AiTM y extensiones comprometidas que fuerzan retrocesos o secuestran sesiones.</li>
-                        <li>Mitigaciones: passkeys ligadas al dispositivo y hardware, eliminar fallback y restringir extensiones.</li>
+                        <li>Los tests puntuales generan sobrecarga administrativa y problemas de alcance.</li>
+                        <li>Interrupciones operativas y ciclos de remediación/retesting aumentan costos.</li>
+                        <li>PTaaS ofrece continuidad, priorización y mayor transparencia en costos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Revisar flujos de recuperación y políticas de sincronización en la empresa; implementar controles que bloqueen extensiones no autorizadas, exigir attestation en el enrolamiento y monitorizar la postura del dispositivo para detectar sesiones anómalas.</p>
+                <p>Considera evaluar modelos continuos que integren pruebas regulares, priorización basada en riesgo y métricas de costo/beneficio para optimizar presupuesto y reducir ventanas de exposición.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/threatsday-bulletin-15b-crypto-bust.html">ThreatsDay Bulletin: $15B Crypto Bust, Satellite Spying, Billion-Dollar Smishing, Android RATs & More</a></h2>
+                <h2><a href="https://krebsonsecurity.com/2025/10/email-bombs-exploit-lax-authentication-in-zendesk/">Email Bombs Exploit Lax Authentication in Zendesk</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Resumen semanal de amenazas: autoridades de EE. UU. incautaron $15,000 millones vinculados a redes de estafa 'pig butchering'; investigadores demuestran que antenas comerciales pueden interceptar tráfico no cifrado de satélites geostacionarios; el gusano de WhatsApp "Maverick" y grandes campañas de phishing contra 2FA (Whisper) están activas. También se reportan RATs para Android, skimmers, abuso de herramientas RMM y técnicas de C2 basadas en la nube.</p>
+                <p>Atacantes abusaron de la configuración de tickets anónimos en clientes de Zendesk para enviar miles de notificaciones falsificadas desde cientos de empresas, inundando bandejas con mensajes amenazantes o insultantes. Zendesk recomienda usar flujos de tickets autenticados y está evaluando límites de tasa y otras medidas preventivas.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Operativo de decomiso de $15B relacionado con estafas criptográficas masivas.</li>
-                        <li>Riesgo de intercepción de tráfico satelital no cifrado con equipo comercial.</li>
-                        <li>Campañas activas: malware móvil, phishing 2FA, abuso de RMM y técnicas avanzadas de C2.</li>
+                        <li>Se explotó la capacidad de tickets anónimos para ejecutar campañas de "email bombing".</li>
+                        <li>Impacto: inundación masiva de bandejas de entrada con mensajes fraudulentos o amenazantes.</li>
+                        <li>Mitigaciones: exigir autenticación en tickets, implementar límites de tasa y monitoreo.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Priorizar monitoreo de transacciones inusuales, proteger canales de comunicación satelital donde aplique, endurecer configuraciones RMM, reforzar detección de exfiltración y mantener campañas de concientización para usuarios ante phishing y gusanos móviles.</p>
+                <p>Organizaciones que usan sistemas de soporte deben revisar opciones de autenticación, monitorear volúmenes de tickets entrantes y aplicar controles (rate limiting, validación de remitentes) para mitigar abuso activo.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/new-oracle-e-business-suite-bug-could.html">New Oracle E-Business Suite Bug Could Let Hackers Access Data Without Login</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/chinese-hackers-exploit-arcgis-server.html">Chinese Hackers Exploit ArcGIS Server as Backdoor for Over a Year</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Oracle advirtió sobre CVE-2025-61884 en E-Business Suite (afecta 12.2.3–12.2.14) con una puntuación CVSS de 7.5. Según NVD, un atacante no autenticado con acceso HTTP podría comprometer Oracle Configurator y acceder a datos sensibles. Oracle insta a aplicar actualizaciones de inmediato; por ahora no se reporta explotación activa, aunque el aviso sigue a una reciente explotación real de otra vulnerabilidad EBS (CVE-2025-61882).</p>
+                <p>ReliaQuest atribuye a Flax Typhoon, vinculado a China, una campaña de más de un año que convirtió una instancia pública de ArcGIS Server SOE en un web shell protegido por una llave hardcodeada e incrustado en respaldos. Los atacantes subieron un ejecutable renombrado de SoftEther VPN ("bridge.exe") como servicio ("SysBridge") para crear una VPN encubierta usada para descubrimiento, movimiento lateral y exfiltración tras comprometer credenciales administrativas y de estaciones IT.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Vulnerabilidad CVE-2025-61884 afecta varias versiones de Oracle E-Business Suite.</li>
-                        <li>Puntuación CVSS 7.5: posibilidad de acceso sin autenticación vía HTTP al Oracle Configurator.</li>
-                        <li>Oracle recomienda actualizar de inmediato; revisar si hay indicadores de compromiso.</li>
+                        <li>Campaña persistente (>1 año) atribuida al actor Flax Typhoon.</li>
+                        <li>Persistencia mediante web shell protegido y manipulación de respaldos.</li>
+                        <li>Uso de un VPN encubierto para descubrimiento, movimiento lateral y fuga de datos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Aplicar parches oficiales cuanto antes, restringir el acceso HTTP a la instancia (listas IP, VPN, WAF), auditar logs en busca de accesos sospechosos y preparar respuestas para contención si se detecta actividad anómala.</p>
+                <p>Incidentes de larga duración indican compromiso de credenciales privilegiadas y fallas en detección. Revisar integridad de respaldos, rotar credenciales, segmentar redes y realizar análisis forense para identificar alcance y eliminar persistencia.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/npm-pypi-and-rubygems-packages-found.html">npm, PyPI, and RubyGems Packages Found Sending Developer Data to Discord Channels</a></h2>
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://redcanary.com/blog/threat-detection/ai-cli-tools/">Commanding attention: How adversaries are abusing AI CLI tools</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Investigadores localizaron paquetes maliciosos en npm, PyPI y RubyGems que usan webhooks de Discord como canal de C2 para exfiltrar archivos de desarrolladores, variables de entorno e información del host. Ejemplos incluyen mysql-dumpdiscord y variantes tipo malinssx/malicus. Además, Socket vinculó una campaña norcoreana ("Contagious Interview") que publicó 338 typosquats en npm (más de 50k descargas) entregando stealers y puertas traseras.</p>
+                <p>Adversarios están abusando de herramientas CLI de IA (por ejemplo, Claude Code, Gemini CLI) para ejecutar prompts maliciosos, robar credenciales y realizar operaciones sobre archivos y red, en ocasiones a través de servidores MCP. Los defensores deben recolectar registros del CLI/modelo y telemetría de endpoint/red (cadenas padre–hijo de procesos, creación de archivos, conexiones salientes) para detectar y adaptarse a estas tácticas.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Paquetes maliciosos exfiltran datos de desarrollo usando webhooks de Discord como C2.</li>
-                        <li>Afecta ecosistemas npm, PyPI y RubyGems; hay typosquats con descargas masivas.</li>
-                        <li>Campañas sofisticadas (incluida actividad DPRK) usan librerías maliciosas para distribuir stealers/backdoors.</li>
+                        <li>Uso malicioso de herramientas CLI de IA para ejecutar acciones y extraer credenciales.</li>
+                        <li>Técnicas incluyen operaciones sobre archivos y conexiones de red, a veces via MCP.</li>
+                        <li>Detección recomendada: registrar CLI/modelo y colectar telemetría de endpoints y red.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Revisar dependencias antes de instalarlas, usar lockfiles y escáneres de SBOM, evitar ejecutar paquetes no verificados en CI/CD, rotar credenciales comprometidas y restringir secretos en entornos de desarrollo.</p>
+                <p>Implementar logging detallado de uso de CLI de IA, correlacionarlo con telemetría de procesos y red, y crear detecciones para cadenas de procesos y comportamientos anómalos relacionados con modelos/CLI.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/north-korean-hackers-use-etherhiding-to.html">North Korean Hackers Use EtherHiding to Hide Malware Inside Blockchain Smart Contracts</a></h2>
+                <span class="threat-level low">AMENAZA BAJA</span>
+                <h2><a href="https://blog.cloudflare.com/improving-the-trustworthiness-of-javascript-on-the-web/">Improving the trustworthiness of Javascript on the Web</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Google Threat Intelligence indica que UNC5342, un grupo vinculado a Corea del Norte, adoptó "EtherHiding": incrustar código malicioso en contratos inteligentes públicos para alojar y actualizar malware. La campaña atrae a desarrolladores por LinkedIn y Telegram para ejecutar descargadores JavaScript que obtienen payloads en múltiples etapas (stealers y backdoors) que exfiltran credenciales y desvían criptomonedas.</p>
+                <p>Cloudflare presenta WAICT, una propuesta respaldada por W3C que usa manifiestos de integridad, SRI, registros append-only por sitio, árboles de prefijos y "witnesses" para ofrecer integridad, consistencia y transparencia del JavaScript en navegador. El sistema permite auditoría pública, enrolamiento opt-in, monitoreo y extensiones como firma de código, minimizando viajes adicionales y centralización.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Uso de contratos inteligentes públicos como repositorio vivo para código malicioso (EtherHiding).</li>
-                        <li>Ingeniería social dirigida a desarrolladores (LinkedIn/Telegram) para ejecutar descargadores JS.</li>
-                        <li>Payloads multi-etapa diseñados para robar credenciales y sustraer criptomonedas.</li>
+                        <li>WAICT combina manifiestos de integridad, SRI y registros append-only para asegurar JavaScript.</li>
+                        <li>Diseñado para auditoría pública, consistencia y opciones opt-in de monitoreo.</li>
+                        <li>Permite extensiones (firma de código) buscando reducir centralización y latencia adicional.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Evitar ejecutar código JavaScript no verificado, verificar fuentes antes de integrar bibliotecas o scripts, aislar entornos de desarrollo y monitorizar actividad relacionada con wallets y credenciales; considerar bloqueo de dominios y firmas IOCs proporcionadas por inteligencia.</p>
+                <p>La propuesta apunta a mejorar la trazabilidad y confianza del ecosistema de JavaScript en web, facilitando auditorías y detección de manipulación de código en producción sin imponer grandes costos de rendimiento.</p>
             </section>
             
         </div>
