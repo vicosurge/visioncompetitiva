@@ -377,113 +377,111 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 20 de octubre, 2025</div>
+                <div class="date">Semana del 24 de octubre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
 
-            <!-- Article sections will be inserted here by your n8n workflow -->
-            
             <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://thehackernews.com/2025/10/beware-hidden-costs-of-pen-testing.html">Beware the Hidden Costs of Pen Testing</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/10/131-chrome-extensions-caught-hijacking.html">131 Chrome Extensions Caught Hijacking WhatsApp Web for Massive Spam Campaign</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Las pruebas de penetración son esenciales, pero los enfoques tradicionales puntuales esconden costos: carga administrativa, alcance complejo, interrupciones operativas, procesos de remediación y necesidad de retesting, además de retos en presupuesto. El artículo recomienda modelos flexibles de Pen-Testing-as-a-Service (PTaaS) para pruebas continuas, con mayor transparencia de costos y priorización de hallazgos.</p>
+                <p>Investigadores identificaron 131 clones rebrandeados de una extensión de automatización para WhatsApp Web que comparten la misma base de código, patrones e infraestructura, con aproximadamente 20,905 usuarios activos. Estas extensiones, comercializadas mediante un modelo white‑label (DBX Tecnologia) y publicadas mayormente por "WL Extensão", automatizan envíos masivos para evadir límites y controles anti‑spam; la actividad se mantiene desde hace meses con actualizaciones recientes.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Los tests puntuales generan sobrecarga administrativa y problemas de alcance.</li>
-                        <li>Interrupciones operativas y ciclos de remediación/retesting aumentan costos.</li>
-                        <li>PTaaS ofrece continuidad, priorización y mayor transparencia en costos.</li>
+                        <li>131 extensiones clonadas con la misma infraestructura maliciosa.</li>
+                        <li>~20,905 usuarios activos expuestos a campañas masivas de spam.</li>
+                        <li>Diseñadas para evadir límites y controles anti‑spam de WhatsApp Web.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Considera evaluar modelos continuos que integren pruebas regulares, priorización basada en riesgo y métricas de costo/beneficio para optimizar presupuesto y reducir ventanas de exposición.</p>
+                <p>La campaña está en operación activa; se recomienda auditar extensiones instaladas, eliminar las sospechosas, bloquear dominios/infrastructura asociados y denunciar las entradas maliciosas en Chrome Web Store. Implementar detección de actividad inusual en cuentas y revisar automatizaciones que interactúan con WhatsApp Web.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://krebsonsecurity.com/2025/10/email-bombs-exploit-lax-authentication-in-zendesk/">Email Bombs Exploit Lax Authentication in Zendesk</a></h2>
+                <h2><a href="https://www.bleepingcomputer.com/news/security/vidar-stealer-20-adds-multi-threaded-data-theft-better-evasion/">Vidar Stealer 2.0 adds multi-threaded data theft, better evasion</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Atacantes abusaron de la configuración de tickets anónimos en clientes de Zendesk para enviar miles de notificaciones falsificadas desde cientos de empresas, inundando bandejas con mensajes amenazantes o insultantes. Zendesk recomienda usar flujos de tickets autenticados y está evaluando límites de tasa y otras medidas preventivas.</p>
+                <p>Vidar Stealer 2.0, reescrito en C, incorpora recolección de datos multi‑hilo, técnicas avanzadas anti‑análisis y polimorfismo, además de evasión que sortea cifrados ligados a apps de Chrome mediante inyección en memoria. Apunta a navegadores, monederos, cuentas en la nube y redes sociales, y exfiltra información a bots de Telegram y URLs de Steam; los investigadores esperan un incremento en su actividad.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Se explotó la capacidad de tickets anónimos para ejecutar campañas de "email bombing".</li>
-                        <li>Impacto: inundación masiva de bandejas de entrada con mensajes fraudulentos o amenazantes.</li>
-                        <li>Mitigaciones: exigir autenticación en tickets, implementar límites de tasa y monitoreo.</li>
+                        <li>Reescrito en C con soporte multi‑hilo para exfiltración más rápida.</li>
+                        <li>Técnicas anti‑análisis y polimorfismo que complican la detección.</li>
+                        <li>Exfiltra credenciales y datos a bots de Telegram y enlaces de Steam.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Organizaciones que usan sistemas de soporte deben revisar opciones de autenticación, monitorear volúmenes de tickets entrantes y aplicar controles (rate limiting, validación de remitentes) para mitigar abuso activo.</p>
+                <p>La evolución del malware dificulta su identificación por firmas tradicionales; se recomienda reforzar EDR/AV con detección de comportamiento, monitorear conexiones a servicios de exfiltración (Telegram/URLs sospechosas), forzar MFA y rotar credenciales comprometidas.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/chinese-hackers-exploit-arcgis-server.html">Chinese Hackers Exploit ArcGIS Server as Backdoor for Over a Year</a></h2>
+                <h2><a href="https://www.bleepingcomputer.com/news/security/cursor-windsurf-ides-riddled-with-94-plus-n-day-chromium-vulnerabilities/">Cursor, Windsurf IDEs riddled with 94+ n-day Chromium vulnerabilities</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>ReliaQuest atribuye a Flax Typhoon, vinculado a China, una campaña de más de un año que convirtió una instancia pública de ArcGIS Server SOE en un web shell protegido por una llave hardcodeada e incrustado en respaldos. Los atacantes subieron un ejecutable renombrado de SoftEther VPN ("bridge.exe") como servicio ("SysBridge") para crear una VPN encubierta usada para descubrimiento, movimiento lateral y exfiltración tras comprometer credenciales administrativas y de estaciones IT.</p>
+                <p>Las versiones recientes de los IDEs Cursor y Windsurf empaquetan componentes obsoletos de Electron/Chromium/V8, exponiendo a más de 94 vulnerabilidades conocidas y parchadas. Investigadores de Ox Security demostraron un PoC para CVE‑2025‑7656 (DoS) y advierten riesgo de ejecución remota mediante extensiones maliciosas, previews de README o phishing. Cursor calificó el reporte como "fuera de alcance" y Windsurf no respondió; alrededor de 1.8 millones de desarrolladores podrían verse afectados.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Campaña persistente (>1 año) atribuida al actor Flax Typhoon.</li>
-                        <li>Persistencia mediante web shell protegido y manipulación de respaldos.</li>
-                        <li>Uso de un VPN encubierto para descubrimiento, movimiento lateral y fuga de datos.</li>
+                        <li>Más de 94 vulnerabilidades n‑day en componentes Chromium/V8 empaquetados.</li>
+                        <li>PoC publicado para CVE‑2025‑7656 (DoS); posibilidad de RCE mediante vectores auxiliares.</li>
+                        <li>Impacto potencial amplio entre desarrolladores y proyectos que usan estos IDEs.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Incidentes de larga duración indican compromiso de credenciales privilegiadas y fallas en detección. Revisar integridad de respaldos, rotar credenciales, segmentar redes y realizar análisis forense para identificar alcance y eliminar persistencia.</p>
+                <p>Se recomienda no usar versiones vulnerables en entornos sensibles, deshabilitar extensiones no confiables, aislar el uso del IDE y exigir actualizaciones del proveedor. Si no hay parche inmediato, evaluar alternativas o mitigar mediante políticas de seguridad y sandboxes.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://blog.qualys.com/vulnerabilities-threat-research/2025/10/17/a-strategic-response-to-the-f5-big-ip-nation-state-breach">A Strategic Response to the F5 BIG-IP Nation-State Breach</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Una brecha atribuida a un actor de estado‑nación exfiltró código fuente de BIG‑IP y detalles de vulnerabilidades sin parche, lo que motivó una advertencia de CISA sobre una amenaza inminente. Qualys recomienda acciones urgentes: inventariar activos F5, parchear sistemas expuestos, endurecer planos de gestión, auditar configuraciones y buscar indicadores de compromiso; también ofrece herramientas de descubrimiento y VMDR para asistir en la respuesta.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Exfiltración de código fuente y detalles de vulnerabilidades de BIG‑IP.</li>
+                        <li>CISA advierte riesgo inminente para sistemas sin parchear.</li>
+                        <li>Medidas urgentes: inventario, parcheo, endurecimiento y búsqueda de compromisos.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Organizaciones con dispositivos F5 deben priorizar la detección y mitigación: aplicar parches, rotar credenciales, restringir acceso administrativo, revisar logs y desplegar escaneos de vulnerabilidades continuos para identificar exposición y compromisos.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://redcanary.com/blog/threat-detection/ai-cli-tools/">Commanding attention: How adversaries are abusing AI CLI tools</a></h2>
+                <h2><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-preventing-users-from-opening-classic-outlook/">Microsoft fixes bug preventing users from opening classic Outlook</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Adversarios están abusando de herramientas CLI de IA (por ejemplo, Claude Code, Gemini CLI) para ejecutar prompts maliciosos, robar credenciales y realizar operaciones sobre archivos y red, en ocasiones a través de servidores MCP. Los defensores deben recolectar registros del CLI/modelo y telemetría de endpoint/red (cadenas padre–hijo de procesos, creación de archivos, conexiones salientes) para detectar y adaptarse a estas tácticas.</p>
+                <p>Microsoft corrigió un error que impedía a usuarios de Microsoft 365 abrir el cliente clásico de Outlook en Windows. El artículo de soporte fue actualizado para indicar que el problema conocido está resuelto y el equipo de Outlook está monitoreando la implementación. Usuarios aún afectados deben usar Outlook Web Access o el nuevo Outlook para Windows; Microsoft también publica pasos de solución (modo seguro, nuevo perfil, reparación de archivos de datos, /resetnavpane).</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Uso malicioso de herramientas CLI de IA para ejecutar acciones y extraer credenciales.</li>
-                        <li>Técnicas incluyen operaciones sobre archivos y conexiones de red, a veces via MCP.</li>
-                        <li>Detección recomendada: registrar CLI/modelo y colectar telemetría de endpoints y red.</li>
+                        <li>Bug que impedía iniciar Outlook clásico fue corregido por Microsoft.</li>
+                        <li>Solución temporal: usar OWA o el nuevo Outlook para Windows.</li>
+                        <li>Pasos de resolución disponibles: modo seguro, nuevo perfil, reparación y /resetnavpane.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Implementar logging detallado de uso de CLI de IA, correlacionarlo con telemetría de procesos y red, y crear detecciones para cadenas de procesos y comportamientos anómalos relacionados con modelos/CLI.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://blog.cloudflare.com/improving-the-trustworthiness-of-javascript-on-the-web/">Improving the trustworthiness of Javascript on the Web</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Cloudflare presenta WAICT, una propuesta respaldada por W3C que usa manifiestos de integridad, SRI, registros append-only por sitio, árboles de prefijos y "witnesses" para ofrecer integridad, consistencia y transparencia del JavaScript en navegador. El sistema permite auditoría pública, enrolamiento opt-in, monitoreo y extensiones como firma de código, minimizando viajes adicionales y centralización.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>WAICT combina manifiestos de integridad, SRI y registros append-only para asegurar JavaScript.</li>
-                        <li>Diseñado para auditoría pública, consistencia y opciones opt-in de monitoreo.</li>
-                        <li>Permite extensiones (firma de código) buscando reducir centralización y latencia adicional.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>La propuesta apunta a mejorar la trazabilidad y confianza del ecosistema de JavaScript en web, facilitando auditorías y detección de manipulación de código en producción sin imponer grandes costos de rendimiento.</p>
+                <p>El equipo de Outlook monitorea la corrección; si persisten problemas, seguir las guías de soporte y contactar al soporte técnico de Microsoft. Revisar despliegues y actualizaciones en entornos gestionados para asegurar que la corrección se haya aplicado a todos los usuarios.</p>
             </section>
             
         </div>
