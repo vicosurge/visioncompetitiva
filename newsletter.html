@@ -377,111 +377,114 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 24 de octubre, 2025</div>
+                <div class="date">Semana del 27 de octubre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
 
+            <!-- Article sections will be inserted here by your n8n workflow -->
+            <!-- Example format for OpenAI to follow: -->
+            
             <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/131-chrome-extensions-caught-hijacking.html">131 Chrome Extensions Caught Hijacking WhatsApp Web for Massive Spam Campaign</a></h2>
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://redcanary.com/blog/threat-intelligence/intelligence-insights-october-2025/">Intelligence Insights: October 2025</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Investigadores identificaron 131 clones rebrandeados de una extensión de automatización para WhatsApp Web que comparten la misma base de código, patrones e infraestructura, con aproximadamente 20,905 usuarios activos. Estas extensiones, comercializadas mediante un modelo white‑label (DBX Tecnologia) y publicadas mayormente por "WL Extensão", automatizan envíos masivos para evadir límites y controles anti‑spam; la actividad se mantiene desde hace meses con actualizaciones recientes.</p>
+                <p>Red Canary identifica a Tampered Chef —una amenaza basada en Electron/Node.js con temática de recetas/calendario— como la principal amenaza de octubre. Este actor usa C2 esteganográfico, timestomping y comprobaciones de sandbox. Además se observan nuevos actores y familias como el ransomware Akira, el downloader Latrodectus y el stealer Rhadamanthys en campañas de tipo paste‑and‑run.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>131 extensiones clonadas con la misma infraestructura maliciosa.</li>
-                        <li>~20,905 usuarios activos expuestos a campañas masivas de spam.</li>
-                        <li>Diseñadas para evadir límites y controles anti‑spam de WhatsApp Web.</li>
+                        <li>Tampered Chef: malware Electron/Node.js con C2 esteganográfico y técnicas anti‑sandbox.</li>
+                        <li>Nuevas amenazas detectadas: Akira (ransomware), Latrodectus (downloader), Rhadamanthys (stealer).</li>
+                        <li>Campañas observadas: operaciones de paste‑and‑run y distribución por vectores web.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La campaña está en operación activa; se recomienda auditar extensiones instaladas, eliminar las sospechosas, bloquear dominios/infrastructura asociados y denunciar las entradas maliciosas en Chrome Web Store. Implementar detección de actividad inusual en cuentas y revisar automatizaciones que interactúan con WhatsApp Web.</p>
+                <p>La combinación de técnicas de ofuscación y mecanismos de persistencia dificultan la detección temprana; los equipos de respuesta deben priorizar telemetría de ejecución y señales de comportamiento asociadas a procesos Electron/Node.js inusuales.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/vidar-stealer-20-adds-multi-threaded-data-theft-better-evasion/">Vidar Stealer 2.0 adds multi-threaded data theft, better evasion</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/hackers-used-snappybee-malware-and.html">Hackers Used Snappybee Malware and Citrix Flaw to Breach European Telecom Network</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Vidar Stealer 2.0, reescrito en C, incorpora recolección de datos multi‑hilo, técnicas avanzadas anti‑análisis y polimorfismo, además de evasión que sortea cifrados ligados a apps de Chrome mediante inyección en memoria. Apunta a navegadores, monederos, cuentas en la nube y redes sociales, y exfiltra información a bots de Telegram y URLs de Steam; los investigadores esperan un incremento en su actividad.</p>
+                <p>El grupo Salt Typhoon (también conocido como Earth Estries/FamousSparrow/UNC5807) atacó a un proveedor de telecomunicaciones europeo a inicios de julio de 2025 explotando Citrix NetScaler Gateway para el acceso inicial. Los atacantes pivotaron hacia hosts Citrix VDA, utilizaron SoftEther VPN para ocultar su origen y desplegaron Snappybee (Deed RAT) mediante DLL side‑loading junto a ejecutables legítimos de AV. Darktrace detectó y mitigó la intrusión antes de una escalada mayor.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Reescrito en C con soporte multi‑hilo para exfiltración más rápida.</li>
-                        <li>Técnicas anti‑análisis y polimorfismo que complican la detección.</li>
-                        <li>Exfiltra credenciales y datos a bots de Telegram y enlaces de Steam.</li>
+                        <li>Explotación de Citrix NetScaler Gateway para acceso inicial.</li>
+                        <li>Uso de SoftEther VPN y DLL side‑loading para ocultamiento y persistencia.</li>
+                        <li>Despliegue de Snappybee (Deed RAT) junto a binarios legítimos; detección por Darktrace evitó mayor impacto.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La evolución del malware dificulta su identificación por firmas tradicionales; se recomienda reforzar EDR/AV con detección de comportamiento, monitorear conexiones a servicios de exfiltración (Telegram/URLs sospechosas), forzar MFA y rotar credenciales comprometidas.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/cursor-windsurf-ides-riddled-with-94-plus-n-day-chromium-vulnerabilities/">Cursor, Windsurf IDEs riddled with 94+ n-day Chromium vulnerabilities</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Las versiones recientes de los IDEs Cursor y Windsurf empaquetan componentes obsoletos de Electron/Chromium/V8, exponiendo a más de 94 vulnerabilidades conocidas y parchadas. Investigadores de Ox Security demostraron un PoC para CVE‑2025‑7656 (DoS) y advierten riesgo de ejecución remota mediante extensiones maliciosas, previews de README o phishing. Cursor calificó el reporte como "fuera de alcance" y Windsurf no respondió; alrededor de 1.8 millones de desarrolladores podrían verse afectados.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Más de 94 vulnerabilidades n‑day en componentes Chromium/V8 empaquetados.</li>
-                        <li>PoC publicado para CVE‑2025‑7656 (DoS); posibilidad de RCE mediante vectores auxiliares.</li>
-                        <li>Impacto potencial amplio entre desarrolladores y proyectos que usan estos IDEs.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Se recomienda no usar versiones vulnerables en entornos sensibles, deshabilitar extensiones no confiables, aislar el uso del IDE y exigir actualizaciones del proveedor. Si no hay parche inmediato, evaluar alternativas o mitigar mediante políticas de seguridad y sandboxes.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://blog.qualys.com/vulnerabilities-threat-research/2025/10/17/a-strategic-response-to-the-f5-big-ip-nation-state-breach">A Strategic Response to the F5 BIG-IP Nation-State Breach</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Una brecha atribuida a un actor de estado‑nación exfiltró código fuente de BIG‑IP y detalles de vulnerabilidades sin parche, lo que motivó una advertencia de CISA sobre una amenaza inminente. Qualys recomienda acciones urgentes: inventariar activos F5, parchear sistemas expuestos, endurecer planos de gestión, auditar configuraciones y buscar indicadores de compromiso; también ofrece herramientas de descubrimiento y VMDR para asistir en la respuesta.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Exfiltración de código fuente y detalles de vulnerabilidades de BIG‑IP.</li>
-                        <li>CISA advierte riesgo inminente para sistemas sin parchear.</li>
-                        <li>Medidas urgentes: inventario, parcheo, endurecimiento y búsqueda de compromisos.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Organizaciones con dispositivos F5 deben priorizar la detección y mitigación: aplicar parches, rotar credenciales, restringir acceso administrativo, revisar logs y desplegar escaneos de vulnerabilidades continuos para identificar exposición y compromisos.</p>
+                <p>La campaña muestra una cadena de ataque organizada con movimiento lateral hacia VDA y uso de técnicas para evadir atribución. Revisar configuraciones de Citrix, auditar accesos remotos y monitorear indicadores relacionados con SoftEther y side‑loading.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-bug-preventing-users-from-opening-classic-outlook/">Microsoft fixes bug preventing users from opening classic Outlook</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/analysing-clickfix-3-reasons-why.html">Analysing ClickFix: 3 Reasons Why Copy/Paste Attacks Are Driving Security Breaches</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Microsoft corrigió un error que impedía a usuarios de Microsoft 365 abrir el cliente clásico de Outlook en Windows. El artículo de soporte fue actualizado para indicar que el problema conocido está resuelto y el equipo de Outlook está monitoreando la implementación. Usuarios aún afectados deben usar Outlook Web Access o el nuevo Outlook para Windows; Microsoft también publica pasos de solución (modo seguro, nuevo perfil, reparación de archivos de datos, /resetnavpane).</p>
+                <p>ClickFix (también conocido como FileFix/fake CAPTCHA) engaña a usuarios para copiar contenido malicioso al portapapeles que luego pegan y ejecutan localmente, lo que permite evadir defensas centradas en correo electrónico. Se distribuye vía SEO poisoning, malvertising y otros vectores web; estas páginas evaden detección y dejan al EDR como última línea, la cual puede fallar ante payloads ofuscados iniciados por el usuario. La detección en el navegador de copiado/pegar malicioso puede mitigar el ataque antes de la ejecución local.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Bug que impedía iniciar Outlook clásico fue corregido por Microsoft.</li>
-                        <li>Solución temporal: usar OWA o el nuevo Outlook para Windows.</li>
-                        <li>Pasos de resolución disponibles: modo seguro, nuevo perfil, reparación y /resetnavpane.</li>
+                        <li>Vector: engaños que inducen a copiar contenido malicioso al portapapeles.</li>
+                        <li>Evasión: evita controles basados en correo y aprovecha interacción del usuario.</li>
+                        <li>Mitigación: detección en navegador y controles que alerten sobre pegado ejecutable reducen el riesgo.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>El equipo de Outlook monitorea la corrección; si persisten problemas, seguir las guías de soporte y contactar al soporte técnico de Microsoft. Revisar despliegues y actualizaciones en entornos gestionados para asegurar que la corrección se haya aplicado a todos los usuarios.</p>
+                <p>Al ser ataques iniciados por el usuario, es crítico combinar educación, políticas de prevención de pegado de comandos y soluciones que inspeccionen actividad del portapapeles en entornos de alto riesgo.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">AMENAZA BAJA</span>
+                <h2><a href="https://www.microsoft.com/en-us/security/blog/2025/10/23/harden-your-identity-defense-with-improved-protection-deeper-correlation-and-richer-context/">Harden your identity defense with improved protection, deeper correlation, and richer context</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Esto es un anuncio.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Contenido promocional sobre mejoras en defensa de identidad.</li>
+                        <li>Enfoque en protección, correlación y contexto enriquecido.</li>
+                        <li>No corresponde a un aviso técnico o reporte de incidente.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Entrada de blog publicada como material promocional; revisar como referencia de producto si aplica, pero no como indicador de compromiso activo.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://www.bleepingcomputer.com/news/security/sharepoint-toolshell-attacks-targeted-orgs-across-four-continents/">Sharepoint ToolShell attacks targeted orgs across four continents</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Actores vinculados a China explotaron la RCE ToolShell para SharePoint (CVE-2025-53770) para comprometer agencias gubernamentales, universidades, operadores de telecomunicaciones y entidades financieras en cuatro continentes. Las campañas utilizaron webshells y DLL side‑loading para desplegar Zingdoor, ShadowPad, KrustyLoader y Sliver, realizando volcados de credenciales y compromisos de dominio basados en PetitPotam para persistencia y robo de datos.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Vulnerabilidad explotada: CVE-2025-53770 (ToolShell RCE en SharePoint).</li>
+                        <li>Objetivos: organismos gubernamentales, universidades, telcos y finanzas en múltiples continentes.</li>
+                        <li>Muestras de post‑explotación: webshells, DLL side‑loading, despliegue de Zingdoor/ShadowPad/KrustyLoader/Sliver y uso de PetitPotam.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Campaña de explotación activa con impacto amplio; priorizar parcheo de SharePoint, detección de webshells, monitoreo de técnicas de lateralidad (PetitPotam) y respuesta a indicios de DLL side‑loading y volcados de credenciales.</p>
             </section>
             
         </div>
