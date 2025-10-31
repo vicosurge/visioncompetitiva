@@ -377,114 +377,111 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 27 de octubre, 2025</div>
+                <div class="date">Semana del 31 de octubre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
 
-            <!-- Article sections will be inserted here by your n8n workflow -->
-            <!-- Example format for OpenAI to follow: -->
-            
             <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://redcanary.com/blog/threat-intelligence/intelligence-insights-october-2025/">Intelligence Insights: October 2025</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/10/new-android-trojan-herodotus-outsmarts.html">New Android Trojan 'Herodotus' Outsmarts Anti-Fraud Systems by Typing Like a Human</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Red Canary identifica a Tampered Chef —una amenaza basada en Electron/Node.js con temática de recetas/calendario— como la principal amenaza de octubre. Este actor usa C2 esteganográfico, timestomping y comprobaciones de sandbox. Además se observan nuevos actores y familias como el ransomware Akira, el downloader Latrodectus y el stealer Rhadamanthys en campañas de tipo paste‑and‑run.</p>
+                <p>ThreatFabric advierte sobre Herodotus, un nuevo troyano bancario para Android usado en campañas activas en Italia y Brasil. Distribuido mediante aplicaciones dropper y abusando de la accesibilidad de Android, instala overlays, roba credenciales y SMS 2FA, captura pantallas y puede instalar APKs. Como servicio (MaaS), simula la escritura humana añadiendo retrasos aleatorios (300–3000 ms) para evadir sistemas antifraude basados en comportamiento.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Tampered Chef: malware Electron/Node.js con C2 esteganográfico y técnicas anti‑sandbox.</li>
-                        <li>Nuevas amenazas detectadas: Akira (ransomware), Latrodectus (downloader), Rhadamanthys (stealer).</li>
-                        <li>Campañas observadas: operaciones de paste‑and‑run y distribución por vectores web.</li>
+                        <li>Campañas activas en Italia y Brasil usando aplicaciones dropper.</li>
+                        <li>Técnicas: abuso de accesibilidad, overlays, robo de credenciales y SMS 2FA, instalación de APKs.</li>
+                        <li>Evasión: imita la escritura humana con retrasos aleatorios (300–3000 ms) para sortear detecciones basadas en comportamiento.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La combinación de técnicas de ofuscación y mecanismos de persistencia dificultan la detección temprana; los equipos de respuesta deben priorizar telemetría de ejecución y señales de comportamiento asociadas a procesos Electron/Node.js inusuales.</p>
+                <p>Herodotus se ofrece como MaaS, lo que facilita la distribución entre operadores. Su capacidad para introducir retrasos humanizados complica la detección por sistemas antifraude que analizan patrones de entrada, por lo que se recomienda fortalecer controles de accesibilidad, monitorear instalaciones de APK fuera de tiendas oficiales y revisar anomalías en autenticación multifactor.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/hackers-used-snappybee-malware-and.html">Hackers Used Snappybee Malware and Citrix Flaw to Breach European Telecom Network</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/sidewinder-adopts-new-clickonce-based.html">SideWinder Adopts New ClickOnce-Based Attack Chain Targeting South Asian Diplomats</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El grupo Salt Typhoon (también conocido como Earth Estries/FamousSparrow/UNC5807) atacó a un proveedor de telecomunicaciones europeo a inicios de julio de 2025 explotando Citrix NetScaler Gateway para el acceso inicial. Los atacantes pivotaron hacia hosts Citrix VDA, utilizaron SoftEther VPN para ocultar su origen y desplegaron Snappybee (Deed RAT) mediante DLL side‑loading junto a ejecutables legítimos de AV. Darktrace detectó y mitigó la intrusión antes de una escalada mayor.</p>
+                <p>SideWinder ejecutó campañas de spear-phishing multionda (marzo–septiembre 2025) dirigidas a diplomáticos del sur de Asia y a una embajada europea en Nueva Delhi. Los atacantes emplearon señuelos en PDF que activan un instalador ClickOnce (firmado como MagTek ReaderConfiguration.exe) para sideload de DEVOBJ.dll, desplegar ModuleInstaller y StealerBot, y exfiltrar credenciales, capturas de pantalla y archivos. Trellix indica una evolución hacia cadenas de infección basadas en ClickOnce con C2 georrestringidos.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Explotación de Citrix NetScaler Gateway para acceso inicial.</li>
-                        <li>Uso de SoftEther VPN y DLL side‑loading para ocultamiento y persistencia.</li>
-                        <li>Despliegue de Snappybee (Deed RAT) junto a binarios legítimos; detección por Darktrace evitó mayor impacto.</li>
+                        <li>Objetivo: diplomáticos de Asia del Sur y una embajada europea en Nueva Delhi.</li>
+                        <li>Vector: PDFs que lanzan instaladores ClickOnce firmados, sideload de DLLs y despliegue de StealerBot.</li>
+                        <li>Impacto: exfiltración de credenciales, capturas y archivos; uso de C2 regionalizados para limitar la detección.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La campaña muestra una cadena de ataque organizada con movimiento lateral hacia VDA y uso de técnicas para evadir atribución. Revisar configuraciones de Citrix, auditar accesos remotos y monitorear indicadores relacionados con SoftEther y side‑loading.</p>
+                <p>El caso muestra la adopción de cadenas ClickOnce firmadas para eludir controles y facilitar el sideloading de componentes maliciosos. Recomendaciones incluyen bloquear o inspeccionar cargas ClickOnce, validar firmas y reforzar capacitación antiphishing para personal diplomático y de alto perfil.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/10/smishing-triad-linked-to-194000.html">Smishing Triad Linked to 194,000 Malicious Domains in Global Phishing Operation</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Palo Alto Unit 42 vincula una campaña global de smishing—atribuidas al "Smishing Triad"—a más de 194,000 dominios maliciosos desde el 1 de enero de 2024. Muchos dominios se registran con un registrador de Hong Kong pero se alojan en servicios en la nube de EE. UU. (destacando Cloudflare). Los atacantes rotan dominios desechables para suplantar a USPS, peajes, bancos, exchanges de cripto y más, robando credenciales y apuntando a cuentas de corretaje; la operación habría generado más de $1,000 millones.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Más de 194,000 dominios maliciosos registrados desde 2024 vinculados a smishing global.</li>
+                        <li>Estrategia: dominios desechables registrados en HK y hospedados en servicios en la nube (ej. Cloudflare) para evasión.</li>
+                        <li>Consecuencias: robo de credenciales, compromiso de cuentas de corretaje y pérdidas estimadas superiores a $1B.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>La escala y el modelo de rotación de dominios complican las listas negras tradicionales. Es clave reforzar filtros SMS, autenticación multifactor fuerte y monitoreo de actividad inusual en cuentas financieras, además de colaborar con proveedores de hosting y registradores para mitigar la proliferación de dominios maliciosos.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2025/10/analysing-clickfix-3-reasons-why.html">Analysing ClickFix: 3 Reasons Why Copy/Paste Attacks Are Driving Security Breaches</a></h2>
+                <h2><a href="https://thehackernews.com/2025/10/chatgpt-atlas-browser-can-be-tricked-by.html">ChatGPT Atlas Browser Can Be Tricked by Fake URLs into Executing Hidden Commands</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>ClickFix (también conocido como FileFix/fake CAPTCHA) engaña a usuarios para copiar contenido malicioso al portapapeles que luego pegan y ejecutan localmente, lo que permite evadir defensas centradas en correo electrónico. Se distribuye vía SEO poisoning, malvertising y otros vectores web; estas páginas evaden detección y dejan al EDR como última línea, la cual puede fallar ante payloads ofuscados iniciados por el usuario. La detección en el navegador de copiado/pegar malicioso puede mitigar el ataque antes de la ejecución local.</p>
+                <p>NeuralTrust divulgó una falla de inyección de prompts en el navegador ChatGPT Atlas: la omnibox puede interpretar cadenas diseñadas como URLs falsas como prompts de alta confianza por parte del usuario, permitiendo comandos ocultos (redirecciones, acciones con herramientas o exfiltración de datos). Los atacantes podrían ocultar cargas útiles tras botones "Copiar enlace" o mediante extensiones maliciosas (spoofing de la barra lateral de IA). OpenAI y terceros investigan mitigaciones, aunque la inyección de prompts sigue siendo un riesgo complejo.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Vector: engaños que inducen a copiar contenido malicioso al portapapeles.</li>
-                        <li>Evasión: evita controles basados en correo y aprovecha interacción del usuario.</li>
-                        <li>Mitigación: detección en navegador y controles que alerten sobre pegado ejecutable reducen el riesgo.</li>
+                        <li>Falla de inyección de prompts en la omnibox de ChatGPT Atlas que interpreta URLs maliciosas como comandos.</li>
+                        <li>Vectores: cadenas tipo URL, botones "Copiar enlace" y extensiones maliciosas que suplantan la interfaz.</li>
+                        <li>Riesgos: ejecución de comandos ocultos, redirecciones no deseadas y potencial exfiltración de datos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Al ser ataques iniciados por el usuario, es crítico combinar educación, políticas de prevención de pegado de comandos y soluciones que inspeccionen actividad del portapapeles en entornos de alto riesgo.</p>
+                <p>Aunque se buscan mitigaciones, la naturaleza de la interacción entre interfaces conversacionales y contenido web mantiene la inyección de prompts como un problema difícil de resolver. Se recomienda precaución con extensiones no verificadas y evitar interactuar con enlaces o elementos sospechosos en entornos de IA conversacional hasta que se apliquen parches robustos.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://www.microsoft.com/en-us/security/blog/2025/10/23/harden-your-identity-defense-with-improved-protection-deeper-correlation-and-richer-context/">Harden your identity defense with improved protection, deeper correlation, and richer context</a></h2>
+                <h2><a href="https://redcanary.com/blog/threat-detection/detection-engineering-storytelling/">The art and science of effective security storytelling</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Esto es un anuncio.</p>
+                <p>Red Canary plantea tres criterios—claridad de eventos (quién/qué/cuándo/dónde/cómo), capacidad de remediación y correlabilidad—para evaluar la calidad de los datos de seguridad. Con un ejemplo usando Azure AuditLogs, muestran cómo una "narrativa mínima viable" produce relatos concisos de incidentes y facilita remediaciones más rápidas y automatizables.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Contenido promocional sobre mejoras en defensa de identidad.</li>
-                        <li>Enfoque en protección, correlación y contexto enriquecido.</li>
-                        <li>No corresponde a un aviso técnico o reporte de incidente.</li>
+                        <li>Tres criterios para asegurar que los datos permitan acciones efectivas: claridad, remediabilidad y correlabilidad.</li>
+                        <li>Ejemplo práctico con Azure AuditLogs que ilustra la aplicación de los criterios.</li>
+                        <li>Beneficio: narrativas concisas que habilitan remediación más rápida y procesos automatizables.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Entrada de blog publicada como material promocional; revisar como referencia de producto si aplica, pero no como indicador de compromiso activo.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/sharepoint-toolshell-attacks-targeted-orgs-across-four-continents/">Sharepoint ToolShell attacks targeted orgs across four continents</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Actores vinculados a China explotaron la RCE ToolShell para SharePoint (CVE-2025-53770) para comprometer agencias gubernamentales, universidades, operadores de telecomunicaciones y entidades financieras en cuatro continentes. Las campañas utilizaron webshells y DLL side‑loading para desplegar Zingdoor, ShadowPad, KrustyLoader y Sliver, realizando volcados de credenciales y compromisos de dominio basados en PetitPotam para persistencia y robo de datos.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Vulnerabilidad explotada: CVE-2025-53770 (ToolShell RCE en SharePoint).</li>
-                        <li>Objetivos: organismos gubernamentales, universidades, telcos y finanzas en múltiples continentes.</li>
-                        <li>Muestras de post‑explotación: webshells, DLL side‑loading, despliegue de Zingdoor/ShadowPad/KrustyLoader/Sliver y uso de PetitPotam.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Campaña de explotación activa con impacto amplio; priorizar parcheo de SharePoint, detección de webshells, monitoreo de técnicas de lateralidad (PetitPotam) y respuesta a indicios de DLL side‑loading y volcados de credenciales.</p>
+                <p>El enfoque ayuda a priorizar y diseñar detecciones que no solo identifiquen eventos, sino que también permitan respuestas accionables. Incorporar estos criterios en la ingeniería de detección mejora la eficiencia operacional y facilita la automatización de remediaciones.</p>
             </section>
             
         </div>
