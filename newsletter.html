@@ -377,111 +377,119 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 31 de octubre, 2025</div>
+                <div class="date">Semana del 8 de noviembre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
 
+            <!-- Article sections will be inserted here by your n8n workflow -->
+            <!-- Example format for OpenAI to follow: -->
+            
             <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/new-android-trojan-herodotus-outsmarts.html">New Android Trojan 'Herodotus' Outsmarts Anti-Fraud Systems by Typing Like a Human</a></h2>
+                <span class="threat-level medium">RIESGO MEDIO</span>
+                <h2><a href="https://www.wiz.io/blog/introducing-wiz-asm">Introducing Wiz ASM: Context-Driven Attack Surface Management</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>ThreatFabric advierte sobre Herodotus, un nuevo troyano bancario para Android usado en campañas activas en Italia y Brasil. Distribuido mediante aplicaciones dropper y abusando de la accesibilidad de Android, instala overlays, roba credenciales y SMS 2FA, captura pantallas y puede instalar APKs. Como servicio (MaaS), simula la escritura humana añadiendo retrasos aleatorios (300–3000 ms) para evadir sistemas antifraude basados en comportamiento.</p>
+                <p>Wiz presenta Wiz ASM, un escáner de Attack Surface Management que combina el escaneo externo con el Wiz Security Graph para descubrir exposiciones en cloud, IA, SaaS y entornos on‑prem. Valida la explotabilidad de las exposiciones, prioriza riesgos según su impacto en el negocio, asigna propietarios y ofrece guía de remediación asistida por IA, integrándose en un proceso continuo de gestión de exposición a amenazas (CTEM).</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Campañas activas en Italia y Brasil usando aplicaciones dropper.</li>
-                        <li>Técnicas: abuso de accesibilidad, overlays, robo de credenciales y SMS 2FA, instalación de APKs.</li>
-                        <li>Evasión: imita la escritura humana con retrasos aleatorios (300–3000 ms) para sortear detecciones basadas en comportamiento.</li>
+                        <li>Visibilidad convergente de exposiciones en múltiples entornos (cloud, IA, SaaS, on‑prem).</li>
+                        <li>Validación de explotabilidad para reducir falsos positivos.</li>
+                        <li>Priorización basada en impacto de negocio y asignación de propietarios.</li>
+                        <li>Guía de remediación asistida por IA e integración en CTEM.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Herodotus se ofrece como MaaS, lo que facilita la distribución entre operadores. Su capacidad para introducir retrasos humanizados complica la detección por sistemas antifraude que analizan patrones de entrada, por lo que se recomienda fortalecer controles de accesibilidad, monitorear instalaciones de APK fuera de tiendas oficiales y revisar anomalías en autenticación multifactor.</p>
+                <p>Diseñado para integrarse con flujos de trabajo de seguridad existentes, Wiz ASM facilita la remediación y la responsabilidad operativa al identificar a los dueños de los activos expuestos y sugerir acciones concretas.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/sidewinder-adopts-new-clickonce-based.html">SideWinder Adopts New ClickOnce-Based Attack Chain Targeting South Asian Diplomats</a></h2>
+                <h2><a href="https://research.checkpoint.com/2025/microsoft-teams-impersonation-and-spoofing-vulnerabilities-exposed/">Exploiting Microsoft Teams: Impersonation and Spoofing Vulnerabilities Exposed</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>SideWinder ejecutó campañas de spear-phishing multionda (marzo–septiembre 2025) dirigidas a diplomáticos del sur de Asia y a una embajada europea en Nueva Delhi. Los atacantes emplearon señuelos en PDF que activan un instalador ClickOnce (firmado como MagTek ReaderConfiguration.exe) para sideload de DEVOBJ.dll, desplegar ModuleInstaller y StealerBot, y exfiltrar credenciales, capturas de pantalla y archivos. Trellix indica una evolución hacia cadenas de infección basadas en ClickOnce con C2 georrestringidos.</p>
+                <p>Check Point Research reveló cuatro vulnerabilidades en Microsoft Teams que permitían a invitados o usuarios internos suplantar a ejecutivos, alterar mensajes y notificaciones, y falsificar identidades de llamadas. Estas fallas podían facilitar fraudes, entrega de malware y difusión de desinformación. Microsoft fue notificado en marzo de 2024 y publicó correcciones, incluyendo CVE-2024-38197, con remediaciones completas hasta octubre de 2025.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Objetivo: diplomáticos de Asia del Sur y una embajada europea en Nueva Delhi.</li>
-                        <li>Vector: PDFs que lanzan instaladores ClickOnce firmados, sideload de DLLs y despliegue de StealerBot.</li>
-                        <li>Impacto: exfiltración de credenciales, capturas y archivos; uso de C2 regionalizados para limitar la detección.</li>
+                        <li>Vectores de suplantación que afectan mensajes, notificaciones y llamadas.</li>
+                        <li>Impacto alto: riesgo de fraude, phishing y distribución de malware.</li>
+                        <li>Vulnerabilidades reportadas en 2024; parches y mitigaciones liberados en 2025.</li>
+                        <li>Recomendación: aplicar actualizaciones y revisar configuraciones de permisos de invitados.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>El caso muestra la adopción de cadenas ClickOnce firmadas para eludir controles y facilitar el sideloading de componentes maliciosos. Recomendaciones incluyen bloquear o inspeccionar cargas ClickOnce, validar firmas y reforzar capacitación antiphishing para personal diplomático y de alto perfil.</p>
+                <p>Las organizaciones deben validar que los parches de Teams estén aplicados, reforzar políticas de acceso para invitados y monitorear actividades inusuales relacionadas con cuentas privilegiadas y comunicaciones internas.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level medium">RIESGO MEDIO</span>
+                <h2><a href="https://thehackernews.com/2025/11/ransomware-defense-using-wazuh-open.html">Ransomware Defense Using the Wazuh Open Source Platform</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>El artículo presenta cómo la plataforma open source Wazuh puede emplearse para detectar, prevenir y responder a ataques de ransomware. Describe capacidades clave como monitoreo de integridad de archivos, análisis y correlación de logs, detección de comportamiento sospechoso y orquestación de respuestas automatizadas para contener infecciones y minimizar impacto.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Monitoreo de integridad de archivos para detectar cifrados o modificaciones maliciosas.</li>
+                        <li>Correlación de eventos y detección basada en comportamiento.</li>
+                        <li>Alertas y respuesta automatizada para contener propagación.</li>
+                        <li>Recomendaciones de despliegue y ajustes para entornos empresariales.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Implementar Wazuh con reglas adaptadas al entorno, integrar con EDR/SIEM y definir playbooks de respuesta ayuda a reducir ventanas de exposición ante ransomware y mejora la capacidad de recuperación.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/10/smishing-triad-linked-to-194000.html">Smishing Triad Linked to 194,000 Malicious Domains in Global Phishing Operation</a></h2>
+                <h2><a href="https://thehackernews.com/2025/11/a-cybercrime-merger-like-no-other.html">A Cybercrime Merger Like No Other — Scattered Spider, LAPSUS$, and ShinyHunters Join Forces</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Palo Alto Unit 42 vincula una campaña global de smishing—atribuidas al "Smishing Triad"—a más de 194,000 dominios maliciosos desde el 1 de enero de 2024. Muchos dominios se registran con un registrador de Hong Kong pero se alojan en servicios en la nube de EE. UU. (destacando Cloudflare). Los atacantes rotan dominios desechables para suplantar a USPS, peajes, bancos, exchanges de cripto y más, robando credenciales y apuntando a cuentas de corretaje; la operación habría generado más de $1,000 millones.</p>
+                <p>Un colectivo emergente que agrupa a Scattered Spider, LAPSUS$ y ShinyHunters ha publicado múltiples canales en Telegram (al menos 16 desde el 8 de agosto de 2025), recreándolos repetidamente tras la moderación. La fusión sugiere coordinación entre actores para amplificar actividades como exfiltración, extorsión y venta de datos comprometidos.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Más de 194,000 dominios maliciosos registrados desde 2024 vinculados a smishing global.</li>
-                        <li>Estrategia: dominios desechables registrados en HK y hospedados en servicios en la nube (ej. Cloudflare) para evasión.</li>
-                        <li>Consecuencias: robo de credenciales, compromiso de cuentas de corretaje y pérdidas estimadas superiores a $1B.</li>
+                        <li>Unión operacional de tres grupos conocidos, con presencia activa en Telegram.</li>
+                        <li>Canales removidos y recreados múltiples veces para evadir moderación.</li>
+                        <li>Mayor capacidad para ataques coordinados, filtración y extorsión.</li>
+                        <li>Se requiere monitoreo proactivo y compartición de inteligencia para mitigación.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La escala y el modelo de rotación de dominios complican las listas negras tradicionales. Es clave reforzar filtros SMS, autenticación multifactor fuerte y monitoreo de actividad inusual en cuentas financieras, además de colaborar con proveedores de hosting y registradores para mitigar la proliferación de dominios maliciosos.</p>
+                <p>Equipos de TI y seguridad deben intensificar la vigilancia de amenazas, proteger credenciales y datos sensibles, y colaborar con proveedores y comunidades de TI para bloquear campañas y contener impactos.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2025/10/chatgpt-atlas-browser-can-be-tricked-by.html">ChatGPT Atlas Browser Can Be Tricked by Fake URLs into Executing Hidden Commands</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://www.bleepingcomputer.com/news/security/microsoft-sesameop-malware-abuses-openai-assistants-api-in-attacks/">Microsoft: SesameOp malware abuses OpenAI Assistants API in attacks</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>NeuralTrust divulgó una falla de inyección de prompts en el navegador ChatGPT Atlas: la omnibox puede interpretar cadenas diseñadas como URLs falsas como prompts de alta confianza por parte del usuario, permitiendo comandos ocultos (redirecciones, acciones con herramientas o exfiltración de datos). Los atacantes podrían ocultar cargas útiles tras botones "Copiar enlace" o mediante extensiones maliciosas (spoofing de la barra lateral de IA). OpenAI y terceros investigan mitigaciones, aunque la inyección de prompts sigue siendo un riesgo complejo.</p>
+                <p>Microsoft DART identificó "SesameOp", un backdoor que abusa de la API de OpenAI Assistants como canal encubierto de comando y control para obtener comandos cifrados y exfiltrar datos. Se desplegó mediante un loader .NET ofuscado e inyección en AppDomainManager, logrando persistencia a largo plazo. Microsoft y OpenAI deshabilitaron la clave de API comprometida y publicaron guías de mitigación.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Falla de inyección de prompts en la omnibox de ChatGPT Atlas que interpreta URLs maliciosas como comandos.</li>
-                        <li>Vectores: cadenas tipo URL, botones "Copiar enlace" y extensiones maliciosas que suplantan la interfaz.</li>
-                        <li>Riesgos: ejecución de comandos ocultos, redirecciones no deseadas y potencial exfiltración de datos.</li>
+                        <li>SesameOp usa la API de asistentes de OpenAI como C2 encubierto para enviar/recibir datos.</li>
+                        <li>Vector técnico: loader .NET ofuscado y AppDomainManager injection para persistencia.</li>
+                        <li>Acciones: deshabilitación de la clave de API comprometida y publicación de mitigaciones.</li>
+                        <li>Recomendación: revisar integraciones con APIs externas y auditar claves y permisos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Aunque se buscan mitigaciones, la naturaleza de la interacción entre interfaces conversacionales y contenido web mantiene la inyección de prompts como un problema difícil de resolver. Se recomienda precaución con extensiones no verificadas y evitar interactuar con enlaces o elementos sospechosos en entornos de IA conversacional hasta que se apliquen parches robustos.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://redcanary.com/blog/threat-detection/detection-engineering-storytelling/">The art and science of effective security storytelling</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Red Canary plantea tres criterios—claridad de eventos (quién/qué/cuándo/dónde/cómo), capacidad de remediación y correlabilidad—para evaluar la calidad de los datos de seguridad. Con un ejemplo usando Azure AuditLogs, muestran cómo una "narrativa mínima viable" produce relatos concisos de incidentes y facilita remediaciones más rápidas y automatizables.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Tres criterios para asegurar que los datos permitan acciones efectivas: claridad, remediabilidad y correlabilidad.</li>
-                        <li>Ejemplo práctico con Azure AuditLogs que ilustra la aplicación de los criterios.</li>
-                        <li>Beneficio: narrativas concisas que habilitan remediación más rápida y procesos automatizables.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>El enfoque ayuda a priorizar y diseñar detecciones que no solo identifiquen eventos, sino que también permitan respuestas accionables. Incorporar estos criterios en la ingeniería de detección mejora la eficiencia operacional y facilita la automatización de remediaciones.</p>
+                <p>Además de revocar claves afectadas, se sugiere implementar reglas de detección en EDR/SIEM para actividad relacionada con AppDomainManager, controlar el uso de APIs externas y aplicar controles de privilegios mínimos en entornos que ejecutan .NET.</p>
             </section>
             
         </div>
