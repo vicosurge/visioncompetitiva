@@ -377,119 +377,116 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 8 de noviembre, 2025</div>
+                <div class="date">Semana del 10 de noviembre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
 
-            <!-- Article sections will be inserted here by your n8n workflow -->
-            <!-- Example format for OpenAI to follow: -->
-            
             <section class="article-section">
-                <span class="threat-level medium">RIESGO MEDIO</span>
-                <h2><a href="https://www.wiz.io/blog/introducing-wiz-asm">Introducing Wiz ASM: Context-Driven Attack Surface Management</a></h2>
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://www.bleepingcomputer.com/news/security/media-giant-nikkei-reports-data-breach-impacting-17-000-people/">Media giant Nikkei reports data breach impacting 17,000 people</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Wiz presenta Wiz ASM, un escáner de Attack Surface Management que combina el escaneo externo con el Wiz Security Graph para descubrir exposiciones en cloud, IA, SaaS y entornos on‑prem. Valida la explotabilidad de las exposiciones, prioriza riesgos según su impacto en el negocio, asigna propietarios y ofrece guía de remediación asistida por IA, integrándose en un proceso continuo de gestión de exposición a amenazas (CTEM).</p>
+                <p>Atacantes accedieron a cuentas de Slack de empleados luego de que la PC de un trabajador fuera infectada con malware, exponiendo nombres, correos electrónicos e historiales de chat de 17,368 personas. La intrusión se descubrió en septiembre; Nikkei obligó a cambiar contraseñas y notificó voluntariamente a la Comisión de Protección de Información Personal de Japón, indicando que no se filtraron fuentes confidenciales ni datos de investigación.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Visibilidad convergente de exposiciones en múltiples entornos (cloud, IA, SaaS, on‑prem).</li>
-                        <li>Validación de explotabilidad para reducir falsos positivos.</li>
-                        <li>Priorización basada en impacto de negocio y asignación de propietarios.</li>
-                        <li>Guía de remediación asistida por IA e integración en CTEM.</li>
+                        <li>17,368 registros de empleados expuestos (nombres, correos y chats).</li>
+                        <li>Acceso a Slack a partir de credenciales robadas tras infección por malware.</li>
+                        <li>Nikkei forzó cambios de contraseña y notificó a la autoridad de privacidad japonesa.</li>
+                        <li>No se reportó fuga de fuentes confidenciales o datos periodísticos críticos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Diseñado para integrarse con flujos de trabajo de seguridad existentes, Wiz ASM facilita la remediación y la responsabilidad operativa al identificar a los dueños de los activos expuestos y sugerir acciones concretas.</p>
+                <p>Revisar accesos de cuentas con credenciales comprometidas, forzar rotación de credenciales, habilitar MFA y auditar sesiones de Slack y registros de dispositivos comprometidos.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://research.checkpoint.com/2025/microsoft-teams-impersonation-and-spoofing-vulnerabilities-exposed/">Exploiting Microsoft Teams: Impersonation and Spoofing Vulnerabilities Exposed</a></h2>
+                <h2><a href="https://thehackernews.com/2025/11/weekly-recap-lazarus-hits-web3-intelamd.html">⚡ Weekly Recap: Lazarus Hits Web3, Intel/AMD TEEs Cracked, Dark Web Leak Tool & More</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Check Point Research reveló cuatro vulnerabilidades en Microsoft Teams que permitían a invitados o usuarios internos suplantar a ejecutivos, alterar mensajes y notificaciones, y falsificar identidades de llamadas. Estas fallas podían facilitar fraudes, entrega de malware y difusión de desinformación. Microsoft fue notificado en marzo de 2024 y publicó correcciones, incluyendo CVE-2024-38197, con remediaciones completas hasta octubre de 2025.</p>
+                <p>Resumen semanal de desarrollos urgentes: campañas de Lazarus/BlueNoroff (GhostCall/GhostHire) dirigidas a profesionales de Web3, la vulnerabilidad TEE.fail DDR5 que rompe las Trusted Execution Environments de Intel/AMD, explotación rápida de múltiples CVE críticos, nuevo troyano bancario Android Herodotus, ransomware Qilin que aprovecha WSL, campañas de cadena de suministro y phishing. Se listan herramientas y mitigaciones: parchear y reducir la superficie de ataque de inmediato.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Vectores de suplantación que afectan mensajes, notificaciones y llamadas.</li>
-                        <li>Impacto alto: riesgo de fraude, phishing y distribución de malware.</li>
-                        <li>Vulnerabilidades reportadas en 2024; parches y mitigaciones liberados en 2025.</li>
-                        <li>Recomendación: aplicar actualizaciones y revisar configuraciones de permisos de invitados.</li>
+                        <li>Campañas dirigidas a Web3 por Lazarus/BlueNoroff con tácticas de ingeniería social.</li>
+                        <li>Breakdown de TEEs (TEE.fail) afecta a Intel y AMD — riesgo para enclaves seguros.</li>
+                        <li>Explotaciones rápidas tras divulgación de CVE; aplicar parches urgentemente.</li>
+                        <li>Aparecen nuevas familias de malware: Herodotus (Android) y Qilin (ransomware usando WSL).</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Las organizaciones deben validar que los parches de Teams estén aplicados, reforzar políticas de acceso para invitados y monitorear actividades inusuales relacionadas con cuentas privilegiadas y comunicaciones internas.</p>
+                <p>Priorizar parches críticos, revisar telemetría para actividad inusual, endurecer controles de acceso y monitorizar amenazas relacionadas con Web3 y supply chain.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level medium">RIESGO MEDIO</span>
-                <h2><a href="https://thehackernews.com/2025/11/ransomware-defense-using-wazuh-open.html">Ransomware Defense Using the Wazuh Open Source Platform</a></h2>
+                <span class="threat-level low">AMENAZA BAJA</span>
+                <h2><a href="https://www.wiz.io/blog/defend-agentless-workload-detection-bringing-visibility-to-blind-spots-in-threat">Defend Agentless Workload Detection: Bringing Visibility to Blind Spots in Threat Detection</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El artículo presenta cómo la plataforma open source Wazuh puede emplearse para detectar, prevenir y responder a ataques de ransomware. Describe capacidades clave como monitoreo de integridad de archivos, análisis y correlación de logs, detección de comportamiento sospechoso y orquestación de respuestas automatizadas para contener infecciones y minimizar impacto.</p>
+                <p>Wiz presenta Agentless Workload Detection en Wiz Defend para cerrar brechas de visibilidad en appliances y cargas gestionadas por proveedores o de alto rendimiento donde no se pueden desplegar agentes. La solución ingiere logs locales sin agente, correlaciona con eventos del plano de control en la nube, señales de runtime y el contexto del Security Graph para mejorar la detección de malware, correlación de amenazas y análisis forense sin impacto en el rendimiento.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Monitoreo de integridad de archivos para detectar cifrados o modificaciones maliciosas.</li>
-                        <li>Correlación de eventos y detección basada en comportamiento.</li>
-                        <li>Alertas y respuesta automatizada para contener propagación.</li>
-                        <li>Recomendaciones de despliegue y ajustes para entornos empresariales.</li>
+                        <li>Detección sin agente para entornos donde no es viable instalar agentes.</li>
+                        <li>Correlación entre logs locales, eventos del control‑plane y señales de runtime.</li>
+                        <li>Mejora en la visibilidad, correlación de amenazas y capacidades forenses.</li>
+                        <li>Diseñado para no afectar el rendimiento ni requerir despliegues complejos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Implementar Wazuh con reglas adaptadas al entorno, integrar con EDR/SIEM y definir playbooks de respuesta ayuda a reducir ventanas de exposición ante ransomware y mejora la capacidad de recuperación.</p>
+                <p>Útil para organizaciones con appliances o cargas manejadas por terceros; evaluar integraciones y vista del Security Graph para priorizar remediaciones.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">AMENAZA BAJA</span>
+                <h2><a href="https://www.wiz.io/blog/wiz-for-microsoft-365">Meet Wiz for M365: Bringing SaaS into the Security Graph</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Wiz for Microsoft 365 ofrece visibilidad agentless basada en grafo para M365, mostrando riesgos de postura, datos y accesos en OneDrive, SharePoint, Exchange y recursos conectados. Integra hallazgos de M365 en el Wiz Security Graph para revelar rutas de ataque entre SaaS y cloud, habilitando clasificación de datos impulsada por IA, remediación priorizada y flujos de trabajo automatizados. Disponible en vista previa pública.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Visibilidad integrada de posture y accesos en servicios M365.</li>
+                        <li>Relaciona riesgos de SaaS con la superficie cloud mediante el Security Graph.</li>
+                        <li>Incluye clasificación de datos con IA y priorización automatizada de remediaciones.</li>
+                        <li>Vista previa pública disponible para evaluación.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Considerar pruebas en entornos controlados para validar detección y automatización antes de desplegar en producción; evaluar políticas de acceso y protección de datos complementarias.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/11/a-cybercrime-merger-like-no-other.html">A Cybercrime Merger Like No Other — Scattered Spider, LAPSUS$, and ShinyHunters Join Forces</a></h2>
+                <h2><a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-wordpress-plugin-post-smtp-to-hijack-admin-accounts/">Hackers exploit WordPress plugin Post SMTP to hijack admin accounts</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Un colectivo emergente que agrupa a Scattered Spider, LAPSUS$ y ShinyHunters ha publicado múltiples canales en Telegram (al menos 16 desde el 8 de agosto de 2025), recreándolos repetidamente tras la moderación. La fusión sugiere coordinación entre actores para amplificar actividades como exfiltración, extorsión y venta de datos comprometidos.</p>
+                <p>Actores maliciosos explotan activamente CVE-2025-11833, un fallo crítico (9.8) de divulgación de registros de correo en el plugin Post SMTP para WordPress (≤3.6.0), presente en más de 400,000 sitios. Los atacantes pueden leer correos de restablecimiento de contraseña y secuestrar cuentas administrativas. La versión 3.6.1 (29 de octubre) corrige el fallo; los propietarios deben actualizar o desactivar el plugin de inmediato.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Unión operacional de tres grupos conocidos, con presencia activa en Telegram.</li>
-                        <li>Canales removidos y recreados múltiples veces para evadir moderación.</li>
-                        <li>Mayor capacidad para ataques coordinados, filtración y extorsión.</li>
-                        <li>Se requiere monitoreo proactivo y compartición de inteligencia para mitigación.</li>
+                        <li>CVE-2025-11833: divulgación de logs de correo que permite leer emails de restablecimiento.</li>
+                        <li>Impacta a >400,000 sitios con Post SMTP ≤3.6.0.</li>
+                        <li>Explotación activa reportada; riesgo directo de secuestro de cuentas admin.</li>
+                        <li>Actualizar a Post SMTP 3.6.1 o desactivar el plugin urgentemente.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Equipos de TI y seguridad deben intensificar la vigilancia de amenazas, proteger credenciales y datos sensibles, y colaborar con proveedores y comunidades de TI para bloquear campañas y contener impactos.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/microsoft-sesameop-malware-abuses-openai-assistants-api-in-attacks/">Microsoft: SesameOp malware abuses OpenAI Assistants API in attacks</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Microsoft DART identificó "SesameOp", un backdoor que abusa de la API de OpenAI Assistants como canal encubierto de comando y control para obtener comandos cifrados y exfiltrar datos. Se desplegó mediante un loader .NET ofuscado e inyección en AppDomainManager, logrando persistencia a largo plazo. Microsoft y OpenAI deshabilitaron la clave de API comprometida y publicaron guías de mitigación.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>SesameOp usa la API de asistentes de OpenAI como C2 encubierto para enviar/recibir datos.</li>
-                        <li>Vector técnico: loader .NET ofuscado y AppDomainManager injection para persistencia.</li>
-                        <li>Acciones: deshabilitación de la clave de API comprometida y publicación de mitigaciones.</li>
-                        <li>Recomendación: revisar integraciones con APIs externas y auditar claves y permisos.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Además de revocar claves afectadas, se sugiere implementar reglas de detección en EDR/SIEM para actividad relacionada con AppDomainManager, controlar el uso de APIs externas y aplicar controles de privilegios mínimos en entornos que ejecutan .NET.</p>
+                <p>Aplicar actualización inmediatamente, revisar registros de accesos administrativos, forzar resets de contraseña si se sospecha compromiso, y monitorizar intentos de restablecimiento y actividad inusual en sitios afectados.</p>
             </section>
             
         </div>
