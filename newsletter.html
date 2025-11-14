@@ -377,116 +377,114 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 10 de noviembre, 2025</div>
+                <div class="date">Semana del 14 de noviembre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
 
+            <!-- Article sections will be inserted here by your n8n workflow -->
+            <!-- Example format for OpenAI to follow: -->
+            
             <section class="article-section">
                 <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/media-giant-nikkei-reports-data-breach-impacting-17-000-people/">Media giant Nikkei reports data breach impacting 17,000 people</a></h2>
+                <h2><a href="https://thehackernews.com/2025/11/google-launches-new-maps-feature-to.html">Google Launches New Maps Feature to Help Businesses Report Review-Based Extortion Attempts</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Atacantes accedieron a cuentas de Slack de empleados luego de que la PC de un trabajador fuera infectada con malware, exponiendo nombres, correos electrónicos e historiales de chat de 17,368 personas. La intrusión se descubrió en septiembre; Nikkei obligó a cambiar contraseñas y notificó voluntariamente a la Comisión de Protección de Información Personal de Japón, indicando que no se filtraron fuentes confidenciales ni datos de investigación.</p>
+                <p>Google añadió en Maps un formulario específico para que los comercios denuncien extorsiones basadas en reseñas (review‑bombing), donde los atacantes publican reseñas negativas falsas y exigen un rescate para eliminarlas. La herramienta facilita reportar reseñas de una estrella no auténticas y amenazas relacionadas. El informe también alerta sobre otras estafas comunes como fraudes laborales, suplantación por IA, VPNs maliciosos, recuperación de fraudes y estafas estacionales, y cita una investigación de Reuters sobre anuncios fraudulentos en Meta.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>17,368 registros de empleados expuestos (nombres, correos y chats).</li>
-                        <li>Acceso a Slack a partir de credenciales robadas tras infección por malware.</li>
-                        <li>Nikkei forzó cambios de contraseña y notificó a la autoridad de privacidad japonesa.</li>
-                        <li>No se reportó fuga de fuentes confidenciales o datos periodísticos críticos.</li>
+                        <li>Nuevo formulario en Google Maps para reportar reseñas falsas y extorsión por reseñas.</li>
+                        <li>Se detectan además estafas por empleo, suplantación por IA y anuncios fraudulentos en redes.</li>
+                        <li>Herramienta busca ayudar a comerciantes a denunciar y mitigar daños reputacionales.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Revisar accesos de cuentas con credenciales comprometidas, forzar rotación de credenciales, habilitar MFA y auditar sesiones de Slack y registros de dispositivos comprometidos.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/11/weekly-recap-lazarus-hits-web3-intelamd.html">⚡ Weekly Recap: Lazarus Hits Web3, Intel/AMD TEEs Cracked, Dark Web Leak Tool & More</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Resumen semanal de desarrollos urgentes: campañas de Lazarus/BlueNoroff (GhostCall/GhostHire) dirigidas a profesionales de Web3, la vulnerabilidad TEE.fail DDR5 que rompe las Trusted Execution Environments de Intel/AMD, explotación rápida de múltiples CVE críticos, nuevo troyano bancario Android Herodotus, ransomware Qilin que aprovecha WSL, campañas de cadena de suministro y phishing. Se listan herramientas y mitigaciones: parchear y reducir la superficie de ataque de inmediato.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Campañas dirigidas a Web3 por Lazarus/BlueNoroff con tácticas de ingeniería social.</li>
-                        <li>Breakdown de TEEs (TEE.fail) afecta a Intel y AMD — riesgo para enclaves seguros.</li>
-                        <li>Explotaciones rápidas tras divulgación de CVE; aplicar parches urgentemente.</li>
-                        <li>Aparecen nuevas familias de malware: Herodotus (Android) y Qilin (ransomware usando WSL).</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Priorizar parches críticos, revisar telemetría para actividad inusual, endurecer controles de acceso y monitorizar amenazas relacionadas con Web3 y supply chain.</p>
+                <p>Las empresas deben monitorizar activamente reseñas y reportar patrones de review‑bombing. Complementar con políticas de respuesta a incidentes y evidencias para acelerar la remoción. La función facilita la denuncia, pero no sustituye controles internos de reputación y detección temprana.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://www.wiz.io/blog/defend-agentless-workload-detection-bringing-visibility-to-blind-spots-in-threat">Defend Agentless Workload Detection: Bringing Visibility to Blind Spots in Threat Detection</a></h2>
+                <h2><a href="https://www.bleepingcomputer.com/news/microsoft/how-to-use-the-new-windows-11-start-menu-now-rolling-out/">How to use the new Windows 11 Start menu, now rolling out</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Wiz presenta Agentless Workload Detection en Wiz Defend para cerrar brechas de visibilidad en appliances y cargas gestionadas por proveedores o de alto rendimiento donde no se pueden desplegar agentes. La solución ingiere logs locales sin agente, correlaciona con eventos del plano de control en la nube, señales de runtime y el contexto del Security Graph para mejorar la detección de malware, correlación de amenazas y análisis forense sin impacto en el rendimiento.</p>
+                <p>El menú Inicio de Windows 11 recibe su primer rediseño importante desde 2021 y comenzó a desplegarse con el Patch Tuesday del 11 de noviembre. Ahora el menú es desplazable y muestra la lista "Todas las aplicaciones" en la página principal. Hay dos interfaces para "Todas las aplicaciones": la vista por Categorías (agrupa aplicaciones localmente, requiere 3+ apps por categoría) y la vista en Cuadrícula (A–Z). La UI se adapta al tamaño de pantalla, permite ocultar el feed Recomendado desde Configuración y está incluida en las compilaciones 26200.7019 y 26100.7019 o superiores. Algunos usuarios señalan que ocupa mucho espacio en pantallas de baja resolución y sería útil contar con controles de categorías más flexibles.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Detección sin agente para entornos donde no es viable instalar agentes.</li>
-                        <li>Correlación entre logs locales, eventos del control‑plane y señales de runtime.</li>
-                        <li>Mejora en la visibilidad, correlación de amenazas y capacidades forenses.</li>
-                        <li>Diseñado para no afectar el rendimiento ni requerir despliegues complejos.</li>
+                        <li>Nuevo diseño: menú desplazable con "Todas las aplicaciones" en la portada.</li>
+                        <li>Dos vistas: Categorías (agrupada) y Cuadrícula (A–Z); adaptable según pantalla.</li>
+                        <li>Posibilidad de ocultar feed Recomendado; disponible en builds 26200.7019 y 26100.7019+.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Útil para organizaciones con appliances o cargas manejadas por terceros; evaluar integraciones y vista del Security Graph para priorizar remediaciones.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://www.wiz.io/blog/wiz-for-microsoft-365">Meet Wiz for M365: Bringing SaaS into the Security Graph</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Wiz for Microsoft 365 ofrece visibilidad agentless basada en grafo para M365, mostrando riesgos de postura, datos y accesos en OneDrive, SharePoint, Exchange y recursos conectados. Integra hallazgos de M365 en el Wiz Security Graph para revelar rutas de ataque entre SaaS y cloud, habilitando clasificación de datos impulsada por IA, remediación priorizada y flujos de trabajo automatizados. Disponible en vista previa pública.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Visibilidad integrada de posture y accesos en servicios M365.</li>
-                        <li>Relaciona riesgos de SaaS con la superficie cloud mediante el Security Graph.</li>
-                        <li>Incluye clasificación de datos con IA y priorización automatizada de remediaciones.</li>
-                        <li>Vista previa pública disponible para evaluación.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Considerar pruebas en entornos controlados para validar detección y automatización antes de desplegar en producción; evaluar políticas de acceso y protección de datos complementarias.</p>
+                <p>Para entornos corporativos, evaluar impacto en UX y dispositivos con pantallas de baja resolución. Administradores podrían necesitar comunicar cambios y considerar ajustes en políticas de imagen y resolución para evitar que el menú interfiera con flujos de trabajo.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-wordpress-plugin-post-smtp-to-hijack-admin-accounts/">Hackers exploit WordPress plugin Post SMTP to hijack admin accounts</a></h2>
+                <h2><a href="https://www.wiz.io/blog/forbes-ai-50-leaking-secrets">Exposure Report: 65% of Leading AI Companies Found with Verified Secret Leaks</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Actores maliciosos explotan activamente CVE-2025-11833, un fallo crítico (9.8) de divulgación de registros de correo en el plugin Post SMTP para WordPress (≤3.6.0), presente en más de 400,000 sitios. Los atacantes pueden leer correos de restablecimiento de contraseña y secuestrar cuentas administrativas. La versión 3.6.1 (29 de octubre) corrige el fallo; los propietarios deben actualizar o desactivar el plugin de inmediato.</p>
+                <p>Wiz escaneó las 50 principales empresas de IA según Forbes y halló fugas verificadas de secretos en el 65% de las compañías —exponiendo claves API, tokens y credenciales específicas de IA (por ejemplo, Weights & Biases, ElevenLabs, HuggingFace) frecuentemente ocultas en forks eliminados, gists y el historial de commits. Las firmas afectadas suman más de $400 mil millones en valoración. Las divulgaciones fueron dispares; Wiz recomienda escaneo obligatorio de repositorios públicos, preparación para divulgaciones, detección propietaria de secretos y mayor cobertura en profundidad y perímetro.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>CVE-2025-11833: divulgación de logs de correo que permite leer emails de restablecimiento.</li>
-                        <li>Impacta a >400,000 sitios con Post SMTP ≤3.6.0.</li>
-                        <li>Explotación activa reportada; riesgo directo de secuestro de cuentas admin.</li>
-                        <li>Actualizar a Post SMTP 3.6.1 o desactivar el plugin urgentemente.</li>
+                        <li>65% de empresas analizadas presentan fugas verificadas de secretos (API keys, tokens, credenciales IA).</li>
+                        <li>Se encuentran en forks eliminados, gists y en el historial de commits —fuentes difíciles de limpiar.</li>
+                        <li>Recomendaciones: escaneo público de VCS, detección propietaria de secretos y preparación para divulgaciones.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Aplicar actualización inmediatamente, revisar registros de accesos administrativos, forzar resets de contraseña si se sospecha compromiso, y monitorizar intentos de restablecimiento y actividad inusual en sitios afectados.</p>
+                <p>Las organizaciones de IA deben rotar claves comprometidas, ejecutar escaneos de secretos en todo el ciclo de vida del código, aplicar políticas de least privilege y auditar repositorios y artefactos históricos. La exposición puede llevar a abuso de modelos, costos inesperados y compromisos regulatorios.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/11/enterprise-credentials-at-risk-same-old.html">Enterprise Credentials at Risk – Same Old, Same Old?</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Las empresas siguen vulnerables debido a la reutilización de contraseñas por empleados y a campañas de phishing, credential stuffing, claves API filtradas y brechas en terceros. Las credenciales robadas se agregan y venden (frecuentemente alrededor de $15 cada una), luego son probadas por bots o explotadas por grupos organizados para takeover de cuentas, movimiento lateral, robo de datos, abuso de recursos y ransomware. Se enfatiza la necesidad de detección, higiene de credenciales y controles de identidad.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Reutilización de contraseñas y phishing siguen siendo causas principales de compromiso.</li>
+                        <li>Credenciales robadas se venden y se utilizan para account takeover y movimiento lateral.</li>
+                        <li>Priorizar detección, limpieza de credenciales y controles robustos de identidad.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Implementar autenticación multifactor (preferiblemente FIDO/WebAuthn), rotación y segmentación de credenciales, detección de anomalías en accesos y políticas estrictas para proveedores terceros. Educar usuarios y desplegar bloqueos contra credential stuffing reduce riesgo operativo y exposición a ransomware.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/11/android-trojan-fantasy-hub-malware.html">Android Trojan 'Fantasy Hub' Malware Service Turns Telegram Into a Hub for Hackers</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Fantasy Hub es un Malware‑as‑a‑Service para Android, de idioma ruso, comercializado vía Telegram. Ofrece un modelo por suscripción y un generador (builder) para trojanizar APKs, permitiendo control remoto de dispositivos, interceptación de SMS (incluida 2FA), acceso a contactos, registros de llamadas y medios, overlays falsos para banca y transmisión de cámara/micrófono vía WebRTC. Los precios van de $200/semana a $4,500/año, lo que representa un riesgo significativo para BYOD y usuarios de banca móvil.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>MaaS distribuido por Telegram: builder y panel de control para trojanizar APKs.</li>
+                        <li>Funciones: control remoto, interceptación de SMS (2FA), overlays bancarios, acceso a cámara/mic vía WebRTC.</li>
+                        <li>Modelo comercial: suscripciones desde $200/semana hasta $4,500/año; amenaza para BYOD y banca móvil.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Recomendar evitar instalación de APKs fuera de tiendas oficiales, aplicar movilidad gestionada (MDM), restringir permisos sensibles, usar autenticación fuerte (FIDO) y soluciones antimalware móviles. Las instituciones financieras deben reforzar detección de overlays y anomalías en transacciones.</p>
             </section>
             
         </div>
