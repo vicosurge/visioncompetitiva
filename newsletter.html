@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 19 de diciembre, 2025</div>
+                <div class="date">Semana del 22 de diciembre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
@@ -389,107 +389,102 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/12/rogue-nuget-package-poses-as-tracerfody.html">Rogue NuGet Package Poses as Tracer.Fody, Steals Cryptocurrency Wallet Data</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Se identificó un paquete malicioso publicado en el repositorio NuGet que se hacía pasar por la librería legítima Tracer.Fody. Una vez instalado, el paquete recopilaba y exfiltraba datos relacionados con carteras de criptomonedas y credenciales desde entornos de desarrollo y sistemas afectados.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Suplantación de un paquete legítimo en el repositorio público NuGet.</li>
-                        <li>Exfiltración dirigida a archivos y credenciales vinculadas a carteras de criptomonedas.</li>
-                        <li>Riesgo para desarrolladores y pipelines de CI/CD que confían en dependencias externas.</li>
-                        <li>Retiro del paquete y avisos por parte de proveedores tras la detección.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Este incidente resalta el riesgo de la cadena de suministro de software. Recomendaciones inmediatas: auditar dependencias, validar propietarios y firmas de paquetes, eliminar paquetes sospechosos, rotar credenciales potencialmente expuestas y revisar pipelines de CI/CD. Implementar escaneo de paquetes y políticas de aprobación antes de la integración en entornos de producción.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
                 <h2><a href="https://research.checkpoint.com/2025/ink-dragons-relay-network-and-offensive-operation/">Inside Ink Dragon: Revealing the Relay Network and Inner Workings of a Stealthy Offensive Operation</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Investigadores desentrañaron una operación ofensiva avanzada denominada "Ink Dragon", que utiliza una red de relés y herramientas modulares para ocultar comandos, facilitar movimiento lateral y persistir en redes comprometidas. La infraestructura muestra técnicas sofisticadas de evasión y delegación entre nodos de control.</p>
+                <p>Check Point Research atribuye al clúster alineado con la RPC conocido como "Ink Dragon" la explotación de la deserialización de ViewState de ASP.NET y el uso de ToolShell para comprometer servidores IIS/SharePoint gubernamentales en el Sudeste Asiático, Sudamérica y —cada vez más— Europa. El grupo despliega un escuchador ShadowPad en IIS para convertir víctimas en una red distribuida de relés/C2 y emplea cargadores modulares, robo de credenciales y persistencia sigilosa para movimiento lateral y dominio de dominio.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Arquitectura basada en una red de relés para dificultar el rastreo del C2.</li>
-                        <li>Técnicas de ofuscación y compromiso escalonado que reducen la detección.</li>
-                        <li>Modularidad en herramientas que permite objetivos variados (exfiltración, sabotaje, espionaje).</li>
-                        <li>Indicadores de compromiso distribuidos y operación persistente.</li>
+                        <li>Explotación de deserialización de ViewState y ToolShell contra servidores IIS/SharePoint.</li>
+                        <li>Uso de ShadowPad como escuchador para crear una red de relés/C2 distribuida.</li>
+                        <li>Modularidad: cargadores, robo de credenciales y persistencia para movimiento lateral y control de dominios.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Mitigar este tipo de campañas requiere segmentación de red, control estricto de accesos, EDR con telemetría profunda y programas de threat hunting centrados en patrones de relay y comportamiento anómalo. Revisar registros de proxy, conexiones salientes recurrentes y desplegar reglas para detectar tráfico encubierto hacia nodos intermedios.</p>
+                <p>Organizaciones en gobiernos y sistemas SharePoint deben priorizar la detección de tráfico saliente inusual desde IIS, aplicar parches y buscar indicadores relacionados con ShadowPad y loaders modulares.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/">Defending against the CVE-2025-55182 (React2Shell) vulnerability in React Server Components</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>CVE-2025-55182 (React2Shell) es una RCE crítica pre-autenticada en React Server Components y Next.js (CVSS 10.0) que permite la ejecución de código arbitrario mediante una única petición HTTP maliciosa. Se han observado explotaciones activas que entregan mineros de criptomonedas y puertas traseras en entornos Windows y Linux; se recomienda parche inmediato a las versiones corregidas de React/Next.js y desplegar mitigaciones en WAF/Defender.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>RCE pre-autenticada con CVSS 10.0: ejecución remota de código vía petición HTTP.</li>
+                        <li>Explotación activa entregando mineros y backdoors en Windows y Linux.</li>
+                        <li>Mitigaciones inmediatas: actualizar React/Next.js, aplicar WAF y reglas de protección de endpoint.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Priorizar la actualización de dependencias en aplicaciones que usan React Server Components/Next.js, revisar logs HTTP para solicitudes anómalas y aplicar firmas/mitigaciones a nivel de WAF mientras se despliegan parches.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">AMENAZA BAJA</span>
+                <h2><a href="https://www.microsoft.com/en-us/security/blog/2025/12/17/access-fabric-a-modern-approach-to-identity-and-network-access/">Access Fabric: A modern approach to identity and network access</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Este es un anuncio</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Publicación de carácter comercial sobre un enfoque moderno para identidad y acceso en red.</li>
+                        <li>No reporta vulnerabilidades explotables por terceros en el contenido proporcionado.</li>
+                        <li>Interesante para revisiones de arquitectura, pero evaluar independientemente antes de adopción.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Tratar el contenido como material de marketing; realizar pruebas y evaluaciones de seguridad antes de integrar cualquier herramienta o arquitectura propuesta.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/12/iranian-infy-apt-resurfaces-with-new.html">Iranian Infy APT Resurfaces with New Malware Activity After Years of Silence</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>El APT iraní Infy (también conocido como Prince of Persia) ha reaparecido con versiones actualizadas de sus implantes Foudre (downloader/profiler) y Tonnerre. Campañas observadas en Irán, Irak, Turquía, India, Canadá y Europa emplean señuelos de phishing en Excel/ejecutables, un C2 resiliente basado en DGA con validación de dominios firmados RSA y C2 vía Telegram; Tonnerre se detectó por última vez en septiembre de 2025.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Reaparición de Infy con nuevas variantes de Foudre y Tonnerre dirigidas a múltiples regiones.</li>
+                        <li>Vectores: phishing con documentos Excel/ejecutables y cadena de C2 resistente (DGA + validación RSA).</li>
+                        <li>Uso de Telegram como canal de comando y control en algunas campañas.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Reforzar filtrado de correo, análisis de macros/ejecutables, bloquear IOCs y dominios sospechosos, y monitorear conexiones a servicios de mensajería usados como C2 (p. ej. Telegram).</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level medium">AMENAZA MEDIA</span>
                 <h2><a href="https://www.wiz.io/blog/wiz-zeroday-cloud-hacking-competition-behind-the-scenes">Zero‑Days in the Age of AI: Behind the Scenes of ZeroDay.cloud 2025, with a Record High of CVEs in Critical Cloud Infra</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>La edición 2025 del concurso ZeroDay.cloud reveló un número récord de CVEs, muchos relacionados con componentes críticos de infraestructura en la nube. La combinación de técnicas automatizadas y herramientas asistidas por IA aceleró el descubrimiento de vulnerabilidades complejas en servicios y configuraciones cloud.</p>
+                <p>ZeroDay.cloud 2025 otorgó $320,000 a investigadores y reveló un número récord de CVE críticos en infraestructuras cloud centrales. Entre las vulnerabilidades descubiertas hubo RCE en Redis, PostgreSQL y MariaDB, así como una escalada de contenedor a kernel en Linux; los investigadores también exploraron vLLM y Ollama. El evento evidencia que la IA acelera el hallazgo de vulnerabilidades y subraya la urgencia de asegurar componentes open-source en la nube.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Aumento significativo en hallazgos de CVEs dirigidos a infraestructuras cloud críticas.</li>
-                        <li>Uso de herramientas automatizadas y AI para identificar vectores poco documentados.</li>
-                        <li>Mayor presión para la priorización y parcheo en entornos cloud.</li>
-                        <li>Necesidad de mejores prácticas de configuración y monitoreo continuo.</li>
+                        <li>Record de CVEs críticos en componentes de infraestructura cloud (Redis, PostgreSQL, MariaDB, kernel).</li>
+                        <li>Investigación ampliada hacia stacks de IA/LLM (vLLM, Ollama), mostrando nuevos vectores potenciales.</li>
+                        <li>La IA acelera la identificación de vulnerabilidades; urge reforzar la seguridad de componentes open-source.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Organizaciones deben priorizar parches para componentes críticos, aplicar principios de mínima exposición, revisar configuraciones de permisos y desplegar controles compensatorios (WAF, microsegmentación, evaluación continua de posture). Además, coordinar con proveedores para mitigaciones y monitorear indicadores relacionados con los CVEs publicados.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level medium">INFORMACIÓN / MEDIO</span>
-                <h2><a href="https://redcanary.com/blog/security-operations/best-of-2025/">Red Canary’s best of 2025</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Red Canary presenta un compendio de aprendizajes, detecciones y casos representativos de 2025, destacando tácticas prevalentes, controles efectivos y recomendaciones para operaciones de seguridad. Es un recurso práctico para equipos SOC que buscan mejorar detección y respuesta.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Resumen de TTPs más comunes observados durante 2025 (ransomware, abuso de credenciales, cloud misconfigurations).</li>
-                        <li>Ejemplos de detecciones exitosas y lecciones operativas.</li>
-                        <li>Recomendaciones para fortalecer telemetría y procesos de respuesta.</li>
-                        <li>Enfoque en automatización y enriquecimiento de contextos para reducir tiempos de respuesta.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Equipos SOC deberían revisar las reglas y playbooks sugeridos, priorizar la cobertura de telemetría en endpoints y cloud, y realizar ejercicios de mesa para validar procesos. La implementación de detecciones basadas en comportamiento y la inversión en fuentes de datos enriquecidas son acciones recomendadas.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/12/north-korea-linked-hackers-steal-202.html">North Korea-Linked Hackers Steal $2.02 Billion in 2025, Leading Global Crypto Theft</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Se atribuye a actores vinculados a Corea del Norte un robo masivo de criptomonedas por aproximadamente 2.02 mil millones de dólares durante 2025. Las operaciones combinaron explotación técnica, phishing y cadenas de lavado de activos a través de puentes y servicios de mezcla.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Robo a gran escala atribuido a actores estatales o patrocinados por el estado.</li>
-                        <li>Uso combinado de vulnerabilidades, ingeniería social y abuso de servicios intermedios.</li>
-                        <li>Impacto significativo en el ecosistema cripto y en la confianza de ciertas plataformas.</li>
-                        <li>Operaciones de blanqueo a través de múltiples jurisdicciones y servicios descentralizados.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Medidas recomendadas: fortalecer procesos de detección de transacciones anómalas, aplicar controles robustos en puentes y smart contracts, mejorar autenticación y monitoreo de claves, colaborar con exchanges y autoridades para rastrear fondos y cerrar vectores de ataque. Para empresas, revisar controles de acceso y protección de secretos vinculados a billeteras y servicios cloud.</p>
+                <p>Evaluar y parchear dependencias críticas, aplicar defensa en profundidad en entornos cloud y revisar componentes de IA antes de desplegarlos en producción.</p>
             </section>
             
         </div>
