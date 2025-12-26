@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 22 de diciembre, 2025</div>
+                <div class="date">Semana del 26 de diciembre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
@@ -389,102 +389,102 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://research.checkpoint.com/2025/ink-dragons-relay-network-and-offensive-operation/">Inside Ink Dragon: Revealing the Relay Network and Inner Workings of a Stealthy Offensive Operation</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Check Point Research atribuye al clúster alineado con la RPC conocido como "Ink Dragon" la explotación de la deserialización de ViewState de ASP.NET y el uso de ToolShell para comprometer servidores IIS/SharePoint gubernamentales en el Sudeste Asiático, Sudamérica y —cada vez más— Europa. El grupo despliega un escuchador ShadowPad en IIS para convertir víctimas en una red distribuida de relés/C2 y emplea cargadores modulares, robo de credenciales y persistencia sigilosa para movimiento lateral y dominio de dominio.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Explotación de deserialización de ViewState y ToolShell contra servidores IIS/SharePoint.</li>
-                        <li>Uso de ShadowPad como escuchador para crear una red de relés/C2 distribuida.</li>
-                        <li>Modularidad: cargadores, robo de credenciales y persistencia para movimiento lateral y control de dominios.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Organizaciones en gobiernos y sistemas SharePoint deben priorizar la detección de tráfico saliente inusual desde IIS, aplicar parches y buscar indicadores relacionados con ShadowPad y loaders modulares.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://www.microsoft.com/en-us/security/blog/2025/12/15/defending-against-the-cve-2025-55182-react2shell-vulnerability-in-react-server-components/">Defending against the CVE-2025-55182 (React2Shell) vulnerability in React Server Components</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>CVE-2025-55182 (React2Shell) es una RCE crítica pre-autenticada en React Server Components y Next.js (CVSS 10.0) que permite la ejecución de código arbitrario mediante una única petición HTTP maliciosa. Se han observado explotaciones activas que entregan mineros de criptomonedas y puertas traseras en entornos Windows y Linux; se recomienda parche inmediato a las versiones corregidas de React/Next.js y desplegar mitigaciones en WAF/Defender.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>RCE pre-autenticada con CVSS 10.0: ejecución remota de código vía petición HTTP.</li>
-                        <li>Explotación activa entregando mineros y backdoors en Windows y Linux.</li>
-                        <li>Mitigaciones inmediatas: actualizar React/Next.js, aplicar WAF y reglas de protección de endpoint.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Priorizar la actualización de dependencias en aplicaciones que usan React Server Components/Next.js, revisar logs HTTP para solicitudes anómalas y aplicar firmas/mitigaciones a nivel de WAF mientras se despliegan parches.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://www.microsoft.com/en-us/security/blog/2025/12/17/access-fabric-a-modern-approach-to-identity-and-network-access/">Access Fabric: A modern approach to identity and network access</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Este es un anuncio</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Publicación de carácter comercial sobre un enfoque moderno para identidad y acceso en red.</li>
-                        <li>No reporta vulnerabilidades explotables por terceros en el contenido proporcionado.</li>
-                        <li>Interesante para revisiones de arquitectura, pero evaluar independientemente antes de adopción.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Tratar el contenido como material de marketing; realizar pruebas y evaluaciones de seguridad antes de integrar cualquier herramienta o arquitectura propuesta.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
                 <h2><a href="https://thehackernews.com/2025/12/iranian-infy-apt-resurfaces-with-new.html">Iranian Infy APT Resurfaces with New Malware Activity After Years of Silence</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El APT iraní Infy (también conocido como Prince of Persia) ha reaparecido con versiones actualizadas de sus implantes Foudre (downloader/profiler) y Tonnerre. Campañas observadas en Irán, Irak, Turquía, India, Canadá y Europa emplean señuelos de phishing en Excel/ejecutables, un C2 resiliente basado en DGA con validación de dominios firmados RSA y C2 vía Telegram; Tonnerre se detectó por última vez en septiembre de 2025.</p>
+                <p>El grupo APT iraní conocido como Infy (también llamado Prince of Persia) ha reaparecido con versiones actualizadas de los implants Foudre (downloader/perfilador) y Tonnerre. Las campañas observadas en Irán, Irak, Turquía, India, Canadá y Europa emplean cebos por phishing en Excel/ejecutables, un C2 resistente respaldado por DGA con validación de dominios firmados por RSA, y canales de control basados en Telegram. La última variante Tonnerre fue vista en septiembre de 2025 (SafeBreach).</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Reaparición de Infy con nuevas variantes de Foudre y Tonnerre dirigidas a múltiples regiones.</li>
-                        <li>Vectores: phishing con documentos Excel/ejecutables y cadena de C2 resistente (DGA + validación RSA).</li>
-                        <li>Uso de Telegram como canal de comando y control en algunas campañas.</li>
+                        <li>Uso de Foudre y Tonnerre para descarga, perfilado y control remoto.</li>
+                        <li>Cebos de phishing en documentos y ejecutables para inicial la infección.</li>
+                        <li>Infraestructura C2 resistente: DGA y validación mediante firmas RSA; uso de Telegram como canal.</li>
+                        <li>Objetivos geográficamente variados: Oriente Medio, Sur de Asia, Norteamérica y Europa.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Reforzar filtrado de correo, análisis de macros/ejecutables, bloquear IOCs y dominios sospechosos, y monitorear conexiones a servicios de mensajería usados como C2 (p. ej. Telegram).</p>
+                <p>Mitigaciones recomendadas: reforzar detección de macros/executables maliciosos, bloqueo de dominios sospechosos y patrones DGA, aplicar segmentación de red y monitorizar comunicaciones con servicios de mensajería (ej. Telegram). Revisar indicadores IOCs publicados por los proveedores de inteligencia.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/12/cracked-software-and-youtube-videos.html">Cracked Software and YouTube Videos Spread CountLoader and GachiLoader Malware</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Investigadores reportan campañas que distribuyen CountLoader 3.2 desde sitios de software "crackeado" mediante archivos ZIP maliciosos y abuso de binarios firmados; CountLoader asegura persistencia, perfilado del host, propagación por medios extraíbles y etapificación de cargas útiles como ACR Stealer. En paralelo, cuentas de YouTube comprometidas difunden GachiLoader (Node.js), que realiza inyección sofisticada de PE para cargar malware adicional. Se confirma explotación activa.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>CountLoader 3.2 distribuido vía sitios de software pirateado y ZIPs maliciosos.</li>
+                        <li>Abuso de binarios firmados para evadir detecciones y establecer persistencia.</li>
+                        <li>GachiLoader distribuido desde videos/cuentas comprometidas en YouTube; usa inyección PE avanzada.</li>
+                        <li>Malware utilizado para robo de credenciales y despliegue de cargas posteriores (p. ej. ACR Stealer).</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Contramedidas: evitar la descarga de software no oficial, bloquear y monitorear ejecutables sospechosos, aplicar control de dispositivos extraíbles, usar protección en endpoints con detección de comportamiento y firmar/validar binarios internos. Educar a usuarios sobre riesgos de software crackeado y enlaces en redes sociales.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">RIESGO BAJO</span>
+                <h2><a href="https://thehackernews.com/2025/12/how-to-browse-sustainably-with-a-green-browser.html">How to Browse the Web More Sustainably With a Green Browser</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Con el aumento del uso de Internet, su huella ambiental también crece: centros de datos, conectividad constante y hábitos de navegación intensivos generan consumo energético y "residuos digitales". Los navegadores verdes buscan reducir este impacto optimizando consumo de recursos, bloqueando rastreadores y reduciendo cargas innecesarias, ofreciendo una navegación más eficiente y menos intensiva en energía.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Los navegadores optimizados pueden disminuir consumo de CPU y energía.</li>
+                        <li>Bloqueo de rastreadores y anuncios reduce cargas de red y procesamiento.</li>
+                        <li>Buenas prácticas individuales (cerrar pestañas, limitar streaming) ayudan colectivamente.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Recomendaciones: evaluar navegadores que prioricen eficiencia, habilitar bloqueo de trackers/ads, configurar reproducción de medios bajo demanda y revisar extensiones que aumenten consumo. A nivel organizacional, considerar políticas de eficiencia y uso responsable para reducir la huella digital.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://www.wiz.io/blog/wiz-zeroday-cloud-hacking-competition-behind-the-scenes">Zero‑Days in the Age of AI: Behind the Scenes of ZeroDay.cloud 2025, with a Record High of CVEs in Critical Cloud Infra</a></h2>
+                <h2><a href="https://thehackernews.com/2025/12/us-doj-charges-54-in-atm-jackpotting.html">U.S. DOJ Charges 54 in ATM Jackpotting Scheme Using Ploutus Malware</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>ZeroDay.cloud 2025 otorgó $320,000 a investigadores y reveló un número récord de CVE críticos en infraestructuras cloud centrales. Entre las vulnerabilidades descubiertas hubo RCE en Redis, PostgreSQL y MariaDB, así como una escalada de contenedor a kernel en Linux; los investigadores también exploraron vLLM y Ollama. El evento evidencia que la IA acelera el hallazgo de vulnerabilidades y subraya la urgencia de asegurar componentes open-source en la nube.</p>
+                <p>El Departamento de Justicia de EE. UU. acusó a 54 personas vinculadas con Tren de Aragua por una conspiración de "jackpotting" de cajeros automáticos que utilizó malware Ploutus para forzar la dispensación de efectivo. Los operadores realizaron vigilancia, obtuvieron acceso físico (reemplazo de discos o uso de USB) y blanquearon los fondos. Se vinculan aproximadamente 1,529 incidentes desde 2021 con pérdidas estimadas de ~40.73 millones de dólares en EE. UU.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Record de CVEs críticos en componentes de infraestructura cloud (Redis, PostgreSQL, MariaDB, kernel).</li>
-                        <li>Investigación ampliada hacia stacks de IA/LLM (vLLM, Ollama), mostrando nuevos vectores potenciales.</li>
-                        <li>La IA acelera la identificación de vulnerabilidades; urge reforzar la seguridad de componentes open-source.</li>
+                        <li>54 acusados por participar en esquema de jackpotting usando Ploutus.</li>
+                        <li>Metodología: vigilancia, acceso físico a ATMs y uso de USBs/ reemplazo de discos.</li>
+                        <li>Impacto: ~1,529 incidentes y ~$40.73M en pérdidas reportadas en EE. UU. desde 2021.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Evaluar y parchear dependencias críticas, aplicar defensa en profundidad en entornos cloud y revisar componentes de IA antes de desplegarlos en producción.</p>
+                <p>Medidas preventivas para operadores de ATM y bancos: reforzar controles físicos, bloquear puertos USB, aplicar integridad de software en dispositivos, monitorizar transacciones y patrones anómalos, y coordinar con fuerzas del orden ante indicios de compromiso físico o malware.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">RIESGO BAJO</span>
+                <h2><a href="https://fidelissecurity.com/threatgeek/endpoint-security/inside-fidelis-edr-technology-detect-respond-and-remediate/">Inside Fidelis’ EDR Technology: What Sets Us Apart from Others</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Contenido publicitario.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Artículo patrocinado sobre tecnología EDR.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Es material con intención comercial; revisar con criterio y contrastar con evaluaciones independientes antes de tomar decisiones de compra.</p>
             </section>
             
         </div>
