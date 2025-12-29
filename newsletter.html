@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 26 de diciembre, 2025</div>
+                <div class="date">Semana del 29 de diciembre, 2025</div>
             </div>
 
             <div class="newsletter-intro">
@@ -389,102 +389,108 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/12/iranian-infy-apt-resurfaces-with-new.html">Iranian Infy APT Resurfaces with New Malware Activity After Years of Silence</a></h2>
+                <h2><a href="https://thehackernews.com/2025/12/android-malware-operations-merge.html">Android Malware Operations Merge Droppers, SMS Theft, and RAT Capabilities at Scale</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El grupo APT iraní conocido como Infy (también llamado Prince of Persia) ha reaparecido con versiones actualizadas de los implants Foudre (downloader/perfilador) y Tonnerre. Las campañas observadas en Irán, Irak, Turquía, India, Canadá y Europa emplean cebos por phishing en Excel/ejecutables, un C2 resistente respaldado por DGA con validación de dominios firmados por RSA, y canales de control basados en Telegram. La última variante Tonnerre fue vista en septiembre de 2025 (SafeBreach).</p>
+                <p>Group-IB informa que actores de amenaza en Uzbekistán están usando droppers maliciosos (MidnightDat, RoundRift) para instalar el atacante SMS conocido como Wonderland (antes WretchedCat). Wonderland intercepta OTPs/SMS, ejecuta comandos USSD, oculta notificaciones, exfiltra contactos y facilita fraudes bancarios. La distribución incluye páginas falsas de Play Store, anuncios, apps de citas y sesiones de Telegram abusadas; las muestras se generan vía bots de Telegram con dominios C2 por build.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Uso de Foudre y Tonnerre para descarga, perfilado y control remoto.</li>
-                        <li>Cebos de phishing en documentos y ejecutables para inicial la infección.</li>
-                        <li>Infraestructura C2 resistente: DGA y validación mediante firmas RSA; uso de Telegram como canal.</li>
-                        <li>Objetivos geográficamente variados: Oriente Medio, Sur de Asia, Norteamérica y Europa.</li>
+                        <li>Droppers identificados: MidnightDat y RoundRift.</li>
+                        <li>Malware Wonderland roba SMS/OTPs, ejecuta USSD y oculta notificaciones.</li>
+                        <li>Facilita exfiltración de contactos y fraude bancario.</li>
+                        <li>Distribución mediante páginas falsas, anuncios, apps de citas y Telegram.</li>
+                        <li>Builds generadas por bots de Telegram con dominios C2 específicos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Mitigaciones recomendadas: reforzar detección de macros/executables maliciosos, bloqueo de dominios sospechosos y patrones DGA, aplicar segmentación de red y monitorizar comunicaciones con servicios de mensajería (ej. Telegram). Revisar indicadores IOCs publicados por los proveedores de inteligencia.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/12/cracked-software-and-youtube-videos.html">Cracked Software and YouTube Videos Spread CountLoader and GachiLoader Malware</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Investigadores reportan campañas que distribuyen CountLoader 3.2 desde sitios de software "crackeado" mediante archivos ZIP maliciosos y abuso de binarios firmados; CountLoader asegura persistencia, perfilado del host, propagación por medios extraíbles y etapificación de cargas útiles como ACR Stealer. En paralelo, cuentas de YouTube comprometidas difunden GachiLoader (Node.js), que realiza inyección sofisticada de PE para cargar malware adicional. Se confirma explotación activa.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>CountLoader 3.2 distribuido vía sitios de software pirateado y ZIPs maliciosos.</li>
-                        <li>Abuso de binarios firmados para evadir detecciones y establecer persistencia.</li>
-                        <li>GachiLoader distribuido desde videos/cuentas comprometidas en YouTube; usa inyección PE avanzada.</li>
-                        <li>Malware utilizado para robo de credenciales y despliegue de cargas posteriores (p. ej. ACR Stealer).</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Contramedidas: evitar la descarga de software no oficial, bloquear y monitorear ejecutables sospechosos, aplicar control de dispositivos extraíbles, usar protección en endpoints con detección de comportamiento y firmar/validar binarios internos. Educar a usuarios sobre riesgos de software crackeado y enlaces en redes sociales.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level low">RIESGO BAJO</span>
-                <h2><a href="https://thehackernews.com/2025/12/how-to-browse-sustainably-with-a-green-browser.html">How to Browse the Web More Sustainably With a Green Browser</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Con el aumento del uso de Internet, su huella ambiental también crece: centros de datos, conectividad constante y hábitos de navegación intensivos generan consumo energético y "residuos digitales". Los navegadores verdes buscan reducir este impacto optimizando consumo de recursos, bloqueando rastreadores y reduciendo cargas innecesarias, ofreciendo una navegación más eficiente y menos intensiva en energía.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Los navegadores optimizados pueden disminuir consumo de CPU y energía.</li>
-                        <li>Bloqueo de rastreadores y anuncios reduce cargas de red y procesamiento.</li>
-                        <li>Buenas prácticas individuales (cerrar pestañas, limitar streaming) ayudan colectivamente.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Recomendaciones: evaluar navegadores que prioricen eficiencia, habilitar bloqueo de trackers/ads, configurar reproducción de medios bajo demanda y revisar extensiones que aumenten consumo. A nivel organizacional, considerar políticas de eficiencia y uso responsable para reducir la huella digital.</p>
+                <p>Mitigaciones: instalar solo apps de fuentes oficiales, revisar permisos SMS/USSD, habilitar MFA no basado en SMS cuando sea posible, bloquear dominios C2 conocidos y monitorizar comportamiento anómalo en dispositivos móviles. Considerar soluciones MDM/EDR para dispositivos móviles y campañas de concientización para usuarios.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2025/12/us-doj-charges-54-in-atm-jackpotting.html">U.S. DOJ Charges 54 in ATM Jackpotting Scheme Using Ploutus Malware</a></h2>
+                <h2><a href="https://redcanary.com/blog/security-operations/office-hours-december-2025/">Here's what you missed on Office Hours: December 2025</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El Departamento de Justicia de EE. UU. acusó a 54 personas vinculadas con Tren de Aragua por una conspiración de "jackpotting" de cajeros automáticos que utilizó malware Ploutus para forzar la dispensación de efectivo. Los operadores realizaron vigilancia, obtuvieron acceso físico (reemplazo de discos o uso de USB) y blanquearon los fondos. Se vinculan aproximadamente 1,529 incidentes desde 2021 con pérdidas estimadas de ~40.73 millones de dólares en EE. UU.</p>
+                <p>Red Canary recopila los episodios de diciembre: análisis del compromiso en la cadena de suministro npm (Shai Hulud) y estrategias de defensa en profundidad; establecimiento de líneas base del comportamiento de usuarios para detección; y los Intelligence Insights de diciembre, que incluyen abuso de RMM maliciosos (ScreenConnect) y el stealer para macOS MacSync. Se incluyen videos y recursos.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>54 acusados por participar en esquema de jackpotting usando Ploutus.</li>
-                        <li>Metodología: vigilancia, acceso físico a ATMs y uso de USBs/ reemplazo de discos.</li>
-                        <li>Impacto: ~1,529 incidentes y ~$40.73M en pérdidas reportadas en EE. UU. desde 2021.</li>
+                        <li>Revisión del incidente en la cadena de suministro npm (Shai Hulud) y lecciones de mitigación.</li>
+                        <li>Importancia de baselines de comportamiento para mejorar la detección.</li>
+                        <li>Inteligencia sobre abuso de herramientas RMM y malware para macOS (MacSync).</li>
+                        <li>Material audiovisual y enlaces de recursos para profundizar.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Medidas preventivas para operadores de ATM y bancos: reforzar controles físicos, bloquear puertos USB, aplicar integridad de software en dispositivos, monitorizar transacciones y patrones anómalos, y coordinar con fuerzas del orden ante indicios de compromiso físico o malware.</p>
+                <p>Recomendaciones: ver los episodios y aplicar medidas de supply-chain hygiene, fortalecer visibilidad en RMM, basar detecciones en comportamientos y revisar controles para macOS. Usar los recursos compartidos para entrenar equipos y actualizar playbooks de respuesta.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level low">RIESGO BAJO</span>
-                <h2><a href="https://fidelissecurity.com/threatgeek/endpoint-security/inside-fidelis-edr-technology-detect-respond-and-remediate/">Inside Fidelis’ EDR Technology: What Sets Us Apart from Others</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/12/weekly-recap-firewall-exploits-ai-data.html">⚡ Weekly Recap: Firewall Exploits, AI Data Theft, Android Hacks, APT Attacks, Insider Leaks & More</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Contenido publicitario.</p>
+                <p>Los atacantes están convirtiendo herramientas cotidianas —firewalls, extensiones de navegador, smart TVs y más— en vectores de ataque. El resumen cubre explotación activa de fallas en firewalls y dispositivos de borde (Cisco, SonicWall, Fortinet, WatchGuard), extensiones que cosechan datos de chats de IA, la botnet Kimwolf para Android TV, campañas APT y múltiples CVEs críticos. Se enfatiza parcheo, auditoría y monitoreo de sistemas confiables.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Artículo patrocinado sobre tecnología EDR.</li>
+                        <li>Explotación activa de vulnerabilidades en firewalls y equipos de borde.</li>
+                        <li>Riesgo por extensiones de navegador que exfiltran datos de sesiones de IA.</li>
+                        <li>Actividad de botnets en Android TV (Kimwolf) y campañas APT en curso.</li>
+                        <li>Numerosos CVEs críticos requieren atención inmediata.</li>
+                        <li>Acciones recomendadas: parchear, auditar y monitorear sistemas de confianza.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Es material con intención comercial; revisar con criterio y contrastar con evaluaciones independientes antes de tomar decisiones de compra.</p>
+                <p>Acciones inmediatas: aplicar parches de proveedores, revisar configuraciones de firewalls y dispositivos de borde, eliminar extensiones no auditadas, actualizar firmware de dispositivos IoT/TV y reforzar monitoreo de telemetría. Actualizar inventarios y playbooks de respuesta ante incidentes.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">AMENAZA BAJA</span>
+                <h2><a href="https://thehackernews.com/2025/12/how-to-browse-sustainably-with-a-green-browser.html">How to Browse the Web More Sustainably With a Green Browser</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>A medida que el uso de Internet crece, también lo hace su huella ambiental: centros de datos, conectividad constante y hábitos de navegación intensivos consumen energía y generan desperdicio digital. Los navegadores "verdes" buscan reducir ese impacto mediante optimizaciones de rendimiento, menor consumo de CPU, bloqueo de trackers y reducción de procesos en segundo plano.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>La navegación tiene un impacto energético significativo a escala global.</li>
+                        <li>Navegadores verdes optimizan uso de recursos (CPU, red) y bloquean trackers.</li>
+                        <li>Reducir extensiones, limitar pestañas y usar modos de eficiencia ayuda a ahorrar energía.</li>
+                        <li>Algunas soluciones ofrecen compensación o rutas de tráfico más eficientes.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Recomendaciones prácticas: elegir navegadores con enfoque en eficiencia, limitar extensiones, activar bloqueo de trackers y ahorrar energía cerrando pestañas innecesarias. Para organizaciones, considerar políticas de navegación y herramientas que reduzcan consumo sin comprometer seguridad.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">INFORMACIÓN</span>
+                <h2><a href="https://fidelissecurity.com/threatgeek/endpoint-security/inside-fidelis-edr-technology-detect-respond-and-remediate/">Inside Fidelis’ EDR Technology: What Sets Us Apart from Others</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Este contenido es un anuncio/promoción sobre la tecnología EDR de Fidelis. Presenta capacidades de detección, respuesta y remediación ofrecidas por su solución de endpoint.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Contenido de carácter publicitario sobre una solución EDR.</li>
+                        <li>Destaca funciones de detección, respuesta y remediación de endpoints.</li>
+                        <li>Incluye información comercial y llamada a la acción para conocer el producto.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Si consideras evaluar la solución, valida mediante pruebas independientes, solicita demos y compara con otras herramientas EDR en función de detección, false positives, integración y soporte operativo.</p>
             </section>
             
         </div>
