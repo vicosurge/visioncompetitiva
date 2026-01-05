@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 29 de diciembre, 2025</div>
+                <div class="date">Semana del 5 de enero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
@@ -389,108 +389,102 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/12/android-malware-operations-merge.html">Android Malware Operations Merge Droppers, SMS Theft, and RAT Capabilities at Scale</a></h2>
+                <h2><a href="https://research.checkpoint.com/2025/29th-december-threat-intelligence-report/">29th December – Threat Intelligence Report</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Group-IB informa que actores de amenaza en Uzbekistán están usando droppers maliciosos (MidnightDat, RoundRift) para instalar el atacante SMS conocido como Wonderland (antes WretchedCat). Wonderland intercepta OTPs/SMS, ejecuta comandos USSD, oculta notificaciones, exfiltra contactos y facilita fraudes bancarios. La distribución incluye páginas falsas de Play Store, anuncios, apps de citas y sesiones de Telegram abusadas; las muestras se generan vía bots de Telegram con dominios C2 por build.</p>
+                <p>El informe del 29 de diciembre de Check Point resume grandes filtraciones y ataques (Romanian Waters ransomware; La Poste; Aflac — 22.7M registros; Nissan — 21k; Trust Wallet — pérdida > $7M; Ubisoft; Baker University) y destaca vulnerabilidades críticas como MongoBleed (CVE‑2025‑14847), LangChain (CVE‑2025‑68664) y Net‑SNMP (CVE‑2025‑68615).</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Droppers identificados: MidnightDat y RoundRift.</li>
-                        <li>Malware Wonderland roba SMS/OTPs, ejecuta USSD y oculta notificaciones.</li>
-                        <li>Facilita exfiltración de contactos y fraude bancario.</li>
-                        <li>Distribución mediante páginas falsas, anuncios, apps de citas y Telegram.</li>
-                        <li>Builds generadas por bots de Telegram con dominios C2 específicos.</li>
+                        <li>Varios incidentes de gran alcance que afectan a organizaciones distintas y sectores diversos.</li>
+                        <li>Identificación de vulnerabilidades críticas que requieren parcheo y mitigación urgente.</li>
+                        <li>Recomendaciones generales: priorizar parches, monitoreo continuo e investigación de compromisos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Mitigaciones: instalar solo apps de fuentes oficiales, revisar permisos SMS/USSD, habilitar MFA no basado en SMS cuando sea posible, bloquear dominios C2 conocidos y monitorizar comportamiento anómalo en dispositivos móviles. Considerar soluciones MDM/EDR para dispositivos móviles y campañas de concientización para usuarios.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://redcanary.com/blog/security-operations/office-hours-december-2025/">Here's what you missed on Office Hours: December 2025</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Red Canary recopila los episodios de diciembre: análisis del compromiso en la cadena de suministro npm (Shai Hulud) y estrategias de defensa en profundidad; establecimiento de líneas base del comportamiento de usuarios para detección; y los Intelligence Insights de diciembre, que incluyen abuso de RMM maliciosos (ScreenConnect) y el stealer para macOS MacSync. Se incluyen videos y recursos.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Revisión del incidente en la cadena de suministro npm (Shai Hulud) y lecciones de mitigación.</li>
-                        <li>Importancia de baselines de comportamiento para mejorar la detección.</li>
-                        <li>Inteligencia sobre abuso de herramientas RMM y malware para macOS (MacSync).</li>
-                        <li>Material audiovisual y enlaces de recursos para profundizar.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Recomendaciones: ver los episodios y aplicar medidas de supply-chain hygiene, fortalecer visibilidad en RMM, basar detecciones en comportamientos y revisar controles para macOS. Usar los recursos compartidos para entrenar equipos y actualizar playbooks de respuesta.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/12/weekly-recap-firewall-exploits-ai-data.html">⚡ Weekly Recap: Firewall Exploits, AI Data Theft, Android Hacks, APT Attacks, Insider Leaks & More</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Los atacantes están convirtiendo herramientas cotidianas —firewalls, extensiones de navegador, smart TVs y más— en vectores de ataque. El resumen cubre explotación activa de fallas en firewalls y dispositivos de borde (Cisco, SonicWall, Fortinet, WatchGuard), extensiones que cosechan datos de chats de IA, la botnet Kimwolf para Android TV, campañas APT y múltiples CVEs críticos. Se enfatiza parcheo, auditoría y monitoreo de sistemas confiables.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Explotación activa de vulnerabilidades en firewalls y equipos de borde.</li>
-                        <li>Riesgo por extensiones de navegador que exfiltran datos de sesiones de IA.</li>
-                        <li>Actividad de botnets en Android TV (Kimwolf) y campañas APT en curso.</li>
-                        <li>Numerosos CVEs críticos requieren atención inmediata.</li>
-                        <li>Acciones recomendadas: parchear, auditar y monitorear sistemas de confianza.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Acciones inmediatas: aplicar parches de proveedores, revisar configuraciones de firewalls y dispositivos de borde, eliminar extensiones no auditadas, actualizar firmware de dispositivos IoT/TV y reforzar monitoreo de telemetría. Actualizar inventarios y playbooks de respuesta ante incidentes.</p>
+                <p>El reporte agrega contexto sobre impacto y vectores usados en los incidentes, útil para priorizar respuestas y revisar controles compensatorios en infraestructuras expuestas.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://thehackernews.com/2025/12/how-to-browse-sustainably-with-a-green-browser.html">How to Browse the Web More Sustainably With a Green Browser</a></h2>
+                <h2><a href="https://www.wiz.io/blog/expanding-the-zero-critical-club">Expanding the Zero Critical Club to set a new standard for AppSec and SecOps teams</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>A medida que el uso de Internet crece, también lo hace su huella ambiental: centros de datos, conectividad constante y hábitos de navegación intensivos consumen energía y generan desperdicio digital. Los navegadores "verdes" buscan reducir ese impacto mediante optimizaciones de rendimiento, menor consumo de CPU, bloqueo de trackers y reducción de procesos en segundo plano.</p>
+                <p>Wiz amplía el "Zero Critical Club" con dos nuevos hitos: Zero Code Criticals (reconociendo equipos que corrigen problemas críticos en código con Wiz Code) y Zero Time to Respond (reconociendo equipos SecOps con MTTR excepcional). El programa ofrece métricas para impulsar priorización basada en contexto, consolidar seguridad en los flujos de desarrollo y fomentar colaboración entre equipos.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>La navegación tiene un impacto energético significativo a escala global.</li>
-                        <li>Navegadores verdes optimizan uso de recursos (CPU, red) y bloquean trackers.</li>
-                        <li>Reducir extensiones, limitar pestañas y usar modos de eficiencia ayuda a ahorrar energía.</li>
-                        <li>Algunas soluciones ofrecen compensación o rutas de tráfico más eficientes.</li>
+                        <li>Introducción de métricas orientadas a resultados para AppSec y SecOps.</li>
+                        <li>Enfoque en shift-left y reducción del tiempo de respuesta ante críticos.</li>
+                        <li>Busca alinear equipos mediante estándares medibles y buenas prácticas integradas en el desarrollo.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Recomendaciones prácticas: elegir navegadores con enfoque en eficiencia, limitar extensiones, activar bloqueo de trackers y ahorrar energía cerrando pestañas innecesarias. Para organizaciones, considerar políticas de navegación y herramientas que reduzcan consumo sin comprometer seguridad.</p>
+                <p>Es una iniciativa para medir y promover mejoras procesales más que una amenaza técnica directa; puede servir como referencia para métricas internas de seguridad.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level low">INFORMACIÓN</span>
-                <h2><a href="https://fidelissecurity.com/threatgeek/endpoint-security/inside-fidelis-edr-technology-detect-respond-and-remediate/">Inside Fidelis’ EDR Technology: What Sets Us Apart from Others</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2025/12/mustang-panda-uses-signed-kernel-driver.html">Mustang Panda Uses Signed Kernel-Mode Rootkit to Load TONESHELL Backdoor</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Este contenido es un anuncio/promoción sobre la tecnología EDR de Fidelis. Presenta capacidades de detección, respuesta y remediación ofrecidas por su solución de endpoint.</p>
+                <p>El grupo Mustang Panda (aka HoneyMyte) utilizó un driver en modo kernel con rootkit, firmado y hasta ahora no documentado, para desplegar una nueva variante del backdoor TONESHELL en un ataque detectado a mediados de 2025 contra una entidad en Asia, según Kaspersky.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Contenido de carácter publicitario sobre una solución EDR.</li>
-                        <li>Destaca funciones de detección, respuesta y remediación de endpoints.</li>
-                        <li>Incluye información comercial y llamada a la acción para conocer el producto.</li>
+                        <li>Uso de un driver en modo kernel firmado como vector de persistencia y evasión.</li>
+                        <li>Despliegue del backdoor TONESHELL, con capacidades avanzadas de control remoto.</li>
+                        <li>Recomendaciones: reforzar detección a nivel kernel, aplicar whitelisting de drivers y escaneo de IoCs.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Si consideras evaluar la solución, valida mediante pruebas independientes, solicita demos y compara con otras herramientas EDR en función de detección, false positives, integración y soporte operativo.</p>
+                <p>Campaña activamente explotada; implica riesgo elevado para entornos con control de drivers débil. Revisar telemetría EDR/EDR a nivel kernel y validar la procedencia de controladores firmados instalados.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://thehackernews.com/2025/12/27-malicious-npm-packages-used-as.html">27 Malicious npm Packages Used as Phishing Infrastructure to Steal Login Credentials</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Se identificó una campaña de spear-phishing de cinco meses que publicó 27 paquetes npm (provenientes de seis alias) para abusar del hosting npm/CDN y servir señuelos de phishing en el navegador. Los paquetes contenían HTML/JS que imitaba servicios de compartición de documentos e inicio de sesión de Microsoft; apuntaron al personal de ventas/comercial en varios países, usaron técnicas anti-análisis y campos honeypot, y tenían 25 correos víctimas codificados.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Abuso del ecosistema npm/CDN para hospedar y distribuir señuelos de phishing en navegador.</li>
+                        <li>Tácticas avanzadas: anti-análisis, honeypots y objetivos preseleccionados.</li>
+                        <li>Medidas defensivas: verificación de dependencias, logging de solicitudes CDN y MFA resistente al phishing.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Operaciones de software supply abuse requieren controles de integridad de dependencias, auditoría de paquetes publicados y detección temprana de contenido malicioso servido por CDNs.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">AMENAZA BAJA</span>
+                <h2><a href="https://thehackernews.com/2026/01/the-roi-problem-in-attack-surface.html">The ROI Problem in Attack Surface Management</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>El Attack Surface Management (ASM) suele aumentar la visibilidad sin traducirse en reducción de riesgo medible. Los equipos tienden a monitorear conteos de activos y alertas (entradas) en lugar de resultados. El artículo propone enfocar el ROI en métricas de resultado: tiempo medio para poseer activos, reducción de endpoints no autenticados que pueden cambiar estado y tiempo para desactivar activos abandonados.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Crítica a métricas de entrada que no reflejan reducción efectiva de exposición.</li>
+                        <li>Propuesta de métricas orientadas a resultados y reducción del riesgo real.</li>
+                        <li>Ejemplos prácticos: tiempos de remediación, desactivación de activos abandonados y reducción de endpoints vulnerables.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Recomienda alinear KPIs de ASM con resultados operativos y mostrar ROI mediante reducción mensurable de exposición y mejoras en tiempos de respuesta.</p>
             </section>
             
         </div>
