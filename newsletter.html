@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 5 de enero, 2026</div>
+                <div class="date">Semana del 9 de enero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
@@ -389,102 +389,106 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://research.checkpoint.com/2025/29th-december-threat-intelligence-report/">29th December – Threat Intelligence Report</a></h2>
+                <h2><a href="https://krebsonsecurity.com/2026/01/the-kimwolf-botnet-is-stalking-your-local-network/">The Kimwolf Botnet is Stalking Your Local Network</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El informe del 29 de diciembre de Check Point resume grandes filtraciones y ataques (Romanian Waters ransomware; La Poste; Aflac — 22.7M registros; Nissan — 21k; Trust Wallet — pérdida > $7M; Ubisoft; Baker University) y destaca vulnerabilidades críticas como MongoBleed (CVE‑2025‑14847), LangChain (CVE‑2025‑68664) y Net‑SNMP (CVE‑2025‑68615).</p>
+                <p>Kimwolf ha infectado a más de 2 millones de dispositivos —principalmente cajas Android TV inseguras y marcos digitales— al abusar de servicios de proxy residencial y de dispositivos con ADB habilitado para tunelizar hacia redes domésticas. Se está explotando para fraude publicitario, toma de cuentas, scraping de contenido y grandes ataques DDoS. Se recomienda retirar dispositivos riesgosos y usar redes Wi‑Fi de invitados.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Varios incidentes de gran alcance que afectan a organizaciones distintas y sectores diversos.</li>
-                        <li>Identificación de vulnerabilidades críticas que requieren parcheo y mitigación urgente.</li>
-                        <li>Recomendaciones generales: priorizar parches, monitoreo continuo e investigación de compromisos.</li>
+                        <li>Más de 2 millones de dispositivos infectados, principalmente Android TV y dispositivos IoT inseguros.</li>
+                        <li>Vectores: ADB expuesto y túneles a través de proxies residenciales.</li>
+                        <li>Uso malicioso: fraude publicitario, toma de cuentas, scraping y ataques DDoS masivos.</li>
+                        <li>Mitigación: retirar dispositivos comprometidos y segmentar con Wi‑Fi de invitados.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>El reporte agrega contexto sobre impacto y vectores usados en los incidentes, útil para priorizar respuestas y revisar controles compensatorios en infraestructuras expuestas.</p>
+                <p>Los operadores aprovechan proxies residenciales para enrutar tráfico y monetizar la botnet. Revisar y deshabilitar ADB en dispositivos, aplicar segmentación de red y auditar dispositivos conectados a la red doméstica o corporativa.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://www.wiz.io/blog/expanding-the-zero-critical-club">Expanding the Zero Critical Club to set a new standard for AppSec and SecOps teams</a></h2>
+                <h2><a href="https://www.wiz.io/blog/wiz-2025-customers-choice-gartner-cnapp">Wiz Recognized as a 2025 Customers’ Choice in the Gartner® Peer Insights™ Voice of the Customer for CNAPP</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Wiz amplía el "Zero Critical Club" con dos nuevos hitos: Zero Code Criticals (reconociendo equipos que corrigen problemas críticos en código con Wiz Code) y Zero Time to Respond (reconociendo equipos SecOps con MTTR excepcional). El programa ofrece métricas para impulsar priorización basada en contexto, consolidar seguridad en los flujos de desarrollo y fomentar colaboración entre equipos.</p>
+                <p>Wiz fue reconocido como Customers’ Choice 2025 en Gartner Peer Insights Voice of the Customer para CNAPP y es el único proveedor con esa distinción dos años consecutivos. El informe, basado en 18 meses de reseñas verificadas hasta el 31 de octubre de 2025, destaca la facilidad de implementación multi‑cloud, el tiempo al valor, la visibilidad de extremo a extremo y la reducción de falsos positivos.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Introducción de métricas orientadas a resultados para AppSec y SecOps.</li>
-                        <li>Enfoque en shift-left y reducción del tiempo de respuesta ante críticos.</li>
-                        <li>Busca alinear equipos mediante estándares medibles y buenas prácticas integradas en el desarrollo.</li>
+                        <li>Reconocimiento como Customers’ Choice en CNAPP para 2025.</li>
+                        <li>Basado en reseñas verificadas de clientes durante 18 meses.</li>
+                        <li>Fortalezas: implementación multi‑cloud, visibilidad completa y menos falsos positivos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Es una iniciativa para medir y promover mejoras procesales más que una amenaza técnica directa; puede servir como referencia para métricas internas de seguridad.</p>
+                <p>La evaluación sirve como referencia para equipos de seguridad que evalúan soluciones CNAPP; es recomendable validar casos de uso específicos y realizar pruebas de integración en entornos multi‑cloud.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2025/12/mustang-panda-uses-signed-kernel-driver.html">Mustang Panda Uses Signed Kernel-Mode Rootkit to Load TONESHELL Backdoor</a></h2>
+                <h2><a href="https://krebsonsecurity.com/2026/01/who-benefited-from-the-aisuru-and-kimwolf-botnets/">Who Benefited from the Aisuru and Kimwolf Botnets?</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El grupo Mustang Panda (aka HoneyMyte) utilizó un driver en modo kernel con rootkit, firmado y hasta ahora no documentado, para desplegar una nueva variante del backdoor TONESHELL en un ataque detectado a mediados de 2025 contra una entidad en Asia, según Kaspersky.</p>
+                <p>Kimwolf y su predecesor Aisuru infectaron millones de cajas Android no oficiales para ejecutar ataques DDoS y retransmitir tráfico para servicios de proxy residencial. Las investigaciones vinculan a operadores de proxy y empresas de hosting (Resi Rack, Plainproxies/ByteConnect, 3XK Tech, Maskify) y muestran que los botmasters usaban ENS, Discord y Telegram para coordinar y retaliar.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Uso de un driver en modo kernel firmado como vector de persistencia y evasión.</li>
-                        <li>Despliegue del backdoor TONESHELL, con capacidades avanzadas de control remoto.</li>
-                        <li>Recomendaciones: reforzar detección a nivel kernel, aplicar whitelisting de drivers y escaneo de IoCs.</li>
+                        <li>Uso de dispositivos Android no oficiales como infraestructura para ataques y proxies residenciales.</li>
+                        <li>Investigaciones señalan a operadores de proxy y proveedores de hosting implicados.</li>
+                        <li>Coordinación y comunicación a través de ENS, Discord y Telegram.</li>
+                        <li>Implicaciones para confianza en servicios de proxy y hosting no regulados.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Campaña activamente explotada; implica riesgo elevado para entornos con control de drivers débil. Revisar telemetría EDR/EDR a nivel kernel y validar la procedencia de controladores firmados instalados.</p>
+                <p>La evidencia sugiere una cadena de monetización que incluye proxies residenciales y servicios DDoS. Las organizaciones deben evaluar el riesgo de depender de tráfico proveniente de proxies residenciales y fortalecer controles de acceso y detección de tráfico anómalo.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2025/12/27-malicious-npm-packages-used-as.html">27 Malicious npm Packages Used as Phishing Infrastructure to Steal Login Credentials</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2026/01/n8n-warns-of-cvss-100-rce-vulnerability.html">n8n Warns of CVSS 10.0 RCE Vulnerability Affecting Self-Hosted and Cloud Versions</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Se identificó una campaña de spear-phishing de cinco meses que publicó 27 paquetes npm (provenientes de seis alias) para abusar del hosting npm/CDN y servir señuelos de phishing en el navegador. Los paquetes contenían HTML/JS que imitaba servicios de compartición de documentos e inicio de sesión de Microsoft; apuntaron al personal de ventas/comercial en varios países, usaron técnicas anti-análisis y campos honeypot, y tenían 25 correos víctimas codificados.</p>
+                <p>n8n divulgó CVE‑2026‑21877, una ejecución remota de código (RCE) crítica autenticada calificada con CVSS 10.0 que afecta instancias auto‑hosteadas y n8n Cloud (versiones ≥0.123.0 y &lt;1.121.3). El fallo, acreditado a Théo Lelasseux, fue corregido en la v1.121.3 (nov. 2025). Se recomienda actualizar a 1.121.3 o superior o, si no es posible, deshabilitar el nodo Git y restringir el acceso a usuarios no confiables.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Abuso del ecosistema npm/CDN para hospedar y distribuir señuelos de phishing en navegador.</li>
-                        <li>Tácticas avanzadas: anti-análisis, honeypots y objetivos preseleccionados.</li>
-                        <li>Medidas defensivas: verificación de dependencias, logging de solicitudes CDN y MFA resistente al phishing.</li>
+                        <li>CVE‑2026‑21877: RCE autenticada con CVSS 10.0, impacto crítico.</li>
+                        <li>Versiones afectadas: ≥0.123.0 y &lt;1.121.3 (incluye instancias Cloud y self‑hosted).</li>
+                        <li>Solución disponible en v1.121.3; aplicar actualización inmediatamente.</li>
+                        <li>Mitigaciones temporales: deshabilitar el nodo Git y limitar accesos no confiables.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Operaciones de software supply abuse requieren controles de integridad de dependencias, auditoría de paquetes publicados y detección temprana de contenido malicioso servido por CDNs.</p>
+                <p>Debido a la severidad y la autenticación requerida, priorizar actualización para reducir riesgo de explotación interna. Revisar permisos de usuarios, políticas de acceso y monitoreo de actividad en plataformas n8n.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://thehackernews.com/2026/01/the-roi-problem-in-attack-surface.html">The ROI Problem in Attack Surface Management</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2026/01/kimwolf-android-botnet-infects-over-2.html">Kimwolf Android Botnet Infects Over 2 Million Devices via Exposed ADB and Proxy Networks</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El Attack Surface Management (ASM) suele aumentar la visibilidad sin traducirse en reducción de riesgo medible. Los equipos tienden a monitorear conteos de activos y alertas (entradas) en lugar de resultados. El artículo propone enfocar el ROI en métricas de resultado: tiempo medio para poseer activos, reducción de endpoints no autenticados que pueden cambiar estado y tiempo para desactivar activos abandonados.</p>
+                <p>Synthient informa que Kimwolf ha infectado a más de 2 millones de dispositivos Android al explotar ADB expuesto y tunelizar a través de redes de proxy residenciales. Los operadores monetizan la botnet con instalaciones de apps, venta de ancho de banda de proxy residencial y servicios de DDoS‑for‑hire. Las infecciones, concentradas en Vietnam, Brasil, India y Arabia Saudita, incluyen Android TV y set‑top boxes preinfectados; la infraestructura se ha usado para credential stuffing y grandes ataques DDoS.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Crítica a métricas de entrada que no reflejan reducción efectiva de exposición.</li>
-                        <li>Propuesta de métricas orientadas a resultados y reducción del riesgo real.</li>
-                        <li>Ejemplos prácticos: tiempos de remediación, desactivación de activos abandonados y reducción de endpoints vulnerables.</li>
+                        <li>Más de 2 millones de dispositivos Android comprometidos mediante ADB expuesto.</li>
+                        <li>Túneles a través de proxies residenciales para ocultar origen y monetizar tráfico.</li>
+                        <li>Operadores generan ingresos con instalaciones de apps, venta de proxies y DDoS‑for‑hire.</li>
+                        <li>Infecciones geográficamente concentradas y uso para credential stuffing y DDoS.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Recomienda alinear KPIs de ASM con resultados operativos y mostrar ROI mediante reducción mensurable de exposición y mejoras en tiempos de respuesta.</p>
+                <p>Reforzar prácticas: deshabilitar ADB en dispositivos expuestos, aplicar segmentación de red, escanear dispositivos IoT/Android conectados y bloquear tráfico inusual hacia proxies residenciales conocidos.</p>
             </section>
             
         </div>
