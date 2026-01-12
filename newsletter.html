@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 9 de enero, 2026</div>
+                <div class="date">Semana del 12 de enero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
@@ -389,106 +389,107 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://krebsonsecurity.com/2026/01/the-kimwolf-botnet-is-stalking-your-local-network/">The Kimwolf Botnet is Stalking Your Local Network</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/unpatched-firmware-flaw-exposes.html">Unpatched Firmware Flaw Exposes TOTOLINK EX200 to Full Remote Device Takeover</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Kimwolf ha infectado a más de 2 millones de dispositivos —principalmente cajas Android TV inseguras y marcos digitales— al abusar de servicios de proxy residencial y de dispositivos con ADB habilitado para tunelizar hacia redes domésticas. Se está explotando para fraude publicitario, toma de cuentas, scraping de contenido y grandes ataques DDoS. Se recomienda retirar dispositivos riesgosos y usar redes Wi‑Fi de invitados.</p>
+                <p>El CERT Coordination Center (CERT/CC) divulgó una falla sin parchear en el firmware del extensor de rango inalámbrico TOTOLINK EX200 que podría permitir a un atacante remoto autenticado obtener control total del dispositivo. La vulnerabilidad, registrada como CVE-2025-65606 (CVSS: no disponible), se origina en la lógica de manejo de errores durante la carga de firmware y puede provocar que el dispositivo ejecute acciones que faciliten la toma de control remota.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Más de 2 millones de dispositivos infectados, principalmente Android TV y dispositivos IoT inseguros.</li>
-                        <li>Vectores: ADB expuesto y túneles a través de proxies residenciales.</li>
-                        <li>Uso malicioso: fraude publicitario, toma de cuentas, scraping y ataques DDoS masivos.</li>
-                        <li>Mitigación: retirar dispositivos comprometidos y segmentar con Wi‑Fi de invitados.</li>
+                        <li>Falla en el manejo de errores de carga de firmware en TOTOLINK EX200.</li>
+                        <li>ID reportada: CVE-2025-65606 (sin puntuación CVSS publicada).</li>
+                        <li>Puede permitir a un atacante controlar el dispositivo de forma remota.</li>
+                        <li>No hay parche público al momento del reporte.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Los operadores aprovechan proxies residenciales para enrutar tráfico y monetizar la botnet. Revisar y deshabilitar ADB en dispositivos, aplicar segmentación de red y auditar dispositivos conectados a la red doméstica o corporativa.</p>
+                <p>Se recomienda aislar el dispositivo de redes críticas, desactivar administración remota si está habilitada y supervisar avisos del proveedor para aplicar actualizaciones cuando estén disponibles.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://www.wiz.io/blog/wiz-2025-customers-choice-gartner-cnapp">Wiz Recognized as a 2025 Customers’ Choice in the Gartner® Peer Insights™ Voice of the Customer for CNAPP</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/cybersecurity-predictions-2026-hype-we.html">Cybersecurity Predictions 2026: The Hype We Can Ignore (And the Risks We Can't)</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Wiz fue reconocido como Customers’ Choice 2025 en Gartner Peer Insights Voice of the Customer para CNAPP y es el único proveedor con esa distinción dos años consecutivos. El informe, basado en 18 meses de reseñas verificadas hasta el 31 de octubre de 2025, destaca la facilidad de implementación multi‑cloud, el tiempo al valor, la visibilidad de extremo a extremo y la reducción de falsos positivos.</p>
+                <p>El seminario web de Bitdefender utiliza investigación del mundo real para separar el ruido mediático de los riesgos accionables para 2026. Destaca el incremento del ransomware dirigido a interrumpir operaciones, las brechas de seguridad derivadas de la adopción acelerada de IA y argumenta que, en el corto plazo, los ataques adaptativos orquestados por IA siguen siendo improbables. La presentación ayuda a priorizar defensas e inversiones basadas en evidencia.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Reconocimiento como Customers’ Choice en CNAPP para 2025.</li>
-                        <li>Basado en reseñas verificadas de clientes durante 18 meses.</li>
-                        <li>Fortalezas: implementación multi‑cloud, visibilidad completa y menos falsos positivos.</li>
+                        <li>Enfoque en amenazas reales y medibles para 2026, no solo en el “hype”.</li>
+                        <li>Riesgo creciente de ransomware enfocado en interrumpir operaciones.</li>
+                        <li>Riesgos derivados de adopción rápida de soluciones basadas en IA.</li>
+                        <li>IA-orquestada a gran escala sigue siendo una preocupación a mediano/largo plazo, no inminente.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La evaluación sirve como referencia para equipos de seguridad que evalúan soluciones CNAPP; es recomendable validar casos de uso específicos y realizar pruebas de integración en entornos multi‑cloud.</p>
+                <p>Recomendaciones: priorizar controles que reduzcan impacto operativo (resiliencia ante ransomware), evaluar riesgos asociados a proyectos de IA y destinar presupuesto a medidas comprobadas basadas en investigación.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://krebsonsecurity.com/2026/01/who-benefited-from-the-aisuru-and-kimwolf-botnets/">Who Benefited from the Aisuru and Kimwolf Botnets?</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/critical-n8n-vulnerability-cvss-100.html">Critical n8n Vulnerability (CVSS 10.0) Allows Unauthenticated Attackers to Take Full Control</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Kimwolf y su predecesor Aisuru infectaron millones de cajas Android no oficiales para ejecutar ataques DDoS y retransmitir tráfico para servicios de proxy residencial. Las investigaciones vinculan a operadores de proxy y empresas de hosting (Resi Rack, Plainproxies/ByteConnect, 3XK Tech, Maskify) y muestran que los botmasters usaban ENS, Discord y Telegram para coordinar y retaliar.</p>
+                <p>Investigadores divulgaron CVE-2026-21858 (apodada "Ni8mare"), una vulnerabilidad con puntuación CVSS 10.0 en n8n que permite a atacantes no autenticados leer archivos locales, forjar sesiones de administrador y lograr ejecución remota de código (RCE). El problema surge por un manejo incorrecto del Content-Type que permite a un atacante controlar req.body.files en el procesamiento de webhooks y formularios. El hallazgo fue reportado por Cyera (Dor Attias). Hay parches y mitigaciones disponibles.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Uso de dispositivos Android no oficiales como infraestructura para ataques y proxies residenciales.</li>
-                        <li>Investigaciones señalan a operadores de proxy y proveedores de hosting implicados.</li>
-                        <li>Coordinación y comunicación a través de ENS, Discord y Telegram.</li>
-                        <li>Implicaciones para confianza en servicios de proxy y hosting no regulados.</li>
+                        <li>Vulnerabilidad crítica en n8n: CVE-2026-21858 ("Ni8mare"), CVSS 10.0.</li>
+                        <li>Permite lectura de archivos locales, forge de sesiones admin y RCE vía control de req.body.files.</li>
+                        <li>Afecta instancias expuestas públicamente que procesan webhooks/ formularios.</li>
+                        <li>Parche y mitigaciones ya publicados por los investigadores/proveedores.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La evidencia sugiere una cadena de monetización que incluye proxies residenciales y servicios DDoS. Las organizaciones deben evaluar el riesgo de depender de tráfico proveniente de proxies residenciales y fortalecer controles de acceso y detección de tráfico anómalo.</p>
+                <p>Mitigaciones recomendadas: actualizar n8n a la versión parcheada de inmediato, evitar exponer instancias a Internet público, restringir y validar webhooks/formularios y aplicar controles de red que limiten acceso no autorizado.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/n8n-warns-of-cvss-100-rce-vulnerability.html">n8n Warns of CVSS 10.0 RCE Vulnerability Affecting Self-Hosted and Cloud Versions</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/trend-micro-apex-central-rce-flaw.html">Trend Micro Apex Central RCE Flaw Scores 9.8 CVSS in On-Prem Windows Versions</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>n8n divulgó CVE‑2026‑21877, una ejecución remota de código (RCE) crítica autenticada calificada con CVSS 10.0 que afecta instancias auto‑hosteadas y n8n Cloud (versiones ≥0.123.0 y &lt;1.121.3). El fallo, acreditado a Théo Lelasseux, fue corregido en la v1.121.3 (nov. 2025). Se recomienda actualizar a 1.121.3 o superior o, si no es posible, deshabilitar el nodo Git y restringir el acceso a usuarios no confiables.</p>
+                <p>Trend Micro publicó actualizaciones de seguridad para su solución on‑premise Apex Central en Windows para corregir múltiples vulnerabilidades, entre ellas un bug crítico de ejecución remota de código identificado como CVE-2025-69258 con una puntuación CVSS de 9.8. La falla podría permitir la ejecución de código arbitrario en sistemas afectados si no se aplica la corrección.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>CVE‑2026‑21877: RCE autenticada con CVSS 10.0, impacto crítico.</li>
-                        <li>Versiones afectadas: ≥0.123.0 y &lt;1.121.3 (incluye instancias Cloud y self‑hosted).</li>
-                        <li>Solución disponible en v1.121.3; aplicar actualización inmediatamente.</li>
-                        <li>Mitigaciones temporales: deshabilitar el nodo Git y limitar accesos no confiables.</li>
+                        <li>Vulnerabilidad RCE crítica en Apex Central para Windows: CVE-2025-69258 (CVSS 9.8).</li>
+                        <li>Trend Micro lanzó parches para entornos on‑premise.</li>
+                        <li>Riesgo de ejecución de código arbitrario en sistemas sin actualizar.</li>
+                        <li>Priorizar actualización en servidores de administración centralizada.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Debido a la severidad y la autenticación requerida, priorizar actualización para reducir riesgo de explotación interna. Revisar permisos de usuarios, políticas de acceso y monitoreo de actividad en plataformas n8n.</p>
+                <p>Administradores deben aplicar los parches oficiales cuanto antes, verificar integridad de sistemas, restringir acceso a servidores de administración y seguir las guías del proveedor para mitigación y verificación post‑parche.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/kimwolf-android-botnet-infects-over-2.html">Kimwolf Android Botnet Infects Over 2 Million Devices via Exposed ADB and Proxy Networks</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/russian-apt28-runs-credential-stealing.html">Russian APT28 Runs Credential-Stealing Campaign Targeting Energy and Policy Organizations</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Synthient informa que Kimwolf ha infectado a más de 2 millones de dispositivos Android al explotar ADB expuesto y tunelizar a través de redes de proxy residenciales. Los operadores monetizan la botnet con instalaciones de apps, venta de ancho de banda de proxy residencial y servicios de DDoS‑for‑hire. Las infecciones, concentradas en Vietnam, Brasil, India y Arabia Saudita, incluyen Android TV y set‑top boxes preinfectados; la infraestructura se ha usado para credential stuffing y grandes ataques DDoS.</p>
+                <p>Recorded Future vincula al grupo APT28 alineado con el GRU (identificado como BlueDelta) con múltiples campañas de 2025 destinadas a robar credenciales de investigadores energéticos y nucleares en Turquía, un think tank europeo y organizaciones en Macedonia del Norte y Uzbekistán. El actor usó cebos adaptados regionalmente y PDFs legítimos para redirigir a las víctimas a páginas falsas de inicio de sesión (Microsoft/Google/Sophos) alojadas en servicios desechables para capturar credenciales y luego redirigir a los sitios reales.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Más de 2 millones de dispositivos Android comprometidos mediante ADB expuesto.</li>
-                        <li>Túneles a través de proxies residenciales para ocultar origen y monetizar tráfico.</li>
-                        <li>Operadores generan ingresos con instalaciones de apps, venta de proxies y DDoS‑for‑hire.</li>
-                        <li>Infecciones geográficamente concentradas y uso para credential stuffing y DDoS.</li>
+                        <li>APT28 (BlueDelta) ejecutó campañas de robo de credenciales en 2025 contra sectores de energía y políticas.</li>
+                        <li>Uso de señuelos regionales y PDFs legítimos para inducir a víctimas.</li>
+                        <li>Páginas falsas alojadas en servicios desechables (Webhook.site, InfinityFree, Byet, ngrok) para capturar credenciales.</li>
+                        <li>Posterior redirección a sitios reales para evadir detección.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Reforzar prácticas: deshabilitar ADB en dispositivos expuestos, aplicar segmentación de red, escanear dispositivos IoT/Android conectados y bloquear tráfico inusual hacia proxies residenciales conocidos.</p>
+                <p>Contramedidas: reforzar la concienciación de phishing en personal crítico, habilitar MFA, monitorizar inicios de sesión atípicos y bloquear/monitorizar dominios y servicios desechables usados para hosting de páginas de captura.</p>
             </section>
             
         </div>
