@@ -355,6 +355,17 @@
                 font-size: 1.2rem;
             }
         }
+
+        .exploit-banner {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.12);
+            color: #ffedd5;
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -377,119 +388,112 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 12 de enero, 2026</div>
+                <div class="date">Semana del 16 de enero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
 
-            <!-- Article sections will be inserted here by your n8n workflow -->
-            <!-- Example format for OpenAI to follow: -->
-            
             <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/unpatched-firmware-flaw-exposes.html">Unpatched Firmware Flaw Exposes TOTOLINK EX200 to Full Remote Device Takeover</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>El CERT Coordination Center (CERT/CC) divulgó una falla sin parchear en el firmware del extensor de rango inalámbrico TOTOLINK EX200 que podría permitir a un atacante remoto autenticado obtener control total del dispositivo. La vulnerabilidad, registrada como CVE-2025-65606 (CVSS: no disponible), se origina en la lógica de manejo de errores durante la carga de firmware y puede provocar que el dispositivo ejecute acciones que faciliten la toma de control remota.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Falla en el manejo de errores de carga de firmware en TOTOLINK EX200.</li>
-                        <li>ID reportada: CVE-2025-65606 (sin puntuación CVSS publicada).</li>
-                        <li>Puede permitir a un atacante controlar el dispositivo de forma remota.</li>
-                        <li>No hay parche público al momento del reporte.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Se recomienda aislar el dispositivo de redes críticas, desactivar administración remota si está habilitada y supervisar avisos del proveedor para aplicar actualizaciones cuando estén disponibles.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
+                <span class="threat-level medium">AMENAZA MEDIA</span>
                 <h2><a href="https://thehackernews.com/2026/01/cybersecurity-predictions-2026-hype-we.html">Cybersecurity Predictions 2026: The Hype We Can Ignore (And the Risks We Can't)</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El seminario web de Bitdefender utiliza investigación del mundo real para separar el ruido mediático de los riesgos accionables para 2026. Destaca el incremento del ransomware dirigido a interrumpir operaciones, las brechas de seguridad derivadas de la adopción acelerada de IA y argumenta que, en el corto plazo, los ataques adaptativos orquestados por IA siguen siendo improbables. La presentación ayuda a priorizar defensas e inversiones basadas en evidencia.</p>
+                <p>El webinar de Bitdefender utiliza investigación del mundo real para distinguir el bombo mediático de los riesgos accionables para 2026. Señala el aumento de ransomware dirigido a interrumpir operaciones, las brechas de seguridad relacionadas con la adopción acelerada de IA y por qué los ataques adaptativos orquestados por IA a corto plazo siguen siendo poco probables. Esto ayuda a los líderes a priorizar defensas e inversiones basadas en evidencia.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Enfoque en amenazas reales y medibles para 2026, no solo en el “hype”.</li>
-                        <li>Riesgo creciente de ransomware enfocado en interrumpir operaciones.</li>
-                        <li>Riesgos derivados de adopción rápida de soluciones basadas en IA.</li>
-                        <li>IA-orquestada a gran escala sigue siendo una preocupación a mediano/largo plazo, no inminente.</li>
+                        <li>Ransomware dirigido como mayor riesgo operativo para 2026.</li>
+                        <li>Riesgos derivados de la implementación rápida de soluciones de IA.</li>
+                        <li>Los ataques adaptativos dirigidos por IA no son inminentes; priorizar controles basados en evidencia.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Recomendaciones: priorizar controles que reduzcan impacto operativo (resiliencia ante ransomware), evaluar riesgos asociados a proyectos de IA y destinar presupuesto a medidas comprobadas basadas en investigación.</p>
+                <p>Se recomienda reforzar la respuesta a incidentes, validar controles de backup y continuidad, evaluar implementaciones de IA con pruebas de seguridad y priorizar mitigaciones que reduzcan impacto operativo en lugar de seguir tendencias sin evidencia.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">INFORMACIÓN / ANUNCIO</span>
+                <h2><a href="https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/">Microsoft named a Leader in IDC MarketScape for Unified AI Governance Platforms</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Esto es un anuncio.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Entrada promocional destacando reconocimiento en IDC MarketScape.</li>
+                        <li>No contiene advertencias técnicas ni indicadores de compromiso.</li>
+                        <li>Útil para evaluación de proveedores, no para respuesta inmediata a amenazas.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Evaluar cualquier solución de gobierno de IA según requisitos propios: pruebas, auditorías y compatibilidad con políticas internas. Verificar reclamaciones de proveedores antes de adoptar herramientas en producción.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/critical-n8n-vulnerability-cvss-100.html">Critical n8n Vulnerability (CVSS 10.0) Allows Unauthenticated Attackers to Take Full Control</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/fortinet-fixes-critical-fortisiem-flaw.html">Fortinet Fixes Critical FortiSIEM Flaw Allowing Unauthenticated Remote Code Execution</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Investigadores divulgaron CVE-2026-21858 (apodada "Ni8mare"), una vulnerabilidad con puntuación CVSS 10.0 en n8n que permite a atacantes no autenticados leer archivos locales, forjar sesiones de administrador y lograr ejecución remota de código (RCE). El problema surge por un manejo incorrecto del Content-Type que permite a un atacante controlar req.body.files en el procesamiento de webhooks y formularios. El hallazgo fue reportado por Cyera (Dor Attias). Hay parches y mitigaciones disponibles.</p>
+                <p>Fortinet publicó parches para una vulnerabilidad crítica de inyección de comandos en FortiSIEM OS (CVE-2025-64155, CVSS 9.4) que permite ejecución remota sin autenticación mediante el servicio phMonitor en el puerto TCP 7900. El investigador describió una cadena de explotación que va de inyección de argumentos a escritura arbitraria de archivos y escalamiento a root mediante tareas programadas. También se corrigió una falla en FortiFone.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Vulnerabilidad crítica en n8n: CVE-2026-21858 ("Ni8mare"), CVSS 10.0.</li>
-                        <li>Permite lectura de archivos locales, forge de sesiones admin y RCE vía control de req.body.files.</li>
-                        <li>Afecta instancias expuestas públicamente que procesan webhooks/ formularios.</li>
-                        <li>Parche y mitigaciones ya publicados por los investigadores/proveedores.</li>
+                        <li>CVE-2025-64155: RCE no autenticado vía phMonitor en TCP 7900.</li>
+                        <li>Cadena de explotación: inyección de argumentos → escritura de archivos → escalamiento a root.</li>
+                        <li>Fortinet lanzó parches; se recomienda restringir acceso al puerto 7900 y actualizar inmediatamente.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Mitigaciones recomendadas: actualizar n8n a la versión parcheada de inmediato, evitar exponer instancias a Internet público, restringir y validar webhooks/formularios y aplicar controles de red que limiten acceso no autorizado.</p>
+                <p>Aplicar los parches suministrados por Fortinet de inmediato, limitar el acceso al servicio phMonitor mediante firewall/ACL y revisar registros de acceso y procesos para detectar actividad sospechosa. Considerar aislamiento de instancias vulnerables hasta completar la mitigación.</p>
+            </section>
+
+            <section class="article-section">
+                <div class="exploit-banner">⚠️ ACTIVELY EXPLOITED</div>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2026/01/kimwolf-botnet-infected-over-2-million.html">Researchers Null-Route Over 550 Kimwolf and Aisuru Botnet Command Servers</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Black Lotus Labs redirigió (null‑route) el tráfico hacia más de 550 servidores de comando y control de los botnets AISURU/Kimwolf tras rastrear una botnet que convirtió millones de dispositivos Android y televisores en proxies residenciales usados para ataques DDoS y reventa de ancho de banda. Kimwolf aprovechó ADB expuesto y debilidades en servicios proxy para incorporar bots rápidamente; se observó evidencia de venta de ancho de banda.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Más de 550 servidores C2 null‑routeados por acción de investigadores/ISPs.</li>
+                        <li>Millones de dispositivos Android/TV convertidos en proxies residenciales.</li>
+                        <li>Explotación de ADB expuesto y servicios proxy vulnerables; evidencia de reventa de ancho de banda y uso en DDoS.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Reforzar la seguridad de dispositivos IoT/Android: deshabilitar ADB expuesto, aplicar actualizaciones, segmentar redes y monitorear tráfico saliente para detectar proxies residenciales. Colaborar con ISPs y listas de bloqueo de C2 para mitigar comunicaciones maliciosas.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/trend-micro-apex-central-rce-flaw.html">Trend Micro Apex Central RCE Flaw Scores 9.8 CVSS in On-Prem Windows Versions</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/new-malware-campaign-delivers-remcos.html">New Malware Campaign Delivers Remcos RAT Through Multi-Stage Windows Attack</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Trend Micro publicó actualizaciones de seguridad para su solución on‑premise Apex Central en Windows para corregir múltiples vulnerabilidades, entre ellas un bug crítico de ejecución remota de código identificado como CVE-2025-69258 con una puntuación CVSS de 9.8. La falla podría permitir la ejecución de código arbitrario en sistemas afectados si no se aplica la corrección.</p>
+                <p>Investigadores de Securonix describen SHADOW#REACTOR, una campaña sigilosa multi‑etapa para Windows que utiliza un lanzador VBS ofuscado, stagers de PowerShell en texto, un cargador reflectivo .NET Reactor y abuso de MSBuild como LOLBin para desplegar el RAT comercial Remcos. La cadena modular reconstruye fragmentos del payload en memoria, incorpora comprobaciones anti‑análisis y establece acceso remoto persistente y encubierto, apuntando a empresas y pymes.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Vulnerabilidad RCE crítica en Apex Central para Windows: CVE-2025-69258 (CVSS 9.8).</li>
-                        <li>Trend Micro lanzó parches para entornos on‑premise.</li>
-                        <li>Riesgo de ejecución de código arbitrario en sistemas sin actualizar.</li>
-                        <li>Priorizar actualización en servidores de administración centralizada.</li>
+                        <li>Cadena multi‑etapa: VBS ofuscado → PowerShell en texto → cargador .NET reflectivo → abuso de MSBuild.</li>
+                        <li>Implanta Remcos RAT en memoria con técnicas anti‑análisis y persistencia.</li>
+                        <li>Objetivos: entornos corporativos y pequeñas/medianas empresas, aprovechando LOLBins y fragmentación en memoria.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Administradores deben aplicar los parches oficiales cuanto antes, verificar integridad de sistemas, restringir acceso a servidores de administración y seguir las guías del proveedor para mitigación y verificación post‑parche.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/russian-apt28-runs-credential-stealing.html">Russian APT28 Runs Credential-Stealing Campaign Targeting Energy and Policy Organizations</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Recorded Future vincula al grupo APT28 alineado con el GRU (identificado como BlueDelta) con múltiples campañas de 2025 destinadas a robar credenciales de investigadores energéticos y nucleares en Turquía, un think tank europeo y organizaciones en Macedonia del Norte y Uzbekistán. El actor usó cebos adaptados regionalmente y PDFs legítimos para redirigir a las víctimas a páginas falsas de inicio de sesión (Microsoft/Google/Sophos) alojadas en servicios desechables para capturar credenciales y luego redirigir a los sitios reales.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>APT28 (BlueDelta) ejecutó campañas de robo de credenciales en 2025 contra sectores de energía y políticas.</li>
-                        <li>Uso de señuelos regionales y PDFs legítimos para inducir a víctimas.</li>
-                        <li>Páginas falsas alojadas en servicios desechables (Webhook.site, InfinityFree, Byet, ngrok) para capturar credenciales.</li>
-                        <li>Posterior redirección a sitios reales para evadir detección.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Contramedidas: reforzar la concienciación de phishing en personal crítico, habilitar MFA, monitorizar inicios de sesión atípicos y bloquear/monitorizar dominios y servicios desechables usados para hosting de páginas de captura.</p>
+                <p>Mitigar limitando el uso de LOLBins como MSBuild, implementar control de ejecución de scripts (PowerShell Constrained Language), aplicar allowlisting de aplicaciones, reforzar EDR/AV para detección en memoria y educar a usuarios sobre vectores de entrega. Revisar señales de compromiso relacionadas con Remcos y cadenas de carga en memoria.</p>
             </section>
             
         </div>
