@@ -355,17 +355,6 @@
                 font-size: 1.2rem;
             }
         }
-
-        .exploit-banner {
-            display: inline-block;
-            background: rgba(239, 68, 68, 0.12);
-            color: #ffedd5;
-            border: 1px solid rgba(239, 68, 68, 0.25);
-            padding: 0.3rem 0.6rem;
-            border-radius: 6px;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
     </style>
 </head>
 <body>
@@ -388,36 +377,99 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 16 de enero, 2026</div>
+                <div class="date">Semana del 19 de enero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
 
+            <!-- Article sections will be inserted here by your n8n workflow -->
+            <!-- Example format for OpenAI to follow: -->
+            
             <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2026/01/cybersecurity-predictions-2026-hype-we.html">Cybersecurity Predictions 2026: The Hype We Can Ignore (And the Risks We Can't)</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2026/01/microsoft-fixes-114-windows-flaws-in.html">Microsoft Fixes 114 Windows Flaws in January 2026 Patch, One Actively Exploited</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El webinar de Bitdefender utiliza investigación del mundo real para distinguir el bombo mediático de los riesgos accionables para 2026. Señala el aumento de ransomware dirigido a interrumpir operaciones, las brechas de seguridad relacionadas con la adopción acelerada de IA y por qué los ataques adaptativos orquestados por IA a corto plazo siguen siendo poco probables. Esto ayuda a los líderes a priorizar defensas e inversiones basadas en evidencia.</p>
+                <p>El Patch Tuesday de enero 2026 de Microsoft corrige 114 vulnerabilidades (8 críticas, 106 importantes). Se añadió a la lista KEV de CISA una falla de divulgación de información en Desktop Window Manager (CVE-2026-20805) que está siendo explotada activamente; otras correcciones notables incluyen un error de escalamiento de privilegios en VBS Enclave (CVE-2026-20876), problemas relacionados con certificados de Secure Boot y la remoción de controladores de módem Agere vulnerables.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Ransomware dirigido como mayor riesgo operativo para 2026.</li>
-                        <li>Riesgos derivados de la implementación rápida de soluciones de IA.</li>
-                        <li>Los ataques adaptativos dirigidos por IA no son inminentes; priorizar controles basados en evidencia.</li>
+                        <li>Se corrigieron 114 vulnerabilidades: 8 críticas y 106 importantes.</li>
+                        <li>CVE-2026-20805 (Desktop Window Manager) está siendo explotada y fue añadida a la lista KEV de CISA.</li>
+                        <li>Otras correcciones importantes: VBS Enclave (CVE-2026-20876), problemas de Secure Boot y eliminación de drivers Agere vulnerables.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Se recomienda reforzar la respuesta a incidentes, validar controles de backup y continuidad, evaluar implementaciones de IA con pruebas de seguridad y priorizar mitigaciones que reduzcan impacto operativo en lugar de seguir tendencias sin evidencia.</p>
+                <p>Priorizar la implementación de parches y mitigaciones relacionadas con las vulnerabilidades explotadas activamente y revisar sistemas que dependan de Secure Boot y controladores de módem antiguos.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level low">INFORMACIÓN / ANUNCIO</span>
-                <h2><a href="https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/">Microsoft named a Leader in IDC MarketScape for Unified AI Governance Platforms</a></h2>
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://thehackernews.com/2026/01/webinar-t-from-mcps-and-tool-access-to.html">[Webinar] Securing Agentic AI: From MCPs and Tool Access to Shadow API Key Sprawl</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Los agentes de IA ahora construyen, prueban y despliegan código de forma autónoma, creando un riesgo oculto en el plano de control: los Machine Control Protocols (MCP). MCP inseguros y incidentes como CVE-2025-6514 (un proxy OAuth que derivó en RCE) demuestran que la automatización puede ser un vector de ataque. El webinar cubre los riesgos de MCP, claves API en la sombra, auditoría de acciones de agentes y controles prácticos para asegurar la IA agentiva.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Los MCP representan un plano de control que puede ser explotado por agentes autónomos.</li>
+                        <li>Incidentes previos (ej. CVE-2025-6514) muestran cómo proxies o MCP inseguros pueden derivar en RCE.</li>
+                        <li>El webinar ofrece controles prácticos: gestión de claves API, auditoría de acciones y restricciones de permisos.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Evaluar y auditar cualquier integración de agentes de IA, rotar y monitorizar claves API, y aplicar políticas de mínimo privilegio para herramientas automatizadas.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://thehackernews.com/2026/01/model-security-is-wrong-frame-real-risk.html">Model Security Is the Wrong Frame – The Real Risk Is Workflow Security</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Incidentes recientes muestran que el riesgo principal en IA es la seguridad del flujo de trabajo, no tanto los detalles internos del modelo. Extensiones maliciosas de Chrome robaron chats de ChatGPT/DeepSeek de aproximadamente 900,000 usuarios y las inyecciones de prompt en repositorios de código engañaron a un asistente de IA para ejecutar malware. Las organizaciones deben inventariar el uso de IA, aplicar acceso con mínimo privilegio, escanear salidas y aplicar middleware de protección o monitoreo en tiempo de ejecución.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>La seguridad del flujo de trabajo (workflow) es el principal vector de riesgo en despliegues de IA.</li>
+                        <li>Casos reales: extensiones maliciosas exfiltraron chats (~900k usuarios) e inyecciones de prompt llevaron a ejecución de malware.</li>
+                        <li>Recomendaciones: inventario de usos de IA, acceso con mínimo privilegio, escaneo de salidas y guardrails en middleware/tiempo de ejecución.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Implementar controles en cada punto del flujo de trabajo de IA y monitoreo continuo para detectar comportamientos anómalos o exfiltración de datos.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://blog.qualys.com/vulnerabilities-threat-research/2026/01/13/microsoft-patch-tuesday-january-2026-security-update-review">Microsoft and Adobe Patch Tuesday, January 2026 Security Update Review</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>El Patch Tuesday de enero 2026 corrige 115 vulnerabilidades de Microsoft —incluyendo ocho críticas y tres zero-days (uno explotado activamente)—abordando RCE, escalamiento de privilegios y múltiples componentes de Windows; Adobe publicó 11 avisos corrigiendo 25 fallas (17 críticas). Las organizaciones deben priorizar parches y mitigaciones de inmediato.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Microsoft: 115 correcciones, 8 críticas, 3 zero-days (uno explotado activamente).</li>
+                        <li>Adobe: 11 avisos que corrigen 25 vulnerabilidades, 17 de ellas críticas.</li>
+                        <li>Se recomienda priorizar parches y aplicar mitigaciones mientras se despliegan actualizaciones.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Coordinar ventanas de mantenimiento, validar mitigaciones compensatorias y monitorear indicadores de compromiso relacionados con las vulnerabilidades conocidas.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level low">AMENAZA BAJA</span>
+                <h2><a href="https://fidelissecurity.com/threatgeek/cloud-security/enterprise-cloud-security-solutions/">Top 5 Enterprise Cloud Security Solutions to Consider in 2026</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
                 <p>Esto es un anuncio.</p>
@@ -425,75 +477,14 @@
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Entrada promocional destacando reconocimiento en IDC MarketScape.</li>
-                        <li>No contiene advertencias técnicas ni indicadores de compromiso.</li>
-                        <li>Útil para evaluación de proveedores, no para respuesta inmediata a amenazas.</li>
+                        <li>Contenido patrocinado/publicitario.</li>
+                        <li>Evaluar cualquier solución con pruebas, referencias y validaciones técnicas.</li>
+                        <li>Comparar características, integración y soporte antes de adoptar.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Evaluar cualquier solución de gobierno de IA según requisitos propios: pruebas, auditorías y compatibilidad con políticas internas. Verificar reclamaciones de proveedores antes de adoptar herramientas en producción.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/fortinet-fixes-critical-fortisiem-flaw.html">Fortinet Fixes Critical FortiSIEM Flaw Allowing Unauthenticated Remote Code Execution</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Fortinet publicó parches para una vulnerabilidad crítica de inyección de comandos en FortiSIEM OS (CVE-2025-64155, CVSS 9.4) que permite ejecución remota sin autenticación mediante el servicio phMonitor en el puerto TCP 7900. El investigador describió una cadena de explotación que va de inyección de argumentos a escritura arbitraria de archivos y escalamiento a root mediante tareas programadas. También se corrigió una falla en FortiFone.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>CVE-2025-64155: RCE no autenticado vía phMonitor en TCP 7900.</li>
-                        <li>Cadena de explotación: inyección de argumentos → escritura de archivos → escalamiento a root.</li>
-                        <li>Fortinet lanzó parches; se recomienda restringir acceso al puerto 7900 y actualizar inmediatamente.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Aplicar los parches suministrados por Fortinet de inmediato, limitar el acceso al servicio phMonitor mediante firewall/ACL y revisar registros de acceso y procesos para detectar actividad sospechosa. Considerar aislamiento de instancias vulnerables hasta completar la mitigación.</p>
-            </section>
-
-            <section class="article-section">
-                <div class="exploit-banner">⚠️ ACTIVELY EXPLOITED</div>
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/kimwolf-botnet-infected-over-2-million.html">Researchers Null-Route Over 550 Kimwolf and Aisuru Botnet Command Servers</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Black Lotus Labs redirigió (null‑route) el tráfico hacia más de 550 servidores de comando y control de los botnets AISURU/Kimwolf tras rastrear una botnet que convirtió millones de dispositivos Android y televisores en proxies residenciales usados para ataques DDoS y reventa de ancho de banda. Kimwolf aprovechó ADB expuesto y debilidades en servicios proxy para incorporar bots rápidamente; se observó evidencia de venta de ancho de banda.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Más de 550 servidores C2 null‑routeados por acción de investigadores/ISPs.</li>
-                        <li>Millones de dispositivos Android/TV convertidos en proxies residenciales.</li>
-                        <li>Explotación de ADB expuesto y servicios proxy vulnerables; evidencia de reventa de ancho de banda y uso en DDoS.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Reforzar la seguridad de dispositivos IoT/Android: deshabilitar ADB expuesto, aplicar actualizaciones, segmentar redes y monitorear tráfico saliente para detectar proxies residenciales. Colaborar con ISPs y listas de bloqueo de C2 para mitigar comunicaciones maliciosas.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/new-malware-campaign-delivers-remcos.html">New Malware Campaign Delivers Remcos RAT Through Multi-Stage Windows Attack</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Investigadores de Securonix describen SHADOW#REACTOR, una campaña sigilosa multi‑etapa para Windows que utiliza un lanzador VBS ofuscado, stagers de PowerShell en texto, un cargador reflectivo .NET Reactor y abuso de MSBuild como LOLBin para desplegar el RAT comercial Remcos. La cadena modular reconstruye fragmentos del payload en memoria, incorpora comprobaciones anti‑análisis y establece acceso remoto persistente y encubierto, apuntando a empresas y pymes.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Cadena multi‑etapa: VBS ofuscado → PowerShell en texto → cargador .NET reflectivo → abuso de MSBuild.</li>
-                        <li>Implanta Remcos RAT en memoria con técnicas anti‑análisis y persistencia.</li>
-                        <li>Objetivos: entornos corporativos y pequeñas/medianas empresas, aprovechando LOLBins y fragmentación en memoria.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Mitigar limitando el uso de LOLBins como MSBuild, implementar control de ejecución de scripts (PowerShell Constrained Language), aplicar allowlisting de aplicaciones, reforzar EDR/AV para detección en memoria y educar a usuarios sobre vectores de entrega. Revisar señales de compromiso relacionadas con Remcos y cadenas de carga en memoria.</p>
+                <p>Solicitar demos y pruebas de concepto para validar que la solución satisface los requerimientos de seguridad y cumplimiento de la organización.</p>
             </section>
             
         </div>
