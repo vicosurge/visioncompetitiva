@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 19 de enero, 2026</div>
+                <div class="date">Semana del 23 de enero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
@@ -389,102 +389,107 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/microsoft-fixes-114-windows-flaws-in.html">Microsoft Fixes 114 Windows Flaws in January 2026 Patch, One Actively Exploited</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/certcc-warns-binary-parser-bug-allows.html">CERT/CC Warns binary-parser Bug Allows Node.js Privilege-Level Code Execution</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El Patch Tuesday de enero 2026 de Microsoft corrige 114 vulnerabilidades (8 críticas, 106 importantes). Se añadió a la lista KEV de CISA una falla de divulgación de información en Desktop Window Manager (CVE-2026-20805) que está siendo explotada activamente; otras correcciones notables incluyen un error de escalamiento de privilegios en VBS Enclave (CVE-2026-20876), problemas relacionados con certificados de Secure Boot y la remoción de controladores de módem Agere vulnerables.</p>
+                <p>CERT/CC divulgó la vulnerabilidad CVE-2026-1245 en el paquete npm binary-parser (versiones anteriores a la 2.3.0). Valores controlados por el usuario (nombres de campos del parser y parámetros de codificación) no son sanitizados y pueden inyectarse en código JavaScript generado con el constructor Function, permitiendo ejecución de código arbitrario en entornos Node.js con privilegios. Se publicaron correcciones el 26 de noviembre de 2025: actualiza a la versión 2.3.0 y evita pasar valores no confiables.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Se corrigieron 114 vulnerabilidades: 8 críticas y 106 importantes.</li>
-                        <li>CVE-2026-20805 (Desktop Window Manager) está siendo explotada y fue añadida a la lista KEV de CISA.</li>
-                        <li>Otras correcciones importantes: VBS Enclave (CVE-2026-20876), problemas de Secure Boot y eliminación de drivers Agere vulnerables.</li>
+                        <li>Vulnerabilidad: CVE-2026-1245 en binary-parser (<2.3.0).</li>
+                        <li>Permite ejecución de código arbitrario vía inyección en constructor Function.</li>
+                        <li>Impacta aplicaciones Node.js que procesan entradas no confiables.</li>
+                        <li>Mitigación: actualizar a v2.3.0 y validar/sanitizar entradas.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Priorizar la implementación de parches y mitigaciones relacionadas con las vulnerabilidades explotadas activamente y revisar sistemas que dependan de Secure Boot y controladores de módem antiguos.</p>
+                <p>La explotación puede permitir ejecución con los privilegios del proceso Node.js afectado, lo que es crítico en servidores y servicios backend. Revisa dependencias transitorias que puedan incluir binary-parser y aplica parches o bloqueos en repositorios de paquetes internos.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2026/01/webinar-t-from-mcps-and-tool-access-to.html">[Webinar] Securing Agentic AI: From MCPs and Tool Access to Shadow API Key Sprawl</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/the-hidden-risk-of-orphan-accounts.html">The Hidden Risk of Orphan Accounts</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Los agentes de IA ahora construyen, prueban y despliegan código de forma autónoma, creando un riesgo oculto en el plano de control: los Machine Control Protocols (MCP). MCP inseguros y incidentes como CVE-2025-6514 (un proxy OAuth que derivó en RCE) demuestran que la automatización puede ser un vector de ataque. El webinar cubre los riesgos de MCP, claves API en la sombra, auditoría de acciones de agentes y controles prácticos para asegurar la IA agentiva.</p>
+                <p>Las cuentas huérfanas —identidades humanas y no humanas abandonadas en aplicaciones, servicios y consolas en la nube— persisten porque las herramientas IAM/IGA cubren solo fragmentos del entorno. Estas cuentas invisibles (cuentas de servicio, bots, APIs y agentes de IA) constituyen una “materia oscura de identidad” que los atacantes aprovechan, generando riesgos de cumplimiento, dificultades forenses y problemas operativos. Se recomienda telemetría continua de identidad, registros de auditoría unificados, mapeo contextual de roles y desactivación automatizada.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Los MCP representan un plano de control que puede ser explotado por agentes autónomos.</li>
-                        <li>Incidentes previos (ej. CVE-2025-6514) muestran cómo proxies o MCP inseguros pueden derivar en RCE.</li>
-                        <li>El webinar ofrece controles prácticos: gestión de claves API, auditoría de acciones y restricciones de permisos.</li>
+                        <li>Las herramientas IAM tradicionales no detectan todas las identidades no gestionadas.</li>
+                        <li>Las cuentas huérfanas facilitan acceso no autorizado y complican investigaciones.</li>
+                        <li>Recomendaciones: telemetría continua, auditoría consolidada y automatización del offboarding.</li>
+                        <li>Incluir bots, APIs y agentes de IA en la gobernanza de identidad.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Evaluar y auditar cualquier integración de agentes de IA, rotar y monitorizar claves API, y aplicar políticas de mínimo privilegio para herramientas automatizadas.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2026/01/model-security-is-wrong-frame-real-risk.html">Model Security Is the Wrong Frame – The Real Risk Is Workflow Security</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Incidentes recientes muestran que el riesgo principal en IA es la seguridad del flujo de trabajo, no tanto los detalles internos del modelo. Extensiones maliciosas de Chrome robaron chats de ChatGPT/DeepSeek de aproximadamente 900,000 usuarios y las inyecciones de prompt en repositorios de código engañaron a un asistente de IA para ejecutar malware. Las organizaciones deben inventariar el uso de IA, aplicar acceso con mínimo privilegio, escanear salidas y aplicar middleware de protección o monitoreo en tiempo de ejecución.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>La seguridad del flujo de trabajo (workflow) es el principal vector de riesgo en despliegues de IA.</li>
-                        <li>Casos reales: extensiones maliciosas exfiltraron chats (~900k usuarios) e inyecciones de prompt llevaron a ejecución de malware.</li>
-                        <li>Recomendaciones: inventario de usos de IA, acceso con mínimo privilegio, escaneo de salidas y guardrails en middleware/tiempo de ejecución.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Implementar controles en cada punto del flujo de trabajo de IA y monitoreo continuo para detectar comportamientos anómalos o exfiltración de datos.</p>
+                <p>Los equipos deben instrumentar telemetría de identidad en toda la pila y correlacionar eventos para detectar anomalías. Implementar procesos de certificación de acceso y flujos automatizados para revocar credenciales inactivas reduce la “superficie de identidad” explotable.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://blog.qualys.com/vulnerabilities-threat-research/2026/01/13/microsoft-patch-tuesday-january-2026-security-update-review">Microsoft and Adobe Patch Tuesday, January 2026 Security Update Review</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/new-osiris-ransomware-emerges-as-new.html">New Osiris Ransomware Emerges as New Strain Using POORTRY Driver in BYOVD Attack</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El Patch Tuesday de enero 2026 corrige 115 vulnerabilidades de Microsoft —incluyendo ocho críticas y tres zero-days (uno explotado activamente)—abordando RCE, escalamiento de privilegios y múltiples componentes de Windows; Adobe publicó 11 avisos corrigiendo 25 fallas (17 críticas). Las organizaciones deben priorizar parches y mitigaciones de inmediato.</p>
+                <p>Investigadores reportan una nueva variante de ransomware Osiris que afectó a un gran franquiciado de servicios alimentarios en el sudeste asiático en noviembre de 2025. Los atacantes emplearon un driver personalizado llamado POORTRY en una técnica BYOVD para desactivar mecanismos de seguridad, exfiltraron datos mediante Rclone a Wasabi, utilizaron Mimikatz (kaz.exe) y desplegaron un cifrador híbrido con claves por archivo, terminación de procesos/servicios y notas de rescate. Symantec/Carbon Black observan posibles vínculos con la familia INC.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Microsoft: 115 correcciones, 8 críticas, 3 zero-days (uno explotado activamente).</li>
-                        <li>Adobe: 11 avisos que corrigen 25 vulnerabilidades, 17 de ellas críticas.</li>
-                        <li>Se recomienda priorizar parches y aplicar mitigaciones mientras se despliegan actualizaciones.</li>
+                        <li>Técnica BYOVD usando driver POORTRY para evadir seguridad del endpoint.</li>
+                        <li>Exfiltración con Rclone hacia Wasabi antes del cifrado.</li>
+                        <li>Uso de Mimikatz para robo de credenciales y herramientas de manipulación de procesos.</li>
+                        <li>Recomendaciones: endurecer control de drivers, monitorear Rclone/transferencias a S3-compatible, respaldos y detección EDR.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Coordinar ventanas de mantenimiento, validar mitigaciones compensatorias y monitorear indicadores de compromiso relacionados con las vulnerabilidades conocidas.</p>
+                <p>La presencia de un driver malicioso sugiere escalada a nivel de kernel; bloquear controladores no firmados, aplicar listas blancas de drivers y vigilar indicadores de compromiso (ej. procesos kaz.exe, conexiones a Wasabi) ayudan a mitigar. Preparar planes de respuesta a incidentes y restauración desde copias seguras es crítico.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://fidelissecurity.com/threatgeek/cloud-security/enterprise-cloud-security-solutions/">Top 5 Enterprise Cloud Security Solutions to Consider in 2026</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2026/01/china-linked-apt-exploits-sitecore-zero.html">China-Linked APT Exploited Sitecore Zero-Day in Critical Infrastructure Intrusions</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Esto es un anuncio.</p>
+                <p>Cisco Talos atribuye actividad a un APT con nexos a China, rastreado como UAT-8837, que apuntó a infraestructura crítica en Norteamérica. El actor explotó un zero-day de Sitecore (CVE-2025-53690) para obtener acceso inicial y empleó herramientas de código abierto (GoTokenTheft, EarthWorm, DWAgent, SharpHound, Impacket, GoExec, Rubeus, Certipy) para cosechar credenciales de Active Directory, mantener persistencia y exfiltrar artefactos, lo que genera preocupaciones sobre la cadena de suministro. Sitecore parcheó la falla en septiembre de 2025.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Contenido patrocinado/publicitario.</li>
-                        <li>Evaluar cualquier solución con pruebas, referencias y validaciones técnicas.</li>
-                        <li>Comparar características, integración y soporte antes de adoptar.</li>
+                        <li>Actor: UAT-8837 (vinculado a China) enfocado en infraestructura crítica.</li>
+                        <li>Vector inicial: zero-day en Sitecore (CVE-2025-53690), parche disponible desde septiembre 2025.</li>
+                        <li>Herramientas abiertas usadas para robo de credenciales y movimiento lateral.</li>
+                        <li>Mitigaciones: aplicar parche, auditar instancias Sitecore y monitorizar actividad en AD.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Solicitar demos y pruebas de concepto para validar que la solución satisface los requerimientos de seguridad y cumplimiento de la organización.</p>
+                <p>El uso de utilerías abiertas facilita la capacidad de mimetizar actividades maliciosas como operaciones legítimas. Reforzar detección en controladores de dominio, revisar logs para abuso de Kerberos/NTLM y validar integridad de cadenas de suministro relacionadas con Sitecore son pasos recomendados.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://thehackernews.com/2026/01/zoom-and-gitlab-release-security.html">Zoom and GitLab Release Security Updates Fixing RCE, DoS, and 2FA Bypass Flaws</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Zoom corrigió una falla crítica de inyección de comandos en Node Multimedia Routers (CVE-2026-22844, CVSS 9.9) que podría permitir a un participante de reunión ejecutar código remoto; se recomienda actualizar los MMRs a la versión 5.2.1716.0 o superior. GitLab publicó parches para múltiples problemas de alta severidad que causaban DoS y un bypass de 2FA (CVE-2025-13927, CVE-2025-13928, CVE-2026-0723) en CE/EE, además de otros bugs de DoS de severidad media. No se reporta evidencia de explotación activa hasta el momento.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Zoom: CVE-2026-22844 (inyección de comandos en MMR) — actualizar a 5.2.1716.0+.</li>
+                        <li>GitLab: múltiples correcciones para DoS y bypass de 2FA (varios CVE).</li>
+                        <li>Impacto alto potencial, sin indicios de explotación activa reportada.</li>
+                        <li>Acciones: aplicar actualizaciones, revisar configuraciones de 2FA y monitorear anomalías.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Aunque no hay pruebas de explotación masiva, las vulnerabilidades de alta severidad en servicios ampliamente utilizados requieren parche inmediato. Validar despliegues, realizar pruebas de regresión y comunicar actualizaciones a administradores y usuarios ayuda a reducir el riesgo.</p>
             </section>
             
         </div>
