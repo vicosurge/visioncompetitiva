@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 23 de enero, 2026</div>
+                <div class="date">Semana del 26 de enero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
@@ -389,107 +389,102 @@
             
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/certcc-warns-binary-parser-bug-allows.html">CERT/CC Warns binary-parser Bug Allows Node.js Privilege-Level Code Execution</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/north-korea-linked-hackers-target.html">North Korea-Linked Hackers Target Developers via Malicious VS Code Projects</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>CERT/CC divulgó la vulnerabilidad CVE-2026-1245 en el paquete npm binary-parser (versiones anteriores a la 2.3.0). Valores controlados por el usuario (nombres de campos del parser y parámetros de codificación) no son sanitizados y pueden inyectarse en código JavaScript generado con el constructor Function, permitiendo ejecución de código arbitrario en entornos Node.js con privilegios. Se publicaron correcciones el 26 de noviembre de 2025: actualiza a la versión 2.3.0 y evita pasar valores no confiables.</p>
+                <p>Jamf Threat Labs y otros informan que actores vinculados a Corea del Norte, conocidos como "Contagious Interview", atraen a desarrolladores para clonar proyectos maliciosos de VS Code. Archivos de configuración de tareas (runOn: folderOpen) ejecutan automáticamente JavaScript ofuscado desde Vercel, desplegando puertas traseras (BeaverTail/InvisibleFerret/Tsunami), mineros y módulos para el robo de datos. Los objetivos incluyen desarrolladores de criptomonedas y fintech; mecanismos de fallback a npm y cargadores multinivel en Node/Python permiten persistencia y ejecución remota de código.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Vulnerabilidad: CVE-2026-1245 en binary-parser (<2.3.0).</li>
-                        <li>Permite ejecución de código arbitrario vía inyección en constructor Function.</li>
-                        <li>Impacta aplicaciones Node.js que procesan entradas no confiables.</li>
-                        <li>Mitigación: actualizar a v2.3.0 y validar/sanitizar entradas.</li>
+                        <li>Ingeniería de atracción hacia repositorios maliciosos de VS Code que ejecutan tareas al abrir la carpeta (runOn: folderOpen).</li>
+                        <li>Despliegue de puertas traseras, mineros y módulos de exfiltración (ej.: BeaverTail, InvisibleFerret, Tsunami).</li>
+                        <li>Técnicas de persistencia y RCE mediante fallback a npm y cargadores en varias etapas (Node/Python).</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La explotación puede permitir ejecución con los privilegios del proceso Node.js afectado, lo que es crítico en servidores y servicios backend. Revisa dependencias transitorias que puedan incluir binary-parser y aplica parches o bloqueos en repositorios de paquetes internos.</p>
+                <p>Evita clonar proyectos de fuentes no verificadas, revisa archivos tasks.json y deshabilita la ejecución automática de tareas en VS Code. Monitorea dependencias y credenciales en entornos de desarrollo.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2026/01/the-hidden-risk-of-orphan-accounts.html">The Hidden Risk of Orphan Accounts</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/threatsday-bulletin-pixel-zero-click.html">ThreatsDay Bulletin: Pixel Zero-Click, Redis RCE, China C2s, RAT Ads, Crypto Scams & 15+ Stories</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Las cuentas huérfanas —identidades humanas y no humanas abandonadas en aplicaciones, servicios y consolas en la nube— persisten porque las herramientas IAM/IGA cubren solo fragmentos del entorno. Estas cuentas invisibles (cuentas de servicio, bots, APIs y agentes de IA) constituyen una “materia oscura de identidad” que los atacantes aprovechan, generando riesgos de cumplimiento, dificultades forenses y problemas operativos. Se recomienda telemetría continua de identidad, registros de auditoría unificados, mapeo contextual de roles y desactivación automatizada.</p>
+                <p>Resumen semanal de ThreatsDay: los atacantes abusaron de sistemas y flujos de trabajo confiables — malvertising e instaladores falsos que despliegan RATs y stealers, DLL side‑loading, aprovechamientos en WSL, spam que relay de tickets de soporte, escaneos masivos de plugins de WordPress, exposiciones en la cadena de suministro, esquemas de proxyware, stealers como PureLogs/TamperedChef, una cadena de explotación zero‑click contra Pixel 9, C2s alojados en China y estafas criptográficas en niveles récord. Se están publicando parches y mitigaciones; los defensores deben actualizar y monitorear servicios rutinarios.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Las herramientas IAM tradicionales no detectan todas las identidades no gestionadas.</li>
-                        <li>Las cuentas huérfanas facilitan acceso no autorizado y complican investigaciones.</li>
-                        <li>Recomendaciones: telemetría continua, auditoría consolidada y automatización del offboarding.</li>
-                        <li>Incluir bots, APIs y agentes de IA en la gobernanza de identidad.</li>
+                        <li>Malvertising e instaladores falsos continúan entregando RATs y stealers a gran escala.</li>
+                        <li>Cadena de exploits zero‑click (Pixel 9) y servidores C2 con infraestructura alojada en China señalados en múltiples casos.</li>
+                        <li>Recomendación general: aplicar parches, auditar plugins y sistemas de soporte, y monitorear servicios expuestos.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Los equipos deben instrumentar telemetría de identidad en toda la pila y correlacionar eventos para detectar anomalías. Implementar procesos de certificación de acceso y flujos automatizados para revocar credenciales inactivas reduce la “superficie de identidad” explotable.</p>
+                <p>Revisar telemetría de red y endpoints, fortalecer procesos de detección para instaladores y publicidad maliciosa, y priorizar actualizaciones en servicios críticos y plugins populares.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/new-osiris-ransomware-emerges-as-new.html">New Osiris Ransomware Emerges as New Strain Using POORTRY Driver in BYOVD Attack</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/cisco-fixes-actively-exploited-zero-day.html">Cisco Fixes Actively Exploited Zero-Day CVE-2026-20045 in Unified CM and Webex</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Investigadores reportan una nueva variante de ransomware Osiris que afectó a un gran franquiciado de servicios alimentarios en el sudeste asiático en noviembre de 2025. Los atacantes emplearon un driver personalizado llamado POORTRY en una técnica BYOVD para desactivar mecanismos de seguridad, exfiltraron datos mediante Rclone a Wasabi, utilizaron Mimikatz (kaz.exe) y desplegaron un cifrador híbrido con claves por archivo, terminación de procesos/servicios y notas de rescate. Symantec/Carbon Black observan posibles vínculos con la familia INC.</p>
+                <p>Cisco publicó parches para CVE-2026-20045 (CVSS 8.2), una RCE crítica que afecta Unified CM (incluyendo SME, IM&P), Unity Connection y Webex Calling Dedicated Instance. Un atacante no autenticado puede ejecutar comandos del sistema operativo mediante peticiones HTTP especialmente construidas; se ha observado explotación en la naturaleza. Cisco proporcionó versiones corregidas y archivos de parche; no existen soluciones alternativas, y CISA incluyó la falla en su KEV con fecha límite de mitigación el 11 de febrero de 2026.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Técnica BYOVD usando driver POORTRY para evadir seguridad del endpoint.</li>
-                        <li>Exfiltración con Rclone hacia Wasabi antes del cifrado.</li>
-                        <li>Uso de Mimikatz para robo de credenciales y herramientas de manipulación de procesos.</li>
-                        <li>Recomendaciones: endurecer control de drivers, monitorear Rclone/transferencias a S3-compatible, respaldos y detección EDR.</li>
+                        <li>CVE-2026-20045: RCE crítica con CVSS 8.2 que permite ejecución remota sin autenticación.</li>
+                        <li>Afecta componentes de comunicación de Cisco: Unified CM, Unity Connection y Webex Calling Dedicated Instance.</li>
+                        <li>No hay mitigaciones temporales documentadas; aplicar los parches oficiales cuanto antes (CISA KEV: 11/02/2026).</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La presencia de un driver malicioso sugiere escalada a nivel de kernel; bloquear controladores no firmados, aplicar listas blancas de drivers y vigilar indicadores de compromiso (ej. procesos kaz.exe, conexiones a Wasabi) ayudan a mitigar. Preparar planes de respuesta a incidentes y restauración desde copias seguras es crítico.</p>
+                <p>Priorizar la actualización de los sistemas afectados, revisar registros de acceso y tráfico para detecciones de explotación, y seguir las instrucciones de Cisco para la instalación de las versiones corregidas.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/china-linked-apt-exploits-sitecore-zero.html">China-Linked APT Exploited Sitecore Zero-Day in Critical Infrastructure Intrusions</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/fortinet-confirms-active-forticloud-sso.html">Fortinet Confirms Active FortiCloud SSO Bypass on Fully Patched FortiGate Firewalls</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Cisco Talos atribuye actividad a un APT con nexos a China, rastreado como UAT-8837, que apuntó a infraestructura crítica en Norteamérica. El actor explotó un zero-day de Sitecore (CVE-2025-53690) para obtener acceso inicial y empleó herramientas de código abierto (GoTokenTheft, EarthWorm, DWAgent, SharpHound, Impacket, GoExec, Rubeus, Certipy) para cosechar credenciales de Active Directory, mantener persistencia y exfiltrar artefactos, lo que genera preocupaciones sobre la cadena de suministro. Sitecore parcheó la falla en septiembre de 2025.</p>
+                <p>Fortinet confirmó la explotación activa de un bypass de autenticación FortiCloud SSO que puede eludir parches recientes en FortiGate totalmente parcheados mediante abuso de SAML. Los atacantes han accedido a cuentas administrativas, creado cuentas genéricas de persistencia (por ejemplo, cloud-noc@mail.io), concedido acceso VPN y exfiltrado configuraciones. Fortinet aconseja restringir el acceso administrativo por internet y deshabilitar FortiCloud SSO mientras se desarrollan soluciones.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Actor: UAT-8837 (vinculado a China) enfocado en infraestructura crítica.</li>
-                        <li>Vector inicial: zero-day en Sitecore (CVE-2025-53690), parche disponible desde septiembre 2025.</li>
-                        <li>Herramientas abiertas usadas para robo de credenciales y movimiento lateral.</li>
-                        <li>Mitigaciones: aplicar parche, auditar instancias Sitecore y monitorizar actividad en AD.</li>
+                        <li>Bypass de FortiCloud SSO aprovechando SAML que puede derrotar parches recientes.</li>
+                        <li>Acceso a cuentas admin, creación de cuentas persistentes y exfiltración de configuraciones reportadas.</li>
+                        <li>Mitigaciones recomendadas: restringir administración por internet y deshabilitar FortiCloud SSO temporalmente.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>El uso de utilerías abiertas facilita la capacidad de mimetizar actividades maliciosas como operaciones legítimas. Reforzar detección en controladores de dominio, revisar logs para abuso de Kerberos/NTLM y validar integridad de cadenas de suministro relacionadas con Sitecore son pasos recomendados.</p>
+                <p>Auditar cuentas administrativas, rotar credenciales sensibles, revisar logs y respaldos de configuración, y bloquear acceso remoto innecesario hasta que Fortinet publique una corrección definitiva.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2026/01/zoom-and-gitlab-release-security.html">Zoom and GitLab Release Security Updates Fixing RCE, DoS, and 2FA Bypass Flaws</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2026/01/evelyn-stealer-malware-abuses-vs-code.html">Evelyn Stealer Malware Abuses VS Code Extensions to Steal Developer Credentials and Crypto</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Zoom corrigió una falla crítica de inyección de comandos en Node Multimedia Routers (CVE-2026-22844, CVSS 9.9) que podría permitir a un participante de reunión ejecutar código remoto; se recomienda actualizar los MMRs a la versión 5.2.1716.0 o superior. GitLab publicó parches para múltiples problemas de alta severidad que causaban DoS y un bypass de 2FA (CVE-2025-13927, CVE-2025-13928, CVE-2026-0723) en CE/EE, además de otros bugs de DoS de severidad media. No se reporta evidencia de explotación activa hasta el momento.</p>
+                <p>Evelyn Stealer es un info‑stealer distribuido mediante extensiones maliciosas de VS Code. Instala un DLL downloader que lanza un runtime inyectado en un proceso de Windows para recolectar datos del portapapeles, cookies y credenciales del navegador, billeteras cripto, credenciales Wi‑Fi, capturas de pantalla, aplicaciones instaladas y más; posteriormente exfiltra la información (vía FTP). Investigadores advierten que desarrolladores y organizaciones con acceso a entornos de producción o cloud están siendo dirigidos.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Zoom: CVE-2026-22844 (inyección de comandos en MMR) — actualizar a 5.2.1716.0+.</li>
-                        <li>GitLab: múltiples correcciones para DoS y bypass de 2FA (varios CVE).</li>
-                        <li>Impacto alto potencial, sin indicios de explotación activa reportada.</li>
-                        <li>Acciones: aplicar actualizaciones, revisar configuraciones de 2FA y monitorear anomalías.</li>
+                        <li>Distribución a través de extensiones maliciosas de VS Code que actúan como vector inicial.</li>
+                        <li>Robo amplio de credenciales, cookies, datos del portapapeles y billeteras; exfiltración por FTP.</li>
+                        <li>Objetivo: desarrolladores y personas con acceso a entornos de producción/cloud; riesgo elevado para claves y credenciales.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Aunque no hay pruebas de explotación masiva, las vulnerabilidades de alta severidad en servicios ampliamente utilizados requieren parche inmediato. Validar despliegues, realizar pruebas de regresión y comunicar actualizaciones a administradores y usuarios ayuda a reducir el riesgo.</p>
+                <p>Eliminar extensiones sospechosas, escanear endpoints, restringir permisos de desarrollo en entornos críticos, rotar credenciales comprometidas y monitorizar transferencias FTP o conexiones salientes inusuales.</p>
             </section>
             
         </div>
