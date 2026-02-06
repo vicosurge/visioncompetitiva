@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 2 de febrero, 2026</div>
+                <div class="date">Semana del 6 de febrero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
@@ -388,103 +388,108 @@
             <!-- Example format for OpenAI to follow: -->
             
             <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2026/01/ex-google-engineer-convicted-for.html">Ex-Google Engineer Convicted for Stealing 2,000 AI Trade Secrets for China Startup</a></h2>
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2026/02/docker-fixes-critical-ask-gordon-ai.html">Docker Fixes Critical Ask Gordon AI Flaw Allowing Code Execution via Image Metadata</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Un ex ingeniero de Google, Linwei (Leon) Ding, fue declarado culpable en EE. UU. por múltiples cargos de espionaje económico y robo de secretos industriales tras sustraer más de 2,000 documentos confidenciales relacionados con investigaciones y tecnologías de IA para presuntamente apoyar una startup en China.</p>
+                <p>Docker corrigió una vulnerabilidad crítica en "Ask Gordon" (el asistente de IA en Docker Desktop/CLI). Investigadores de Noma Labs demostraron que metadatos LABEL maliciosos en imágenes Docker podían inyectar instrucciones que Ask Gordon reenviaba al MCP Gateway, el cual ejecutaba herramientas MCP sin validación, posibilitando ejecución remota de código y exfiltración de datos. La falla se solucionó en Docker Desktop/CLI versión 4.50.0; Noma recomienda validar bajo principios de zero-trust todo contexto provisto por IA.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Condena por siete cargos de espionaje económico y siete de robo de secretos industriales.</li>
-                        <li>Se tomaron más de 2,000 documentos confidenciales vinculados a proyectos de IA.</li>
-                        <li>El caso refuerza el riesgo de amenazas internas y la necesidad de controles de exfiltración de datos.</li>
+                        <li>La explotación se realiza mediante metadatos LABEL en imágenes Docker.</li>
+                        <li>Ask Gordon reenviaba instrucciones al MCP Gateway sin validarlas, permitiendo RCE y exfiltración.</li>
+                        <li>Parche disponible en Docker Desktop/CLI 4.50.0 — actualizar urgentemente.</li>
+                        <li>Recomendación: aplicar validación zero-trust del contexto generado por IA y restringir privilegios del Gateway.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>El Departamento de Justicia informó la condena; el caso subraya la importancia de la supervisión de accesos privilegiados, políticas DLP y controles de salida de información en proyectos sensibles de IA para mitigar el riesgo de espionaje industrial.</p>
+                <p>Se sugiere actualizar a la versión parcheada inmediatamente, auditar imágenes internas y públicas, revisar permisos y políticas del MCP Gateway, y monitorear actividad anómala relacionada con ejecución de herramientas MCP o transferencia de datos.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/survey-of-100-energy-systems-reveals.html">Survey of 100+ Energy Systems Reveals Critical OT Cybersecurity Gaps</a></h2>
+                <h2><a href="https://thehackernews.com/2026/02/open-vsx-supply-chain-attack-used.html">Open VSX Supply Chain Attack Used Compromised Dev Account to Spread GlassWorm</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Una revisión de OMICRON sobre despliegues de StationGuard IDS en más de 100 subestaciones, plantas de energía y centros de control reveló fallas críticas en seguridad OT: dispositivos PAC sin parches, redes planas, conexiones externas no documentadas y activos ocultos.</p>
+                <p>Se detectó un ataque a la cadena de suministro en el registro Open VSX donde actores maliciosos usaron la cuenta de desarrollador comprometida "oorzc" para publicar actualizaciones maliciosas (30 de enero de 2026) que incorporaban el cargador GlassWorm. Cuatro extensiones, con aproximadamente 22,000 descargas en conjunto, fueron envenenadas; el loader roba credenciales en macOS, datos de navegadores y wallets, y claves de desarrollador. Las versiones maliciosas fueron removidas tras el hallazgo.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Se detectaron vulnerabilidades de configuración y visibilidad en la mayoría de los sitios evaluados.</li>
-                        <li>Problemas como falta de segmentación, sincronización de tiempo y carencias en inventario eran visibles en minutos.</li>
-                        <li>Recomendaciones: IDS a nivel de red, inventarios automatizados, allowlisting por protocolo y gobernanza OT fortalecida.</li>
+                        <li>Cuenta de desarrollador comprometida usada para distribuir código malicioso en Open VSX.</li>
+                        <li>Cuatro extensiones afectadas ~22k descargas potenciales.</li>
+                        <li>GlassWorm roba credenciales de macOS, datos de navegador/wallet y claves de desarrollador.</li>
+                        <li>Las versiones maliciosas ya fueron retiradas, pero se recomienda auditoría y mitigación.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La evaluación muestra que muchas infraestructuras críticas operan con configuraciones que facilitan accesos no autorizados o fallas operativas; se insta a priorizar medidas de detección en red, correcciones de dispositivos y auditorías continuas.</p>
+                <p>Recomiendan rotar claves y tokens relacionados, revisar cadenas de suministro de extensiones, habilitar firma de paquetes, endurecer procesos de publicación y utilizar controles CI/CD que detecten inserciones maliciosas en actualizaciones.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://thehackernews.com/2026/01/whatsapp-rolls-out-lockdown-style.html">WhatsApp Rolls Out Lockdown-Style Security Mode to Protect Targeted Users From Spyware</a></h2>
+                <h2><a href="https://fidelissecurity.com/threatgeek/cloud-security/aws-ecr-scanning-securing-your-containers/">AWS ECR Scanning: The Practical Guide to Securing Your Containers</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Meta presentó "Strict Account Settings" para WhatsApp, un modo tipo "lockdown" orientado a usuarios en alto riesgo (periodistas, figuras públicas). El modo bloquea adjuntos/media de contactos desconocidos, silencia llamadas de desconocidos y limita otras funciones para reducir la exposición a spyware.</p>
+                <p>Guía práctica sobre el escaneo de AWS ECR (Amazon Inspector) para detectar y gestionar vulnerabilidades en imágenes de contenedores. Recomienda activar scan-on-push, bloquear pipelines con gates en CI/CD, orquestar remediación automática y aplicar políticas de ciclo de vida. También aborda monitoreo, gobernanza multi-cuenta, SBOMs, correlación runtime y optimizaciones de costo y permisos.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Modo restrictivo que aplica las configuraciones más seguras disponibles en la app.</li>
-                        <li>Bloqueo de archivos y llamadas de contactos no verificados; despliegue gradual.</li>
-                        <li>WhatsApp también está migrando a una librería de medios en Rust para mejorar la seguridad de memoria.</li>
+                        <li>Habilitar escaneo on-push y puertas de seguridad en CI/CD.</li>
+                        <li>Integrar SBOMs y correlacionar hallazgos estáticos con comportamiento en runtime.</li>
+                        <li>Implementar gobernanza multi-cuenta y políticas de ciclo de vida para imágenes.</li>
+                        <li>Optimizar costos y permisos para escaneos automatizados.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>La función está dirigida a mitigar ataques dirigidos; se recomienda a usuarios de alto riesgo habilitar el modo y revisar configuraciones de privacidad y verificación de contactos.</p>
+                <p>Priorización de vulnerabilidades, reglas de aceptación en pipelines y automatización de remediación reducen riesgo operativo. Evaluar cobertura de imágenes críticas y ajustar permisos de servicio para limitar blast radius.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/clickfix-attacks-expand-using-fake.html">ClickFix Attacks Expand Using Fake CAPTCHAs, Microsoft Scripts, and Trusted Web Services</a></h2>
+                <h2><a href="https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html">Mandiant Finds ShinyHunters-Style Vishing Attacks Stealing MFA to Breach SaaS Platforms</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Investigadores describen una campaña que combina CAPTCHAs falsos estilo ClickFix con un script firmado de Microsoft App-V para distribuir un info-stealer llamado Amatera. Los atacantes usan el script firmado para iniciar ejecución evitando rutas más detectables como PowerShell directo.</p>
+                <p>Mandiant documenta la expansión de campañas al estilo ShinyHunters que emplean vishing avanzado y sitios falsos para robar credenciales SSO y códigos MFA. Grupos rastreados como UNC6661, UNC6671 y UNC6240 registran MFA en dispositivos controlados por atacantes, acceden a plataformas SaaS (Okta, SharePoint, OneDrive), exfiltran datos y extorsionan. Google y Mandiant recomiendan endurecer help-desk, aumentar registros y adoptar MFA resistente a phishing (FIDO2/passkeys).</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Uso de CAPTCHAs falsos como ingeniería social para inducir a la víctima a ejecutar contenido.</li>
-                        <li>Abuso de un script App‑V firmado por Microsoft para evadir controles y lanzar el info‑stealer Amatera.</li>
-                        <li>El método dificulta la detección por firmas tradicionales; se recomienda monitoreo de ejecución de scripts firmados y telemetría de App‑V.</li>
+                        <li>Vishing y sitios falsos para capturar SSO y códigos MFA.</li>
+                        <li>Atacantes registran MFA en dispositivos propios para mantener acceso persistente.</li>
+                        <li>Objetivos incluyen plataformas SaaS y almacenamiento corporativo, con exfiltración y extorsión.</li>
+                        <li>Mitigaciones: hardening de help-desk, logs ampliados y MFA phishing-resistant (FIDO2/passkeys).</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Defensores deben ajustar detección de ejecución anómala, vigilar indicadores de compromiso relacionados con dominios y URLs usadas por la campaña, y bloquear vectores sociales; revisar políticas de ejecución de scripts y aprovechar EDR/telemetría para identificar cadenas de ataque que abusan de servicios confiables.</p>
+                <p>Implementar detección de registros de MFA inusuales, restricciones de dispositivo, políticas de acceso condicional y formación a personal de soporte para verificar solicitudes sensibles. Priorizar la migración a soluciones de autenticación resistentes al phishing.</p>
             </section>
 
             <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://www.microsoft.com/en-us/security/blog/2026/01/30/case-study-securing-ai-application-supply-chains/">Case study: Securing AI application supply chains</a></h2>
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://thehackernews.com/2026/02/when-cloud-outages-ripple-across.html">When Cloud Outages Ripple Across the Internet</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Microsoft expone riesgos en cadenas de suministro de aplicaciones de IA: los sistemas agentivos amplían la superficie de ataque y una vulnerabilidad de deserialización en LangChain (CVE‑2025‑68664, "LangGrinch") puede exponer secretos y permitir la instanciación de objetos maliciosos.</p>
+                <p>Cuando proveedores cloud sufren interrupciones, los efectos se propagan a servicios dependientes. El artículo advierte que los sistemas de identidad —autenticación/autorización y sus dependencias cloud (almacenamientos, motores de políticas, DNS, planos de control)— pueden convertirse en puntos únicos de falla. Recomienda diseñar resiliencia (multi-cloud/on-prem, atributos en caché, modos degradados) y tratar la caída de identidad como incidente crítico para el negocio.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Vulnerabilidad LangChain ("LangGrinch") permite exposición de secretos y ejecución maliciosa mediante deserialización insegura.</li>
-                        <li>Recomendación inmediata: actualizar langchain-core y dependencias afectadas.</li>
-                        <li>Microsoft sugiere usar Defender y herramientas de seguridad para detectar y mitigar despliegues afectados, además de prácticas de hardening para cadenas de suministro.</li>
+                        <li>Los outages de proveedores cloud pueden causar fallos en cascada en servicios dependientes.</li>
+                        <li>Los sistemas de identidad son puntos críticos de falla que requieren especial atención.</li>
+                        <li>Estrategias: multi-cloud o on-prem, caché de atributos y modos de degradación controlada.</li>
+                        <li>Tratar la indisponibilidad de identidad como un incidente con alto impacto empresarial.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>El estudio enfatiza controlar dependencias, aplicar escaneo de SBOM, validar entradas/serialización y gestionar secretos adecuadamente; las arquitecturas agentivas requieren controles en tiempo de ejecución y verificación estricta de componentes de terceros.</p>
+                <p>Realizar pruebas de resiliencia (chaos engineering), contar con métodos de autenticación de respaldo, diseñar flujos degradados y revisar acuerdos de nivel de servicio y planes de continuidad para minimizar impacto en procesos críticos.</p>
             </section>
             
         </div>
