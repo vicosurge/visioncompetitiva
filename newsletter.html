@@ -377,7 +377,7 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 6 de febrero, 2026</div>
+                <div class="date">Semana del 9 de febrero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
@@ -388,108 +388,103 @@
             <!-- Example format for OpenAI to follow: -->
             
             <section class="article-section">
+                <span class="threat-level medium">AMENAZA MEDIA</span>
+                <h2><a href="https://thehackernews.com/2026/02/orchid-security-introduces-continuous.html">Orchid Security Introduces Continuous Identity Observability for Enterprise Applications</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>Orchid Security presentó una plataforma de observabilidad continua de identidades que detecta el uso de identidades dentro de aplicaciones (credenciales embebidas, cuentas de servicio y autenticaciones personalizadas), analiza el comportamiento para priorizar riesgos reales (credenciales hardcodeadas, cuentas huérfanas, rutas privilegiadas sin gestionar), orquesta la remediación vía flujos IAM/PAM existentes y mantiene evidencia continua lista para auditoría.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>Descubrimiento automático de identidades y credenciales embebidas dentro de aplicaciones.</li>
+                        <li>Análisis de comportamiento para priorizar riesgos reales y rutas privilegiadas no gestionadas.</li>
+                        <li>Integración con procesos IAM/PAM para orquestar remediación y conservar evidencia de auditoría.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Recomendado evaluar la integración con tus pipelines de CI/CD y plantillas/base images, revisar cuentas de servicio y credenciales hardcodeadas, y aprovechar las evidencias continuas para auditorías y cumplimiento. Aunque no es una explotación activa, mejora la visibilidad y reduce riesgo de abuso de identidades.</p>
+            </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://blog.qualys.com/vulnerabilities-threat-research/2026/02/02/mutagen-astronomy-discovery-to-kev">Mutagen Astronomy: From Discovery to CISA Recognition—A Seven-Year Journey</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>CISA añadió la vulnerabilidad CVE-2018-14634 ("Mutagen Astronomy"), un escalamiento de privilegios local en el kernel de Linux descubierto por Qualys en 2018, a su catálogo de Vulnerabilidades Conocidas Explotadas (KEV) tras confirmarse explotación en el mundo real. Las organizaciones deben priorizar parches en distribuciones afectadas, actualizar imágenes base y verificar la remediación.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>CVE-2018-14634 es un LPE (Local Privilege Escalation) en kernel de Linux con explotación confirmada en campo.</li>
+                        <li>Incorporada al catálogo KEV de CISA, lo que implica prioridad para mitigación en entornos críticos.</li>
+                        <li>Acciones recomendadas: parchear distribuciones, actualizar imágenes base/plantillas y validar la corrección.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Además de aplicar parches, audita imágenes de contenedor y máquinas virtuales para detectar kernels vulnerables, implemente controles compensatorios (hardening, restricciones de acceso) y valide mediante escaneos y pruebas de penetración internas para asegurar que no queden sistemas sin mitigar.</p>
+            </section>
+
+            <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
                 <h2><a href="https://thehackernews.com/2026/02/docker-fixes-critical-ask-gordon-ai.html">Docker Fixes Critical Ask Gordon AI Flaw Allowing Code Execution via Image Metadata</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Docker corrigió una vulnerabilidad crítica en "Ask Gordon" (el asistente de IA en Docker Desktop/CLI). Investigadores de Noma Labs demostraron que metadatos LABEL maliciosos en imágenes Docker podían inyectar instrucciones que Ask Gordon reenviaba al MCP Gateway, el cual ejecutaba herramientas MCP sin validación, posibilitando ejecución remota de código y exfiltración de datos. La falla se solucionó en Docker Desktop/CLI versión 4.50.0; Noma recomienda validar bajo principios de zero-trust todo contexto provisto por IA.</p>
+                <p>Docker parcheó una falla crítica en Ask Gordon (el asistente AI de Docker Desktop/CLI) descubierta por Noma Labs: metadatos LABEL maliciosos en imágenes Docker podían inyectar instrucciones que Ask Gordon reenviaba al MCP Gateway, permitiendo la ejecución de herramientas MCP sin validación y posibilitando ejecución remota de código o exfiltración. El arreglo está en Docker Desktop/CLI versión 4.50.0.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>La explotación se realiza mediante metadatos LABEL en imágenes Docker.</li>
-                        <li>Ask Gordon reenviaba instrucciones al MCP Gateway sin validarlas, permitiendo RCE y exfiltración.</li>
-                        <li>Parche disponible en Docker Desktop/CLI 4.50.0 — actualizar urgentemente.</li>
-                        <li>Recomendación: aplicar validación zero-trust del contexto generado por IA y restringir privilegios del Gateway.</li>
+                        <li>Vector: metadatos LABEL en imágenes Docker que manipulan el contexto entregado al asistente AI.</li>
+                        <li>Impacto: posibilidad de ejecución remota de comandos y exfiltración vía MCP Gateway si no se valida el contexto.</li>
+                        <li>Mitigación: actualizar a Docker Desktop/CLI 4.50.0 y aplicar validación de entrada/contexto AI siguiendo principios de zero-trust.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Se sugiere actualizar a la versión parcheada inmediatamente, auditar imágenes internas y públicas, revisar permisos y políticas del MCP Gateway, y monitorear actividad anómala relacionada con ejecución de herramientas MCP o transferencia de datos.</p>
+                <p>Se recomienda aplicar el parche inmediatamente, restringir privilegios de ejecución desde asistentes AI, validar cualquier instrucción que provenga de contexto automatizado, y monitorear registros de MCP Gateway y comportamiento anómalo en entornos donde se utilice Ask Gordon.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/02/open-vsx-supply-chain-attack-used.html">Open VSX Supply Chain Attack Used Compromised Dev Account to Spread GlassWorm</a></h2>
+                <h2><a href="https://blog.cloudflare.com/ddos-threat-report-2025-q4/">2025 Q4 DDoS threat report: A record-setting 31.4 Tbps attack caps a year of massive DDoS assaults</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Se detectó un ataque a la cadena de suministro en el registro Open VSX donde actores maliciosos usaron la cuenta de desarrollador comprometida "oorzc" para publicar actualizaciones maliciosas (30 de enero de 2026) que incorporaban el cargador GlassWorm. Cuatro extensiones, con aproximadamente 22,000 descargas en conjunto, fueron envenenadas; el loader roba credenciales en macOS, datos de navegadores y wallets, y claves de desarrollador. Las versiones maliciosas fueron removidas tras el hallazgo.</p>
+                <p>Cloudflare reporta un aumento masivo en 2025 con 47.1 millones de ataques DDoS (121% más), destacando el botnet Aisuru‑Kimwolf que lanzó ataques HTTP hiper‑volumétricos de hasta 205 Mrps y picos de decenas de Tbps; proveedores telco, gaming y servicios en la nube fueron objetivos principales y las defensas de Cloudflare mitigaron estos ataques.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Cuenta de desarrollador comprometida usada para distribuir código malicioso en Open VSX.</li>
-                        <li>Cuatro extensiones afectadas ~22k descargas potenciales.</li>
-                        <li>GlassWorm roba credenciales de macOS, datos de navegador/wallet y claves de desarrollador.</li>
-                        <li>Las versiones maliciosas ya fueron retiradas, pero se recomienda auditoría y mitigación.</li>
+                        <li>Incremento del 121% en cantidad de ataques DDoS reportados en 2025.</li>
+                        <li>Botnet Aisuru‑Kimwolf ejecutó ataques HTTP a gran escala (hasta cientos de Mrps y Tbps).</li>
+                        <li>Sectores afectados: telecomunicaciones, gaming y servicios cloud; mitigaciones a gran escala fueron necesarias.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Recomiendan rotar claves y tokens relacionados, revisar cadenas de suministro de extensiones, habilitar firma de paquetes, endurecer procesos de publicación y utilizar controles CI/CD que detecten inserciones maliciosas en actualizaciones.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://fidelissecurity.com/threatgeek/cloud-security/aws-ecr-scanning-securing-your-containers/">AWS ECR Scanning: The Practical Guide to Securing Your Containers</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Guía práctica sobre el escaneo de AWS ECR (Amazon Inspector) para detectar y gestionar vulnerabilidades en imágenes de contenedores. Recomienda activar scan-on-push, bloquear pipelines con gates en CI/CD, orquestar remediación automática y aplicar políticas de ciclo de vida. También aborda monitoreo, gobernanza multi-cuenta, SBOMs, correlación runtime y optimizaciones de costo y permisos.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Habilitar escaneo on-push y puertas de seguridad en CI/CD.</li>
-                        <li>Integrar SBOMs y correlacionar hallazgos estáticos con comportamiento en runtime.</li>
-                        <li>Implementar gobernanza multi-cuenta y políticas de ciclo de vida para imágenes.</li>
-                        <li>Optimizar costos y permisos para escaneos automatizados.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Priorización de vulnerabilidades, reglas de aceptación en pipelines y automatización de remediación reducen riesgo operativo. Evaluar cobertura de imágenes críticas y ajustar permisos de servicio para limitar blast radius.</p>
+                <p>Organizaciones deben revisar estrategias de mitigación DDoS (CDN, scrubbing, rate limiting, arquitectura redundante), probar procedimientos de respuesta a incidentes y coordinarse con proveedores de red y seguridad para asegurar escalabilidad ante ataques volumétricos.</p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/01/mandiant-finds-shinyhunters-using.html">Mandiant Finds ShinyHunters-Style Vishing Attacks Stealing MFA to Breach SaaS Platforms</a></h2>
+                <h2><a href="https://thehackernews.com/2026/02/deadvax-malware-campaign-deploys.html">DEAD#VAX Malware Campaign Deploys AsyncRAT via IPFS-Hosted VHD Phishing Files</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Mandiant documenta la expansión de campañas al estilo ShinyHunters que emplean vishing avanzado y sitios falsos para robar credenciales SSO y códigos MFA. Grupos rastreados como UNC6661, UNC6671 y UNC6240 registran MFA en dispositivos controlados por atacantes, acceden a plataformas SaaS (Okta, SharePoint, OneDrive), exfiltran datos y extorsionan. Google y Mandiant recomiendan endurecer help-desk, aumentar registros y adoptar MFA resistente a phishing (FIDO2/passkeys).</p>
+                <p>Investigadores describen la campaña DEAD#VAX que entrega AsyncRAT mediante archivos VHD alojados en IPFS, disfrazados como PDFs. El ataque multinivel usa WSF, scripts batch y loaders en PowerShell fuertemente ofuscados para descifrar e inyectar AsyncRAT como shellcode en memoria dentro de procesos Microsoft confiables, además de persistencia vía tareas programadas y técnicas sin archivos para evadir detección y complicar el análisis forense.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Vishing y sitios falsos para capturar SSO y códigos MFA.</li>
-                        <li>Atacantes registran MFA en dispositivos propios para mantener acceso persistente.</li>
-                        <li>Objetivos incluyen plataformas SaaS y almacenamiento corporativo, con exfiltración y extorsión.</li>
-                        <li>Mitigaciones: hardening de help-desk, logs ampliados y MFA phishing-resistant (FIDO2/passkeys).</li>
+                        <li>Entrega: archivos VHD en IPFS usados en phishing, con apariencia de PDFs.</li>
+                        <li>Técnicas: loaders ofuscados, inyección en memoria (fileless) y persistencia mediante tareas programadas.</li>
+                        <li>Payload: AsyncRAT desplegado como shellcode en procesos confiables para evadir detección.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Implementar detección de registros de MFA inusuales, restricciones de dispositivo, políticas de acceso condicional y formación a personal de soporte para verificar solicitudes sensibles. Priorizar la migración a soluciones de autenticación resistentes al phishing.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://thehackernews.com/2026/02/when-cloud-outages-ripple-across.html">When Cloud Outages Ripple Across the Internet</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Cuando proveedores cloud sufren interrupciones, los efectos se propagan a servicios dependientes. El artículo advierte que los sistemas de identidad —autenticación/autorización y sus dependencias cloud (almacenamientos, motores de políticas, DNS, planos de control)— pueden convertirse en puntos únicos de falla. Recomienda diseñar resiliencia (multi-cloud/on-prem, atributos en caché, modos degradados) y tratar la caída de identidad como incidente crítico para el negocio.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Los outages de proveedores cloud pueden causar fallos en cascada en servicios dependientes.</li>
-                        <li>Los sistemas de identidad son puntos críticos de falla que requieren especial atención.</li>
-                        <li>Estrategias: multi-cloud o on-prem, caché de atributos y modos de degradación controlada.</li>
-                        <li>Tratar la indisponibilidad de identidad como un incidente con alto impacto empresarial.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Realizar pruebas de resiliencia (chaos engineering), contar con métodos de autenticación de respaldo, diseñar flujos degradados y revisar acuerdos de nivel de servicio y planes de continuidad para minimizar impacto en procesos críticos.</p>
+                <p>Mitigaciones recomendadas: bloquear/monitorizar acceso a dominios y gateways IPFS sospechosos, restringir ejecución de scripts (WSF/PowerShell), aplicar detección de comportamiento en memoria con EDR, auditar tareas programadas y educar a usuarios sobre phishing con archivos VHD/adjuntos disfrazados.</p>
             </section>
             
         </div>
