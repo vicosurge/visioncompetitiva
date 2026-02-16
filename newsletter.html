@@ -377,112 +377,122 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 13 de febrero, 2026</div>
+                <div class="date">Semana del 16 de febrero, 2026</div>
             </div>
 
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
 
+            <!-- Article sections will be inserted here by your n8n workflow -->
+            <!-- Example format for OpenAI to follow: -->
+            
             <section class="article-section">
                 <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://fidelissecurity.com/threatgeek/network-security/hybrid-network-visibility-gaps-and-security-complexities/">Hybrid Network Security Complexities and Visibility Gaps You Need to beware of</a></h2>
+                <h2><a href="https://www.wiz.io/blog/introducing-ai-cyber-model-arena-a-real-world-benchmark-for-ai-agents-in-cybersec">Introducing AI Cyber Model Arena: A Real-World Benchmark for AI Agents in Cybersecurity</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Las redes híbridas generan brechas de visibilidad entre trayectos on‑prem y multi‑cloud que facilitan el movimiento lateral, detecciones tardías y mayores costos por brecha (promedio en EE. UU.: $10.22M). Para mitigarlo se recomienda visibilidad centralizada con NDR y descifrado, microsegmentación (y eBPF), control de acceso zero‑trust y monitoreo unificado.</p>
+                <p>Wiz Research presentó AI Cyber Model Arena, un benchmark compuesto por 257 desafíos reales de seguridad ofensiva que abarcan zero‑days, detección de CVE, API/web y entornos cloud (AWS/Azure/GCP/K8s). Ejecuta evaluaciones multi‑agente y multi‑modelo en contenedores aislados con puntajes deterministas (pass@3), mostrando que la capacidad ofensiva depende tanto del modelo como del andamiaje del agente y es altamente específica del dominio.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Las rutas híbridas crean "puntos ciegos" que aumentan el riesgo de compromiso lateral.</li>
-                        <li>Soluciones recomendadas: NDR con descifrado, microsegmentación y eBPF, IAM zero‑trust.</li>
-                        <li>Monitoreo unificado reduce tiempos de detección y costes de remediación.</li>
+                        <li>Benchmark de 257 desafíos reales para evaluar agentes y modelos en escenarios ofensivos.</li>
+                        <li>Evaluaciones multi‑agente/multi‑modelo en contenedores aislados con scoring determinista (pass@3).</li>
+                        <li>Resultados muestran que el rendimiento ofensivo es dependiente del modelo y del scaffolding del agente.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Evaluar arquitectura de telemetría y priorizar despliegue de sensores NDR donde convergen las conexiones cloud/on‑prem. Revisar políticas de segmentación y autenticación para minimizar alcance si ocurre una intrusión.</p>
+                <p>AI Cyber Model Arena ofrece una plataforma reproducible para comparar agentes y modelos en tareas de ciberseguridad. Puede usarse para evaluar defensas, diseñar pruebas de red teaming y medir mejoras en modelos/arquitecturas de agentes. Los resultados indican la necesidad de evaluaciones específicas por dominio al validar capacidades ofensivas de IA.</p>
+                <p><a href="https://www.wiz.io/blog/introducing-ai-cyber-model-arena-a-real-world-benchmark-for-ai-agents-in-cybersec" class="read-more">Leer más →</a></p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/02/german-agencies-warn-of-signal-phishing.html">German Agencies Warn of Signal Phishing Targeting Politicians, Military, Journalists</a></h2>
+                <h2><a href="https://thehackernews.com/2026/02/lazarus-campaign-plants-malicious.html">Lazarus Campaign Plants Malicious Packages in npm and PyPI Ecosystems</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>Las agencias alemanas BfV y BSI advierten sobre una campaña de phishing —presuntamente vinculada a un estado— que abusa de funciones de Signal para apuntar a políticos, militares, diplomáticos y periodistas. Los atacantes se hacen pasar por soporte de Signal para obtener el PIN o inducir al usuario a escanear códigos QR y así vincular dispositivos, lo que permite el secuestro de cuentas y acceso a mensajes y contactos.</p>
+                <p>Investigadores identificaron paquetes maliciosos en npm y PyPI vinculados a una campaña de reclutamiento falsa del grupo Lazarus (vinculado a Corea del Norte), apodada "graphalgo" y activa desde mayo de 2025. Los atacantes usaron empresas falsas, repositorios en GitHub y falsas ofertas de empleo para inducir a desarrolladores a instalar dependencias que desplegaban un RAT protegido por token para robo de datos y control remoto.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Objetivos de alto perfil: políticos, militares, periodistas y diplomáticos.</li>
-                        <li>Métodos: suplantación de soporte, recolección de PIN y uso de QR para vincular dispositivos.</li>
-                        <li>Mitigación recomendada: activar Registration Lock y revisar dispositivos vinculados.</li>
+                        <li>Campaña "graphalgo" activa desde mayo de 2025 dirigida a ecosistemas npm y PyPI.</li>
+                        <li>Uso de empresas y repositorios falsos como señuelo para instalar dependencias maliciosas.</li>
+                        <li>Instalación de un RAT con control basado en token para exfiltración de datos y control remoto.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Organizaciones y personas en riesgo deben fortalecer medidas de autenticación y capacitar para detectar solicitudes de soporte falsas. Revisar y revocar dispositivos desconocidos desde la configuración de Signal.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://thehackernews.com/2026/02/zastai-raises-6m-pre-to-scale-zero.html">ZAST.AI Raises $6M Pre-A to Scale "Zero False Positive" AI-Powered Code Security</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>ZAST.AI obtuvo $6M en una ronda Pre‑A liderada por Hillhouse Capital (cercana a $10M en total). En 2025 su IA descubrió cientos de vulnerabilidades reales en proyectos open source, generando PoC ejecutables y 119 asignaciones CVE. Su enfoque de generación y validación automática de PoC busca reducir falsos positivos y acelerar la remediación en entornos empresariales.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Financiamiento para escalar su plataforma de seguridad de código impulsada por IA.</li>
-                        <li>Resultados 2025: cientos de vulnerabilidades reales y 119 CVE asignadas.</li>
-                        <li>Objetivo: eliminar falsos positivos mediante generación/validación automática de PoC.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Herramientas como esta pueden mejorar la priorización de parches al entregar PoC verificables; sin embargo, integrar resultados en pipelines de desarrollo requiere validar procesos internos y gobernanza de vulnerabilidades.</p>
+                <p>La táctica destaca el riesgo de confiar en paquetes de terceros sin verificarlos. Recomendaciones: auditar dependencias, usar lockfiles y firmas, aplicar escaneo de software compuesto (SCA), evitar instalar paquetes desde fuentes no verificadas y reportar paquetes maliciosos a los registros correspondientes.</p>
+                <p><a href="https://thehackernews.com/2026/02/lazarus-campaign-plants-malicious.html" class="read-more">Leer más →</a></p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://thehackernews.com/2026/02/bloody-wolf-targets-uzbekistan-russia.html">Bloody Wolf Targets Uzbekistan, Russia Using NetSupport RAT in Spear-Phishing Campaign</a></h2>
+                <h2><a href="https://thehackernews.com/2026/02/weekly-recap-ai-skill-malware-31tbps.html">⚡ Weekly Recap: AI Skill Malware, 31Tbps DDoS, Notepad++ Hack, LLM Backdoors and More</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El actor conocido como Bloody Wolf está llevando a cabo una campaña de spear‑phishing dirigida a Uzbekistán y Rusia para desplegar el troyano de acceso remoto NetSupport RAT. Kaspersky rastrea la actividad con el nombre Stan Ghouls; el grupo ha operado al menos desde 2023 y apunta a sectores como manufactura, finanzas y TI.</p>
+                <p>Los atacantes están abusando cada vez más de ecosistemas de confianza—marketplaces de agentes de IA, actualizaciones, hosting y metadatos—para distribuir malware y evadir controles. El resumen cubre skills maliciosos de OpenClaw, un DDoS récord de 31.4 Tbps (AISURU), la distribución de un backdoor "Chrysalis" vía actualización de Notepad++, una RCE por metadatos en Docker ('Ask Gordon'), trabajos de detección de puertas traseras en LLMs y CVEs críticos por parchear.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>Uso de spear‑phishing para distribuir NetSupport RAT y obtener acceso remoto.</li>
-                        <li>Victimología: organizaciones en manufactura, finanzas y tecnologías de la información.</li>
-                        <li>Kaspersky sigue la actividad bajo el alias Stan Ghouls; campaña activa desde 2023.</li>
+                        <li>Abuso de marketplaces y mecanismos de actualización para distribuir malware y backdoors.</li>
+                        <li>Registro de un DDoS de ~31.4 Tbps atribuido a AISURU.</li>
+                        <li>Incidentes diversos: backdoor en Notepad++ vía actualizaciones, RCE por metadatos en Docker y detección de backdoors en LLMs.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Reforzar detección de correos dirigidos, habilitar filtrado de attachments/links y monitoreo de conexiones salientes. En caso de sospecha, aislar sistemas y realizar análisis forense para identificar alcance de compromiso.</p>
+                <p>Mitigaciones recomendadas: validar y firmar paquetes/skills antes de su uso, monitorizar integridad de actualizaciones, aplicar control de reputación en proveedores, segmentar y monitorear red para detectar picos anómalos de tráfico, y parchear CVEs críticos cuanto antes.</p>
+                <p><a href="https://thehackernews.com/2026/02/weekly-recap-ai-skill-malware-31tbps.html" class="read-more">Leer más →</a></p>
             </section>
 
             <section class="article-section">
                 <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://blog.qualys.com/vulnerabilities-threat-research/2026/02/10/microsoft-patch-tuesday-february-2026-security-update-review">Microsoft and Adobe Patch Tuesday, February 2026 Security Update Review</a></h2>
+                <h2><a href="https://krebsonsecurity.com/2026/02/patch-tuesday-february-2026-edition/">Patch Tuesday, February 2026 Edition</a></h2>
                 
                 <p><strong>Resumen:</strong></p>
-                <p>El Patch Tuesday de febrero de 2026 corrige 61 vulnerabilidades de Microsoft, incluidas cinco críticas y seis zero‑days confirmados como explotados activamente, afectando Exchange, RDS, Windows Shell, Word y otros componentes. Adobe publicó parches para 44 fallas (27 críticas). Se recomienda priorizar el parcheo inmediato y aplicar mitigaciones donde el parche no sea posible de inmediato.</p>
+                <p>Microsoft publicó actualizaciones que corrigen más de 50 vulnerabilidades, incluyendo seis zero‑days que están siendo explotadas activamente. Las fallas permiten ejecución remota de código, elevación de privilegios, elusión de seguridad y denegación de servicio en Windows, Office y herramientas de desarrollo. Los administradores deben aplicar parches con prioridad y seguir las guías de mitigación.</p>
                 
                 <div class="key-points">
                     <h4>Puntos clave:</h4>
                     <ul>
-                        <li>61 vulnerabilidades de Microsoft; 6 zero‑days con explotación activa confirmada.</li>
-                        <li>Adobe: 44 correcciones, 27 de ellas críticas.</li>
-                        <li>Priorizar parches para Exchange, RDS y componentes con explotación activa.</li>
+                        <li>Más de 50 vulnerabilidades corregidas en múltiples productos de Microsoft.</li>
+                        <li>Seis zero‑days identificados como explotados activamente.</li>
+                        <li>Impacto: RCE, elevación de privilegios, bypass de seguridad y DoS en entornos Windows/Office/dev tools.</li>
                     </ul>
                 </div>
                 
                 <h3>Detalles adicionales:</h3>
-                <p>Inventariar exposiciones críticas, aplicar parches y mitigaciones compensatorias (reglas WAF, bloqueo de RDP, segmentación). Monitorear indicadores de compromiso y adaptar planes de respuesta a incidentes ante explotación activa.</p>
+                <p>Priorizar la implementación de parches en sistemas expuestos y servidores críticos. Aplicar mitigaciones temporales indicadas por Microsoft cuando sea necesario, revisar inventario de activos y dependencias, y coordinar ventanas de mantenimiento para reducir el riesgo de explotación inmediata.</p>
+                <p><a href="https://krebsonsecurity.com/2026/02/patch-tuesday-february-2026-edition/" class="read-more">Leer más →</a></p>
             </section>
+
+            <section class="article-section">
+                <span class="threat-level high">AMENAZA ALTA</span>
+                <h2><a href="https://thehackernews.com/2026/02/beyondtrust-fixes-critical-pre-auth-rce.html">BeyondTrust Fixes Critical Pre-Auth RCE Vulnerability in Remote Support and PRA</a></h2>
+                
+                <p><strong>Resumen:</strong></p>
+                <p>BeyondTrust parcheó una vulnerabilidad crítica de inyección de comandos que permite RCE sin autenticación (CVE‑2026‑1731, CVSS 9.9) en Remote Support ≤25.3.1 y Privileged Remote Access ≤24.3.4. Las correcciones se publicaron como BT26‑02‑RS (RS 25.3.2+) y BT26‑02‑PRA (PRA 25.1.1+). Las instancias autohospedadas deben aplicar las actualizaciones manualmente; versiones muy antiguas requieren actualización. Un investigador detectó ~11,000 instancias expuestas y Censys lista ~190,832 propiedades web relacionadas.</p>
+                
+                <div class="key-points">
+                    <h4>Puntos clave:</h4>
+                    <ul>
+                        <li>CVE‑2026‑1731: vulnerabilidad pre‑auth de inyección de comandos con CVSS 9.9 (RCE).</li>
+                        <li>Parche disponible: BT26‑02‑RS (Remote Support 25.3.2+) y BT26‑02‑PRA (PRA 25.1.1+); aplicar manualmente si es self‑hosted.</li>
+                        <li>Investigador encontró ~11,000 instancias expuestas; Censys muestra ~190,832 propiedades relacionadas.</li>
+                    </ul>
+                </div>
+                
+                <h3>Detalles adicionales:</h3>
+                <p>Acciones recomendadas: actualizar inmediatamente a las versiones parcheadas, restringir el acceso administrativo mediante listas de IP y VPN, aislar instancias autohospedadas, rotar credenciales comprometidas y monitorear logs por actividad sospechosa. Para versiones obsoletas, planear un proceso de upgrade controlado lo antes posible.</p>
+                <p><a href="https://thehackernews.com/2026/02/beyondtrust-fixes-critical-pre-auth-rce.html" class="read-more">Leer más →</a></p>
+            </section>
+
+            <!-- Repeat the above structure for each article -->
             
         </div>
     </main>
