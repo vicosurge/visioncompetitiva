@@ -7,353 +7,66 @@
     <meta name="description" content="Resumen Semanal de Ciberseguridad - Visión Competitiva">
     <meta name="keywords" content="ciberseguridad, newsletter, amenazas, vulnerabilidades, noticias">
     <title>Resumen Semanal de Ciberseguridad - Visión Competitiva</title>
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --primary-color: #0f172a;
-            --secondary-color: #1e293b;
-            --accent-color: #3b82f6;
-            --accent-hover: #2563eb;
-            --text-primary: #f8fafc;
-            --text-secondary: #cbd5e1;
-            --text-muted: #94a3b8;
-            --border-color: #334155;
-            --card-bg: #1e293b;
+            --primary-color: #0f172a; --secondary-color: #1e293b; --accent-color: #3b82f6;
+            --accent-hover: #2563eb; --text-primary: #f8fafc; --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8; --border-color: #334155; --card-bg: #1e293b;
             --gradient-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.3);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.2); --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-
-        html, body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--gradient-bg);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Header */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 0;
-            transition: all 0.3s ease;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            height: 60px;
-            width: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav ul li a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        /* Newsletter Specific Styles */
-        .newsletter-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-            min-height: calc(100vh - 160px);
-        }
-
-        .newsletter-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-        }
-
-        .newsletter-header h1 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-color) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .newsletter-header .date {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        .newsletter-intro {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 3rem;
-            box-shadow: var(--shadow);
-        }
-
-        .newsletter-intro p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            text-align: center;
-        }
-
-        .article-section {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-        }
-
-        .article-section:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--accent-color);
-        }
-
-        .article-section h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            line-height: 1.4;
-        }
-
-        .article-section h2 a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .article-section h2 a:hover {
-            color: var(--accent-hover);
-        }
-
-        .article-section h3 {
-            color: var(--text-primary);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 1.5rem 0 1rem 0;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 1rem;
-        }
-
-        .article-section p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-
-        .article-section ul, .article-section ol {
-            margin: 1rem 0 1rem 1.5rem;
-            color: var(--text-secondary);
-        }
-
-        .article-section li {
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
-        }
-
-        .article-section strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .article-section em {
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
-        .key-points {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .key-points h4 {
-            color: var(--accent-color);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .threat-level {
-            display: inline-block;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .threat-level.high {
-            background: rgba(239, 68, 68, 0.2);
-            color: #ef4444;
-            border: 1px solid rgba(239, 68, 68, 0.3);
-        }
-
-        .threat-level.medium {
-            background: rgba(245, 158, 11, 0.2);
-            color: #f59e0b;
-            border: 1px solid rgba(245, 158, 11, 0.3);
-        }
-
-        .threat-level.low {
-            background: rgba(34, 197, 94, 0.2);
-            color: #22c55e;
-            border: 1px solid rgba(34, 197, 94, 0.3);
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .back-to-top:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            border-top: 1px solid var(--border-color);
-            padding: 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Mobile Responsiveness */
+        html, body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gradient-bg); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+        header { position: sticky; top: 0; z-index: 1000; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 1rem 0; transition: all 0.3s ease; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { height: 60px; width: auto; transition: transform 0.3s ease; }
+        .logo:hover { transform: scale(1.05); }
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav ul li a { color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: all 0.3s ease; position: relative; }
+        nav ul li a:hover { color: var(--accent-color); }
+        nav ul li a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent-color); transition: width 0.3s ease; }
+        nav ul li a:hover::after { width: 100%; }
+        .newsletter-container { max-width: 1000px; margin: 0 auto; padding: 2rem; min-height: calc(100vh - 160px); }
+        .newsletter-header { text-align: center; margin-bottom: 3rem; padding: 2rem 0; }
+        .newsletter-header h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1rem; background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-color) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .newsletter-header .date { color: var(--text-muted); font-size: 1.1rem; font-weight: 500; }
+        .newsletter-intro { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: var(--shadow); }
+        .newsletter-intro p { color: var(--text-secondary); font-size: 1.1rem; text-align: center; }
+        .article-section { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow); transition: all 0.3s ease; }
+        .article-section:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); border-color: var(--accent-color); }
+        .article-section h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; line-height: 1.4; }
+        .article-section h2 a { color: var(--accent-color); text-decoration: none; transition: color 0.3s ease; }
+        .article-section h2 a:hover { color: var(--accent-hover); }
+        .article-section h3 { color: var(--text-primary); font-size: 1.2rem; font-weight: 600; margin: 1.5rem 0 1rem 0; border-left: 3px solid var(--accent-color); padding-left: 1rem; }
+        .article-section p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.7; }
+        .article-section ul, .article-section ol { margin: 1rem 0 1rem 1.5rem; color: var(--text-secondary); }
+        .article-section li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .article-section strong { color: var(--text-primary); font-weight: 600; }
+        .article-section em { color: var(--text-muted); font-style: italic; }
+        .key-points { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 10px; padding: 1.5rem; margin: 1.5rem 0; }
+        .key-points h4 { color: var(--accent-color); font-weight: 600; margin-bottom: 1rem; font-size: 1.1rem; }
+        .threat-level { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
+        .threat-level.high { background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .threat-level.medium { background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
+        .threat-level.low { background: rgba(34, 197, 94, 0.2); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.3); }
+        .back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: var(--accent-color); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.2rem; cursor: pointer; box-shadow: var(--shadow); transition: all 0.3s ease; opacity: 0; transform: translateY(20px); }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); }
+        .back-to-top:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+        footer { background: var(--primary-color); border-top: 1px solid var(--border-color); padding: 2rem; text-align: center; margin-top: 4rem; }
+        footer p { color: var(--text-muted); font-size: 0.95rem; }
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            .newsletter-container {
-                padding: 1rem;
-            }
-
-            .newsletter-header {
-                padding: 1rem 0;
-                margin-bottom: 2rem;
-            }
-
-            .newsletter-intro,
-            .article-section {
-                padding: 1.5rem;
-            }
-
-            .article-section h2 {
-                font-size: 1.3rem;
-            }
-
-            .back-to-top {
-                bottom: 1rem;
-                right: 1rem;
-                width: 45px;
-                height: 45px;
-            }
+            .header-container { flex-direction: column; gap: 1rem; padding: 0 1rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+            .newsletter-container { padding: 1rem; }
+            .newsletter-header { padding: 1rem 0; margin-bottom: 2rem; }
+            .newsletter-intro, .article-section { padding: 1.5rem; }
+            .article-section h2 { font-size: 1.3rem; }
+            .back-to-top { bottom: 1rem; right: 1rem; width: 45px; height: 45px; }
         }
-
         @media (max-width: 480px) {
-            .newsletter-container {
-                padding: 0.5rem;
-            }
-
-            .newsletter-intro,
-            .article-section {
-                padding: 1rem;
-            }
-
-            .article-section h2 {
-                font-size: 1.2rem;
-            }
+            .newsletter-container { padding: 0.5rem; }
+            .newsletter-intro, .article-section { padding: 1rem; }
+            .article-section h2 { font-size: 1.2rem; }
         }
     </style>
 </head>
@@ -372,176 +85,107 @@
             </nav>
         </div>
     </header>
-
     <main>
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 27 de febrero, 2026</div>
+                <div class="date">Semana del 5 de marzo, 2026</div>
             </div>
-
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
-
-            <!-- Article sections will be inserted here by your n8n workflow -->
-            <!-- Example format for OpenAI to follow: -->
-            
             <section class="article-section">
-                <span class="threat-level low">AMENAZA BAJA</span>
-                <h2><a href="https://isc.sans.edu/podcastdetail/9828">ISC Stormcast For Friday, February 27th, 2026</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Esto es un anuncio.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Contenido publicitario identificado como anuncio.</li>
-                        <li>No contiene alerta de vulnerabilidad técnica en el resumen.</li>
-                        <li>Consultar enlace original si se requiere más contexto.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Entrada marcada como anuncio; no se reportan explotaciones ni acciones de mitigación asociadas en este resumen.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://isc.sans.edu/diary/rss/32752">CloudCharge cloudcharge.se</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>CISA informa múltiples vulnerabilidades críticas en CloudCharge (CVE-2026-20781, CVE-2026-25114, CVE-2026-27652, CVE-2026-20733) que permiten suplantación de estaciones vía WebSocket sin autenticación, secuestro de sesión, ataques de fuerza bruta/DoS y exposición de identificadores de estaciones. CloudCharge no respondió a CISA; al momento del aviso no se reportó explotación pública conocida.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Varias CVE críticas afectan funcionalidades WebSocket de CloudCharge.</li>
-                        <li>Posibles impactos: suplantación de estaciones, secuestro de sesión y DoS.</li>
-                        <li>Exposición de identificadores de estación que facilita ataque dirigido.</li>
-                        <li>Proveedor no respondió a la notificación de CISA; sin explotación pública conocida.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>CISA recomienda mitigaciones y monitoreo; revisar el advisory completo para acciones específicas y parches cuando estén disponibles.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-03">EV2GO ev2go.io</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Se identificaron múltiples vulnerabilidades críticas en EV2GO (varias CVE) que permiten acceso WebSocket sin autenticación, suplantación de estaciones, secuestro/sombra de sesiones, ataques de fuerza bruta/DoS y exposición de identificadores de estaciones. EV2GO no respondió a CISA; se recomiendan mitigaciones indicadas por el organismo.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Cuatro vulnerabilidades críticas permiten acceso y suplantación sin autenticación.</li>
-                        <li>Riesgos: secuestro de sesiones y denegación de servicio.</li>
-                        <li>Exposición de identificadores facilita ataques dirigidos a estaciones EV.</li>
-                        <li>CISA sugiere medidas mitigantes; proveedor no respondió a la notificación.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Consultar el advisory de CISA para mitigar riesgos y aplicar actualizaciones o configuraciones recomendadas.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level high">AMENAZA ALTA</span>
-                <h2><a href="https://www.malwarebytes.com/blog/threat-intel/2026/02/refund-scam-impersonates-avast-to-harvest-credit-card-details">Refund scam impersonates Avast to harvest credit card details</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Un sitio de phishing que se hace pasar por Avast apunta a usuarios francófonos con una supuesta notificación de reembolso de €499.99 para recolectar datos completos de tarjeta de crédito (número, fecha de expiración, CVV). Emplea chat en vivo, branding alojado en CDN, validación Luhn y un backend send.php; además solicita a las víctimas desinstalar Avast.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Phishing que suplanta a Avast dirigido a usuarios de habla francesa.</li>
-                        <li>Recopila datos completos de tarjetas (número, expiración, CVV).</li>
-                        <li>Uso de chat en vivo y recursos CDN para dar apariencia legítima.</li>
-                        <li>Implementa validación Luhn y un endpoint send.php para envío de datos.</li>
-                        <li>Se instruye a las víctimas a desinstalar el software legítimo (Avast).</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Actividad reportada como explotada activamente; informar a usuarios y bloquear dominios sospechosos mientras se investiga.</p>
-            </section>
-
-            <section class="article-section">
-                <span class="threat-level medium">AMENAZA MEDIA</span>
-                <h2><a href="https://www.schneier.com/blog/archives/2026/02/llms-generate-predictable-passwords.html">LLMs Generate Predictable Passwords</a></h2>
-                
-                <p><strong>Resumen:</strong></p>
-                <p>Investigadores encontraron que contraseñas generadas por modelos de lenguaje muestran patrones fuertes y predecibles: prefijo común "G7", selección de caracteres limitada e irregular, evitación de repeticiones y ciertos símbolos (por ejemplo '*') y muchas contraseñas duplicadas. La entropía real es mucho menor de lo esperado (una contraseña apareció el 36% de las veces), lo que debilita el uso de LLMs para generar contraseñas y plantea riesgos para agentes autónomos que confían en ellas.</p>
-                
-                <div class="key-points">
-                    <h4>Puntos clave:</h4>
-                    <ul>
-                        <li>Contraseñas generadas por LLMs presentan patrones repetitivos y predecibles.</li>
-                        <li>Prefijo frecuente "G7" y elección limitada de caracteres reducen entropía.</li>
-                        <li>Evitan ciertos símbolos y repeticiones, creando duplicados significativos.</li>
-                        <li>Una contraseña representó hasta el 36% de las salidas en el estudio.</li>
-                        <li>Implica riesgos para autenticación y uso en agentes autónomos.</li>
-                    </ul>
-                </div>
-                
-                <h3>Detalles adicionales:</h3>
-                <p>Se desaconseja confiar en LLMs para generación de contraseñas críticas sin evaluación de entropía y controles adicionales.</p>
-            </section>
-            
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/02/trojanized-gaming-tools-spread-java.html">Trojanized Gaming Tools Spread Java-Based RAT via Browser and Chat Platforms</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Actores maliciosos distribuyen utilidades de juego troceadas a través de navegadores y plataformas de chat para entregar un troyano de acceso remoto (RAT). Un descargador malicioso prepara un runtime Java portátil y ejecuta un archivo jd-gui.jar usando PowerShell, según Microsoft Threat Intelligence.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Los atacantes usan herramientas de juego modificadas compartidas en navegadores y chats para engañar a las víctimas y desplegar el RAT.</li>
+            <li>El vector técnico incluye un descargador que instala un runtime Java portátil y ejecuta jd-gui.jar vía PowerShell.</li>
+            <li>Recomendaciones: evitar descargar utilidades de fuentes no verificadas, bloquear y detectar payloads Java/PowerShell y aplicar controles de seguridad en endpoints.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/02/cisco-sd-wan-zero-day-cve-2026-20127.html">Cisco SD-WAN Zero-Day CVE-2026-20127 Exploited Since 2023 for Admin Access</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Una vulnerabilidad recién divulgada de severidad máxima (CVE-2026-20127, CVSS 10.0) en Cisco Catalyst SD-WAN Controller (vSmart) y Manager (vManage) permite a atacantes remotos no autenticados evitar la autenticación. La falla ha sido explotada activamente en la naturaleza desde 2023.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Es una vulnerabilidad crítica (CVSS 10.0) que permite bypass de autenticación en componentes vSmart y vManage de Cisco SD-WAN.</li>
+            <li>Hay explotación activa documentada desde 2023, lo que aumenta el riesgo de acceso administrativo no autorizado.</li>
+            <li>Acciones recomendadas: aplicar parches de inmediato, aislar/controlar acceso a consolas SD‑WAN y monitorizar actividad sospechosa en la red.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://krebsonsecurity.com/2026/02/who-is-the-kimwolf-botmaster-dort/">Who is the Kimwolf Botmaster “Dort”?</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>KrebsOnSecurity perfila al presunto botmaster de Kimwolf, “Dort”, vinculando alias y cuentas de correo a un probable individuo canadiense y detallando su papel en la construcción de Kimwolf explotando debilidades de proxies residenciales para infectar dispositivos IoT poco protegidos. El artículo documenta la venta de servicios de correo desechable y elusión de CAPTCHA, además de recientes campañas coordinadas de DDoS, doxing, saturación de correos y amenazas de SWAT contra investigadores.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>La investigación vincula múltiples alias y cuentas a una probable persona en Canadá que operó como “Dort”, el arquitecto de Kimwolf.</li>
+            <li>Dort habría aprovechado proxies residenciales y la mala configuración de IoT para expandir la botnet y ofrecer servicios ilícitos (CAPTCHA-bypass, emails desechables).</li>
+            <li>Impacto operacional: campañas de DDoS, doxing y amenazas contra investigadores; recomienda reforzar seguridad de IoT, colaborar con autoridades y monitorear actividades relacionadas.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://www.malwarebytes.com/blog/news/2026/02/public-google-api-keys-can-be-used-to-expose-gemini-ai-data">Public Google API keys can be used to expose Gemini AI data</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Investigadores hallaron aproximadamente 2,800 claves públicas de API de Google que pueden autenticarse ante Gemini, lo que significa que claves previamente consideradas no secretas (Maps, YouTube, etc.) podrían dar acceso a datos de Gemini o permitir abuso de facturación. Se recomienda que los desarrolladores auditen proyectos GCP para la Generative Language API, roten claves expuestas o sin restricciones y monitoreen uso y facturación.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Unas ~2,800 claves públicas de Google encontradas podrían permitir acceso a la API de Gemini o generar cargos no autorizados.</li>
+            <li>Claves "no secretas" usadas en otros servicios pueden ser reutilizadas para acceder a datos de IA o para abuso de facturación si no están restringidas.</li>
+            <li>Mitigaciones: auditar proyectos GCP, rotar y restringir claves expuestas, habilitar monitoreo/facturación y aplicar permisos mínimos para APIs generativas.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10">Copeland XWEB and XWEB Pro</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Múltiples vulnerabilidades críticas (bypass de autenticación, inyección de comandos OS, lectura arbitraria de archivos y un desbordamiento de búfer en pila) afectan a Copeland XWEB y XWEB Pro versiones ≤1.12.1, potencialmente permitiendo ejecución remota de código, omisión de autenticación y DoS. Copeland ha publicado correcciones y CISA recomienda actualizar y aplicar mitigaciones de red; hasta ahora no se reporta explotación pública conocida.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Varios CVE críticos permiten desde bypass de autenticación hasta ejecución remota de código y denegación de servicio en XWEB/XWEB Pro ≤1.12.1.</li>
+            <li>Copeland publicó parches; CISA aconseja actualizar inmediatamente y aplicar controles de red para reducir la exposición.</li>
+            <li>Aunque no hay explotación pública conocida, se recomienda evaluar y mitigar sistemas ICS/OT afectados, segmentar redes y monitorear intentos de explotación.</li>
+        </ul>
+    </div>
+</section>
         </div>
     </main>
-
     <footer>
-        <p>&copy; 2025 Visión Competitiva. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Visión Competitiva. Todos los derechos reservados.</p>
     </footer>
-
     <button class="back-to-top" onclick="scrollToTop()">↑</button>
-
     <script>
-        // Back to top functionality
         window.addEventListener('scroll', () => {
             const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
+            if (window.scrollY > 300) { backToTop.classList.add('visible'); } else { backToTop.classList.remove('visible'); }
         });
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Smooth scroll for anchor links
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
             });
         });
-
-        // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(15, 23, 42, 0.98)';
-            } else {
-                header.style.background = 'rgba(15, 23, 42, 0.95)';
-            }
+            header.style.background = window.scrollY > 100 ? 'rgba(15, 23, 42, 0.98)' : 'rgba(15, 23, 42, 0.95)';
         });
     </script>
 </body>
