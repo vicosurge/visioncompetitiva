@@ -89,50 +89,64 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 5 de marzo, 2026</div>
+                <div class="date">Semana del 6 de marzo, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/02/trojanized-gaming-tools-spread-java.html">Trojanized Gaming Tools Spread Java-Based RAT via Browser and Chat Platforms</a></h2>
+    <h2><a href="https://www.schneier.com/blog/archives/2026/02/phishing-attacks-against-people-seeking-programming-jobs.html">Phishing Attacks Against People Seeking Programming Jobs</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Actores maliciosos distribuyen utilidades de juego troceadas a través de navegadores y plataformas de chat para entregar un troyano de acceso remoto (RAT). Un descargador malicioso prepara un runtime Java portátil y ejecuta un archivo jd-gui.jar usando PowerShell, según Microsoft Threat Intelligence.</p>
+    <p>Hackers norcoreanos se hacen pasar por reclutadores de empresas y atraen a candidatos a empleos de programación con retos de código que, al ejecutar el código proporcionado, instalan malware en sus sistemas.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Los atacantes usan herramientas de juego modificadas compartidas en navegadores y chats para engañar a las víctimas y desplegar el RAT.</li>
-            <li>El vector técnico incluye un descargador que instala un runtime Java portátil y ejecuta jd-gui.jar vía PowerShell.</li>
-            <li>Recomendaciones: evitar descargar utilidades de fuentes no verificadas, bloquear y detectar payloads Java/PowerShell y aplicar controles de seguridad en endpoints.</li>
+            <li>Uso de suplantación de reclutadores y ofertas de empleo para ganarse la confianza de las víctimas.</li>
+            <li>Los retos de programación incluyen código malicioso que, al ejecutarse, instala malware con persistencia y exfiltración de datos.</li>
+            <li>Mitigaciones: no ejecutar código desconocido en máquinas personales, usar entornos aislados/VMs, verificar identidad de reclutadores y habilitar MFA.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/02/cisco-sd-wan-zero-day-cve-2026-20127.html">Cisco SD-WAN Zero-Day CVE-2026-20127 Exploited Since 2023 for Admin Access</a></h2>
+    <h2><a href="https://www.intel471.com/blog/cve-2026-1731-finding-a-critical-rce-in-an-age-of-ai-driven-vulnerability-research">CVE-2026-1731: Finding a critical RCE in an age of AI-driven vulnerability research</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Una vulnerabilidad recién divulgada de severidad máxima (CVE-2026-20127, CVSS 10.0) en Cisco Catalyst SD-WAN Controller (vSmart) y Manager (vManage) permite a atacantes remotos no autenticados evitar la autenticación. La falla ha sido explotada activamente en la naturaleza desde 2023.</p>
+    <p>CVE-2026-1731 es una inyección de comandos en el sistema operativo (RCE) sin autenticación en BeyondTrust Remote Support y Privileged Remote Access, explotable a través de un script Bash vulnerable (thin-scc-wrapper) que procesa remoteVersion. Fue descubierta mediante análisis variante impulsado por IA, ya fue parcheada por BeyondTrust, se publicaron PoC y se ha observado actividad de escaneo y explotación (incluida la inclusión en la KEV de CISA).</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Es una vulnerabilidad crítica (CVSS 10.0) que permite bypass de autenticación en componentes vSmart y vManage de Cisco SD-WAN.</li>
-            <li>Hay explotación activa documentada desde 2023, lo que aumenta el riesgo de acceso administrativo no autorizado.</li>
-            <li>Acciones recomendadas: aplicar parches de inmediato, aislar/controlar acceso a consolas SD‑WAN y monitorizar actividad sospechosa en la red.</li>
+            <li>Vulnerabilidad de ejecución remota de comandos sin autenticación en componentes de BeyondTrust con impacto crítico.</li>
+            <li>Descubierta usando técnicas de análisis asistido por IA; existen PoC públicas y actividad de escaneo/explotación activa.</li>
+            <li>Acciones recomendadas: aplicar parches inmediatamente, inventariar instalaciones afectadas, bloquear exposición a Internet y monitorizar actividad inusual.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://krebsonsecurity.com/2026/02/who-is-the-kimwolf-botmaster-dort/">Who is the Kimwolf Botmaster “Dort”?</a></h2>
+    <h2><a href="https://www.malwarebytes.com/blog/privacy/2026/02/inside-a-fake-google-security-check-that-becomes-a-browser-rat">Inside a fake Google security check that becomes a browser RAT</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>KrebsOnSecurity perfila al presunto botmaster de Kimwolf, “Dort”, vinculando alias y cuentas de correo a un probable individuo canadiense y detallando su papel en la construcción de Kimwolf explotando debilidades de proxies residenciales para infectar dispositivos IoT poco protegidos. El artículo documenta la venta de servicios de correo desechable y elusión de CAPTCHA, además de recientes campañas coordinadas de DDoS, doxing, saturación de correos y amenazas de SWAT contra investigadores.</p>
+    <p>Una PWA falsa de “verificación de seguridad” de Google (google-prism[.]com) engaña socialmente a las víctimas para que otorguen permisos de notificaciones, contactos, GPS, portapapeles y WebOTP; luego usa un service worker persistente para exfiltrar datos, proxear tráfico vía WebSocket, escanear redes locales y ejecutar JavaScript remotamente. Además, si la víctima sigue las instrucciones, entrega un APK de Android (com.device.sync) que actúa como teclado capturador de pulsaciones, abusa de accesibilidad/autocompletado y logra fuerte persistencia.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La investigación vincula múltiples alias y cuentas a una probable persona en Canadá que operó como “Dort”, el arquitecto de Kimwolf.</li>
-            <li>Dort habría aprovechado proxies residenciales y la mala configuración de IoT para expandir la botnet y ofrecer servicios ilícitos (CAPTCHA-bypass, emails desechables).</li>
-            <li>Impacto operacional: campañas de DDoS, doxing y amenazas contra investigadores; recomienda reforzar seguridad de IoT, colaborar con autoridades y monitorear actividades relacionadas.</li>
+            <li>Ingeniería social mediante PWA que solicita permisos excesivos para obtener acceso a datos sensibles del navegador y del dispositivo.</li>
+            <li>Uso de un service worker persistente para exfiltrar datos, proxy inverso y ejecución remota de código en el navegador.</li>
+            <li>Entrega de APK malicioso con keylogger de teclado, abuso de accesibilidad y mecanismos de persistencia; eliminar la PWA y el APK y revocar permisos son medidas urgentes.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://thehackernews.com/2026/02/meta-files-lawsuits-against-brazil.html">Meta Files Lawsuits Against Brazil, China, Vietnam Advertisers Over Celeb-Bait Scams</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Meta presentó demandas contra anunciantes engañosos en Brasil, China y Vietnam por estafas que usan el atractivo de celebridades; además suspendió sus métodos de pago, deshabilitó cuentas relacionadas y bloqueó los dominios empleados en las estafas.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Acción legal de Meta contra anunciantes que promueven estafas vinculadas a celebridades en múltiples países.</li>
+            <li>Medidas tomadas: suspensión de métodos de pago, desactivación de cuentas y bloqueo de dominios usados en las campañas fraudulentas.</li>
+            <li>Consejos: los usuarios deben desconfiar de anuncios que prometen premios/empleos vinculados a celebridades y reportar campañas sospechosas.</li>
         </ul>
     </div>
 </section>
@@ -140,27 +154,13 @@
     <span class="threat-level medium">AMENAZA MEDIA</span>
     <h2><a href="https://www.malwarebytes.com/blog/news/2026/02/public-google-api-keys-can-be-used-to-expose-gemini-ai-data">Public Google API keys can be used to expose Gemini AI data</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Investigadores hallaron aproximadamente 2,800 claves públicas de API de Google que pueden autenticarse ante Gemini, lo que significa que claves previamente consideradas no secretas (Maps, YouTube, etc.) podrían dar acceso a datos de Gemini o permitir abuso de facturación. Se recomienda que los desarrolladores auditen proyectos GCP para la Generative Language API, roten claves expuestas o sin restricciones y monitoreen uso y facturación.</p>
+    <p>Investigadores encontraron alrededor de 2,800 claves públicas de API de Google que pueden autenticar contra Gemini, lo que significa que claves previamente consideradas no secretas (Maps, YouTube, etc.) podrían dar acceso a datos de Gemini o permitir abuso de facturación. Se recomienda auditar proyectos de GCP para la Generative Language API, rotar claves expuestas o sin restricciones y monitorear uso y facturación.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Unas ~2,800 claves públicas de Google encontradas podrían permitir acceso a la API de Gemini o generar cargos no autorizados.</li>
-            <li>Claves "no secretas" usadas en otros servicios pueden ser reutilizadas para acceder a datos de IA o para abuso de facturación si no están restringidas.</li>
-            <li>Mitigaciones: auditar proyectos GCP, rotar y restringir claves expuestas, habilitar monitoreo/facturación y aplicar permisos mínimos para APIs generativas.</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-10">Copeland XWEB and XWEB Pro</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Múltiples vulnerabilidades críticas (bypass de autenticación, inyección de comandos OS, lectura arbitraria de archivos y un desbordamiento de búfer en pila) afectan a Copeland XWEB y XWEB Pro versiones ≤1.12.1, potencialmente permitiendo ejecución remota de código, omisión de autenticación y DoS. Copeland ha publicado correcciones y CISA recomienda actualizar y aplicar mitigaciones de red; hasta ahora no se reporta explotación pública conocida.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Varios CVE críticos permiten desde bypass de autenticación hasta ejecución remota de código y denegación de servicio en XWEB/XWEB Pro ≤1.12.1.</li>
-            <li>Copeland publicó parches; CISA aconseja actualizar inmediatamente y aplicar controles de red para reducir la exposición.</li>
-            <li>Aunque no hay explotación pública conocida, se recomienda evaluar y mitigar sistemas ICS/OT afectados, segmentar redes y monitorear intentos de explotación.</li>
+            <li>Alrededor de 2,800 claves públicas detectadas que permiten autenticación a Gemini, exponiendo potencialmente datos y riesgos de facturación.</li>
+            <li>Impacto: claves no tratadas como secretas pueden ser usadas para acceder a la API de lenguaje generativo o para cargos indebidos.</li>
+            <li>Mitigaciones: auditar proyectos GCP, rotar o restringir claves expuestas, habilitar controles de cuota y monitorizar uso y facturación.</li>
         </ul>
     </div>
 </section>
