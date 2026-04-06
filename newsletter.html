@@ -89,78 +89,82 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 6 de marzo, 2026</div>
+                <div class="date">Semana del 6 de abril, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.schneier.com/blog/archives/2026/02/phishing-attacks-against-people-seeking-programming-jobs.html">Phishing Attacks Against People Seeking Programming Jobs</a></h2>
+    <span class="threat-level low">AMENAZA BAJA</span>
+    <h2><a href="https://www.schneier.com/blog/archives/2026/03/apples-camera-indicator-lights.html">Apple’s Camera Indicator Lights</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Hackers norcoreanos se hacen pasar por reclutadores de empresas y atraen a candidatos a empleos de programación con retos de código que, al ejecutar el código proporcionado, instalan malware en sus sistemas.</p>
+    <p>Una revisión del sistema de indicadores de cámara activa de Apple, comparando la seguridad basada en hardware frente a la de software. El análisis detalla cómo la robusta implementación de Apple mitiga las preocupaciones sobre malware capaz de desactivar la alerta visual, mejorando significativamente la privacidad del usuario contra grabaciones no autorizadas.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Uso de suplantación de reclutadores y ofertas de empleo para ganarse la confianza de las víctimas.</li>
-            <li>Los retos de programación incluyen código malicioso que, al ejecutarse, instala malware con persistencia y exfiltración de datos.</li>
-            <li>Mitigaciones: no ejecutar código desconocido en máquinas personales, usar entornos aislados/VMs, verificar identidad de reclutadores y habilitar MFA.</li>
+            <li>Análisis de la arquitectura de seguridad que impide la desactivación por software del indicador LED.</li>
+            <li>Comparativa técnica entre la protección de hardware y las capas de validación del sistema operativo.</li>
+            <li>Refuerzo de la privacidad del usuario frente a intentos de espionaje mediante malware avanzado.</li>
         </ul>
     </div>
 </section>
+
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.intel471.com/blog/cve-2026-1731-finding-a-critical-rce-in-an-age-of-ai-driven-vulnerability-research">CVE-2026-1731: Finding a critical RCE in an age of AI-driven vulnerability research</a></h2>
+    <h2><a href="https://blog.talosintelligence.com/uat-10608-inside-a-large-scale-automated-credential-harvesting-operation-targeting-web-applications/">UAT-10608: Inside a large-scale automated credential harvesting operation targeting web applications</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>CVE-2026-1731 es una inyección de comandos en el sistema operativo (RCE) sin autenticación en BeyondTrust Remote Support y Privileged Remote Access, explotable a través de un script Bash vulnerable (thin-scc-wrapper) que procesa remoteVersion. Fue descubierta mediante análisis variante impulsado por IA, ya fue parcheada por BeyondTrust, se publicaron PoC y se ha observado actividad de escaneo y explotación (incluida la inclusión en la KEV de CISA).</p>
+    <p>Cisco Talos ha descubierto UAT-10608, una campaña masiva y automatizada de robo de credenciales que explota la vulnerabilidad CVE-2025-55182 (React2Shell) en aplicaciones Next.js. La operación utiliza el framework "NEXUS Listener" para exfiltrar contraseñas, llaves SSH, tokens de servicios en la nube y secretos de entorno de al menos 766 hosts comprometidos.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Vulnerabilidad de ejecución remota de comandos sin autenticación en componentes de BeyondTrust con impacto crítico.</li>
-            <li>Descubierta usando técnicas de análisis asistido por IA; existen PoC públicas y actividad de escaneo/explotación activa.</li>
-            <li>Acciones recomendadas: aplicar parches inmediatamente, inventariar instalaciones afectadas, bloquear exposición a Internet y monitorizar actividad inusual.</li>
+            <li>Explotación activa de una vulnerabilidad crítica en el framework de desarrollo Next.js.</li>
+            <li>Uso de herramientas automatizadas para la extracción masiva de secretos de configuración y llaves de acceso.</li>
+            <li>Recomendación urgente de rotar credenciales y realizar auditorías profundas en implementaciones de Next.js.</li>
         </ul>
     </div>
 </section>
-<section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/privacy/2026/02/inside-a-fake-google-security-check-that-becomes-a-browser-rat">Inside a fake Google security check that becomes a browser RAT</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Una PWA falsa de “verificación de seguridad” de Google (google-prism[.]com) engaña socialmente a las víctimas para que otorguen permisos de notificaciones, contactos, GPS, portapapeles y WebOTP; luego usa un service worker persistente para exfiltrar datos, proxear tráfico vía WebSocket, escanear redes locales y ejecutar JavaScript remotamente. Además, si la víctima sigue las instrucciones, entrega un APK de Android (com.device.sync) que actúa como teclado capturador de pulsaciones, abusa de accesibilidad/autocompletado y logra fuerte persistencia.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Ingeniería social mediante PWA que solicita permisos excesivos para obtener acceso a datos sensibles del navegador y del dispositivo.</li>
-            <li>Uso de un service worker persistente para exfiltrar datos, proxy inverso y ejecución remota de código en el navegador.</li>
-            <li>Entrega de APK malicioso con keylogger de teclado, abuso de accesibilidad y mecanismos de persistencia; eliminar la PWA y el APK y revocar permisos son medidas urgentes.</li>
-        </ul>
-    </div>
-</section>
+
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://thehackernews.com/2026/02/meta-files-lawsuits-against-brazil.html">Meta Files Lawsuits Against Brazil, China, Vietnam Advertisers Over Celeb-Bait Scams</a></h2>
+    <h2><a href="https://research.checkpoint.com/2026/chatgpt-data-leakage-via-a-hidden-outbound-channel-in-the-code-execution-runtime/">ChatGPT Data Leakage via a Hidden Outbound Channel in the Code Execution Runtime</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Meta presentó demandas contra anunciantes engañosos en Brasil, China y Vietnam por estafas que usan el atractivo de celebridades; además suspendió sus métodos de pago, deshabilitó cuentas relacionadas y bloqueó los dominios empleados en las estafas.</p>
+    <p>Investigadores de Check Point Research detectaron un canal oculto de exfiltración basado en DNS dentro del entorno de ejecución de código de ChatGPT. Esta vulnerabilidad permitía que prompts maliciosos o GPTs personalizados filtraran datos sensibles de los usuarios de manera silenciosa y establecieran un acceso remoto tipo "shell". OpenAI ya ha implementado un parche para corregir esta falla.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Acción legal de Meta contra anunciantes que promueven estafas vinculadas a celebridades en múltiples países.</li>
-            <li>Medidas tomadas: suspensión de métodos de pago, desactivación de cuentas y bloqueo de dominios usados en las campañas fraudulentas.</li>
-            <li>Consejos: los usuarios deben desconfiar de anuncios que prometen premios/empleos vinculados a celebridades y reportar campañas sospechosas.</li>
+            <li>Descubrimiento de una técnica de fuga de datos a través de consultas DNS no detectadas.</li>
+            <li>Posibilidad de establecer acceso remoto no autorizado mediante la manipulación del entorno de IA.</li>
+            <li>La vulnerabilidad fue mitigada con éxito por OpenAI tras el reporte de los investigadores.</li>
         </ul>
     </div>
 </section>
+
 <section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/news/2026/02/public-google-api-keys-can-be-used-to-expose-gemini-ai-data">Public Google API keys can be used to expose Gemini AI data</a></h2>
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/04/cert-ua-impersonation-campaign-spread.html">CERT-UA Impersonation Campaign Spread AGEWHEEZE Malware to 1 Million Emails</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Investigadores encontraron alrededor de 2,800 claves públicas de API de Google que pueden autenticar contra Gemini, lo que significa que claves previamente consideradas no secretas (Maps, YouTube, etc.) podrían dar acceso a datos de Gemini o permitir abuso de facturación. Se recomienda auditar proyectos de GCP para la Generative Language API, rotar claves expuestas o sin restricciones y monitorear uso y facturación.</p>
+    <p>El equipo CERT-UA reportó una campaña de phishing a gran escala que suplanta su identidad institucional para distribuir el malware de administración remota AGEWHEEZE. Los atacantes, identificados como el grupo UAC-0255, enviaron correos electrónicos a un millón de destinatarios utilizando archivos ZIP protegidos con contraseña para evadir las herramientas de seguridad tradicionales.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Alrededor de 2,800 claves públicas detectadas que permiten autenticación a Gemini, exponiendo potencialmente datos y riesgos de facturación.</li>
-            <li>Impacto: claves no tratadas como secretas pueden ser usadas para acceder a la API de lenguaje generativo o para cargos indebidos.</li>
-            <li>Mitigaciones: auditar proyectos GCP, rotar o restringir claves expuestas, habilitar controles de cuota y monitorizar uso y facturación.</li>
+            <li>Suplantación de una entidad gubernamental de ciberseguridad para generar confianza en las víctimas.</li>
+            <li>Distribución masiva de malware de acceso remoto (RAT) para el control total de equipos infectados.</li>
+            <li>Evasión de filtros de seguridad mediante el uso de archivos comprimidos con clave.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
+    <span class="threat-level low">AMENAZA BAJA</span>
+    <h2><a href="https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-march-2026/">This month in security with Tony Anscombe – March 2026 edition</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Un resumen completo de los eventos de seguridad más destacados durante el mes de marzo de 2026, presentado por Tony Anscombe. Se analizan las tendencias de amenazas más recientes, las vulnerabilidades críticas descubiertas y se ofrecen consejos prácticos para que las organizaciones fortalezcan sus defensas digitales.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Recuento de los principales incidentes de ciberseguridad y filtraciones del mes.</li>
+            <li>Análisis de la evolución de las tácticas de los atacantes en el primer trimestre del año.</li>
+            <li>Mejores prácticas sugeridas para mejorar la resiliencia ante ataques cibernéticos.</li>
         </ul>
     </div>
 </section>
