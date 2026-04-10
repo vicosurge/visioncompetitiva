@@ -89,82 +89,82 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 6 de abril, 2026</div>
+                <div class="date">Semana del 10 de abril, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
-    <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://www.schneier.com/blog/archives/2026/03/apples-camera-indicator-lights.html">Apple’s Camera Indicator Lights</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Una revisión del sistema de indicadores de cámara activa de Apple, comparando la seguridad basada en hardware frente a la de software. El análisis detalla cómo la robusta implementación de Apple mitiga las preocupaciones sobre malware capaz de desactivar la alerta visual, mejorando significativamente la privacidad del usuario contra grabaciones no autorizadas.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Análisis de la arquitectura de seguridad que impide la desactivación por software del indicador LED.</li>
-            <li>Comparativa técnica entre la protección de hardware y las capas de validación del sistema operativo.</li>
-            <li>Refuerzo de la privacidad del usuario frente a intentos de espionaje mediante malware avanzado.</li>
-        </ul>
-    </div>
-</section>
-
-<section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://blog.talosintelligence.com/uat-10608-inside-a-large-scale-automated-credential-harvesting-operation-targeting-web-applications/">UAT-10608: Inside a large-scale automated credential harvesting operation targeting web applications</a></h2>
+    <h2><a href="https://www.schneier.com/blog/archives/2026/04/python-supply-chain-compromise.html">Python Supply-Chain Compromise</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Cisco Talos ha descubierto UAT-10608, una campaña masiva y automatizada de robo de credenciales que explota la vulnerabilidad CVE-2025-55182 (React2Shell) en aplicaciones Next.js. La operación utiliza el framework "NEXUS Listener" para exfiltrar contraseñas, llaves SSH, tokens de servicios en la nube y secretos de entorno de al menos 766 hosts comprometidos.</p>
+    <p>Se detectó un compromiso malicioso en la cadena de suministro dentro del paquete "litellm" (versión 1.82.8) del repositorio PyPI. El ataque utiliza un archivo .pth malicioso que permite la ejecución automática de código al iniciar Python, lo que resalta la vulnerabilidad de las librerías críticas y la necesidad de mejores controles de seguridad.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Explotación activa de una vulnerabilidad crítica en el framework de desarrollo Next.js.</li>
-            <li>Uso de herramientas automatizadas para la extracción masiva de secretos de configuración y llaves de acceso.</li>
-            <li>Recomendación urgente de rotar credenciales y realizar auditorías profundas en implementaciones de Next.js.</li>
+            <li>El paquete afectado es litellm en su versión 1.82.8 dentro del ecosistema PyPI.</li>
+            <li>La técnica utiliza archivos .pth maliciosos para lograr ejecución automática de código en el sistema.</li>
+            <li>Se recomienda la implementación urgente de medidas como SBOM, SLSA y SigStore para proteger librerías críticas.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://research.checkpoint.com/2026/chatgpt-data-leakage-via-a-hidden-outbound-channel-in-the-code-execution-runtime/">ChatGPT Data Leakage via a Hidden Outbound Channel in the Code Execution Runtime</a></h2>
+    <h2><a href="https://isc.sans.edu/diary/rss/32872">ISC Stormcast For Tuesday, April 7th, 2026</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Investigadores de Check Point Research detectaron un canal oculto de exfiltración basado en DNS dentro del entorno de ejecución de código de ChatGPT. Esta vulnerabilidad permitía que prompts maliciosos o GPTs personalizados filtraran datos sensibles de los usuarios de manera silenciosa y establecieran un acceso remoto tipo "shell". OpenAI ya ha implementado un parche para corregir esta falla.</p>
+    <p>El SANS ISC informa que la campaña de cadena de suministro TeamPCP no ha mostrado nuevos paquetes comprometidos en los últimos 16 días. Sin embargo, se enfatiza el cumplimiento de la remediación para la vulnerabilidad CVE-2026-33634, vinculada a brechas confirmadas mediante herramientas comprometidas como Trivy.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Descubrimiento de una técnica de fuga de datos a través de consultas DNS no detectadas.</li>
-            <li>Posibilidad de establecer acceso remoto no autorizado mediante la manipulación del entorno de IA.</li>
-            <li>La vulnerabilidad fue mitigada con éxito por OpenAI tras el reporte de los investigadores.</li>
+            <li>La campaña TeamPCP se mantiene estable sin nuevos compromisos en cinco ecosistemas conocidos.</li>
+            <li>El 8 de abril de 2026 vence el plazo de remediación de CISA KEV para la vulnerabilidad CVE-2026-33634.</li>
+            <li>Se confirma que Sportradar AG fue afectado tras el uso de una versión comprometida de la herramienta Trivy.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://thehackernews.com/2026/04/bka-identifies-revil-leaders-behind-130.html">BKA Identifies REvil Leaders Behind 130 German Ransomware Attacks</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>La Oficina Federal de Investigación Criminal de Alemania (BKA) ha identificado a dos figuras clave detrás del ya inactivo grupo de ransomware REvil. Entre los identificados se encuentra el actor conocido bajo el alias "UNKN", quien era responsable de la promoción del servicio de ransomware en foros de cibercrimen desde 2019.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Identificación oficial de los líderes de REvil tras investigaciones sobre 130 ataques en Alemania.</li>
+            <li>El alias "UNKN" fue rastreado como el principal promotor del ransomware en el foro XSS.</li>
+            <li>Este avance representa un golpe significativo contra la impunidad de los operadores de Ransomware-as-a-Service (RaaS).</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://isc.sans.edu/diary/rss/32862">ISC Stormcast For Friday, April 3rd, 2026</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Este reporte analiza técnicas de evasión de firewalls de nueva generación (NGFW) para la exfiltración de datos mediante fragmentos pequeños. También cubre métodos de persistencia de malware sin archivos y proporciona actualizaciones críticas sobre los compromisos recientes en axios y LiteLLM.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Métodos para burlar el control de aplicaciones en firewalls enviando datos en bloques mínimos.</li>
+            <li>Persistencia de amenazas mediante el uso del registro y flujos de datos alternos (ADS).</li>
+            <li>Monitoreo continuo de los incidentes de seguridad en los paquetes de software axios y LiteLLM.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/04/cert-ua-impersonation-campaign-spread.html">CERT-UA Impersonation Campaign Spread AGEWHEEZE Malware to 1 Million Emails</a></h2>
+    <h2><a href="https://isc.sans.edu/diary/rss/32864">TeamPCP Supply Chain Campaign: Update 006 - CERT-EU Confirms European Commission Cloud Breach, Sportradar Details Emerge, and Mandiant Quantifies Campaign at 1,000&#x2b; SaaS Environments</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>El equipo CERT-UA reportó una campaña de phishing a gran escala que suplanta su identidad institucional para distribuir el malware de administración remota AGEWHEEZE. Los atacantes, identificados como el grupo UAC-0255, enviaron correos electrónicos a un millón de destinatarios utilizando archivos ZIP protegidos con contraseña para evadir las herramientas de seguridad tradicionales.</p>
+    <p>CERT-EU ha confirmado una brecha importante en la nube de la Comisión Europea originada por el compromiso de la cadena de suministro de Trivy, afectando a 71 entidades. Mandiant ha escalado la magnitud de esta campaña, estimando que más de 1,000 entornos SaaS y 500,000 máquinas han sido comprometidos mediante el robo de credenciales.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Suplantación de una entidad gubernamental de ciberseguridad para generar confianza en las víctimas.</li>
-            <li>Distribución masiva de malware de acceso remoto (RAT) para el control total de equipos infectados.</li>
-            <li>Evasión de filtros de seguridad mediante el uso de archivos comprimidos con clave.</li>
-        </ul>
-    </div>
-</section>
-
-<section class="article-section">
-    <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-march-2026/">This month in security with Tony Anscombe – March 2026 edition</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Un resumen completo de los eventos de seguridad más destacados durante el mes de marzo de 2026, presentado por Tony Anscombe. Se analizan las tendencias de amenazas más recientes, las vulnerabilidades críticas descubiertas y se ofrecen consejos prácticos para que las organizaciones fortalezcan sus defensas digitales.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Recuento de los principales incidentes de ciberseguridad y filtraciones del mes.</li>
-            <li>Análisis de la evolución de las tácticas de los atacantes en el primer trimestre del año.</li>
-            <li>Mejores prácticas sugeridas para mejorar la resiliencia ante ataques cibernéticos.</li>
+            <li>Confirmación de la brecha en la Comisión Europea con datos publicados por el grupo ShinyHunters.</li>
+            <li>La campaña ha impactado masivamente con más de un millón de entornos SaaS en riesgo.</li>
+            <li>Sportradar AG reportó la exposición de datos sensibles de clientes y llaves API debido a esta campaña.</li>
         </ul>
     </div>
 </section>
