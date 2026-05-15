@@ -89,82 +89,82 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 11 de mayo, 2026</div>
+                <div class="date">Semana del 15 de mayo, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/news/2026/05/thousands-of-facebook-accounts-stolen-by-phishing-emails-sent-through-google">Thousands of Facebook accounts stolen by phishing emails sent through Google</a></h2>
+    <h2><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-134-08">Siemens Siemens ROS#</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Se ha detectado una campaña masiva de phishing que aprovecha la infraestructura de Google para distribuir correos electrónicos maliciosos. Estos mensajes engañan a los usuarios para que entreguen sus credenciales de Facebook, evadiendo los filtros de seguridad convencionales al provenir de dominios confiables de Google.</p>
+    <p>CISA ha emitido un aviso de seguridad detallando vulnerabilidades críticas en el componente Siemens ROS# (Robot Operating System), utilizado en diversos entornos industriales. La explotación de estas fallas podría permitir a un atacante comprometer la integridad de los sistemas de control, afectando la operatividad de infraestructuras críticas.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Uso de servicios de Google para saltar las protecciones de spam y seguridad.</li>
-            <li>Robo exitoso de miles de cuentas personales y de empresas en Facebook.</li>
-            <li>El ataque utiliza técnicas de ingeniería social para simular alertas de seguridad oficiales.</li>
-        </ul>
-    </div>
-</section>
-
-<section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-125-05">Johnson Controls CEM AC2000</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>CISA emitió un aviso de seguridad sobre vulnerabilidades críticas en el sistema de control de acceso AC2000 de Johnson Controls. Estas fallas podrían permitir a atacantes remotos obtener acceso no autorizado o interrumpir el funcionamiento de los sistemas de seguridad física en instalaciones críticas.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Riesgo de compromiso en la seguridad física de los edificios controlados.</li>
-            <li>Posibilidad de ejecución de comandos no autorizados en el sistema de control.</li>
-            <li>Se urge a los administradores a aplicar las actualizaciones de firmware y parches de seguridad de inmediato.</li>
-        </ul>
-    </div>
-</section>
-
-<section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-125-01">Hitachi Energy PCM600</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Se han identificado vulnerabilidades en la herramienta PCM600 de Hitachi Energy, la cual se utiliza para la configuración y gestión de dispositivos de protección en redes eléctricas. La explotación de estas fallas podría dar lugar a la manipulación de infraestructura crítica de energía.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Afecta a la gestión de Dispositivos Electrónicos Inteligentes (IED) en el sector eléctrico.</li>
-            <li>Riesgo de exposición de información sensible de configuración de red.</li>
-            <li>Hitachi Energy ha publicado mitigaciones y versiones actualizadas para cerrar las brechas de seguridad.</li>
+            <li>Vulnerabilidades en sistemas de control industrial (ICS) de Siemens.</li>
+            <li>Riesgo potencial de ejecución de comandos no autorizados.</li>
+            <li>Se recomienda encarecidamente actualizar a las versiones más recientes y segmentar las redes industriales.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://isc.sans.edu/diary/rss/32956">SSL.com rotates their root certificate today, (Tue, May 5th)</a></h2>
+    <h2><a href="https://thehackernews.com/2026/05/one-missed-threat-per-week-what-25m.html">One Missed Threat Per Week: What 25M Alerts Reveal About Low-Severity Risk</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>SSL.com llevará a cabo la rotación de su certificado raíz este 5 de mayo de 2026. Este procedimiento estándar de mantenimiento puede causar interrupciones en servicios que utilicen "certificate pinning" o almacenes de confianza que no se actualicen automáticamente, afectando la validación de conexiones seguras.</p>
+    <p>Los equipos de seguridad empresarial suelen ignorar las alertas de baja severidad, lo que resulta en aproximadamente una brecha de seguridad omitida por semana. Un informe que analizó 25 millones de alertas muestra que este descuido permite a los atacantes explotar brechas predecibles utilizando herramientas comunes como Mimikatz y Cobalt Strike, exponiendo una falla crítica en las operaciones de seguridad tradicionales.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Posible pérdida de conectividad en sistemas con configuraciones de confianza rígidas.</li>
-            <li>Necesidad de auditar aplicaciones que dependan de anclaje de certificados específicos.</li>
-            <li>Se recomienda la migración a certificados de cliente dedicados para mejorar la resiliencia operativa.</li>
+            <li>La acumulación de alertas de baja prioridad oculta incidentes de seguridad reales.</li>
+            <li>Los atacantes aprovechan la falta de monitoreo en eventos considerados "poco riesgosos".</li>
+            <li>Es necesario reevaluar la forma en que los SOC priorizan y gestionan el volumen masivo de alertas.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://research.checkpoint.com/2026/4th-may-threat-intelligence-report/">4th May – Threat Intelligence Report</a></h2>
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://www.tenable.com/blog/why-the-approaching-flood-of-vulnerabilities-changes-everything-and-what-to-do-about-it">Why the approaching flood of vulnerabilities changes everything — and what to do about it</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>El reporte de inteligencia de amenazas de Check Point para la primera semana de mayo destaca un aumento en las campañas de malware polimórfico y nuevas tácticas de grupos APT. El informe detalla las tendencias de ataques globales y proporciona indicadores para reforzar las posturas de defensa corporativa.</p>
+    <p>El ecosistema de ciberseguridad se enfrenta a un aumento exponencial en el volumen de nuevas vulnerabilidades, lo que está cambiando drásticamente la forma en que las empresas deben protegerse. El artículo advierte que los métodos tradicionales de parchado ya no son suficientes ante esta avalancha y propone un cambio hacia una gestión de riesgos basada en la exposición real y la priorización inteligente.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Detección de nuevas variantes de ransomware dirigidas a sectores industriales.</li>
-            <li>Incremento en el uso de herramientas legítimas para actividades de espionaje digital (Living-off-the-land).</li>
-            <li>Publicación de nuevos Indicadores de Compromiso (IoCs) para sistemas de detección de intrusos.</li>
+            <li>El volumen masivo de CVEs está saturando la capacidad de respuesta de los equipos de TI.</li>
+            <li>La gestión de vulnerabilidades debe evolucionar hacia un modelo de gestión de exposición.</li>
+            <li>La automatización y el análisis de riesgo son fundamentales para sobrevivir al flujo constante de fallas.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
+    <span class="threat-level low">AMENAZA BAJA</span>
+    <h2><a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-tops-leading-industry-benchmark/">Defense at AI speed: Microsoft’s new multi-model agentic security system tops leading industry benchmark</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Microsoft ha presentado un innovador sistema de seguridad agéntico multimodelo que utiliza inteligencia artificial para responder a amenazas en tiempo real. Este sistema ha superado los estándares actuales de la industria, demostrando una capacidad superior para detectar y mitigar ataques complejos de forma autónoma, marcando un avance significativo en la defensa cibernética impulsada por IA.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Integración de múltiples modelos de IA para una defensa coordinada y veloz.</li>
+            <li>Reducción drástica en los tiempos de detección y respuesta ante incidentes.</li>
+            <li>Uso de agentes inteligentes para automatizar tareas complejas de analistas de seguridad.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://unit42.paloaltonetworks.com/active-directory-certificate-services-exploitation/">Inside AD CS Escalation: Unpacking Advanced Misuse Techniques and Tools</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Unit 42 analizó técnicas avanzadas de explotación en Active Directory Certificate Services (AD CS), enfocándose en configuraciones erróneas de plantillas y el mal uso de credenciales fantasma (shadow credentials). El estudio detalla cómo los atacantes logran escalar privilegios dentro de una red y proporciona métodos específicos de detección basados en el comportamiento para que los defensores puedan identificar estos abusos.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Las plantillas de certificados mal configuradas siguen siendo un vector crítico de ataque.</li>
+            <li>El uso de "Shadow Credentials" permite la persistencia y escalada de privilegios en el dominio.</li>
+            <li>La detección debe centrarse en patrones de comportamiento anómalos dentro de AD CS.</li>
         </ul>
     </div>
 </section>
