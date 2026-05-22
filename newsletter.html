@@ -89,82 +89,82 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 18 de mayo, 2026</div>
+                <div class="date">Semana del 22 de mayo, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/05/new-trickmo-variant-uses-ton-c2-and.html">New TrickMo Variant Uses TON C2 and SOCKS5 to Create Android Network Pivots</a></h2>
+    <h2><a href="https://thehackernews.com/2026/05/mini-shai-hulud-pushes-malicious-antv.html">Mini Shai-Hulud Pushes Malicious AntV npm Packages via Compromised Maintainer Account</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Una nueva variante del troyano bancario para Android, TrickMo, detectada a principios de 2026, está atacando activamente a usuarios de aplicaciones bancarias y billeteras de criptomonedas en Francia, Italia y Austria. Esta variante utiliza de forma única la red The Open Network (TON) para su infraestructura de comando y control (C2) y se basa en la carga de un archivo APK en tiempo de ejecución para evadir detecciones estáticas.</p>
+    <p>Un nuevo ataque a la cadena de suministro de software, que forma parte de la campaña maliciosa Mini Shai-Hulud, ha comprometido varios paquetes npm dentro del ecosistema @antv, incluyendo la biblioteca de uso masivo echarts-for-react, lo que afecta a más de un millón de usuarios semanales.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Utiliza la infraestructura de TON (The Open Network) para ocultar las comunicaciones con el servidor de comando.</li>
-            <li>Emplea SOCKS5 para crear puentes en la red y permitir que el atacante pivote dentro de la infraestructura de la víctima.</li>
-            <li>Se enfoca en el robo de credenciales financieras y el acceso no autorizado a carteras de activos digitales.</li>
+            <li>El incidente se atribuye a la campaña de amenazas persistentes conocida como Mini Shai-Hulud.</li>
+            <li>El vector de ataque inicial fue el compromiso de una cuenta de desarrollador autorizada para publicar paquetes en el ecosistema @antv.</li>
+            <li>La biblioteca afectada, echarts-for-react, expone a riesgos de ejecución de código malicioso a una enorme base de proyectos web activos.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/05/cisa-adds-cisco-sd-wan-cve-2026-20182.html">CISA Adds Cisco SD-WAN CVE-2026-20182 to KEV After Admin Access Exploits</a></h2>
+    <h2><a href="https://thehackernews.com/2026/05/github-actions-supply-chain-attack.html">Popular GitHub Action Tags Redirected to Imposter Commit to Steal CI/CD Credentials</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>La agencia CISA ha añadido una vulnerabilidad crítica de omisión de autenticación (CVE-2026-20182) en el controlador Cisco Catalyst SD-WAN a su catálogo de Vulnerabilidades Explotadas Conocidas (KEV). Esta vulnerabilidad está siendo aprovechada activamente por atacantes para obtener privilegios de administrador, lo que ha llevado a la orden obligatoria para que las agencias federales mitiguen el fallo antes del 17 de mayo de 2026.</p>
+    <p>Actores de amenazas lograron vulnerar el flujo de trabajo (workflow) de GitHub Actions conocido como actions-cool/issues-helper. Los atacantes utilizaron este acceso para ejecutar código malicioso, recolectar credenciales confidenciales y exfiltrarlas del entorno, redirigiendo etiquetas existentes de repositorios hacia un commit impostor oculto en el historial de la acción.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La vulnerabilidad permite a un atacante remoto saltarse la autenticación y tomar control total del sistema SD-WAN.</li>
-            <li>Se ha confirmado la explotación activa en entornos reales para obtener acceso de administrador.</li>
-            <li>CISA exige la actualización inmediata de los sistemas afectados debido al riesgo inminente para la infraestructura de red.</li>
+            <li>Los atacantes manipularon etiquetas de versiones legítimas para redirigir el código a commits maliciosos no registrados formalmente.</li>
+            <li>El objetivo principal del ataque fue la exfiltración de secretos del entorno CI/CD y credenciales de acceso de las organizaciones afectadas.</li>
+            <li>Este método de ataque resalta la vulnerabilidad de confiar ciegamente en las etiquetas de versión (tags) en lugar de utilizar hashes de commit específicos (SHAs) para asegurar las dependencias.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://www.tenable.com/blog/cve-2026-9082-highly-critical-sql-injection-vulnerability-in-drupal-core-sa-core-2026-004">CVE-2026-9082: Highly Critical SQL Injection Vulnerability in Drupal Core (SA-CORE-2026-004)</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Se ha revelado una vulnerabilidad de inyección SQL de severidad sumamente crítica en el núcleo de Drupal, identificada como CVE-2026-9082 (bajo el aviso de seguridad SA-CORE-2026-004). Esta falla permite a atacantes remotos sin autenticar ejecutar comandos SQL arbitrarios directamente en la base de datos de los sitios afectados, comprometiendo por completo la confidencialidad e integridad del sistema.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>La vulnerabilidad afecta de manera directa a los componentes centrales (core) de Drupal, ampliando significativamente la superficie de exposición global.</li>
+            <li>Un atacante podría explotar este fallo para alterar registros, extraer información privada de usuarios o incluso secuestrar la administración del sitio web.</li>
+            <li>Se recomienda a los administradores de sistemas aplicar los parches oficiales emitidos por el equipo de Drupal con la máxima urgencia.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://isc.sans.edu/diary/rss/32990">Simple bypass of the link preview function in Outlook Junk folder</a></h2>
+    <h2><a href="https://thehackernews.com/2026/05/agent-ai-is-coming-are-you-ready.html">Agent AI is Coming. Are You Ready?</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Se ha identificado una limitación en el mecanismo de seguridad de la carpeta de correo no deseado (Junk) de Outlook. El sistema de vista previa de enlaces no muestra advertencias ni detecta enlaces que utilizan esquemas URI no válidos o que carecen de protocolo, a pesar de que estos enlaces siguen siendo funcionales y pueden ser activados por el usuario, facilitando posibles ataques de phishing.</p>
+    <p>La adopción acelerada de los sistemas autónomos de Inteligencia Artificial (Agent AI) está redefiniendo el panorama tecnológico. Estos agentes inteligentes pueden tomar decisiones y realizar acciones de forma independiente dentro de los sistemas empresariales, lo cual introduce nuevos e importantes vectores de ataque que los equipos de ciberseguridad deben comenzar a prever y mitigar de inmediato.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Los enlaces sin un protocolo estándar (como http/https) logran evadir el filtro de vista previa de Outlook.</li>
-            <li>Los usuarios pueden ser engañados para hacer clic en enlaces maliciosos que parecen texto plano o inofensivo.</li>
-            <li>El hallazgo demuestra que los mecanismos visuales de protección en carpetas de spam no son totalmente infalibles.</li>
+            <li>Los agentes autónomos de IA aumentan los riesgos de inyección de prompts indirecta, donde fuentes de datos externas manipulan las acciones del agente.</li>
+            <li>El despliegue de estos sistemas requiere la implementación de controles estrictos de privilegios mínimos para evitar que realicen acciones dañinas no autorizadas.</li>
+            <li>Las empresas deben actualizar sus políticas de gobernanza digital para evaluar el comportamiento autónomo y el flujo de datos que maneja la IA.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
-    <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://fidelissecurity.com/threatgeek/threat-detection-response/claude-mythos-risks-and-deception-based-defense/">Why the Mythos Era Calls for Deception-Based Defense</a></h2>
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://krebsonsecurity.com/2026/05/alleged-kimwolf-botmaster-dort-arrested-charged-in-u-s-and-canada/">Alleged Kimwolf Botmaster ‘Dort’ Arrested, Charged in U.S. and Canada</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>En el contexto de la "era Mythos" de la ciberseguridad, caracterizada por ataques cada vez más complejos y basados en inteligencia artificial, las defensas convencionales están resultando insuficientes. El artículo argumenta a favor de la implementación de estrategias de defensa basadas en el engaño (deception), que utilizan señuelos y trampas para detectar a los atacantes que ya han logrado infiltrarse en el perímetro.</p>
+    <p>Las autoridades en Canadá detuvieron a Jacob Butler, alias 'Dort', señalado como el presunto operador intelectual de la botnet de IoT Kimwolf. Esta infraestructura maliciosa, compuesta por millones de dispositivos comprometidos a nivel mundial, se utilizó para lanzar ataques masivos de denegación de servicio (DDoS) que llegaron a alcanzar los 30 Tbps de tráfico, afectando incluso a sistemas del Departamento de Defensa de EE. UU.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La defensa basada en el engaño obliga al atacante a revelar sus tácticas antes de alcanzar objetivos críticos.</li>
-            <li>Se recomienda el uso de "honeytokens" y activos falsos para aumentar la visibilidad sobre amenazas internas y externas.</li>
-            <li>El objetivo es cambiar la asimetría del ataque, aumentando el costo y el riesgo para el ciberdelincuente.</li>
-        </ul>
-    </div>
-</section>
-
-<section class="article-section">
-    <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://blog.talosintelligence.com/breaking-things-to-keep-them-safe-with-philippe-laulheret/">Breaking things to keep them safe with Philippe Laulheret</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Esta pieza explora la mentalidad de la seguridad ofensiva a través de una entrevista con Philippe Laulheret, investigador de Cisco Talos. El enfoque central es cómo el acto de analizar y "romper" sistemas y software permite identificar vulnerabilidades antes de que los atacantes lo hagan, lo que resulta fundamental para diseñar arquitecturas de seguridad más resistentes en el futuro.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>La investigación de vulnerabilidades (vulnerability research) es un pilar preventivo indispensable.</li>
-            <li>Entender el proceso de explotación es necesario para desarrollar parches y firmas de detección efectivas.</li>
-            <li>Se destaca la importancia de la colaboración y el análisis profundo para enfrentar el panorama de amenazas moderno.</li>
+            <li>El arresto es el resultado de una exitosa operación conjunta de investigación y aplicación de la ley entre agencias de Estados Unidos y Canadá.</li>
+            <li>La botnet Kimwolf aprovechaba vulnerabilidades comunes en millones de dispositivos de Internet de las Cosas (IoT) para reclutarlos en su red zombi.</li>
+            <li>Butler enfrenta severos cargos criminales en ambas naciones relacionados con daños a la infraestructura crítica e intrusión informática a gran escala.</li>
         </ul>
     </div>
 </section>
