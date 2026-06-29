@@ -89,82 +89,82 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 26 de junio, 2026</div>
+                <div class="date">Semana del 29 de junio, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html">Amazon Q Developer Flaw Could Let Malicious Repos Run Code via MCP Configs</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Una falla de alta gravedad (CVE-2026-12957, CVSS 8.5) en Amazon Q Developer permitía que repositorios maliciosos ejecutaran comandos y robaran credenciales en la nube de los desarrolladores. La vulnerabilidad residía en la forma en que el asistente de IA manejaba los servidores del Protocolo de Contexto de Modelo (MCP). Amazon ya ha solucionado el problema.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>La vulnerabilidad CVE-2026-12957 tiene una puntuación de gravedad de CVSS 8.5.</li>
+            <li>El fallo permitía a repositorios maliciosos ejecutar código de forma remota y sustraer credenciales sensibles de los desarrolladores.</li>
+            <li>Amazon ya corrigió el error relacionado con la configuración de los servidores de Protocolo de Contexto de Modelo (MCP).</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
     <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://www.schneier.com/blog/archives/2026/06/friday-squid-blogging-victims-of-unregulated-squid-fishing.html">Friday Squid Blogging: Victims of Unregulated Squid Fishing</a></h2>
+    <h2><a href="https://www.wiz.io/blog/ai-rewriting-secops-playbook">How AI Is Rewriting the SecOps Playbook</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Entrada semanal de Bruce Schneier que analiza el impacto de la pesca de calamar no regulada. El artículo aborda cómo la falta de supervisión y normativas internacionales afecta gravemente a las comunidades costeras locales, la biodiversidad marina y la sustentabilidad de los océanos, señalando a las víctimas directas de estas prácticas descontroladas.</p>
+    <p>Este artículo analiza cómo la inteligencia artificial está transformando radicalmente las operaciones de seguridad (SecOps). Explica cómo la automatización impulsada por IA ayuda a los analistas a clasificar alertas, correlacionar datos y acelerar los tiempos de respuesta ante incidentes, redefiniendo el diseño de los centros de operaciones de seguridad (SOC) modernos.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La pesca industrial de calamar sin regulación amenaza la seguridad alimentaria y el sustento económico de pescadores locales.</li>
-            <li>La falta de un marco legal global efectivo permite que flotas pesqueras operen con impunidad en aguas internacionales.</li>
-            <li>Se destaca la urgente necesidad de implementar mejores tecnologías de monitoreo satelital y regulaciones ambientales más estrictas.</li>
+            <li>La IA está automatizando tareas repetitivas y de análisis básico en los equipos de SecOps.</li>
+            <li>Permite una detección y correlación de amenazas mucho más veloz frente a ataques complejos y automatizados.</li>
+            <li>Los profesionales de seguridad deben evolucionar para asumir roles de supervisión y curación de flujos de trabajo basados en IA.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.microsoft.com/en-us/security/blog/2026/06/18/autojack-single-page-rce-host-running-ai-agent/">AutoJack: How a single page can RCE the host running your AI agent</a></h2>
+    <h2><a href="https://isc.sans.edu/diary/rss/33100">ISC Stormcast For Wednesday, June 24th, 2026 https://isc.sans.edu/podcastdetail/9984</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Microsoft Security Research identificó y solucionó una vulnerabilidad crítica de ejecución remota de código (RCE), denominada "AutoJack", en la interfaz de desarrollo AutoGen Studio antes de su lanzamiento oficial en PyPI. El exploit aprovecha las capacidades de navegación de un agente de inteligencia artificial para evadir los límites de confianza de localhost, permitiendo que contenido web malicioso eche a andar procesos arbitrarios en el sistema anfitrión.</p>
+    <p>Este diario de SANS ISC detalla la explotación continua de dispositivos SonicWall de 6.ª y 7.ª generación a través de las vulnerabilidades CVE-2024-40766 y CVE-2024-12802 por parte de los grupos de ransomware Akira y Fog. Los ataques ocurren incluso después de aplicar parches de seguridad debido a problemas de configuración no resueltos y cuentas locales obsoletas. Se urge a las organizaciones a auditar sus configuraciones.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La vulnerabilidad permite que un sitio web malicioso tome el control completo del equipo que ejecuta el agente de IA a través de peticiones locales.</li>
-            <li>El fallo radica en la confianza implícita que los marcos de trabajo de IA otorgan a las conexiones locales (localhost) sin la debida autenticación.</li>
-            <li>Microsoft ya ha implementado mitigaciones y alertas de detección en Microsoft Defender para proteger los entornos de desarrollo contra este tipo de ataques.</li>
+            <li>Los grupos de ransomware Akira y Fog siguen comprometiendo activamente dispositivos SonicWall Gen 6 y Gen 7.</li>
+            <li>Los compromisos de seguridad pueden ocurrir en cuestión de minutos debido a fallas de configuración y cuentas locales inactivas.</li>
+            <li>Se recomienda de forma urgente a las organizaciones auditar sus configuraciones y actualizar todos los dispositivos afectados.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://isc.sans.edu/diary/rss/33096">Webshells Remain Popular, (Mon, Jun 22nd)</a></h2>
+    <h2><a href="https://isc.sans.edu/diary/rss/33102">Linux Process Name Masquerading</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Se analiza el descubrimiento de "ZypeerShell", una nueva webshell basada en PHP que se encuentra disponible de manera pública en GitHub. Esta herramienta, promovida falsamente como un recurso para auditorías de seguridad (red-team), promete ser indetectable por soluciones antivirus y cuenta con funciones avanzadas para el control de servidores comprometidos, incluyendo capacidades de conexión a servidores de comando y control (C2).</p>
+    <p>Esta publicación de SANS detalla el enmascaramiento de nombres de procesos (técnica T1036 de MITRE ATT&CK), un método de ofuscación de malware utilizado por grupos de amenazas avanzadas como Velvet Ant. El artículo explica cómo los atacantes modifican los nombres de los procesos en sistemas Linux y Windows, proporciona una prueba de concepto (PoC) y aborda estrategias eficaces para su detección.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>ZypeerShell permite a los atacantes administrar servidores web vulnerables de forma remota y evadir las firmas tradicionales de detección.</li>
-            <li>La libre distribución de este código en plataformas públicas como GitHub facilita el acceso a herramientas ofensivas a actores de amenazas de cualquier nivel.</li>
-            <li>Las webshells siguen siendo uno de los mecanismos de persistencia preferidos por los ciberdelincuentes tras vulnerar una aplicación web.</li>
+            <li>El enmascaramiento de procesos busca evadir los sistemas de detección simulando nombres de procesos legítimos del sistema operativo.</li>
+            <li>Es una técnica de evasión de defensas comúnmente empleada por actores de amenazas persistentes como Velvet Ant.</li>
+            <li>El análisis incluye una prueba de concepto y guías detalladas sobre cómo cazar estas amenazas en entornos corporativos.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.microsoft.com/en-us/security/blog/2026/06/22/one-intrusion-two-cyberattackers-uncovering-parallel-threat-activity/">One intrusion, two cyberattackers: Uncovering parallel threat activity</a></h2>
+    <h2><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01">Siemens WinCC Certificate Manager</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Microsoft detalla un caso de estudio en el que dos grupos de ciberdelincuentes independientes lograron comprometer y operar de manera simultánea dentro de la misma red corporativa. Esta investigación pone de manifiesto la complejidad de las labores de respuesta a incidentes cuando múltiples actores de amenazas coexisten en el mismo entorno de TI, aprovechando frecuentemente las mismas vulnerabilidades de acceso inicial.</p>
+    <p>CISA ha publicado un aviso de seguridad de sistemas de control industrial (ICSA-26-174-01) relacionado con vulnerabilidades en el administrador de certificados Siemens WinCC (Siemens WinCC Certificate Manager). Estas fallas podrían permitir a actores maliciosos comprometer la autenticidad del sistema o interceptar comunicaciones sensibles en entornos industriales críticos si no se aplican los parches correspondientes.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La presencia de atacantes paralelos suele entorpecer el análisis forense, ya que las actividades de un grupo pueden camuflar o confundirse con las del otro.</li>
-            <li>Es común que el acceso inicial sea vendido por un mismo intermediario de accesos (IAB) a múltiples compradores del mercado negro.</li>
-            <li>Los equipos de seguridad no deben detener la investigación tras expulsar a un primer atacante, sino validar exhaustivamente que no existan más intrusos activos.</li>
-        </ul>
-    </div>
-</section>
-
-<section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://www.schneier.com/blog/archives/2026/06/professional-athletes-and-wearables.html">Professional Athletes and Wearables</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>El artículo analiza los graves riesgos de privacidad que enfrentan los atletas profesionales debido al uso generalizado de dispositivos vestibles (wearables) y la recolección de sus datos biométricos. Se destacan preocupaciones críticas como el espionaje y control excesivo por parte de los entrenadores, la comercialización de estos datos sensibles para el mercado de las apuestas, y su uso perjudicial en negociaciones contractuales en contra de jugadores veteranos o lesionados.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Los datos de salud y rendimiento físico de los atletas se están monetizando y compartiendo con terceros sin un consentimiento claro ni regulaciones estrictas.</li>
-            <li>Las directivas de los equipos utilizan la información biométrica para justificar reducciones salariales o rescisiones de contratos de manera preventiva.</li>
-            <li>Existe un vacío legal preocupante sobre quién posee realmente la propiedad intelectual y los derechos de privacidad de la información generada por estos dispositivos.</li>
+            <li>La alerta de CISA identifica vulnerabilidades críticas en la gestión de certificados de Siemens WinCC.</li>
+            <li>La explotación de estos fallos podría dar lugar a la manipulación de la comunicación o a la evasión de mecanismos de autenticación.</li>
+            <li>Se insta fuertemente a los operadores de infraestructura crítica a aplicar las actualizaciones y mitigaciones oficiales publicadas por Siemens.</li>
         </ul>
     </div>
 </section>
