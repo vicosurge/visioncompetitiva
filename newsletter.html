@@ -89,82 +89,82 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 13 de julio, 2026</div>
+                <div class="date">Semana del 17 de julio, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html">n8n Token Exchange Flaw Could Let Attackers Log In as Users From Another Issuer</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Una falla en las instancias Enterprise de n8n permitía a los usuarios iniciar sesión en cuentas incorrectas al validar tokens JWT basándose únicamente en el reclamo 'sub' e ignorando el reclamo 'iss'. Esto podría otorgar acceso a la cuenta de otro usuario si un token válido de un emisor diferente compartía el mismo valor en el reclamo 'sub'.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>La vulnerabilidad afecta directamente a las instancias Enterprise de la plataforma de automatización de flujos de trabajo n8n.</li>
+            <li>El problema radica en una validación incorrecta de tokens JWT que ignora la verificación del emisor ('iss') y se confía únicamente en el identificador del sujeto ('sub').</li>
+            <li>Un atacante con un token válido generado por un emisor externo podría obtener acceso no autorizado a cuentas ajenas que coincidan con el mismo ID de usuario.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
     <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://www.microsoft.com/en-us/security/blog/2026/07/08/protecting-microsoft-at-ai-speed-how-sfi-proactively-hardens-our-cloud/">Protecting Microsoft at AI speed: How SFI proactively hardens our cloud  </a></h2>
+    <h2><a href="https://thehackernews.com/2026/07/how-pentera-turns-ai-security-workflows.html">How Pentera Turns AI Security Workflows into Validation Engines</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Microsoft detalla cómo su Iniciativa de Futuro Seguro (SFI, por sus siglas en inglés) utiliza la inteligencia artificial y el análisis proactivo para robustecer la seguridad de su infraestructura en la nube. Estas medidas buscan anticiparse a las amenazas modernas y automatizar la mitigación de riesgos a gran escala para proteger a sus usuarios globales.</p>
+    <p>Pentera ha presentado un nuevo enfoque para transformar los flujos de trabajo de seguridad de Inteligencia Artificial (IA) en motores de validación automatizados. El objetivo es permitir a las organizaciones poner a prueba y validar continuamente sus defensas contra amenazas específicas dirigidas a modelos e infraestructuras de IA, garantizando que las políticas de seguridad se cumplan en tiempo real.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Implementación de la Iniciativa de Futuro Seguro (SFI) para fortalecer la resiliencia en la nube de Microsoft.</li>
-            <li>Uso de inteligencia artificial avanzada para la detección proactiva y la automatización de defensas en tiempo real.</li>
-            <li>Enfoque estratégico en la reducción de la superficie de ataque y la mejora continua de la infraestructura operativa.</li>
+            <li>Se enfoca en la automatización de la validación de seguridad para entornos que utilizan herramientas y flujos de Inteligencia Artificial.</li>
+            <li>Permite a las organizaciones poner a prueba sus defensas de IA frente a ataques simulados y escenarios adversarios de manera continua.</li>
+            <li>Ayuda a reducir la brecha entre la detección teórica de vulnerabilidades y la mitigación práctica dentro de las infraestructuras corporativas.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-03">Schneider Electric Easergy MiCOM Px40 Series</a></h2>
+    <h2><a href="https://www.malwarebytes.com/blog/threat-intel/2026/07/this-fake-apple-app-can-unlock-your-macs-password-vault">This fake Apple app can unlock your Mac&#8217;s password vault</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>La agencia CISA ha emitido un aviso de seguridad industrial referente a la serie Easergy MiCOM Px40 de Schneider Electric. El aviso detalla vulnerabilidades críticas que podrían permitir a atacantes remotos comprometer dispositivos utilizados en la protección y el control de sistemas eléctricos en infraestructuras críticas.</p>
+    <p>CrashStealer es un nuevo software de robo de información (infostealer) para macOS que se disfraza de la herramienta legítima CrashReporter de Apple. Utiliza un instalador notarizado por Apple para evadir la protección de Gatekeeper y engañar a los usuarios para que revelen sus contraseñas. El malware extrae sistemáticamente credenciales de navegadores, billeteras de criptomonedas, datos de gestores de contraseñas y secretos del Keychain antes de exfiltrarlos.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>CISA emite una alerta sobre fallos de seguridad en la serie de dispositivos industriales Easergy MiCOM Px40 de Schneider Electric.</li>
-            <li>Las vulnerabilidades podrían permitir la ejecución remota de código o ataques de denegación de servicio (DoS) en redes operativas críticas.</li>
-            <li>Se recomienda aplicar de inmediato las actualizaciones de firmware y seguir las directrices de mitigación del fabricante.</li>
-        </ul>
-    </div>
-</section>
-
-<section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://thehackernews.com/2026/07/monday-recap-proxy-botnets-browser.html">⚡ Weekly Recap: Proxy Botnets, Browser Ransomware, AI Agent Tricks, Fake PoC Malware and More</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Un resumen semanal de las amenazas cibernéticas más recientes que destaca el auge de las redes de bots proxy (proxy botnets), tácticas de ransomware dirigidas a navegadores web, técnicas de manipulación de agentes de IA y la proliferación de malware disfrazado de pruebas de concepto (PoC) falsas.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Aumento en la actividad de botnets de proxy que comprometen dispositivos residenciales para ocultar actividades maliciosas.</li>
-            <li>Evolución de ataques de ransomware que bloquean navegadores web para extorsionar a los usuarios de manera directa.</li>
-            <li>Advertencias sobre falsos exploits (PoC) compartidos en repositorios públicos que en realidad instalan malware en los sistemas de los investigadores.</li>
+            <li>El malware se hace pasar por la herramienta del sistema CrashReporter de Apple y utiliza un instalador con firma notarizada válida para burlar Gatekeeper.</li>
+            <li>Tiene la capacidad de recolectar contraseñas, información de navegadores web, datos de billeteras de criptomonedas y las claves del Keychain de macOS.</li>
+            <li>Esta campaña activa resalta el incremento y la sofisticación de los ataques diseñados específicamente para robar credenciales de identidad en entornos Mac.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/07/new-java-based-quimarat-maas-built-to.html">New Java-Based QuimaRAT MaaS Built to Run on Windows, Linux, and macOS</a></h2>
+    <h2><a href="https://thehackernews.com/2026/07/oauth-client-id-spoofing-lets-attackers.html">OAuth Client ID Spoofing Lets Attackers Validate Stolen Microsoft Entra Credentials</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Se ha descubierto un nuevo troyano de acceso remoto (RAT) basado en Java llamado QuimaRAT. Este malware se comercializa bajo el modelo de Malware como Servicio (MaaS) con precios que oscilan entre los 150 y los 1,200 dólares, y está diseñado para infectar y tomar el control de sistemas operativos Windows, Linux y macOS.</p>
+    <p>Actores de amenazas están utilizando una novedosa técnica de suplantación de ID de cliente de OAuth (OAuth client ID spoofing) para enumerar cuentas de usuario y validar credenciales robadas en entornos de Microsoft Entra ID. Este método les permite evadir las alertas de seguridad tradicionales y operar de forma sigilosa dentro de campañas de ataque en la nube.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>QuimaRAT es una amenaza multiplataforma capaz de comprometer sistemas Windows, Linux y macOS gracias a su desarrollo en Java.</li>
-            <li>Se distribuye como Malware como Servicio (MaaS), lo que reduce la barrera de entrada para atacantes menos experimentados.</li>
-            <li>La herramienta otorga control remoto completo a los atacantes, facilitando la exfiltración de datos confidenciales y la ejecución de comandos.</li>
+            <li>Los atacantes aprovechan la suplantación de ID de cliente OAuth para verificar si las credenciales robadas son válidas sin levantar sospechas en los sistemas de monitoreo.</li>
+            <li>La técnica facilita la enumeración de cuentas activas dentro del ecosistema de identidad de Microsoft Entra ID sin activar las defensas automatizadas.</li>
+            <li>Al eludir las alertas de seguridad tradicionales, permite a los atacantes mantener la persistencia y realizar actividades de reconocimiento sigiloso en entornos en la nube.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/07/debull-tooling-abuses-microsoft-device.html">DEBULL Tooling Abuses Microsoft Device-Code Flow to Target M365 Accounts</a></h2>
+    <h2><a href="https://www.tenable.com/blog/cve-2026-15409-cve-2026-15410-sonicwall-sma-1000-zero-day-vulnerabilities-exploited-in-the">CVE-2026-15409, CVE-2026-15410: SonicWall SMA 1000 zero-day vulnerabilities exploited in the wild</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Una campaña de phishing observada entre finales de junio y principios de julio de 2026 utiliza la herramienta DEBULL para abusar del flujo de código de dispositivo (device-code flow) de Microsoft 365. Los atacantes emplean señuelos de colaboración para redirigir a los usuarios al proceso de inicio de sesión legítimo de Microsoft, comprometiendo sus cuentas sin necesidad de crear páginas de inicio de sesión falsas.</p>
+    <p>Se han identificado dos vulnerabilidades de día cero (CVE-2026-15409 y CVE-2026-15410) en los dispositivos de acceso remoto SonicWall SMA 1000 que están siendo explotadas activamente por atacantes. Estas fallas representan un riesgo severo para la infraestructura corporativa al permitir comprometer los dispositivos perimetrales utilizados para la conectividad VPN y de red segura.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La herramienta DEBULL explota el flujo de código de dispositivo legítimo de Microsoft para saltarse las defensas y la autenticación multifactor (MFA) tradicionales.</li>
-            <li>Los atacantes envían correos electrónicos con temáticas de colaboración para engañar a los usuarios y convencerlos de vincular sus cuentas corporativas.</li>
-            <li>Al utilizar la infraestructura oficial de Microsoft, la campaña reduce la sospecha y compromete cuentas de manera sumamente efectiva.</li>
+            <li>Las vulnerabilidades críticas afectan de manera directa a la serie de dispositivos SonicWall Secure Mobile Access (SMA) 1000.</li>
+            <li>Al ser vulnerabilidades de día cero bajo explotación activa, la aplicación inmediata de parches de seguridad o mitigaciones recomendadas es de alta prioridad.</li>
+            <li>El compromiso de estos sistemas perimetrales puede otorgar a los atacantes un punto de entrada directo e inicial a la red interna de las organizaciones afectadas.</li>
         </ul>
     </div>
 </section>
