@@ -89,82 +89,82 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 17 de julio, 2026</div>
+                <div class="date">Semana del 20 de julio, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html">n8n Token Exchange Flaw Could Let Attackers Log In as Users From Another Issuer</a></h2>
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://thehackernews.com/2026/07/study-of-85-crypto-wallet-extensions.html">Study of 85 Crypto Wallet Extensions Finds Address Leaks and Cross-Site Tracking Risks</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Una falla en las instancias Enterprise de n8n permitía a los usuarios iniciar sesión en cuentas incorrectas al validar tokens JWT basándose únicamente en el reclamo 'sub' e ignorando el reclamo 'iss'. Esto podría otorgar acceso a la cuenta de otro usuario si un token válido de un emisor diferente compartía el mismo valor en el reclamo 'sub'.</p>
+    <p>Investigadores descubrieron que 85 extensiones populares de billeteras de criptomonedas para navegadores filtran datos de los usuarios, lo que permite rastrearlos y vincularlos a través de diferentes sitios web. Esta falla de privacidad, identificada por KU Leuven, hace posible asociar distintas direcciones de criptomonedas pertenecientes al mismo usuario, comprometiendo su anonimato en la red.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La vulnerabilidad afecta directamente a las instancias Enterprise de la plataforma de automatización de flujos de trabajo n8n.</li>
-            <li>El problema radica en una validación incorrecta de tokens JWT que ignora la verificación del emisor ('iss') y se confía únicamente en el identificador del sujeto ('sub').</li>
-            <li>Un atacante con un token válido generado por un emisor externo podría obtener acceso no autorizado a cuentas ajenas que coincidan con el mismo ID de usuario.</li>
+            <li>Un estudio de KU Leuven reveló vulnerabilidades de privacidad en 85 extensiones populares de billeteras de criptomonedas.</li>
+            <li>Las fallas de diseño permiten el rastreo entre sitios y la vinculación de múltiples direcciones de criptomonedas pertenecientes al mismo usuario.</li>
+            <li>La filtración de datos expone el historial de transacciones y debilita severamente el anonimato en la blockchain.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/07/researcher-drops-new-windows-zero-day.html">Researcher Drops New Windows Zero-Day PoC Hours After Microsoft Patch Tuesday</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>El investigador de seguridad Chaotic Eclipse publicó "LegacyHive", una prueba de concepto (PoC) de un exploit para una vulnerabilidad de día cero en el Servicio de Perfiles de Usuario de Windows (ProfSvc). Esta falla de elevación de privilegios locales por carga arbitraria de colmenas de registro afecta directamente a las cuentas de usuario de Windows.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>La prueba de concepto se lanzó públicamente apenas unas horas después de que Microsoft distribuyera sus parches mensuales de seguridad.</li>
+            <li>El exploit afecta al Servicio de Perfiles de Usuario (ProfSvc), permitiendo a un atacante con pocos privilegios escalar a privilegios de nivel de sistema.</li>
+            <li>La disponibilidad de este exploit de día cero incrementa el riesgo de ciberataques dirigidos antes de que se publique una solución oficial.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://www.tenable.com/blog/cve-2026-32201-cve-2026-45659-cve-2026-56164-faq-sharepoint-server-exploitation">CVE-2026-32201, CVE-2026-45659, CVE-2026-56164: Frequently Asked Questions About Active Exploitation of Microsoft SharePoint Server Vulnerabilities</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Un conjunto de preguntas frecuentes detalla la explotación activa en el mundo real de tres vulnerabilidades críticas en Microsoft SharePoint Server (CVE-2026-32201, CVE-2026-45659 y CVE-2026-56164). Estas fallas permiten a los atacantes realizar ejecuciones remotas de código y elevación de privilegios dentro de las redes corporativas.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Se ha confirmado que diversos actores de amenazas están explotando activamente estas tres vulnerabilidades en servidores SharePoint expuestos.</li>
+            <li>Los fallos de seguridad facilitan la toma de control del servidor afectado, comprometiendo potencialmente toda la infraestructura interna de la organización.</li>
+            <li>Se urge a los administradores de sistemas a aplicar los parches correspondientes de manera inmediata para evitar intrusiones.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://thehackernews.com/2026/07/how-pentera-turns-ai-security-workflows.html">How Pentera Turns AI Security Workflows into Validation Engines</a></h2>
+    <h2><a href="https://thehackernews.com/2026/07/two-scattered-spider-hackers-get-55.html">Two Scattered Spider Hackers Get 5.5 Years Each for £29 Million TfL Hack</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Pentera ha presentado un nuevo enfoque para transformar los flujos de trabajo de seguridad de Inteligencia Artificial (IA) en motores de validación automatizados. El objetivo es permitir a las organizaciones poner a prueba y validar continuamente sus defensas contra amenazas específicas dirigidas a modelos e infraestructuras de IA, garantizando que las políticas de seguridad se cumplan en tiempo real.</p>
+    <p>Owen Flowers y Thalha Jubair fueron sentenciados a cinco años y medio de prisión cada uno por su implicación en el ciberataque de 2024 contra la entidad Transport for London (TfL). El ataque inhabilitó 148 sistemas de transporte e interrumpió las operaciones, forzando a 27,000 empleados a restablecer sus contraseñas en persona.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Se enfoca en la automatización de la validación de seguridad para entornos que utilizan herramientas y flujos de Inteligencia Artificial.</li>
-            <li>Permite a las organizaciones poner a prueba sus defensas de IA frente a ataques simulados y escenarios adversarios de manera continua.</li>
-            <li>Ayuda a reducir la brecha entre la detección teórica de vulnerabilidades y la mitigación práctica dentro de las infraestructuras corporativas.</li>
+            <li>Los dos hackers sentenciados formaban parte del grupo cibercriminal Scattered Spider.</li>
+            <li>El impacto económico y operativo del hackeo a TfL se estimó en alrededor de 29 millones de libras esterlinas.</li>
+            <li>El incidente obligó a implementar un proceso masivo de restablecimiento de credenciales de forma presencial por motivos de seguridad.</li>
         </ul>
     </div>
 </section>
 
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/threat-intel/2026/07/this-fake-apple-app-can-unlock-your-macs-password-vault">This fake Apple app can unlock your Mac&#8217;s password vault</a></h2>
+    <h2><a href="https://www.malwarebytes.com/blog/bugs/2026/07/security-updates-available-for-adobe-chrome-firefox-vmware-and-zoom">Security updates available for Adobe, Chrome, Firefox, VMWare, and Zoom</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>CrashStealer es un nuevo software de robo de información (infostealer) para macOS que se disfraza de la herramienta legítima CrashReporter de Apple. Utiliza un instalador notarizado por Apple para evadir la protección de Gatekeeper y engañar a los usuarios para que revelen sus contraseñas. El malware extrae sistemáticamente credenciales de navegadores, billeteras de criptomonedas, datos de gestores de contraseñas y secretos del Keychain antes de exfiltrarlos.</p>
+    <p>Se han lanzado actualizaciones de seguridad urgentes para corregir fallas de severidad crítica en productos de Adobe (ColdFusion, Commerce, Experience Manager), Google Chrome, Mozilla Firefox, VMware Avi Load Balancer y Zoom Workplace. Se recomienda ampliamente que los usuarios instalen las actualizaciones correspondientes sin demora.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>El malware se hace pasar por la herramienta del sistema CrashReporter de Apple y utiliza un instalador con firma notarizada válida para burlar Gatekeeper.</li>
-            <li>Tiene la capacidad de recolectar contraseñas, información de navegadores web, datos de billeteras de criptomonedas y las claves del Keychain de macOS.</li>
-            <li>Esta campaña activa resalta el incremento y la sofisticación de los ataques diseñados específicamente para robar credenciales de identidad en entornos Mac.</li>
-        </ul>
-    </div>
-</section>
-
-<section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/07/oauth-client-id-spoofing-lets-attackers.html">OAuth Client ID Spoofing Lets Attackers Validate Stolen Microsoft Entra Credentials</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Actores de amenazas están utilizando una novedosa técnica de suplantación de ID de cliente de OAuth (OAuth client ID spoofing) para enumerar cuentas de usuario y validar credenciales robadas en entornos de Microsoft Entra ID. Este método les permite evadir las alertas de seguridad tradicionales y operar de forma sigilosa dentro de campañas de ataque en la nube.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Los atacantes aprovechan la suplantación de ID de cliente OAuth para verificar si las credenciales robadas son válidas sin levantar sospechas en los sistemas de monitoreo.</li>
-            <li>La técnica facilita la enumeración de cuentas activas dentro del ecosistema de identidad de Microsoft Entra ID sin activar las defensas automatizadas.</li>
-            <li>Al eludir las alertas de seguridad tradicionales, permite a los atacantes mantener la persistencia y realizar actividades de reconocimiento sigiloso en entornos en la nube.</li>
-        </ul>
-    </div>
-</section>
-
-<section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.tenable.com/blog/cve-2026-15409-cve-2026-15410-sonicwall-sma-1000-zero-day-vulnerabilities-exploited-in-the">CVE-2026-15409, CVE-2026-15410: SonicWall SMA 1000 zero-day vulnerabilities exploited in the wild</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Se han identificado dos vulnerabilidades de día cero (CVE-2026-15409 y CVE-2026-15410) en los dispositivos de acceso remoto SonicWall SMA 1000 que están siendo explotadas activamente por atacantes. Estas fallas representan un riesgo severo para la infraestructura corporativa al permitir comprometer los dispositivos perimetrales utilizados para la conectividad VPN y de red segura.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Las vulnerabilidades críticas afectan de manera directa a la serie de dispositivos SonicWall Secure Mobile Access (SMA) 1000.</li>
-            <li>Al ser vulnerabilidades de día cero bajo explotación activa, la aplicación inmediata de parches de seguridad o mitigaciones recomendadas es de alta prioridad.</li>
-            <li>El compromiso de estos sistemas perimetrales puede otorgar a los atacantes un punto de entrada directo e inicial a la red interna de las organizaciones afectadas.</li>
+            <li>Google Chrome solucionó 15 fallas de seguridad, incluyendo vulnerabilidades críticas de tipo "use-after-free" en la gestión de memoria.</li>
+            <li>Firefox corrigió dos vulnerabilidades críticas que ya cuentan con código de explotación pública disponible en la red.</li>
+            <li>VMware parchó una omisión de autenticación crítica (CVE-2026-47865) y Zoom solucionó un fallo crítico de validación de entrada incorrecta (CVE-2026-53412).</li>
         </ul>
     </div>
 </section>
