@@ -89,78 +89,82 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 24 de julio, 2026</div>
+                <div class="date">Semana del 27 de julio, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://thehackernews.com/2026/07/eu-orders-google-to-open-android-mic.html">E.U. Orders Google to Open Android Mic, Camera and Screen to Rival AI Assistants</a></h2>
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/07/fake-notepad-plugin-delivers.html">Fake Notepad++ Plugin Delivers MATCHBOIL.V2 in UAC-0099 Attacks</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>La Comisión Europea le ha ordenado a Google que otorgue a los asistentes de inteligencia artificial competidores el mismo acceso profundo a las funciones de Android —como la cámara, el micrófono y la pantalla— del que goza actualmente su asistente nativo Gemini. Este cambio regulatorio deberá implementarse en Android 18 a más tardar el 1 de agosto de 2027.</p>
+    <p>El equipo CERT-UA advirtió sobre una nueva campaña maliciosa impulsada por el grupo UAC-0099, vinculado a Rusia. Los atacantes están distribuyendo un complemento falso de Notepad++ para infectar sistemas Windows con el malware MATCHBOIL.V2, aprovechando que este grupo ya contaba con antecedentes explotando fallas en WinRAR.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La orden exige acceso equitativo al hardware y sistema operativo para IA de terceros.</li>
-            <li>La medida busca garantizar una competencia justa en el ecosistema móvil de Google.</li>
-            <li>La integración obligatoria está programada para concretarse en Android 18 antes de agosto de 2027.</li>
+            <li>El grupo prorruso UAC-0099 utiliza suplantación de identidades para distribuir la amenaza MATCHBOIL.V2.</li>
+            <li>El ataque depende de que los usuarios instalen un complemento falso y malicioso para el editor Notepad++.</li>
+            <li>Se recomienda auditar los complementos instalados y restringir la ejecución de archivos no verificados en entornos Windows.</li>
         </ul>
     </div>
 </section>
+
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/data-breaches/2026/07/healthcare-giant-abbott-probes-two-cyber-incidents-amid-extortion-claims">Healthcare giant Abbott probes two cyber incidents amid extortion claims</a></h2>
+    <h2><a href="https://thehackernews.com/2026/07/wordpress-wp2shell-exploitation-grows.html">WordPress wp2shell Exploitation Grows as Public Exploit Fuels Mass Scanning</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>La gigante de la salud Abbott se encuentra investigando dos incidentes de ciberseguridad independientes tras recibir intentos de extorsión por parte de cibercriminales. La empresa trabaja para determinar el alcance del compromiso de sus sistemas y evaluar la posible filtración de datos confidenciales.</p>
+    <p>Diversos ciberdelincuentes están explotando de forma activa dos fallas críticas en WordPress (CVE-2026-63030 y CVE-2026-60137), conocidas bajo el alias wp2shell. Estas vulnerabilidades permiten la ejecución remota de código sin necesidad de autenticación, logrando el control total de los sitios web afectados.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Abbott realiza investigaciones simultáneas sobre dos brechas de seguridad distintas.</li>
-            <li>Los incidentes incluyen demandas de extorsión por parte de actores maliciosos.</li>
-            <li>El sector de la salud continúa en la mira de ataques dirigidos a comprometer datos de alto impacto.</li>
+            <li>Las vulnerabilidades apodadas wp2shell permiten la toma de control completa del servidor web sin credenciales.</li>
+            <li>La publicación de un exploit funcional ha provocado una ola masiva de escaneos automáticos en todo internet.</li>
+            <li>Es prioritario que los administradores de WordPress apliquen de inmediato las actualizaciones de seguridad pertinentes.</li>
         </ul>
     </div>
 </section>
+
 <section class="article-section">
-    <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/how-to/2026/07/how-to-use-github-safely">How to use GitHub safely</a></h2>
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/07/zimbra-patches-critical-snmp-command.html">Zimbra Patches Critical SNMP Command Injection and Four XSS Vulnerabilities</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Esta guía ofrece mejores prácticas clave para desarrolladores sobre cómo utilizar GitHub de manera segura, enfocándose en la prevención de filtraciones accidentales de secretos, credenciales e información sensible en repositorios públicos y privados.</p>
+    <p>La plataforma de correo y colaboración Zimbra lanzó parches en su versión 10.1.20 para corregir múltiples vulnerabilidades graves. La falla más severa corresponde a una inyección de comandos en su componente de monitoreo SNMP, además de solucionar cuatro vulnerabilidades de tipo Cross-Site Scripting (XSS).</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Uso indispensable de la autenticación de dos factores (2FA) y claves de acceso seguras.</li>
-            <li>Prevención de exposición involuntaria de llaves API, tokens y contraseñas en el código fuente.</li>
-            <li>Implementación de herramientas de escaneo automático para la detección temprana de secretos filtrados.</li>
+            <li>Se resolvió una vulnerabilidad crítica de inyección de comandos en el módulo de monitoreo SNMP de Zimbra.</li>
+            <li>La actualización corrige de manera adicional cuatro fallas de XSS que ponían en riesgo la sesión de los usuarios.</li>
+            <li>Se aconseja a las organizaciones actualizar lo antes posible a Zimbra 10.1.20 para mitigar posibles ataques.</li>
         </ul>
     </div>
 </section>
-<section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://www.sentinelone.com/blog/the-agentic-soc-transforming-data-into-defensive-velocity/">The Agentic SOC: Transforming Data into Defensive Velocity</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>El concepto de SOC Agéntico revoluciona los centros de operaciones de seguridad al aprovechar agentes autónomos de IA para procesar volúmenes masivos de datos en tiempo real, transformándolos en acciones defensivas rápidas y eficaces.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Uso de agentes de IA autónomos para agilizar la detección y el análisis de ciberamenazas.</li>
-            <li>Transformación de grandes volúmenes de datos de telemetría en respuestas defensivas inmediatas.</li>
-            <li>Reducción considerable de la fatiga por alertas y optimización de los tiempos de respuesta (MTTR).</li>
-        </ul>
-    </div>
-</section>
+
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://fidelissecurity.com/threatgeek/deception/stop-ai-cyberattacks-with-deception-technology/">AI is Supercharging Cyberattacks. Can Deception Technology Tip the Balance Back to Defenders?</a></h2>
+    <h2><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-202-07">Rockwell Automation FactoryTalk Services Platform</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>A medida que los atacantes utilizan la inteligencia artificial para automatizar y potenciar la efectividad de sus ofensivas, las tecnologías de engaño surgen como un recurso crítico para confundir a los sistemas maliciosos y nivelar la balanza a favor de los equipos defensivos.</p>
+    <p>La Agencia de Ciberseguridad y Seguridad de Infraestructura (CISA) emitió un aviso de seguridad referente a la plataforma FactoryTalk Services Platform de Rockwell Automation. La advertencia detalla vulnerabilidades en sistemas de control industrial (ICS) que podrían permitir a atacantes afectar la disponibilidad u operatividad de entornos industriales.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Los ciberataques impulsados por IA aumentan la velocidad y sofisticación de las evasiones.</li>
-            <li>La tecnología de engaño despliega señuelos para desviar e identificar la actividad automatizada del atacante.</li>
-            <li>Proporciona a los analistas de seguridad tiempo oportuno e inteligencia precisa para neutralizar la amenaza.</li>
+            <li>CISA alerta sobre vulnerabilidades que impactan la infraestructura industrial que utiliza FactoryTalk Services Platform.</li>
+            <li>Los riesgos asociados incluyen la posible interrupción de procesos críticos e impactos en la integridad del sistema.</li>
+            <li>Se insta a los operadores de infraestructura crítica a aplicar las mitigaciones y actualizaciones provistas por el fabricante.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="article-section">
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://krebsonsecurity.com/2026/07/lg-to-ban-residential-proxies-from-smart-tv-apps/">LG to Ban Residential Proxies from Smart TV Apps</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>LG Electronics EE. UU. anunció que suspenderá las aplicaciones para Smart TV que conviertan los televisores en nodos de proxies residenciales. La decisión se tomó tras investigaciones que revelaron que más del 42% de las apps en LG webOS y más del 25% en Samsung Tizen OS incluían SDKs que enrutaban tráfico de internet de terceros sin el consentimiento claro de los usuarios.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>LG prohibirá el uso de SDKs que conviertan los Smart TVs en puntos de retransmisión (proxies) no autorizados.</li>
+            <li>Una porción significativa de aplicaciones en webOS y Tizen OS vendía sigilosamente el ancho de banda del usuario.</li>
+            <li>La medida busca proteger la privacidad de las redes domésticas y evitar el abuso de los dispositivos IoT.</li>
         </ul>
     </div>
 </section>
