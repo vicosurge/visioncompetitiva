@@ -89,78 +89,78 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 21 de agosto, 2026</div>
+                <div class="date">Semana del 24 de agosto, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
-    <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://www.wiz.io/blog/how-wiz-finops-uses-wiz-cloud-cost">Wiz on Wiz: How the Wiz FinOps Team Uses Wiz Cloud Cost</a></h2>
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://isc.sans.edu/diary/rss/33254">Apple Patches iOS and macOS, (Mon, Aug 17th)</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>El equipo interno de FinOps de Wiz comparte cómo utilizan su propia plataforma, Wiz Cloud Cost, para optimizar el gasto operativo en la nube, correlacionando datos de seguridad y costos para identificar y eliminar recursos innecesarios sin arriesgar la infraestructura.</p>
+    <p>Apple lanzó una serie de actualizaciones de seguridad para iOS, iPadOS y macOS para corregir más de un centenar de fallas de seguridad, incluyendo múltiples vulnerabilidades en el motor WebKit. Aunque por ahora no se reporta que estén siendo explotadas en ataques reales, se aconseja a los usuarios actualizar sus dispositivos a la brevedad.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Visibilidad unificada entre la postura de seguridad y los costos en entornos multinube.</li>
-            <li>Identificación y limpieza proactiva de recursos huérfanos o sobreaprovisionados.</li>
-            <li>Colaboración estrecha entre las áreas de ingeniería, seguridad y finanzas para evitar gastos imprevistos.</li>
+            <li>Se solucionaron un total de 108 vulnerabilidades en los distintos sistemas operativos de Apple.</li>
+            <li>Seis vulnerabilidades críticas en WebKit impactan de manera transversal a dispositivos móviles y computadoras Mac.</li>
+            <li>No se tiene registro de exploits activos en el entorno contra estas fallas al momento del parche.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://isc.sans.edu/diary/rss/33252">Apple Screen Sharing Security, (Mon, Aug 17th)</a></h2>
+    <h2><a href="https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html">Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Se han identificado dos vulnerabilidades críticas en la funcionalidad de pantalla compartida de Apple basada en VNC que están siendo explotadas activamente, comprometiendo equipos expuestos debido a fallas en las modificaciones del protocolo y mecanismos de autenticación propios de Apple.</p>
+    <p>Un grupo de ciberdelincuentes presuntamente vinculado a China está explotando activamente una falla crítica de salto de directorio (CVE-2026-59310) en Broadcom VMware vCenter. El fallo permite la ejecución remota de código y está siendo aprovechado para desplegar variantes de ransomware derivadas de Babuk en la infraestructura de las víctimas.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Explotación activa dirigida a sistemas con el servicio VNC de Apple expuesto a Internet.</li>
-            <li>Las fallas se originan en las modificaciones personalizadas que Apple implementó sobre el protocolo VNC estándar.</li>
-            <li>Se recomienda restringir el acceso con firewalls y utilizar exclusivamente túneles SSH o VPNs para conexiones remotas.</li>
+            <li>La vulnerabilidad permite a los atacantes ejecutar código arbitrario y tomar el control del servidor vCenter.</li>
+            <li>Se ha confirmado el despliegue de ransomware derivado de Babuk tras vulnerar los sistemas afectados.</li>
+            <li>Se urge a los administradores de sistemas a aplicar los parches oficiales emitidos por Broadcom de inmediato.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://isc.sans.edu/diary/rss/33250">ISC Stormcast For Monday, August 17th, 2026 https://isc.sans.edu/podcastdetail/10054, (Mon, Aug 17th)</a></h2>
+    <h2><a href="https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug">Wiz Red Agent Finds Its Way Into Snowflake’s Internal Jira Through a Flaw in a GitHub Copilot–Assisted PR</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>El podcast diario del SANS Internet Storm Center resume las amenazas y actividades maliciosas más relevantes del día, destacando los escaneos de red activos, fallas recientes en servicios remotos y consejos prácticos de análisis de registros para administradores de sistemas.</p>
+    <p>Investigadores de seguridad de Wiz lograron acceder a los sistemas internos de Jira en Snowflake tras identificar una vulnerabilidad en su pipeline de CI/CD, la cual fue introducida a través de un pull request generado con la asistencia de GitHub Copilot. El hallazgo evidencia los riesgos en la cadena de suministro al integrar código generado por IA sin revisiones exhaustivas.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Monitoreo constante de actividad sospechosa y escaneo masivo de puertos en la red.</li>
-            <li>Revisión de riesgos vinculados a protocolos de administración remota y servicios expuestos.</li>
-            <li>Orientación práctica para la detección temprana y respuesta ante incidentes en logs de seguridad.</li>
+            <li>El fallo de seguridad se originó a partir de una propuesta de código asistida por inteligencia artificial en el repositorio.</li>
+            <li>La vulnerabilidad permitió a los investigadores escalar privilegios y alcanzar herramientas internas de la empresa.</li>
+            <li>Snowflake corrigió la brecha tras la notificación de los investigadores y fortaleció sus filtros en pipelines de CI/CD.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/news/2026/08/a-week-in-security-august-10-august-16">A week in security (August 10 – August 16)</a></h2>
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html">CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Malwarebytes presenta su resumen semanal de ciberseguridad, recopilando las campañas de malware más recientes, incidentes de filtración de datos y las actualizaciones de parches emitidas para mitigar vulnerabilidades críticas en el ecosistema digital.</p>
+    <p>La agencia de ciberseguridad CISA añadió una vulnerabilidad crítica en Ray a su catálogo de vulnerabilidades explotadas activamente (KEV). Ray, un framework de código abierto utilizado para escalar cargas de trabajo en inteligencia artificial y aprendizaje automático, presenta una falla que permite la ejecución remota de código a través de interacciones basadas en navegador.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Panorama de campañas emergentes de phishing y ataques dirigidos contra distintas industrias.</li>
-            <li>Alertas sobre parches de seguridad indispensables para corregir fallas activamente aprovechadas.</li>
-            <li>Buenas prácticas recomendadas para reforzar la protección de endpoints y la concienciación del personal.</li>
+            <li>La falla afecta a plataformas y servidores que procesan cargas de trabajo de IA/ML a gran escala.</li>
+            <li>Permite a los atacantes lograr ejecución remota de código sin requerir autenticación compleja.</li>
+            <li>CISA exige a las organizaciones asegurar o aislar sus instancias de Ray para mitigar intrusiones activas.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/">Who’s Tracking You? Use This New Service to Find Out</a></h2>
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html">Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Se presenta DecryptAds, un nuevo servicio gratuito que audita datos del ecosistema publicitario (adtech) para exhibir qué entidades rastrean a los usuarios, identificar redes de alto riesgo, detectar campañas de malvertising y ubicar sitios web chatarra creados con inteligencia artificial.</p>
+    <p>Se descubrió una vulnerabilidad crítica (CVE-2026-15748) con una severidad de 9.8 en el plugin Forminator Forms para WordPress, utilizado en más de 600,000 sitios. Esta falla permite a atacantes no autenticados subir archivos PHP maliciosos al servidor, facilitando la toma de control total del sitio web vulnerable.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Identificación de firmas publicitarias sospechosas operando incluso en sitios de noticias militares en EE. UU.</li>
-            <li>Vínculos descubiertos entre socios publicitarios de baja reputación y dispositivos de streaming infectados con malware.</li>
-            <li>Recomendaciones prácticas para auditar la cadena de suministro adtech y proteger la privacidad de los usuarios.</li>
+            <li>La vulnerabilidad permite ejecución remota de código (RCE) sin necesidad de contar con credenciales de usuario.</li>
+            <li>Más de 600,000 sitios basados en WordPress se encuentran en riesgo potencial si no han actualizado el complemento.</li>
+            <li>Se recomienda a los administradores actualizar Forminator a la última versión disponible de forma urgente.</li>
         </ul>
     </div>
 </section>
