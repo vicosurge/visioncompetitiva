@@ -89,78 +89,78 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 24 de agosto, 2026</div>
+                <div class="date">Semana del 28 de agosto, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html">Microsoft Defender's Own Driver Can Be Weaponized to Delete Security Software at Boot</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Investigadores de Check Point revelaron una técnica que permite abusar del controlador legítimo de remediación durante el arranque de Microsoft Defender (BTR.sys) para ejecutar operaciones arbitrarias a nivel de kernel sobre archivos y el registro en Windows 7 a 11, sin necesidad de explotar vulnerabilidades de software ni cargar controladores externos.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Permite la manipulación o eliminación de soluciones de seguridad rivales en el arranque del sistema.</li>
+            <li>Aprovecha un controlador legítimo y firmado por Microsoft (BTR.sys) evadiendo detecciones habituales.</li>
+            <li>Afecta a múltiples versiones del sistema operativo, desde Windows 7 hasta Windows 11.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://www.malwarebytes.com/blog/news/2026/08/medical-records-ssns-and-bank-details-exposed-in-carecloud-data-breach">Medical records, SSNs, and bank details exposed in CareCloud data breach</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Una filtración de datos masiva en la plataforma de servicios médicos CareCloud expuso información sumamente delicada de pacientes, incluyendo historiales clínicos, números de Seguro Social y detalles bancarios, dejando a los afectados vulnerables a fraudes financieros y suplantación de identidad.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Compromiso de datos personales altamente críticos como registros médicos, números de Seguro Social e información bancaria.</li>
+            <li>Riesgo elevado de campañas dirigidas de ingeniería social, extorsión y fraude crediticio.</li>
+            <li>Pone en evidencia las vulnerabilidades persistentes en la cadena de suministro de servicios tecnológicos de salud.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://isc.sans.edu/diary/rss/33254">Apple Patches iOS and macOS, (Mon, Aug 17th)</a></h2>
+    <h2><a href="https://thehackernews.com/2026/08/the-outsized-shadow-why-5-of-ai-users.html">The Outsized Shadow: Why 5% of AI Users Are Your Biggest Security Risk</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Apple lanzó una serie de actualizaciones de seguridad para iOS, iPadOS y macOS para corregir más de un centenar de fallas de seguridad, incluyendo múltiples vulnerabilidades en el motor WebKit. Aunque por ahora no se reporta que estén siendo explotadas en ataques reales, se aconseja a los usuarios actualizar sus dispositivos a la brevedad.</p>
+    <p>Una nueva investigación de Akamai destaca que apenas el 5% de los usuarios corporativos de inteligencia artificial genera el mayor riesgo de ciberseguridad para las organizaciones, al integrar e incrustar herramientas de IA no autorizadas directamente en flujos de trabajo y operaciones críticas del negocio.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Se solucionaron un total de 108 vulnerabilidades en los distintos sistemas operativos de Apple.</li>
-            <li>Seis vulnerabilidades críticas en WebKit impactan de manera transversal a dispositivos móviles y computadoras Mac.</li>
-            <li>No se tiene registro de exploits activos en el entorno contra estas fallas al momento del parche.</li>
+            <li>El riesgo no proviene del uso casual, sino de la integración profunda de herramientas no auditadas en procesos operativos clave.</li>
+            <li>Genera puntos ciegos significativos de "Shadow AI" que facilitan la fuga de código fuente y datos confidenciales.</li>
+            <li>Las empresas necesitan implementar controles de visibilidad y políticas de gobernanza técnica más estrictas para la IA.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html">Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware</a></h2>
+    <span class="threat-level low">AMENAZA BAJA</span>
+    <h2><a href="https://www.malwarebytes.com/blog/podcast/2026/08/your-data-doesnt-die-when-you-do-lock-and-code-s07e17">What happens to your data when you die? (Lock and Code S07E17)</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Un grupo de ciberdelincuentes presuntamente vinculado a China está explotando activamente una falla crítica de salto de directorio (CVE-2026-59310) en Broadcom VMware vCenter. El fallo permite la ejecución remota de código y está siendo aprovechado para desplegar variantes de ransomware derivadas de Babuk en la infraestructura de las víctimas.</p>
+    <p>En este episodio del podcast Lock and Code, se profundiza en la gestión del legado digital, abordando qué ocurre con la información privada, las cuentas en línea y los datos personales tras el fallecimiento de un usuario y cómo prevenir riesgos de seguridad póstumos.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La vulnerabilidad permite a los atacantes ejecutar código arbitrario y tomar el control del servidor vCenter.</li>
-            <li>Se ha confirmado el despliegue de ransomware derivado de Babuk tras vulnerar los sistemas afectados.</li>
-            <li>Se urge a los administradores de sistemas a aplicar los parches oficiales emitidos por Broadcom de inmediato.</li>
+            <li>Análisis sobre la falta de planeación y protocolos claros para la herencia o eliminación de cuentas digitales.</li>
+            <li>Riesgo de que cuentas inactivas sean secuestradas por cibercriminales para fraudes o robo de identidad.</li>
+            <li>Recomendaciones para configurar administradores de cuentas heredadas y proteger la privacidad digital a largo plazo.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug">Wiz Red Agent Finds Its Way Into Snowflake’s Internal Jira Through a Flaw in a GitHub Copilot–Assisted PR</a></h2>
+    <h2><a href="https://www.malwarebytes.com/blog/privacy/2026/08/gta-6-leak-hunt-could-expose-data-belonging-to-thousands-of-discord-users">GTA 6 leak hunt could expose data belonging to thousands of Discord users</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Investigadores de seguridad de Wiz lograron acceder a los sistemas internos de Jira en Snowflake tras identificar una vulnerabilidad en su pipeline de CI/CD, la cual fue introducida a través de un pull request generado con la asistencia de GitHub Copilot. El hallazgo evidencia los riesgos en la cadena de suministro al integrar código generado por IA sin revisiones exhaustivas.</p>
+    <p>Las investigaciones judiciales para rastrear a los responsables de las filtraciones del videojuego GTA 6 están exigiendo la entrega de datos de servidores de Discord, lo que podría comprometer la privacidad y exponer información sensible de miles de usuarios ajenos a la infracción.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>El fallo de seguridad se originó a partir de una propuesta de código asistida por inteligencia artificial en el repositorio.</li>
-            <li>La vulnerabilidad permitió a los investigadores escalar privilegios y alcanzar herramientas internas de la empresa.</li>
-            <li>Snowflake corrigió la brecha tras la notificación de los investigadores y fortaleció sus filtros en pipelines de CI/CD.</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html">CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>La agencia de ciberseguridad CISA añadió una vulnerabilidad crítica en Ray a su catálogo de vulnerabilidades explotadas activamente (KEV). Ray, un framework de código abierto utilizado para escalar cargas de trabajo en inteligencia artificial y aprendizaje automático, presenta una falla que permite la ejecución remota de código a través de interacciones basadas en navegador.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>La falla afecta a plataformas y servidores que procesan cargas de trabajo de IA/ML a gran escala.</li>
-            <li>Permite a los atacantes lograr ejecución remota de código sin requerir autenticación compleja.</li>
-            <li>CISA exige a las organizaciones asegurar o aislar sus instancias de Ray para mitigar intrusiones activas.</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html">Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Se descubrió una vulnerabilidad crítica (CVE-2026-15748) con una severidad de 9.8 en el plugin Forminator Forms para WordPress, utilizado en más de 600,000 sitios. Esta falla permite a atacantes no autenticados subir archivos PHP maliciosos al servidor, facilitando la toma de control total del sitio web vulnerable.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>La vulnerabilidad permite ejecución remota de código (RCE) sin necesidad de contar con credenciales de usuario.</li>
-            <li>Más de 600,000 sitios basados en WordPress se encuentran en riesgo potencial si no han actualizado el complemento.</li>
-            <li>Se recomienda a los administradores actualizar Forminator a la última versión disponible de forma urgente.</li>
+            <li>Órdenes judiciales que buscan recopilar registros de actividad, direcciones IP y datos de identificación en Discord.</li>
+            <li>Exposición colateral de datos personales de usuarios regulares que compartían servidores con los filtradores.</li>
+            <li>Abre el debate sobre los límites de la privacidad de los usuarios frente a investigaciones corporativas de propiedad intelectual.</li>
         </ul>
     </div>
 </section>
