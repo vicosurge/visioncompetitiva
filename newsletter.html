@@ -89,36 +89,64 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 28 de agosto, 2026</div>
+                <div class="date">Semana del 31 de agosto, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html">Microsoft Defender's Own Driver Can Be Weaponized to Delete Security Software at Boot</a></h2>
+    <h2><a href="https://thehackernews.com/2026/08/alleged-teampcp-hackers-charged-in.html">Alleged TeamPCP Hackers Charged in Australia Over Major Supply Chain Attacks</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Investigadores de Check Point revelaron una técnica que permite abusar del controlador legítimo de remediación durante el arranque de Microsoft Defender (BTR.sys) para ejecutar operaciones arbitrarias a nivel de kernel sobre archivos y el registro en Windows 7 a 11, sin necesidad de explotar vulnerabilidades de software ni cargar controladores externos.</p>
+    <p>Dos hombres australianos, Louis Michael Gaebler y Ruben Ian Thomson, fueron acusados formalmente de 14 delitos por su presunta vinculación con el grupo cibercriminal TeamPCP. A este grupo se le responsabiliza de haber comprometido herramientas críticas como Trivy, Checkmarx KICS y LiteLLM en marzo de 2026.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Permite la manipulación o eliminación de soluciones de seguridad rivales en el arranque del sistema.</li>
-            <li>Aprovecha un controlador legítimo y firmado por Microsoft (BTR.sys) evadiendo detecciones habituales.</li>
-            <li>Afecta a múltiples versiones del sistema operativo, desde Windows 7 hasta Windows 11.</li>
+            <li>La policía australiana presentó cargos contra dos supuestos integrantes del grupo cibercriminal TeamPCP.</li>
+            <li>Se les acusa de ejecutar ataques contra la cadena de suministro de software, infiltrando herramientas clave como Trivy y Checkmarx KICS.</li>
+            <li>El caso subraya la creciente vulnerabilidad y el impacto de las intrusiones en repositorios y dependencias de código abierto.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://isc.sans.edu/diary/rss/33280">Obfuscating IP Addresses as Hostnames, (Tue, Aug 25th)</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Los ciberdelincuentes están evadiendo las mitigaciones de ataques SSRF al utilizar nombres de host como `*.nip.io` y `*.sslip.io` en lugar de direcciones IP directas para consultar el servicio de metadatos en la nube (169.254.169.254). También se detectó el uso de la herramienta `1u.ms` para generar estos dominios sobre la marcha.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Evasión de filtros contra SSRF mediante servicios de DNS comodín dirigidos a la IP de metadatos en la nube (169.254.169.254).</li>
+            <li>Empleo de herramientas automatizadas como `1u.ms` para crear nombres de host dinámicos y ocultar la IP destino.</li>
+            <li>Se recomienda monitorear y analizar los registros DNS internos para identificar consultas que resuelvan a rangos de IP restringidos.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/news/2026/08/medical-records-ssns-and-bank-details-exposed-in-carecloud-data-breach">Medical records, SSNs, and bank details exposed in CareCloud data breach</a></h2>
+    <h2><a href="https://unit42.paloaltonetworks.com/ai-enabled-malware-analysis/">The State of AI-Enabled Malware August 2026: From Brand Abuse to Agentic Execution</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Una filtración de datos masiva en la plataforma de servicios médicos CareCloud expuso información sumamente delicada de pacientes, incluyendo historiales clínicos, números de Seguro Social y detalles bancarios, dejando a los afectados vulnerables a fraudes financieros y suplantación de identidad.</p>
+    <p>El panorama del malware impulsado por inteligencia artificial ha evolucionado de forma acelerada, pasando de campañas básicas de suplantación de marca y phishing a malware con capacidades de ejecución agéntica autónoma, capaz de tomar decisiones y modificar su comportamiento en tiempo real dentro de las redes atacadas.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Compromiso de datos personales altamente críticos como registros médicos, números de Seguro Social e información bancaria.</li>
-            <li>Riesgo elevado de campañas dirigidas de ingeniería social, extorsión y fraude crediticio.</li>
-            <li>Pone en evidencia las vulnerabilidades persistentes en la cadena de suministro de servicios tecnológicos de salud.</li>
+            <li>Transición de amenazas de IA básicas hacia marcos de malware agénticos con ejecución autónoma.</li>
+            <li>Capacidad de los agentes maliciosos para adaptarse y evadir controles de seguridad convencionales sin intervención humana continua.</li>
+            <li>Necesidad urgente de reforzar la detección basada en comportamiento para neutralizar patrones de ataque impulsados por IA.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html">Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>La campaña de phishing como servicio (PhaaS) conocida como Mirage2FA ha afectado a más de 4,500 empresas, principalmente en EE. UU. y la Unión Europea, vulnerando flujos de inicio de sesión de Microsoft 365 y evadiendo el doble factor de autenticación (2FA). Los análisis señalan que hasta un 48% de las cuentas objetivo pudieron haber sido comprometidas.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Ataque masivo mediante plataformas de phishing como servicio dirigido contra entornos de Microsoft 365.</li>
+            <li>Mecanismos avanzados capaces de interceptar y eludir la autenticación multifactor (MFA/2FA) tradicional.</li>
+            <li>Tasa de efectividad alarmante, con casi la mitad de las cuentas atacadas en riesgo de intrusión.</li>
         </ul>
     </div>
 </section>
@@ -126,41 +154,13 @@
     <span class="threat-level medium">AMENAZA MEDIA</span>
     <h2><a href="https://thehackernews.com/2026/08/the-outsized-shadow-why-5-of-ai-users.html">The Outsized Shadow: Why 5% of AI Users Are Your Biggest Security Risk</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Una nueva investigación de Akamai destaca que apenas el 5% de los usuarios corporativos de inteligencia artificial genera el mayor riesgo de ciberseguridad para las organizaciones, al integrar e incrustar herramientas de IA no autorizadas directamente en flujos de trabajo y operaciones críticas del negocio.</p>
+    <p>Una investigación de Akamai revela que un pequeño porcentaje (alrededor del 5%) de usuarios corporativos representa el mayor riesgo de ciberseguridad al integrar herramientas de IA no autorizadas directamente en flujos de trabajo y operaciones críticas, superando con creces los riesgos del uso casual o esporádico.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>El riesgo no proviene del uso casual, sino de la integración profunda de herramientas no auditadas en procesos operativos clave.</li>
-            <li>Genera puntos ciegos significativos de "Shadow AI" que facilitan la fuga de código fuente y datos confidenciales.</li>
-            <li>Las empresas necesitan implementar controles de visibilidad y políticas de gobernanza técnica más estrictas para la IA.</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/podcast/2026/08/your-data-doesnt-die-when-you-do-lock-and-code-s07e17">What happens to your data when you die? (Lock and Code S07E17)</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>En este episodio del podcast Lock and Code, se profundiza en la gestión del legado digital, abordando qué ocurre con la información privada, las cuentas en línea y los datos personales tras el fallecimiento de un usuario y cómo prevenir riesgos de seguridad póstumos.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Análisis sobre la falta de planeación y protocolos claros para la herencia o eliminación de cuentas digitales.</li>
-            <li>Riesgo de que cuentas inactivas sean secuestradas por cibercriminales para fraudes o robo de identidad.</li>
-            <li>Recomendaciones para configurar administradores de cuentas heredadas y proteger la privacidad digital a largo plazo.</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/privacy/2026/08/gta-6-leak-hunt-could-expose-data-belonging-to-thousands-of-discord-users">GTA 6 leak hunt could expose data belonging to thousands of Discord users</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Las investigaciones judiciales para rastrear a los responsables de las filtraciones del videojuego GTA 6 están exigiendo la entrega de datos de servidores de Discord, lo que podría comprometer la privacidad y exponer información sensible de miles de usuarios ajenos a la infracción.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Órdenes judiciales que buscan recopilar registros de actividad, direcciones IP y datos de identificación en Discord.</li>
-            <li>Exposición colateral de datos personales de usuarios regulares que compartían servidores con los filtradores.</li>
-            <li>Abre el debate sobre los límites de la privacidad de los usuarios frente a investigaciones corporativas de propiedad intelectual.</li>
+            <li>El 5% de los empleados avanzados de IA generan la mayor parte del riesgo al programar herramientas no verificadas en procesos clave.</li>
+            <li>Riesgo significativo de fuga de datos sensibles y exposición de credenciales mediante Shadow AI.</li>
+            <li>Las organizaciones deben implementar políticas estrictas de gobernanza y monitoreo de tráfico hacia servicios de IA en la red.</li>
         </ul>
     </div>
 </section>
