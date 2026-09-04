@@ -89,78 +89,78 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 31 de agosto, 2026</div>
+                <div class="date">Semana del 4 de septiembre, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/08/alleged-teampcp-hackers-charged-in.html">Alleged TeamPCP Hackers Charged in Australia Over Major Supply Chain Attacks</a></h2>
+    <h2><a href="https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA Adds Two Known Exploited Vulnerabilities to Catalog</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Dos hombres australianos, Louis Michael Gaebler y Ruben Ian Thomson, fueron acusados formalmente de 14 delitos por su presunta vinculación con el grupo cibercriminal TeamPCP. A este grupo se le responsabiliza de haber comprometido herramientas críticas como Trivy, Checkmarx KICS y LiteLLM en marzo de 2026.</p>
+    <p>La Agencia de Ciberseguridad y Seguridad de Infraestructura de EE. UU. (CISA) incorporó dos vulnerabilidades críticas que afectan al software PaperCut NG/MF (CVE-2026-81578 y CVE-2026-82078) a su catálogo de vulnerabilidades explotadas conocidas (KEV), luego de confirmar su explotación activa en ataques reales. La agencia urgió a todas las organizaciones a priorizar su remediación para evitar accesos no autorizados a las redes corporativas.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La policía australiana presentó cargos contra dos supuestos integrantes del grupo cibercriminal TeamPCP.</li>
-            <li>Se les acusa de ejecutar ataques contra la cadena de suministro de software, infiltrando herramientas clave como Trivy y Checkmarx KICS.</li>
-            <li>El caso subraya la creciente vulnerabilidad y el impacto de las intrusiones en repositorios y dependencias de código abierto.</li>
+            <li>CISA confirmó que los fallos CVE-2026-81578 y CVE-2026-82078 en PaperCut están siendo explotados activamente por atacantes.</li>
+            <li>Las dependencias federales tienen la obligación de mitigar estas vulnerabilidades conforme a la directiva BOD 26-04.</li>
+            <li>Se recomienda a los administradores de sistemas aplicar de inmediato los parches oficiales emitidos por el fabricante.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://isc.sans.edu/diary/rss/33280">Obfuscating IP Addresses as Hostnames, (Tue, Aug 25th)</a></h2>
+    <h2><a href="https://www.tenable.com/blog/why-a-cryptographic-inventory-is-key-for-addressing-the-quantum-computing-threat">Why a cryptographic inventory is key for addressing the quantum computing threat</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>Los ciberdelincuentes están evadiendo las mitigaciones de ataques SSRF al utilizar nombres de host como `*.nip.io` y `*.sslip.io` en lugar de direcciones IP directas para consultar el servicio de metadatos en la nube (169.254.169.254). También se detectó el uso de la herramienta `1u.ms` para generar estos dominios sobre la marcha.</p>
+    <p>El rápido avance de la computación cuántica pone en jaque los esquemas de cifrado actuales mediante ataques de tipo "cosechar ahora, descifrar después". Para mitigar este riesgo a largo plazo, resulta fundamental que las empresas implementen un inventario criptográfico exhaustivo que les permita identificar qué algoritmos, certificados y llaves tienen desplegados en su infraestructura y planear una transición ordenada.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Evasión de filtros contra SSRF mediante servicios de DNS comodín dirigidos a la IP de metadatos en la nube (169.254.169.254).</li>
-            <li>Empleo de herramientas automatizadas como `1u.ms` para crear nombres de host dinámicos y ocultar la IP destino.</li>
-            <li>Se recomienda monitorear y analizar los registros DNS internos para identificar consultas que resuelvan a rangos de IP restringidos.</li>
+            <li>La computación cuántica amenaza con romper algoritmos de cifrado asimétrico estándar como RSA y curvas elípticas.</li>
+            <li>Un inventario criptográfico brinda visibilidad completa sobre los activos que deberán migrarse a criptografía post-cuántica (PQC).</li>
+            <li>Iniciar la evaluación de dependencias criptográficas desde ahora evitará brechas de seguridad y migraciones precipitadas en el futuro.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://unit42.paloaltonetworks.com/ai-enabled-malware-analysis/">The State of AI-Enabled Malware August 2026: From Brand Abuse to Agentic Execution</a></h2>
+    <h2><a href="https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html">Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>El panorama del malware impulsado por inteligencia artificial ha evolucionado de forma acelerada, pasando de campañas básicas de suplantación de marca y phishing a malware con capacidades de ejecución agéntica autónoma, capaz de tomar decisiones y modificar su comportamiento en tiempo real dentro de las redes atacadas.</p>
+    <p>Actores de amenazas están explotando activamente la vulnerabilidad crítica CVE-2026-82329 en JFrog Artifactory a tan solo unos días de su divulgación pública. El fallo permite evadir la autenticación del sistema y generar tokens con privilegios de administrador, otorgando a los atacantes control total sobre repositorios de código y artefactos de software.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Transición de amenazas de IA básicas hacia marcos de malware agénticos con ejecución autónoma.</li>
-            <li>Capacidad de los agentes maliciosos para adaptarse y evadir controles de seguridad convencionales sin intervención humana continua.</li>
-            <li>Necesidad urgente de reforzar la detección basada en comportamiento para neutralizar patrones de ataque impulsados por IA.</li>
+            <li>La vulnerabilidad CVE-2026-82329 permite a intrusos no autenticados evadir controles y fabricar credenciales de administración.</li>
+            <li>La explotación activa inició casi de inmediato tras revelarse los detalles técnicos de la falla.</li>
+            <li>Se insta a los equipos de DevOps y seguridad a actualizar Artifactory urgentemente y revisar la existencia de tokens sospechosos recién creados.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level low">AMENAZA BAJA</span>
+    <h2><a href="https://www.malwarebytes.com/blog/mobile/2026/08/protect-your-whatsapp-account-with-new-passkey-and-2fa-upgrades">Protect your WhatsApp account with new passkey and 2FA upgrades</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>WhatsApp introdujo mejoras en sus mecanismos de seguridad mediante la compatibilidad con llaves de paso (passkeys) y una optimización en su verificación en dos pasos (2FA). Estas herramientas tienen como objetivo reducir los incidentes de robo de cuentas y ataques de suplantación al permitir el inicio de sesión a través de biometría o llaves físicas de hardware.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>El uso de llaves de paso elimina la dependencia de códigos por SMS, protegiendo contra ataques de duplicado de SIM (SIM swapping).</li>
+            <li>Los usuarios pueden autenticarse de forma sencilla y segura utilizando su huella dactilar, reconocimiento facial o PIN del dispositivo.</li>
+            <li>Se aconseja activar estas opciones de autenticación dentro de los ajustes de la aplicación para evitar el secuestro de la cuenta.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html">Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows</a></h2>
+    <h2><a href="https://www.malwarebytes.com/blog/news/2026/08/mckesson-confirms-cyber-incident-after-shinyhunters-claims-patient-data-theft">McKesson confirms cyber incident after ShinyHunters claims patient-data theft</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>La campaña de phishing como servicio (PhaaS) conocida como Mirage2FA ha afectado a más de 4,500 empresas, principalmente en EE. UU. y la Unión Europea, vulnerando flujos de inicio de sesión de Microsoft 365 y evadiendo el doble factor de autenticación (2FA). Los análisis señalan que hasta un 48% de las cuentas objetivo pudieron haber sido comprometidas.</p>
+    <p>El gigante farmacéutico y distribuidor de atención médica McKesson confirmó haber sufrido un incidente de ciberseguridad, luego de que el grupo cibercriminal ShinyHunters afirmara haber robado información confidencial de pacientes. La compañía se encuentra analizando el alcance del ataque mientras colabora con especialistas y autoridades para contener posibles daños.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Ataque masivo mediante plataformas de phishing como servicio dirigido contra entornos de Microsoft 365.</li>
-            <li>Mecanismos avanzados capaces de interceptar y eludir la autenticación multifactor (MFA/2FA) tradicional.</li>
-            <li>Tasa de efectividad alarmante, con casi la mitad de las cuentas atacadas en riesgo de intrusión.</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://thehackernews.com/2026/08/the-outsized-shadow-why-5-of-ai-users.html">The Outsized Shadow: Why 5% of AI Users Are Your Biggest Security Risk</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Una investigación de Akamai revela que un pequeño porcentaje (alrededor del 5%) de usuarios corporativos representa el mayor riesgo de ciberseguridad al integrar herramientas de IA no autorizadas directamente en flujos de trabajo y operaciones críticas, superando con creces los riesgos del uso casual o esporádico.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>El 5% de los empleados avanzados de IA generan la mayor parte del riesgo al programar herramientas no verificadas en procesos clave.</li>
-            <li>Riesgo significativo de fuga de datos sensibles y exposición de credenciales mediante Shadow AI.</li>
-            <li>Las organizaciones deben implementar políticas estrictas de gobernanza y monitoreo de tráfico hacia servicios de IA en la red.</li>
+            <li>El grupo ShinyHunters se atribuyó el ataque y aseguró tener en su poder bases de datos con información sensible de pacientes.</li>
+            <li>McKesson reconoció la intrusión e inició una investigación forense para validar la veracidad y extensión de la fuga de datos.</li>
+            <li>El compromiso de registros médicos representa un alto riesgo de robo de identidad, fraudes financieros y ataques dirigidos a los afectados.</li>
         </ul>
     </div>
 </section>
