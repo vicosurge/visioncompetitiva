@@ -89,64 +89,50 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 4 de septiembre, 2026</div>
+                <div class="date">Semana del 7 de septiembre, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA Adds Two Known Exploited Vulnerabilities to Catalog</a></h2>
+    <span class="threat-level low">AMENAZA BAJA</span>
+    <h2><a href="https://fidelissecurity.com/threatgeek/endpoint-security/malware-sandboxing-for-faster-edr-investigations/">How Integrated Malware Sandboxing Makes EDR Investigations Faster</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>La Agencia de Ciberseguridad y Seguridad de Infraestructura de EE. UU. (CISA) incorporó dos vulnerabilidades críticas que afectan al software PaperCut NG/MF (CVE-2026-81578 y CVE-2026-82078) a su catálogo de vulnerabilidades explotadas conocidas (KEV), luego de confirmar su explotación activa en ataques reales. La agencia urgió a todas las organizaciones a priorizar su remediación para evitar accesos no autorizados a las redes corporativas.</p>
+    <p>La integración directa de entornos de pruebas (sandboxing) dentro de las soluciones de EDR permite detonar y analizar archivos sospechosos en tiempo real, agilizando significativamente las investigaciones forenses y reduciendo la carga de trabajo en los centros de operaciones de seguridad.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>CISA confirmó que los fallos CVE-2026-81578 y CVE-2026-82078 en PaperCut están siendo explotados activamente por atacantes.</li>
-            <li>Las dependencias federales tienen la obligación de mitigar estas vulnerabilidades conforme a la directiva BOD 26-04.</li>
-            <li>Se recomienda a los administradores de sistemas aplicar de inmediato los parches oficiales emitidos por el fabricante.</li>
+            <li>Detonación automatizada de artefactos sospechosos sin tener que abandonar la consola de gestión de EDR.</li>
+            <li>Reducción notable en los tiempos medios de detección (MTTD) y contención de incidentes (MTTR).</li>
+            <li>Generación acelerada de indicadores de compromiso (IoCs) contextuales para fortalecer la postura defensiva.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/08/china-linked-fire-ant-hijacks-cisco.html">China-Linked Fire Ant Hijacks Cisco Routers to Steal Credentials and Blind Security Logs</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>El grupo de ciberespionaje vinculado a China, Fire Ant, expandió sus ataques más allá de entornos VMware para comprometer routers Cisco IOS XR, servidores TACACS y hosts Linux, buscando robar credenciales y deshabilitar registros en redes corporativas de alto valor.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Infiltración avanzada en routers de infraestructura crítica y sistemas de autenticación centralizada TACACS.</li>
+            <li>Manipulación directa de los registros de auditoría para cegar a los equipos de seguridad y evadir la detección.</li>
+            <li>Evolución de tácticas que demuestran un enfoque persistente en el compromiso profundo de hardware de telecomunicaciones.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://www.tenable.com/blog/why-a-cryptographic-inventory-is-key-for-addressing-the-quantum-computing-threat">Why a cryptographic inventory is key for addressing the quantum computing threat</a></h2>
+    <h2><a href="https://isc.sans.edu/diary/rss/33296">ISC Stormcast For Monday, August 31st, 2026 https://isc.sans.edu/podcastdetail/10074, (Mon, Aug 31st)</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>El rápido avance de la computación cuántica pone en jaque los esquemas de cifrado actuales mediante ataques de tipo "cosechar ahora, descifrar después". Para mitigar este riesgo a largo plazo, resulta fundamental que las empresas implementen un inventario criptográfico exhaustivo que les permita identificar qué algoritmos, certificados y llaves tienen desplegados en su infraestructura y planear una transición ordenada.</p>
+    <p>El resumen diario del SANS Internet Storm Center presenta las últimas tendencias en tráfico malicioso, análisis de vulnerabilidades recién divulgadas y recomendaciones prácticas de mitigación dirigidas a administradores de redes y analistas de ciberseguridad.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>La computación cuántica amenaza con romper algoritmos de cifrado asimétrico estándar como RSA y curvas elípticas.</li>
-            <li>Un inventario criptográfico brinda visibilidad completa sobre los activos que deberán migrarse a criptografía post-cuántica (PQC).</li>
-            <li>Iniciar la evaluación de dependencias criptográficas desde ahora evitará brechas de seguridad y migraciones precipitadas en el futuro.</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html">Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Actores de amenazas están explotando activamente la vulnerabilidad crítica CVE-2026-82329 en JFrog Artifactory a tan solo unos días de su divulgación pública. El fallo permite evadir la autenticación del sistema y generar tokens con privilegios de administrador, otorgando a los atacantes control total sobre repositorios de código y artefactos de software.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>La vulnerabilidad CVE-2026-82329 permite a intrusos no autenticados evadir controles y fabricar credenciales de administración.</li>
-            <li>La explotación activa inició casi de inmediato tras revelarse los detalles técnicos de la falla.</li>
-            <li>Se insta a los equipos de DevOps y seguridad a actualizar Artifactory urgentemente y revisar la existencia de tokens sospechosos recién creados.</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/mobile/2026/08/protect-your-whatsapp-account-with-new-passkey-and-2fa-upgrades">Protect your WhatsApp account with new passkey and 2FA upgrades</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>WhatsApp introdujo mejoras en sus mecanismos de seguridad mediante la compatibilidad con llaves de paso (passkeys) y una optimización en su verificación en dos pasos (2FA). Estas herramientas tienen como objetivo reducir los incidentes de robo de cuentas y ataques de suplantación al permitir el inicio de sesión a través de biometría o llaves físicas de hardware.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>El uso de llaves de paso elimina la dependencia de códigos por SMS, protegiendo contra ataques de duplicado de SIM (SIM swapping).</li>
-            <li>Los usuarios pueden autenticarse de forma sencilla y segura utilizando su huella dactilar, reconocimiento facial o PIN del dispositivo.</li>
-            <li>Se aconseja activar estas opciones de autenticación dentro de los ajustes de la aplicación para evitar el secuestro de la cuenta.</li>
+            <li>Revisión de patrones anómalos de escaneo masivo dirigidos contra servicios de acceso remoto expuestos a Internet.</li>
+            <li>Alertas tempranas sobre parches críticos y mitigaciones provisionales para fallas de día cero en aplicaciones comunes.</li>
+            <li>Consejos tácticos para la optimización de reglas de firewall y el filtrado preventivo en el perímetro de la red.</li>
         </ul>
     </div>
 </section>
@@ -154,13 +140,27 @@
     <span class="threat-level high">AMENAZA ALTA</span>
     <h2><a href="https://www.malwarebytes.com/blog/news/2026/08/mckesson-confirms-cyber-incident-after-shinyhunters-claims-patient-data-theft">McKesson confirms cyber incident after ShinyHunters claims patient-data theft</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>El gigante farmacéutico y distribuidor de atención médica McKesson confirmó haber sufrido un incidente de ciberseguridad, luego de que el grupo cibercriminal ShinyHunters afirmara haber robado información confidencial de pacientes. La compañía se encuentra analizando el alcance del ataque mientras colabora con especialistas y autoridades para contener posibles daños.</p>
+    <p>La multinacional farmacéutica y de atención médica McKesson confirmó haber sufrido un incidente de seguridad, luego de que el grupo cibercriminal ShinyHunters asegurara públicamente haber vulnerado sus sistemas y robado información confidencial de pacientes.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>El grupo ShinyHunters se atribuyó el ataque y aseguró tener en su poder bases de datos con información sensible de pacientes.</li>
-            <li>McKesson reconoció la intrusión e inició una investigación forense para validar la veracidad y extensión de la fuga de datos.</li>
-            <li>El compromiso de registros médicos representa un alto riesgo de robo de identidad, fraudes financieros y ataques dirigidos a los afectados.</li>
+            <li>El grupo ShinyHunters se atribuyó la exfiltración masiva de registros médicos y datos personales sensibles.</li>
+            <li>McKesson activó protocolos de respuesta a incidentes e investigaciones forenses para medir el alcance de la intrusión.</li>
+            <li>Riesgo inminente de extorsión financiera y posibles consecuencias regulatorias por el compromiso de datos médicos (PHI).</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level medium">AMENAZA MEDIA</span>
+    <h2><a href="https://thehackernews.com/2026/08/north-korean-job-fraud-expands-beyond.html">North Korean Job Fraud Expands Beyond IT Into Healthcare and Sales</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Operadores norcoreanos están ampliando sus esquemas de fraude laboral remoto más allá del área de TI, infiltrándose en vacantes de ventas, marketing y el sector salud como parte de sus campañas sistemáticas para evadir sanciones y obtener divisas extranjeras.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Uso de identidades sintéticas y perfiles fraudulentos para ser contratados como empleados remotos en empresas occidentales.</li>
+            <li>Riesgo creciente de amenazas internas (insider threat), facilitando el robo de propiedad intelectual y acceso a redes corporativas.</li>
+            <li>Ampliación de los sectores objetivo hacia áreas no técnicas con menores controles estrictos de verificación de identidad.</li>
         </ul>
     </div>
 </section>
