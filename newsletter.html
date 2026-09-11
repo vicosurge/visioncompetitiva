@@ -89,78 +89,78 @@
         <div class="newsletter-container">
             <div class="newsletter-header">
                 <h1>Resumen Semanal de Ciberseguridad</h1>
-                <div class="date">Semana del 7 de septiembre, 2026</div>
+                <div class="date">Semana del 11 de septiembre, 2026</div>
             </div>
             <div class="newsletter-intro">
                 <p>Mantente al día con las últimas amenazas, vulnerabilidades y desarrollos en ciberseguridad. Nuestro resumen semanal te brinda información clave de fuentes confiables para proteger tu organización.</p>
             </div>
             <section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html">Adobe Patches Magento Zero-Day Exploited to Deploy Rust Backdoor and PHP Web Shell</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Adobe publicó parches de seguridad para una vulnerabilidad crítica (CVE-2026-75650, con puntaje CVSS de 10.0) que afecta a Adobe Commerce y Magento Open Source. La falla, identificada con el nombre clave StyleSmuggler, ha sido explotada activamente como un ataque de día cero desde el 4 de septiembre de 2026 para infiltrar puertas traseras desarrolladas en Rust y shells web en PHP.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Calificada con la máxima severidad (CVSS 10.0) debido a la posibilidad de ejecución remota de código sin autenticación.</li>
+            <li>Los atacantes aprovechan la brecha para instalar backdoors en Rust y herramientas de persistencia en servidores comprometidos.</li>
+            <li>Se recomienda a los administradores actualizar de inmediato a las versiones parchadas de Magento y Adobe Commerce.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
+    <span class="threat-level high">AMENAZA ALTA</span>
+    <h2><a href="https://blog.talosintelligence.com/clearfake-webdav-infection-chain/">ClearFake WebDAV infection chain delivers Amatera stealer, ZigCryptoStealer, and NetSupport Manager</a></h2>
+    <p><strong>Resumen:</strong></p>
+    <p>Cisco Talos identificó una campaña de distribución del malware Amatera que recurre a recursos WebDAV, Cloudflare Workers, BNB Smart Chain e ingeniería social tipo ClickFix para comprometer entidades del gobierno de Ucrania. El ataque busca robar credenciales y criptomonedas mediante Amatera y ZigCryptoStealer, además de desplegar el software NetSupport Manager sin autorización para tareas de espionaje atribuidas a un grupo ruso.</p>
+    <div class="key-points">
+        <h4>Puntos clave:</h4>
+        <ul>
+            <li>Utiliza técnicas avanzadas de evasión combinando señuelos ClickFix con WebDAV y la red BNB Smart Chain.</li>
+            <li>El objetivo principal es la sustracción de billeteras de criptoactivos e información confidencial de acceso.</li>
+            <li>Instala NetSupport Manager de forma encubierta para otorgar a los atacantes control remoto continuo sobre los equipos.</li>
+        </ul>
+    </div>
+</section>
+<section class="article-section">
     <span class="threat-level low">AMENAZA BAJA</span>
-    <h2><a href="https://fidelissecurity.com/threatgeek/endpoint-security/malware-sandboxing-for-faster-edr-investigations/">How Integrated Malware Sandboxing Makes EDR Investigations Faster</a></h2>
+    <h2><a href="https://thehackernews.com/2026/09/what-it-took-to-reach-1-billion-build.html">What It Took to Reach 1 Billion Build Manifests</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>La integración directa de entornos de pruebas (sandboxing) dentro de las soluciones de EDR permite detonar y analizar archivos sospechosos en tiempo real, agilizando significativamente las investigaciones forenses y reduciendo la carga de trabajo en los centros de operaciones de seguridad.</p>
+    <p>Un recuento técnico sobre el proceso y los desafíos de ingeniería necesarios para rastrear y procesar mil millones de manifiestos de compilación en el ecosistema de desarrollo de software. El reporte destaca la creciente necesidad de asegurar la procedencia del código y reforzar las medidas de seguridad dentro de las cadenas de suministro de software modernas mediante listas de materiales (SBOM).</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Detonación automatizada de artefactos sospechosos sin tener que abandonar la consola de gestión de EDR.</li>
-            <li>Reducción notable en los tiempos medios de detección (MTTD) y contención de incidentes (MTTR).</li>
-            <li>Generación acelerada de indicadores de compromiso (IoCs) contextuales para fortalecer la postura defensiva.</li>
+            <li>Aborda la importancia crítica de verificar la procedencia del software para prevenir ataques a la cadena de suministro.</li>
+            <li>Examina los retos técnicos de infraestructura y almacenamiento masivo que representa auditar dependencias a gran escala.</li>
+            <li>Resalta el papel fundamental de los manifiestos y estándares SBOM para robustecer la postura defensiva en entornos DevOps.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://thehackernews.com/2026/08/china-linked-fire-ant-hijacks-cisco.html">China-Linked Fire Ant Hijacks Cisco Routers to Steal Credentials and Blind Security Logs</a></h2>
+    <h2><a href="https://thehackernews.com/2026/09/freeipa-flaw-chain-lets-anonymous.html">FreeIPA Flaw Chain Lets Anonymous Clients Create Reusable Administrator Credentials</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>El grupo de ciberespionaje vinculado a China, Fire Ant, expandió sus ataques más allá de entornos VMware para comprometer routers Cisco IOS XR, servidores TACACS y hosts Linux, buscando robar credenciales y deshabilitar registros en redes corporativas de alto valor.</p>
+    <p>Se descubrió una vulnerabilidad crítica en la plataforma de gestión de identidades FreeIPA que, al combinarse con otro fallo en el servidor de directorios 389 Directory Server, permite a clientes no autenticados generar credenciales de administrador permanentes. Con esto, atacantes remotos pueden tomar control absoluto sobre cualquier dominio Linux gestionado por la solución.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>Infiltración avanzada en routers de infraestructura crítica y sistemas de autenticación centralizada TACACS.</li>
-            <li>Manipulación directa de los registros de auditoría para cegar a los equipos de seguridad y evadir la detección.</li>
-            <li>Evolución de tácticas que demuestran un enfoque persistente en el compromiso profundo de hardware de telecomunicaciones.</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://isc.sans.edu/diary/rss/33296">ISC Stormcast For Monday, August 31st, 2026 https://isc.sans.edu/podcastdetail/10074, (Mon, Aug 31st)</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>El resumen diario del SANS Internet Storm Center presenta las últimas tendencias en tráfico malicioso, análisis de vulnerabilidades recién divulgadas y recomendaciones prácticas de mitigación dirigidas a administradores de redes y analistas de ciberseguridad.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Revisión de patrones anómalos de escaneo masivo dirigidos contra servicios de acceso remoto expuestos a Internet.</li>
-            <li>Alertas tempranas sobre parches críticos y mitigaciones provisionales para fallas de día cero en aplicaciones comunes.</li>
-            <li>Consejos tácticos para la optimización de reglas de firewall y el filtrado preventivo en el perímetro de la red.</li>
+            <li>No se requiere ningún tipo de credencial o autenticación previa para ejecutar el encadenamiento de exploits.</li>
+            <li>Permite crear identidades administrativas reutilizables que pasan desapercibidas ante auditorías básicas.</li>
+            <li>Otorga privilegios totales sobre la infraestructura y los accesos federados de la organización afectada.</li>
         </ul>
     </div>
 </section>
 <section class="article-section">
     <span class="threat-level high">AMENAZA ALTA</span>
-    <h2><a href="https://www.malwarebytes.com/blog/news/2026/08/mckesson-confirms-cyber-incident-after-shinyhunters-claims-patient-data-theft">McKesson confirms cyber incident after ShinyHunters claims patient-data theft</a></h2>
+    <h2><a href="https://thehackernews.com/2026/09/autonomous-ai-agents-compromise.html">Autonomous AI Agents Compromise Thousands of Credentials in Under Six Hours</a></h2>
     <p><strong>Resumen:</strong></p>
-    <p>La multinacional farmacéutica y de atención médica McKesson confirmó haber sufrido un incidente de seguridad, luego de que el grupo cibercriminal ShinyHunters asegurara públicamente haber vulnerado sus sistemas y robado información confidencial de pacientes.</p>
+    <p>Grupos cibercriminales han comenzado a utilizar plataformas de ataque multiagente totalmente automatizadas y potenciadas por inteligencia artificial, logrando vulnerar miles de credenciales corporativas en menos de seis horas. El Grupo de Inteligencia contra Amenazas de Google (GTIG) advirtió que estos actores están perfeccionando sus modelos para atacar directamente infraestructuras y sistemas propietarios de IA.</p>
     <div class="key-points">
         <h4>Puntos clave:</h4>
         <ul>
-            <li>El grupo ShinyHunters se atribuyó la exfiltración masiva de registros médicos y datos personales sensibles.</li>
-            <li>McKesson activó protocolos de respuesta a incidentes e investigaciones forenses para medir el alcance de la intrusión.</li>
-            <li>Riesgo inminente de extorsión financiera y posibles consecuencias regulatorias por el compromiso de datos médicos (PHI).</li>
-        </ul>
-    </div>
-</section>
-<section class="article-section">
-    <span class="threat-level medium">AMENAZA MEDIA</span>
-    <h2><a href="https://thehackernews.com/2026/08/north-korean-job-fraud-expands-beyond.html">North Korean Job Fraud Expands Beyond IT Into Healthcare and Sales</a></h2>
-    <p><strong>Resumen:</strong></p>
-    <p>Operadores norcoreanos están ampliando sus esquemas de fraude laboral remoto más allá del área de TI, infiltrándose en vacantes de ventas, marketing y el sector salud como parte de sus campañas sistemáticas para evadir sanciones y obtener divisas extranjeras.</p>
-    <div class="key-points">
-        <h4>Puntos clave:</h4>
-        <ul>
-            <li>Uso de identidades sintéticas y perfiles fraudulentos para ser contratados como empleados remotos en empresas occidentales.</li>
-            <li>Riesgo creciente de amenazas internas (insider threat), facilitando el robo de propiedad intelectual y acceso a redes corporativas.</li>
-            <li>Ampliación de los sectores objetivo hacia áreas no técnicas con menores controles estrictos de verificación de identidad.</li>
+            <li>La coordinación autónoma entre agentes de IA acelera exponencialmente las fases de reconocimiento, explotación y exfiltración.</li>
+            <li>Se lograron recolectar y comprometer volúmenes masivos de credenciales en plazos inferiores a seis horas.</li>
+            <li>Existe un creciente interés por parte de los ciberdelincuentes en vulnerar y explotar sistemas de IA propietarios en las empresas.</li>
         </ul>
     </div>
 </section>
